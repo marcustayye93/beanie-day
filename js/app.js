@@ -187,6 +187,13 @@
     },
   };
 
+  /** Intro entry points → app tabs */
+  const INTRO_TABS = {
+    flavours: true,
+    "happy-hour": true,
+    "this-week": true,
+  };
+
   const state = {
     data: null,
     activeTab: "this-week",
@@ -194,9 +201,13 @@
     filters: new Set(),
     deferredInstall: null,
     openCardId: null,
+    inIntro: true,
   };
 
   const els = {
+    intro: document.getElementById("intro"),
+    appShell: document.getElementById("app-shell"),
+    homeBtn: document.getElementById("home-btn"),
     tabNav: document.getElementById("tab-nav"),
     catScroll: document.getElementById("cat-scroll"),
     cardList: document.getElementById("card-list"),
@@ -233,9 +244,15 @@
       watchScroll();
 
       const hashTab = (location.hash || "").replace("#", "");
-      const savedTab = localStorage.getItem(TAB_KEY);
-      if (hashTab) state.activeTab = hashTab;
-      else if (savedTab) state.activeTab = savedTab;
+      // Deep-link: skip intro when a tab hash is present
+      if (hashTab && hashTab !== "intro") {
+        state.activeTab = hashTab;
+        state.inIntro = false;
+        document.body.classList.remove("intro-active");
+      } else {
+        state.inIntro = true;
+        document.body.classList.add("intro-active");
+      }
 
       await loadData();
       renderAll();
@@ -243,10 +260,41 @@
       if (window.__beanieBoot) clearTimeout(window.__beanieBoot);
     } catch (err) {
       console.error(err);
+      // Still allow intro to show; fatal only if shell open
+      document.body.classList.remove("intro-active");
+      state.inIntro = false;
       showFatal(
         "Couldn’t load this week’s finds. Check your connection, then hard-refresh (or use Reload clean)."
       );
     }
+  }
+
+  function enterApp(tabId) {
+    const tab = INTRO_TABS[tabId] ? tabId : "this-week";
+    state.inIntro = false;
+    state.openCardId = null;
+
+    if (els.intro) {
+      els.intro.classList.add("is-leaving");
+    }
+
+    const finish = () => {
+      document.body.classList.remove("intro-active");
+      els.intro?.classList.remove("is-leaving");
+      setTab(tab, true);
+      window.scrollTo({ top: 0, behavior: "auto" });
+    };
+
+    // Short exit animation then show app
+    setTimeout(finish, 280);
+  }
+
+  function showIntro() {
+    state.inIntro = true;
+    state.openCardId = null;
+    document.body.classList.add("intro-active");
+    history.replaceState(null, "", "#intro");
+    window.scrollTo({ top: 0, behavior: "auto" });
   }
 
   function fetchWithTimeout(url, ms) {
@@ -594,6 +642,18 @@
   }
 
   function bindUI() {
+    // Intro panels → section
+    els.intro?.addEventListener("click", (e) => {
+      const panel = e.target.closest("[data-enter-tab]");
+      if (!panel) return;
+      enterApp(panel.dataset.enterTab);
+    });
+
+    // Logo → back to cinematic explore home
+    els.homeBtn?.addEventListener("click", () => {
+      showIntro();
+    });
+
     const onTab = (e) => {
       const btn = e.target.closest("[data-tab]");
       if (!btn) return;
@@ -667,7 +727,15 @@
 
     window.addEventListener("hashchange", () => {
       const tab = (location.hash || "").replace("#", "");
-      if (tab && tab !== state.activeTab) setTab(tab, false);
+      if (!tab || tab === "intro") {
+        if (!state.inIntro) showIntro();
+        return;
+      }
+      if (state.inIntro) {
+        enterApp(tab);
+        return;
+      }
+      if (tab !== state.activeTab) setTab(tab, false);
     });
   }
 

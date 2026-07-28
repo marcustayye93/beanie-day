@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#0F766E" />
+  <meta name="theme-color" content="#0a0a0a" />
   <meta name="description" content="Beanie Day — weekly discovery for Marcus & Chesa." />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -13,7 +13,7 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="icons/icon-192.svg" />
-  <link rel="stylesheet" href="css/styles.css?v=5" />
+  <link rel="stylesheet" href="css/styles.css?v=6" />
   <title>Beanie Day</title>
   <script>
     // Ensure trailing slash on GitHub Pages project URLs so relative assets resolve
@@ -25,7 +25,7 @@
     })();
   </script>
 </head>
-<body>
+<body class="intro-active">
   <a class="skip-link" href="#main">Skip to content</a>
   <noscript>
     <div style="padding:24px;font-family:system-ui;text-align:center">
@@ -33,6 +33,47 @@
     </div>
   </noscript>
 
+  <!-- Cinematic intro (Meat Mastery–style) -->
+  <section class="intro" id="intro" aria-label="Explore Beanie Day">
+    <div class="intro-panels">
+      <button type="button" class="intro-panel intro-panel-food" data-enter-tab="flavours" aria-label="Explore Food">
+        <div class="intro-panel-media" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80&auto=format&fit=crop')"></div>
+        <div class="intro-panel-shade"></div>
+        <div class="intro-panel-copy intro-panel-copy-top">
+          <h2 class="intro-panel-title">Food</h2>
+          <p class="intro-panel-tag">TASTE, TABLE &amp; NEW MENUS</p>
+        </div>
+      </button>
+
+      <button type="button" class="intro-panel intro-panel-drinks" data-enter-tab="happy-hour" aria-label="Explore Drinks">
+        <div class="intro-panel-media" style="background-image:url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1200&q=80&auto=format&fit=crop')"></div>
+        <div class="intro-panel-shade"></div>
+        <div class="intro-panel-copy intro-panel-copy-mid">
+          <h2 class="intro-panel-title">Drinks</h2>
+          <p class="intro-panel-tag">POUR, SIP &amp; HAPPY HOUR</p>
+        </div>
+      </button>
+
+      <button type="button" class="intro-panel intro-panel-activities" data-enter-tab="this-week" aria-label="Explore Activities">
+        <div class="intro-panel-media" style="background-image:url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&q=80&auto=format&fit=crop')"></div>
+        <div class="intro-panel-shade"></div>
+        <div class="intro-panel-copy intro-panel-copy-bottom">
+          <h2 class="intro-panel-title">Activities</h2>
+          <p class="intro-panel-tag">GO, BROWSE &amp; DISCOVER</p>
+        </div>
+      </button>
+    </div>
+
+    <div class="intro-band" aria-hidden="true">
+      <p class="intro-brand">BEANIE DAY</p>
+    </div>
+
+    <div class="intro-cta-wrap">
+      <p class="intro-cta-pill" id="intro-cta">What are we exploring?</p>
+    </div>
+  </section>
+
+  <div class="app-shell" id="app-shell">
   <div class="bg-blobs" aria-hidden="true">
     <span class="blob blob-a"></span>
     <span class="blob blob-b"></span>
@@ -41,13 +82,13 @@
 
   <header class="top-bar" id="nav-bar">
     <div class="top-bar-inner">
-      <div class="brand-lockup">
+      <button type="button" class="brand-lockup brand-lockup-btn" id="home-btn" title="Back to explore" aria-label="Back to explore">
         <div class="brand-avatar" aria-hidden="true">🧢</div>
         <div>
           <p class="brand-name">Beanie Day</p>
           <p class="brand-sub" id="week-label">This week</p>
         </div>
-      </div>
+      </button>
       <div class="top-actions">
         <button type="button" class="fab-btn" id="install-btn" hidden title="Install" aria-label="Install">
           <span aria-hidden="true">↓</span>
@@ -130,6 +171,7 @@
   </main>
 
   <nav class="tab-bar" id="tab-nav" aria-label="Sections" role="tablist"></nav>
+  </div><!-- /.app-shell -->
 
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
@@ -144,7 +186,7 @@
     </form>
   </dialog>
 
-  <script src="js/app.js?v=5" defer></script>
+  <script src="js/app.js?v=6" defer></script>
   <script>
     // If the app shell never paints cards within 8s, offer a hard reset (clears SW + caches)
     window.__beanieBoot = setTimeout(function () {
