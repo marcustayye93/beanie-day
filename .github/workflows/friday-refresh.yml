@@ -1,0 +1,47 @@
+name: Friday week refresh
+
+# Friday 08:00 Singapore (UTC+8) = Friday 00:00 UTC
+on:
+  schedule:
+    - cron: "0 0 * * 5"
+  workflow_dispatch:
+    inputs:
+      force_note:
+        description: "Optional curator note stamped into meta"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Need a token that can push back to main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Roll week meta + stamp Friday refresh
+        env:
+          FORCE_NOTE: ${{ github.event.inputs.force_note }}
+        run: python3 scripts/friday-refresh.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/week.json
+          if git diff --staged --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "chore(week): Friday refresh $(date -u +%F)"
+            git push
+          fi

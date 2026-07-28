@@ -1,14 +1,18 @@
 {
   "meta": {
-    "weekLabel": "25 Jul – 31 Jul 2026",
-    "weekStart": "2026-07-25",
-    "weekEnd": "2026-07-31",
-    "refreshedOn": "2026-07-25",
-    "nextRefresh": "2026-08-01",
+    "weekLabel": "31 Jul – 6 Aug 2026",
+    "weekStart": "2026-07-31",
+    "weekEnd": "2026-08-06",
+    "refreshedOn": "2026-07-28",
+    "nextRefresh": "2026-08-07",
     "homeBase": "Woodlands, Singapore 730587",
-    "couple": ["Marcus", "Chesa"],
+    "couple": [
+      "Marcus",
+      "Chesa"
+    ],
     "note": "Only fresh finds this week — new openings, pop-ups, limited-run events, and menus you wouldn’t already have bookmarked. Familiar favourites are intentionally left out.",
-    "sourcesNote": "Scouted from City Nomads Just Opened, Eatbook, HungryGoWhere, Honeycombers, Time Out SG, Seth Lui / TheSmartLocal, Singapore Expo events, HappyHourLah, venue pages, and ParkingGoWhere / LTA rates. Always re-check hours before you go — new places change fast."
+    "sourcesNote": "Scouted from City Nomads Just Opened, Eatbook, HungryGoWhere, Honeycombers, Time Out SG, Seth Lui / TheSmartLocal, Singapore Expo events, HappyHourLah, venue pages, and ParkingGoWhere / LTA rates. Always re-check hours before you go — new places change fast.",
+    "autoRefreshNote": "Auto-stamped 2026-07-28 14:13 UTC. Curate openings from City Nomads Just Opened, Eatbook, Expo events, HappyHourLah before relying on cards — auto-roll updates dates; humans keep quality high."
   },
   "tabs": [
     {
@@ -64,455 +68,1036 @@
   "activities": [
     {
       "id": "tw-katong-omakase-new",
-      "tabs": ["this-week", "flavours"],
+      "tabs": [
+        "this-week",
+        "flavours"
+      ],
       "title": "New East Coast omakase — book this week",
       "description": "A newly opened counter-style Japanese spot near the East Coast has been lighting up food round-ups for its short seasonal menu. Small seats, so weekends fill fast — weekday dinner is the smart play.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "East", "fromWoodlands": "~45–55 min", "region": "Katong / East Coast" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "East",
+        "fromWoodlands": "~45–55 min",
+        "region": "Katong / East Coast"
+      },
       "parking": "Street lots along East Coast Rd fill early; Parkway Parade multi-storey (~5–8 min walk) is the reliable backup. Check Parking.sg for evening rates.",
       "when": "Dinner sittings; confirm booking windows on their page",
-      "days": ["Wed", "Thu", "Fri", "Sat"],
-      "source": { "label": "Eatbook / City Nomads openings", "url": "https://eatbook.sg" },
+      "days": [
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "source": {
+        "label": "Eatbook / City Nomads openings",
+        "url": "https://eatbook.sg"
+      },
       "highlight": true,
       "why": "New flavour, full restaurant (not a café), and still early enough to get a table if you move this week."
     },
     {
       "id": "tw-duxton-pop-up-brand",
-      "tabs": ["this-week", "brands"],
+      "tabs": [
+        "this-week",
+        "brands"
+      ],
       "title": "Duxton pop-up — limited label drop",
       "description": "A short-run concept retail pop-up has landed around Duxton / Keong Saik with a label you won’t find in the usual malls. Worth a focused 45-minute browse before it packs up.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "Central", "fromWoodlands": "~35–45 min", "region": "Duxton / Tanjong Pagar" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "~35–45 min",
+        "region": "Duxton / Tanjong Pagar"
+      },
       "parking": "Amara / Icon Village multi-storey. Weekday late afternoon is easier than Saturday noon.",
       "when": "Pop-up window this month — confirm end date on the listing",
-      "days": ["Thu", "Fri", "Sat", "Sun"],
-      "source": { "label": "Honeycombers / Time Out SG", "url": "https://thehoneycombers.com/singapore" },
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "Honeycombers / Time Out SG",
+        "url": "https://thehoneycombers.com/singapore"
+      },
       "highlight": true,
       "why": "Time-limited and novel — the opposite of a neighbourhood you already know cold."
     },
     {
       "id": "tw-expo-public-fair",
-      "tabs": ["this-week", "events"],
+      "tabs": [
+        "this-week",
+        "events"
+      ],
       "title": "Expo public fair — this weekend only",
       "description": "Large-scale consumer fair open to the public at Singapore Expo this weekend. Unusual density of stalls and demos you won’t get mid-week in town. Fully AC — plan 2–3 hours.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "East", "fromWoodlands": "~45–60 min", "region": "Expo / Changi" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "East",
+        "fromWoodlands": "~45–60 min",
+        "region": "Expo / Changi"
+      },
       "parking": "Expo multi-storey — arrive early on Saturday. Some ticket tiers include parking perks; check the event page.",
       "when": "Public days typically 10am–7pm — verify on singaporeexpo.com.sg",
-      "days": ["Sat", "Sun"],
-      "source": { "label": "Singapore Expo Events", "url": "https://www.singaporeexpo.com.sg/en/events" },
+      "days": [
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "Singapore Expo Events",
+        "url": "https://www.singaporeexpo.com.sg/en/events"
+      },
       "highlight": true,
       "why": "Unusual scale + only-this-weekend energy. Your Expo sweet spot."
     },
     {
       "id": "tw-tanjong-pagar-hh-launch",
-      "tabs": ["this-week", "happy-hour"],
+      "tabs": [
+        "this-week",
+        "happy-hour"
+      ],
       "title": "New TP bar — weekday launch happy hour",
       "description": "A recently opened bar in the Tanjong Pagar / Telok Ayer pocket is running a strong weekday afternoon promo to build the after-work crowd. Cold beer, AC, and a menu that goes beyond bar snacks.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "Central", "fromWoodlands": "~35–45 min", "region": "Tanjong Pagar" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "~35–45 min",
+        "region": "Tanjong Pagar"
+      },
       "parking": "Guoco Tower / nearby multi-storey. Weekday 4–6pm is workable; avoid 7pm peak.",
       "when": "Mon–Fri roughly 4pm–7pm launch promo — confirm board specials",
-      "days": ["Mon", "Tue", "Wed", "Thu", "Fri"],
-      "source": { "label": "HappyHourLah", "url": "https://www.happyhourlah.com" },
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri"
+      ],
+      "source": {
+        "label": "HappyHourLah",
+        "url": "https://www.happyhourlah.com"
+      },
       "highlight": true,
       "deal": "Launch-period selected 1-for-1 or house beer specials — check HappyHourLah + venue IG this week.",
       "why": "New venue + real afternoon deal. Worth the drive once while the promo is hot."
     },
     {
       "id": "tw-new-bahru-new-tenant",
-      "tabs": ["this-week", "brands"],
+      "tabs": [
+        "this-week",
+        "brands"
+      ],
       "title": "New Bahru — new tenant worth a look",
       "description": "Not a generic complex loop: a newly opened design / fashion tenant has been getting coverage this month. Go for that shop first, then decide if anything else nearby is new enough to linger.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "Central", "fromWoodlands": "~35–45 min", "region": "River Valley" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "~35–45 min",
+        "region": "River Valley"
+      },
       "parking": "New Bahru multi-storey; weekends ~$2–3 first hour typical. Validate live rates on Parking.sg.",
       "when": "Tue–Sun typical; check the new tenant’s hours",
-      "days": ["Sat", "Sun", "Fri"],
-      "source": { "label": "City Nomads Just Opened", "url": "https://www.citynomads.com/just-opened-singapore" },
+      "days": [
+        "Sat",
+        "Sun",
+        "Fri"
+      ],
+      "source": {
+        "label": "City Nomads Just Opened",
+        "url": "https://www.citynomads.com/just-opened-singapore"
+      },
       "highlight": true,
       "why": "Specific new opening inside a place you like — not a rehash of the whole complex."
     },
     {
       "id": "tw-north-new-restaurant",
-      "tabs": ["this-week", "flavours", "near-home"],
+      "tabs": [
+        "this-week",
+        "flavours",
+        "near-home"
+      ],
       "title": "New northern restaurant — short drive",
       "description": "A just-opened full-service restaurant in the north has been showing up in recent round-ups (interesting regional menu, not café territory). Perfect when you want something new without a full town trip.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "North", "fromWoodlands": "~10–20 min", "region": "Yishun / Sembawang fringe" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "North",
+        "fromWoodlands": "~10–20 min",
+        "region": "Yishun / Sembawang fringe"
+      },
       "parking": "Usually mall- or HDB-adjacent multi-storey nearby — confirm on the venue page. North parking is typically easier than CBD.",
       "when": "Dinner Wed–Sun; lunch if they open midweek",
-      "days": ["Wed", "Thu", "Fri", "Sat", "Sun"],
-      "source": { "label": "Eatbook / HungryGoWhere", "url": "https://www.hungrygowhere.com" },
+      "days": [
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "Eatbook / HungryGoWhere",
+        "url": "https://www.hungrygowhere.com"
+      },
       "highlight": true,
       "nearHomeBonus": true,
       "why": "New menu + near-home drive. Discovery without the PIE crawl."
     },
     {
       "id": "tw-artscience-show",
-      "tabs": ["this-week", "events"],
+      "tabs": [
+        "this-week",
+        "events"
+      ],
       "title": "Current ArtScience exhibition (AC day)",
       "description": "The rotating exhibition currently on at ArtScience Museum — check what’s installed this month. Fully indoor, high production value, and a clean rainy-day or brutal-heat plan that still feels like an outing.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "Central", "fromWoodlands": "~35–45 min", "region": "Marina Bay" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "~35–45 min",
+        "region": "Marina Bay"
+      },
       "parking": "MBS / Marina Square multi-storey. Some tickets include parking validation — check current offers.",
       "when": "Any day; weekday mornings quieter",
-      "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-      "source": { "label": "ArtScience Museum", "url": "https://www.marinabaysands.com/museum.html" },
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "ArtScience Museum",
+        "url": "https://www.marinabaysands.com/museum.html"
+      },
       "highlight": true,
       "why": "What’s on now — not a generic “go to the museum sometime.”"
     },
     {
       "id": "br-keong-saik-concept",
-      "tabs": ["brands"],
+      "tabs": [
+        "brands"
+      ],
       "title": "Keong Saik new concept store",
       "description": "A newly opened independent concept space on/near Keong Saik has been flagged for clothing and objects you won’t see in big department stores. Pair with a new dinner nearby if the browse lands.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "Central", "fromWoodlands": "~35–45 min", "region": "Keong Saik / Outram" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "~35–45 min",
+        "region": "Keong Saik / Outram"
+      },
       "parking": "Nearby hotel/mall multi-storey; street lots scarce on weekends.",
       "when": "Afternoons into evening; closed days vary — check listing",
-      "days": ["Thu", "Fri", "Sat", "Sun"],
-      "source": { "label": "City Nomads Just Opened", "url": "https://www.citynomads.com/just-opened-singapore" },
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "City Nomads Just Opened",
+        "url": "https://www.citynomads.com/just-opened-singapore"
+      },
       "why": "New retail address, not a familiar strip you’ve already mapped."
     },
     {
       "id": "br-orchard-limited-drop",
-      "tabs": ["brands"],
+      "tabs": [
+        "brands"
+      ],
       "title": "Orchard limited drop / new concept floor",
       "description": "Scan for a limited collaboration or newly opened concept corner along Orchard (ION / Takashimaya / standalone). Only go if there’s a specific new listing this week — not for a general mall walk.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "Central", "fromWoodlands": "~30–40 min", "region": "Orchard" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "~30–40 min",
+        "region": "Orchard"
+      },
       "parking": "ION / Wisma linked multi-storey; weekday free-parking promos with spend still appear — check boards.",
       "when": "Any day 11am–9pm; weekday afternoons for stock",
-      "days": ["Wed", "Thu", "Fri", "Sat"],
-      "source": { "label": "City Nomads / brand IG", "url": "https://www.citynomads.com" },
+      "days": [
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "source": {
+        "label": "City Nomads / brand IG",
+        "url": "https://www.citynomads.com"
+      },
       "why": "Targeted new drop — skip if nothing fresh is listed this week."
     },
     {
       "id": "br-bugis-weekend-market",
-      "tabs": ["brands", "events"],
+      "tabs": [
+        "brands",
+        "events"
+      ],
       "title": "Bugis outdoor market weekend (if on)",
       "description": "Only when the outdoor weekend market is running (often alternate weekends). Indie stalls + finds you won’t get mid-week. Confirm market weekend before you drive in; otherwise skip.",
-      "tags": ["Outdoor", "Indoor", "AC"],
-      "travel": { "zone": "Central", "fromWoodlands": "~35–45 min", "region": "Bugis / Kampong Glam" },
+      "tags": [
+        "Outdoor",
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "~35–45 min",
+        "region": "Bugis / Kampong Glam"
+      },
       "parking": "Bugis+ multi-storey is the practical default.",
       "when": "Sat–Sun; verify market is on this weekend first",
-      "days": ["Sat", "Sun"],
-      "source": { "label": "Time Out Singapore", "url": "https://www.timeout.com/singapore" },
+      "days": [
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "Time Out Singapore",
+        "url": "https://www.timeout.com/singapore"
+      },
       "why": "Seasonal/market energy — only surfaces when it’s actually happening."
     },
     {
       "id": "br-joo-chiat-new",
-      "tabs": ["brands"],
+      "tabs": [
+        "brands"
+      ],
       "title": "Joo Chiat / Katong new indie opening",
       "description": "A new boutique or homewares opening has been covered in east-side lifestyle posts. Short AC-heavy hop between shops; keep outdoor stretches brief in the heat.",
-      "tags": ["Indoor", "Outdoor", "AC"],
-      "travel": { "zone": "East", "fromWoodlands": "~45–55 min", "region": "Joo Chiat / Katong" },
+      "tags": [
+        "Indoor",
+        "Outdoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "East",
+        "fromWoodlands": "~45–55 min",
+        "region": "Joo Chiat / Katong"
+      },
       "parking": "Parkway Parade or local multi-storey; estate street lots tight on weekends.",
       "when": "Sat–Sun afternoon or weekday late afternoon",
-      "days": ["Sat", "Sun", "Fri"],
-      "source": { "label": "Honeycombers / TheSmartLocal", "url": "https://thesmartlocal.com" },
+      "days": [
+        "Sat",
+        "Sun",
+        "Fri"
+      ],
+      "source": {
+        "label": "Honeycombers / TheSmartLocal",
+        "url": "https://thesmartlocal.com"
+      },
       "why": "East-side novelty when you want something off your usual central loop."
     },
     {
       "id": "fl-tp-new-kitchen",
-      "tabs": ["flavours"],
+      "tabs": [
+        "flavours"
+      ],
       "title": "Tanjong Pagar — just-opened kitchen",
       "description": "A new full-service restaurant opening in the CBD fringe with a menu angle that stood out in recent coverage (regional technique or unusual ingredient focus). Book if the room is small.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "Central", "fromWoodlands": "~35–45 min", "region": "Tanjong Pagar" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "~35–45 min",
+        "region": "Tanjong Pagar"
+      },
       "parking": "CBD multi-storey (Guoco / nearby). Dinner duration often $4–8 parking — budget for it.",
       "when": "Dinner Thu–Sun; weekday lunch for less wait",
-      "days": ["Thu", "Fri", "Sat", "Sun"],
-      "source": { "label": "City Nomads Just Opened", "url": "https://www.citynomads.com/just-opened-singapore" },
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "City Nomads Just Opened",
+        "url": "https://www.citynomads.com/just-opened-singapore"
+      },
       "why": "Named new opening energy — not a familiar food hall crawl."
     },
     {
       "id": "fl-robertson-new",
-      "tabs": ["flavours"],
+      "tabs": [
+        "flavours"
+      ],
       "title": "Robertson Quay new restaurant",
       "description": "Recent opening along the Quay with a proper dinner menu (skip pure café hype). River-adjacent but prioritise indoor AC seating until evening cools.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "Central", "fromWoodlands": "~35–45 min", "region": "Robertson Quay" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "~35–45 min",
+        "region": "Robertson Quay"
+      },
       "parking": "UE Square / nearby multi-storey. Weekends busier from 7pm.",
       "when": "Dinner Fri–Sun; weekday evenings quieter",
-      "days": ["Wed", "Thu", "Fri", "Sat", "Sun"],
-      "source": { "label": "Eatbook / Seth Lui", "url": "https://sethlui.com" },
+      "days": [
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "Eatbook / Seth Lui",
+        "url": "https://sethlui.com"
+      },
       "why": "New address on a strip that keeps rotating — worth checking what’s actually new."
     },
     {
       "id": "fl-chinatown-new",
-      "tabs": ["flavours"],
+      "tabs": [
+        "flavours"
+      ],
       "title": "Chinatown / Club Street new menu",
       "description": "A newly opened or heavily refreshed restaurant in the Chinatown / Club Street pocket flagged for an interesting menu (modern Chinese or regional). AC sit-down, not a hawker re-run.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "Central", "fromWoodlands": "~35–45 min", "region": "Chinatown / Club Street" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "~35–45 min",
+        "region": "Chinatown / Club Street"
+      },
       "parking": "Chin@town Point / People’s Park Complex multi-storey.",
       "when": "Dinner or late lunch weekends",
-      "days": ["Fri", "Sat", "Sun"],
-      "source": { "label": "HungryGoWhere / Eatbook", "url": "https://eatbook.sg" },
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "HungryGoWhere / Eatbook",
+        "url": "https://eatbook.sg"
+      },
       "why": "Flavour-first new opening — not Maxwell-by-default."
     },
     {
       "id": "fl-west-new-opening",
-      "tabs": ["flavours", "near-home"],
+      "tabs": [
+        "flavours",
+        "near-home"
+      ],
       "title": "West-side new restaurant (Jurong fringe)",
       "description": "A new full-service opening in the west has been getting first-look coverage. Worth it when you want discovery without fighting into Orchard traffic.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "West", "fromWoodlands": "~25–35 min", "region": "Jurong East / west fringe" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "West",
+        "fromWoodlands": "~25–35 min",
+        "region": "Jurong East / west fringe"
+      },
       "parking": "Usually mall multi-storey adjacent — easier than town evenings.",
       "when": "Dinner Thu–Sun",
-      "days": ["Thu", "Fri", "Sat", "Sun"],
-      "source": { "label": "Eatbook / City Nomads", "url": "https://www.citynomads.com/just-opened-singapore" },
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "Eatbook / City Nomads",
+        "url": "https://www.citynomads.com/just-opened-singapore"
+      },
       "nearHomeBonus": true,
       "why": "New kitchen + west drive — bonus when central feels overdone."
     },
     {
       "id": "fl-siglap-new",
-      "tabs": ["flavours"],
+      "tabs": [
+        "flavours"
+      ],
       "title": "Siglap / East Coast new dinner spot",
       "description": "Another east-side opening making the rounds for a distinctive menu. Good pairing if you’re already east for the omakase or a market — don’t treat it as a café stop.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "East", "fromWoodlands": "~45–55 min", "region": "Siglap / East Coast" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "East",
+        "fromWoodlands": "~45–55 min",
+        "region": "Siglap / East Coast"
+      },
       "parking": "Parkway Parade or local multi-storey near Upper East Coast.",
       "when": "Dinner Wed–Sun",
-      "days": ["Wed", "Thu", "Fri", "Sat", "Sun"],
-      "source": { "label": "Time Out SG / Eatbook", "url": "https://www.timeout.com/singapore" },
+      "days": [
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "Time Out SG / Eatbook",
+        "url": "https://www.timeout.com/singapore"
+      },
       "why": "Fresh east dinner option outside your usual central rotation."
     },
     {
       "id": "hh-emerald-new-deal",
-      "tabs": ["happy-hour"],
+      "tabs": [
+        "happy-hour"
+      ],
       "title": "Emerald Hill / Orchard — this week’s standout deal",
       "description": "Not a generic strip guide: pick the venue currently running the strongest weekday afternoon promo (1-for-1 or house beer). Scan HappyHourLah for what’s live this week, then park once and walk.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "Central", "fromWoodlands": "~30–40 min", "region": "Orchard / Emerald Hill" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "~30–40 min",
+        "region": "Orchard / Emerald Hill"
+      },
       "parking": "ION / Ngee Ann City multi-storey; walk to Emerald Hill after.",
       "when": "Mon–Fri ~3pm–7pm (venue-dependent)",
-      "days": ["Mon", "Tue", "Wed", "Thu", "Fri"],
-      "source": { "label": "HappyHourLah", "url": "https://www.happyhourlah.com" },
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri"
+      ],
+      "source": {
+        "label": "HappyHourLah",
+        "url": "https://www.happyhourlah.com"
+      },
       "deal": "Look for current 1-for-1 selected drinks or discounted beer + free-flow soft drinks with sets. Deals rotate — check this week’s list.",
       "why": "Deal-led, not neighbourhood-nostalgia-led."
     },
     {
       "id": "hh-telok-ayer-new",
-      "tabs": ["happy-hour"],
+      "tabs": [
+        "happy-hour"
+      ],
       "title": "Telok Ayer new bar promo",
       "description": "A newer bar in the Telok Ayer cluster is pushing weekday HH to build regulars. AC first; outdoor only after the sun drops if they have a terrace.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "Central", "fromWoodlands": "~35–45 min", "region": "Telok Ayer / CBD" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "~35–45 min",
+        "region": "Telok Ayer / CBD"
+      },
       "parking": "CBD multi-storey after office hours can free up — still tighter than suburbs.",
       "when": "Mon–Fri ~5pm–8pm",
-      "days": ["Mon", "Tue", "Wed", "Thu", "Fri"],
-      "source": { "label": "HappyHourLah / Urban List", "url": "https://www.theurbanlist.com/singapore" },
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri"
+      ],
+      "source": {
+        "label": "HappyHourLah / Urban List",
+        "url": "https://www.theurbanlist.com/singapore"
+      },
       "deal": "Often 1-for-1 house pours or fixed-price beer until 8pm during launch weeks.",
       "why": "New room + real promo window."
     },
     {
       "id": "hh-boat-quay-limited",
-      "tabs": ["happy-hour"],
+      "tabs": [
+        "happy-hour"
+      ],
       "title": "Riverside limited-time weekday HH",
       "description": "Selected riverside venues refresh weekday deals seasonally. Target midweek late afternoon for AC seating and the best-value boards — skip if the only offer is tourist-trap pricing.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "Central", "fromWoodlands": "~35–45 min", "region": "Boat Quay / Clarke fringe" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "~35–45 min",
+        "region": "Boat Quay / Clarke fringe"
+      },
       "parking": "Funan / Central Mall multi-storey; weekday HH is the parking-friendly window.",
       "when": "Weekday 4pm–8pm",
-      "days": ["Tue", "Wed", "Thu", "Fri"],
-      "source": { "label": "HappyHourLah", "url": "https://www.happyhourlah.com" },
+      "days": [
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri"
+      ],
+      "source": {
+        "label": "HappyHourLah",
+        "url": "https://www.happyhourlah.com"
+      },
       "deal": "Confirm current 1-for-1 and free-flow soft drink bundles before you sit.",
       "why": "Only when the deal is actually good this week."
     },
     {
       "id": "hh-woodlands-new-venue",
-      "tabs": ["happy-hour", "near-home"],
+      "tabs": [
+        "happy-hour",
+        "near-home"
+      ],
       "title": "Near-home new F&B promo (north)",
       "description": "When a north-side restaurant or bar posts a new weekday drink deal, it lands here. Low glamour, high convenience — only listed when something fresh appears, not as a default mall loop.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "North", "fromWoodlands": "~5–15 min", "region": "Woodlands / Yishun" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "North",
+        "fromWoodlands": "~5–15 min",
+        "region": "Woodlands / Yishun"
+      },
       "parking": "Usually free/easy mall multi-storey nearby.",
       "when": "Weekday evenings when promo is active",
-      "days": ["Mon", "Tue", "Wed", "Thu", "Fri"],
-      "source": { "label": "Venue boards / local listings", "url": "https://www.hungrygowhere.com" },
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri"
+      ],
+      "source": {
+        "label": "Venue boards / local listings",
+        "url": "https://www.hungrygowhere.com"
+      },
       "deal": "Weekday set + drink bundles when advertised — verify this week.",
       "nearHomeBonus": true,
       "why": "New promo near home — not a permanent “go to the usual mall” tip."
     },
     {
       "id": "ev-expo-whats-on",
-      "tabs": ["events"],
+      "tabs": [
+        "events"
+      ],
       "title": "Singapore Expo — live calendar check",
       "description": "Start at the official Expo events page for what’s public this week: lifestyle fairs, consumer expos, pop-culture weekends. Only go when a listing matches your curiosity — skip empty weeks.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "East", "fromWoodlands": "~45–60 min", "region": "Expo" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "East",
+        "fromWoodlands": "~45–60 min",
+        "region": "Expo"
+      },
       "parking": "Expo car parks; event days fill — early arrival helps.",
       "when": "Public event hours (often 10am–7pm)",
-      "days": ["Fri", "Sat", "Sun"],
-      "source": { "label": "Singapore Expo Events", "url": "https://www.singaporeexpo.com.sg/en/events" },
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "Singapore Expo Events",
+        "url": "https://www.singaporeexpo.com.sg/en/events"
+      },
       "why": "Calendar-driven. Empty Expo week = no card pressure."
     },
     {
       "id": "ev-marina-light",
-      "tabs": ["events"],
+      "tabs": [
+        "events"
+      ],
       "title": "Marina Bay seasonal programme",
       "description": "Only when a light show, installation, or waterfront programme is active on the Marina Bay calendar. Evening slot; duck into AC between outdoor segments.",
-      "tags": ["Outdoor", "Indoor", "AC"],
-      "travel": { "zone": "Central", "fromWoodlands": "~35–45 min", "region": "Marina Bay" },
+      "tags": [
+        "Outdoor",
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "~35–45 min",
+        "region": "Marina Bay"
+      },
       "parking": "MBS / Marina Square / Suntec — pricey evenings; MRT is a valid plan B.",
       "when": "Evenings while the programme runs",
-      "days": ["Fri", "Sat", "Sun"],
-      "source": { "label": "Marina Bay calendar", "url": "https://www.marina-bay.sg" },
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "Marina Bay calendar",
+        "url": "https://www.marina-bay.sg"
+      },
       "why": "Event-specific — not a permanent skyline walk."
     },
     {
       "id": "ev-national-gallery",
-      "tabs": ["events"],
+      "tabs": [
+        "events"
+      ],
       "title": "National Gallery — current special exhibition",
       "description": "Check the special exhibition currently hanging (not the permanent collection re-walk). Fully AC, high quality, and a strong midweek alternative when the heat is brutal.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "Central", "fromWoodlands": "~35–45 min", "region": "City Hall / Padang" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "~35–45 min",
+        "region": "City Hall / Padang"
+      },
       "parking": "City Hall / Capitol / Funan multi-storey.",
       "when": "Any day; free/discounted periods sometimes apply — check site",
-      "days": ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-      "source": { "label": "National Gallery Singapore", "url": "https://www.nationalgallery.sg" },
+      "days": [
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "National Gallery Singapore",
+        "url": "https://www.nationalgallery.sg"
+      },
       "why": "What’s on now, not “museums exist.”"
     },
     {
       "id": "ev-esplanade-show",
-      "tabs": ["events"],
+      "tabs": [
+        "events"
+      ],
       "title": "Esplanade — this week’s ticketed show",
       "description": "If there’s a concert, theatre, or free outdoor programme worth catching this week, it’s here. Check the Esplanade What’s On list before committing the drive.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "Central", "fromWoodlands": "~35–45 min", "region": "Esplanade / Bayfront" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "~35–45 min",
+        "region": "Esplanade / Bayfront"
+      },
       "parking": "Esplanade / MBS / Suntec multi-storey.",
       "when": "Show times vary — buy tickets ahead for popular acts",
-      "days": ["Thu", "Fri", "Sat", "Sun"],
-      "source": { "label": "Esplanade What’s On", "url": "https://www.esplanade.com" },
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "Esplanade What’s On",
+        "url": "https://www.esplanade.com"
+      },
       "why": "Only when something is actually on the calendar."
     },
     {
       "id": "nh-woodlands-new-opening",
-      "tabs": ["near-home", "flavours"],
+      "tabs": [
+        "near-home",
+        "flavours"
+      ],
       "title": "Woodlands / Admiralty new F&B",
       "description": "A new restaurant or interesting menu opening close to home. Only listed when coverage or a real opening appears — never as a permanent “default mall” tip.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "North", "fromWoodlands": "5–15 min", "region": "Woodlands" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "North",
+        "fromWoodlands": "5–15 min",
+        "region": "Woodlands"
+      },
       "parking": "Usually straightforward multi-storey or HDB nearby.",
       "when": "Evenings and weekends once open",
-      "days": ["Wed", "Thu", "Fri", "Sat", "Sun"],
-      "source": { "label": "Local F&B listings / Eatbook", "url": "https://eatbook.sg" },
+      "days": [
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "Local F&B listings / Eatbook",
+        "url": "https://eatbook.sg"
+      },
       "nearHomeBonus": true,
       "why": "Discovery next door — the whole point of Near Home."
     },
     {
       "id": "nh-sembawang-new",
-      "tabs": ["near-home"],
+      "tabs": [
+        "near-home"
+      ],
       "title": "Sembawang / Canberra new spot",
       "description": "New north-fringe opening (food or browse-worthy) that’s easy from Woodlands. Surfaces only when something actually launches — not a park-you-already-know tip.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "North", "fromWoodlands": "~10–20 min", "region": "Sembawang / Canberra" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "North",
+        "fromWoodlands": "~10–20 min",
+        "region": "Sembawang / Canberra"
+      },
       "parking": "Mall or HDB multi-storey — generally easy evenings.",
       "when": "When the new venue’s hours allow",
-      "days": ["Thu", "Fri", "Sat", "Sun"],
-      "source": { "label": "HungryGoWhere / community listings", "url": "https://www.hungrygowhere.com" },
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "HungryGoWhere / community listings",
+        "url": "https://www.hungrygowhere.com"
+      },
       "nearHomeBonus": true,
       "why": "North novelty without inventing errands."
     },
     {
       "id": "nh-kallang-wave-new",
-      "tabs": ["near-home", "events"],
+      "tabs": [
+        "near-home",
+        "events"
+      ],
       "title": "Sports Hub / Kallang — special event week",
       "description": "Only when a concert, match, or public event is on at the Sports Hub. Not a “go walk around the stadium” filler.",
-      "tags": ["Indoor", "Outdoor", "AC"],
-      "travel": { "zone": "Central-East", "fromWoodlands": "~30–40 min", "region": "Kallang" },
+      "tags": [
+        "Indoor",
+        "Outdoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "Central-East",
+        "fromWoodlands": "~30–40 min",
+        "region": "Kallang"
+      },
       "parking": "Sports Hub multi-storey — event pricing and queues apply; arrive early.",
       "when": "Event day/time only",
-      "days": ["Sat", "Sun", "Fri"],
-      "source": { "label": "Singapore Sports Hub", "url": "https://www.sportshub.com.sg" },
+      "days": [
+        "Sat",
+        "Sun",
+        "Fri"
+      ],
+      "source": {
+        "label": "Singapore Sports Hub",
+        "url": "https://www.sportshub.com.sg"
+      },
       "nearHomeBonus": true,
       "why": "Event-driven near-ish outing from the north."
     },
     {
       "id": "nh-west-pop-up",
-      "tabs": ["near-home", "brands"],
+      "tabs": [
+        "near-home",
+        "brands"
+      ],
       "title": "West pop-up or new concept (limited run)",
       "description": "When a limited retail or F&B pop-up lands west (Jurong / west malls / concept spaces), it earns a slot. Skip empty weeks.",
-      "tags": ["Indoor", "AC"],
-      "travel": { "zone": "West", "fromWoodlands": "~25–35 min", "region": "Jurong / West" },
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "West",
+        "fromWoodlands": "~25–35 min",
+        "region": "Jurong / West"
+      },
       "parking": "Mall multi-storey typically.",
       "when": "Pop-up dates only — confirm before driving",
-      "days": ["Sat", "Sun", "Fri"],
-      "source": { "label": "Honeycombers / mall event pages", "url": "https://thehoneycombers.com/singapore" },
+      "days": [
+        "Sat",
+        "Sun",
+        "Fri"
+      ],
+      "source": {
+        "label": "Honeycombers / mall event pages",
+        "url": "https://thehoneycombers.com/singapore"
+      },
       "nearHomeBonus": true,
       "why": "Time-limited west discovery."
     },
     {
       "id": "out-gardens-by-bay-show",
-      "tabs": ["outdoor", "events"],
+      "tabs": [
+        "outdoor",
+        "events"
+      ],
       "title": "Gardens by the Bay — current outdoor programme",
       "description": "Only when a seasonal light show, floral display, or evening programme is running. Short outdoor segments after 6pm; Cloud Forest / Flower Dome as AC backup.",
-      "tags": ["Outdoor", "Indoor", "AC"],
-      "travel": { "zone": "Central", "fromWoodlands": "~35–45 min", "region": "Marina Bay / Bayfront" },
+      "tags": [
+        "Outdoor",
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "~35–45 min",
+        "region": "Marina Bay / Bayfront"
+      },
       "parking": "Gardens / MBS multi-storey. Evening rates apply.",
       "when": "Evenings while the programme runs",
-      "days": ["Fri", "Sat", "Sun"],
-      "source": { "label": "Gardens by the Bay", "url": "https://www.gardensbythebay.com.sg" },
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "Gardens by the Bay",
+        "url": "https://www.gardensbythebay.com.sg"
+      },
       "heatNote": "Outdoors only after the heat breaks. Domes are the AC escape hatch.",
       "why": "Programme-driven, not a permanent garden stroll recap."
     },
     {
       "id": "out-botanic-event",
-      "tabs": ["outdoor"],
+      "tabs": [
+        "outdoor"
+      ],
       "title": "Botanic Gardens — special evening event",
       "description": "When NParks or a partner runs a special evening programme, concert, or seasonal highlight — not a default Swan Lake lap. Finish with AC dinner nearby if you stay out.",
-      "tags": ["Outdoor"],
-      "travel": { "zone": "Central", "fromWoodlands": "~30–40 min", "region": "Botanic Gardens / Tanglin" },
+      "tags": [
+        "Outdoor"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "~30–40 min",
+        "region": "Botanic Gardens / Tanglin"
+      },
       "parking": "Botanic Gardens car parks; free periods may apply for short stays — check signs.",
       "when": "Event evening only; otherwise skip",
-      "days": ["Fri", "Sat", "Sun"],
-      "source": { "label": "NParks events", "url": "https://www.nparks.gov.sg" },
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "NParks events",
+        "url": "https://www.nparks.gov.sg"
+      },
       "heatNote": "Evening only. Midday walks are not the product.",
       "why": "Event filter keeps this from becoming a park you already know."
     },
     {
       "id": "out-sentosa-limited",
-      "tabs": ["outdoor", "events"],
+      "tabs": [
+        "outdoor",
+        "events"
+      ],
       "title": "Sentosa limited-time outdoor / beach event",
       "description": "Only when a festival, night market, or limited beach programme is advertised. Evening preferred; AC backup at nearby malls after.",
-      "tags": ["Outdoor", "Indoor", "AC"],
-      "travel": { "zone": "South", "fromWoodlands": "~45–55 min", "region": "Sentosa / HarbourFront" },
+      "tags": [
+        "Outdoor",
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "South",
+        "fromWoodlands": "~45–55 min",
+        "region": "Sentosa / HarbourFront"
+      },
       "parking": "Sentosa / HarbourFront multi-storey — weekend evenings queue; consider earlier arrival.",
       "when": "Event evenings only",
-      "days": ["Fri", "Sat", "Sun"],
-      "source": { "label": "Sentosa What’s On", "url": "https://www.sentosa.com.sg" },
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "Sentosa What’s On",
+        "url": "https://www.sentosa.com.sg"
+      },
       "heatNote": "Beach heat is real — go late or don’t go.",
       "why": "Special event, not a generic island day."
     },
     {
       "id": "out-coney-seasonal",
-      "tabs": ["outdoor", "near-home"],
+      "tabs": [
+        "outdoor",
+        "near-home"
+      ],
       "title": "Coney Island — cool-season / evening window",
       "description": "Only recommend in lower-heat windows or late day for a short loop. Not a weekly default — surfaces when weather cooperates and you want a north outdoor change of scene.",
-      "tags": ["Outdoor"],
-      "travel": { "zone": "North", "fromWoodlands": "~20–25 min", "region": "Punggol / Coney" },
+      "tags": [
+        "Outdoor"
+      ],
+      "travel": {
+        "zone": "North",
+        "fromWoodlands": "~20–25 min",
+        "region": "Punggol / Coney"
+      },
       "parking": "Punggol Point / nearby public lots — check NParks access notes.",
       "when": "Late afternoon / early evening only",
-      "days": ["Sat", "Sun"],
-      "source": { "label": "NParks Coney Island", "url": "https://www.nparks.gov.sg" },
+      "days": [
+        "Sat",
+        "Sun"
+      ],
+      "source": {
+        "label": "NParks Coney Island",
+        "url": "https://www.nparks.gov.sg"
+      },
       "nearHomeBonus": true,
       "heatNote": "Skip on scorching weeks. Short loop + water + AC dinner after.",
       "why": "Weather-gated north outdoor — not a permanent listing."
     },
     {
       "id": "out-rooftop-new",
-      "tabs": ["outdoor", "happy-hour"],
+      "tabs": [
+        "outdoor",
+        "happy-hour"
+      ],
       "title": "New rooftop / sky bar evening (after dark)",
       "description": "When a new rooftop or sky lounge opens or launches a sunset promo, it’s a heat-smart outdoor-ish option — go after 6:30pm. AC indoor bar as fallback.",
-      "tags": ["Outdoor", "Indoor", "AC"],
-      "travel": { "zone": "Central", "fromWoodlands": "~30–45 min", "region": "CBD / Orchard fringe" },
+      "tags": [
+        "Outdoor",
+        "Indoor",
+        "AC"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "~30–45 min",
+        "region": "CBD / Orchard fringe"
+      },
       "parking": "Building multi-storey; evening rates vary widely.",
       "when": "After 6:30pm; weekday launch promos best",
-      "days": ["Wed", "Thu", "Fri", "Sat"],
-      "source": { "label": "Urban List / HappyHourLah", "url": "https://www.theurbanlist.com/singapore" },
+      "days": [
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "source": {
+        "label": "Urban List / HappyHourLah",
+        "url": "https://www.theurbanlist.com/singapore"
+      },
       "heatNote": "Rooftops at 3pm in July are a trap. Evening only.",
       "why": "New venue + evening outdoor energy without pretending midday parks are fun."
     }

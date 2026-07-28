@@ -17,7 +17,7 @@ from __future__ import annotations
 
 import json
 import os
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -76,7 +76,7 @@ def main() -> None:
 
     extra = (os.environ.get("FORCE_NOTE") or "").strip()
     stamp = (
-        f"Auto-stamped {datetime.utcnow().strftime('%Y-%m-%d %H:%M')} UTC. "
+        f"Auto-stamped {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M')} UTC. "
         "Curate openings from City Nomads Just Opened, Eatbook, Expo events, HappyHourLah "
         "before relying on cards — auto-roll updates dates; humans keep quality high."
     )
