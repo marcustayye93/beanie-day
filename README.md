@@ -8,9 +8,9 @@ Preferences (Holland Village energy, New Bahru browsing, dense food halls, Expo,
 
 ## Live app (GitHub Pages)
 
-**https://marcustayye.github.io/beanie-day/**
+**https://marcustayye93.github.io/beanie-day/**
 
-Repo: [github.com/marcustayye/beanie-day](https://github.com/marcustayye/beanie-day)
+Repo: [github.com/marcustayye93/beanie-day](https://github.com/marcustayye93/beanie-day)
 
 ### Install on iPhone (PWA)
 
