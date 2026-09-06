@@ -288,3 +288,49 @@ body.nav-open {
   margin-left: 2px;
   opacity: 0.95;
 }
+
+
+/* Friday zone-pass honesty banner */
+.zone-pass {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--surface) 92%, #0f766e 8%);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid color-mix(in srgb, #0f766e 18%, transparent);
+}
+.zone-pass-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.zone-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-2);
+}
+.zone-chip.is-filled {
+  background: color-mix(in srgb, #22c55e 18%, var(--surface));
+  color: #166534;
+}
+.zone-chip.is-empty {
+  color: var(--ink-3);
+}
+.zone-chip.is-skipped {
+  color: var(--ink-3);
+  opacity: 0.85;
+}
+.zone-pass-copy {
+  margin: 8px 0 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--ink-2);
+  font-weight: 600;
+}
