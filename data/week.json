@@ -5,11 +5,6 @@
     "weekEnd": "2026-09-10",
     "refreshedOn": "2026-09-04",
     "nextRefresh": "2026-09-11",
-    "homeBase": "Woodlands, Singapore 730587",
-    "couple": [
-      "Marcus",
-      "Chesa"
-    ],
     "note": "Only fresh finds this week — new openings, pop-ups, limited-run events, and menus you wouldn’t already have bookmarked. Familiar favourites are intentionally left out.",
     "sourcesNote": "Scouted from City Nomads Just Opened, Eatbook, HungryGoWhere, Honeycombers, Time Out SG, Seth Lui / TheSmartLocal, Singapore Expo events, HappyHourLah, venue pages, and ParkingGoWhere / LTA rates. Always re-check hours before you go — new places change fast.",
     "autoRefreshNote": "Auto-stamped 2026-09-04 02:23 UTC. Curate openings from City Nomads Just Opened, Eatbook, Expo events, HappyHourLah before relying on cards — auto-roll updates dates; humans keep quality high.",
@@ -94,7 +89,7 @@
       "label": "Near Home",
       "shortLabel": "Home",
       "emoji": "🏡",
-      "blurb": "New or easy-to-miss finds in the north & west — only when they’re genuinely worth it from Woodlands."
+      "blurb": "New or easy-to-miss finds in the north & west — only when they’re genuinely worth the trip from home."
     },
     {
       "id": "outdoor",
@@ -717,7 +712,7 @@
       "travel": {
         "zone": "North",
         "fromWoodlands": "~5–15 min",
-        "region": "Woodlands / Yishun"
+        "region": "North / Yishun"
       },
       "parking": "Usually free/easy mall multi-storey nearby.",
       "when": "Weekday evenings when promo is active",
@@ -863,8 +858,8 @@
         "near-home",
         "flavours"
       ],
-      "title": "Woodlands / Admiralty new F&B",
-      "description": "A new restaurant or interesting menu opening close to home. Only listed when coverage or a real opening appears — never as a permanent “default mall” tip.",
+      "title": "Admiralty new F&B",
+      "description": "A new restaurant or interesting menu opening in the north. Only listed when coverage or a real opening appears — never as a permanent “default mall” tip.",
       "tags": [
         "Indoor",
         "AC"
@@ -872,7 +867,7 @@
       "travel": {
         "zone": "North",
         "fromWoodlands": "5–15 min",
-        "region": "Woodlands"
+        "region": "Admiralty"
       },
       "parking": "Usually straightforward multi-storey or HDB nearby.",
       "when": "Evenings and weekends once open",
@@ -896,7 +891,7 @@
         "near-home"
       ],
       "title": "Sembawang / Canberra new spot",
-      "description": "New north-fringe opening (food or browse-worthy) that’s easy from Woodlands. Surfaces only when something actually launches — not a park-you-already-know tip.",
+      "description": "New north-fringe opening (food or browse-worthy) that’s easy from home. Surfaces only when something actually launches — not a park-you-already-know tip.",
       "tags": [
         "Indoor",
         "AC"

@@ -488,7 +488,7 @@ body:not(.intro-active) .section-header {
 }
 
 
-/* —— Marcus polish: sharper, no emoji, gradient bg, richer motion —— */
+/* —— night-out polish: sharper, no emoji, gradient bg, richer motion —— */
 body:not(.intro-active) {
   --radius: 8px;
   --radius-sm: 6px;
