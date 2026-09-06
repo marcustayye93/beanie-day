@@ -14,6 +14,10 @@
       var s = document.createElement("script");
       s.text = texts.join("");
       document.head.appendChild(s);
+      var z = document.createElement("script");
+      z.src = "js/zone-pass.js?v=12";
+      z.defer = true;
+      document.head.appendChild(z);
     })
     .catch(function (err) {
       console.error("Beanie Day bake load failed", err);
