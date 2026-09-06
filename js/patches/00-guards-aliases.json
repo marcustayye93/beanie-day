@@ -1,5 +1,5 @@
 {
   "name": "guards-aliases",
-  "old": "  const TAB_KEY = \"beanie-day-active-tab\";\n\n  const TAB_THEME = {",
-  "new": "  const TAB_KEY = \"beanie-day-active-tab\";\n\n  const G = window.BeanieGuards || {};\n  const isBlocklisted = G.isBlocklisted || (() => false);\n  const isFresh = G.isFresh || ((a) => Boolean(a && a.highlight));\n  const venueName = G.venueName || (() => \"\");\n  const normalizeWeekData =\n    G.normalizeWeekData ||\n    ((raw) =>\n      raw && Array.isArray(raw.activities) && Array.isArray(raw.tabs) ? raw : null);\n\n  const TAB_THEME = {"
+  "old_b64": "ICBjb25zdCBUQUJfS0VZID0gImJlYW5pZS1kYXktYWN0aXZlLXRhYiI7CgogIGNvbnN0IFRBQl9USEVNRSA9IHs=",
+  "new_b64": "ICBjb25zdCBUQUJfS0VZID0gImJlYW5pZS1kYXktYWN0aXZlLXRhYiI7CgogIGNvbnN0IEcgPSB3aW5kb3cuQmVhbmllR3VhcmRzIHx8IHt9OwogIGNvbnN0IGlzQmxvY2tsaXN0ZWQgPSBHLmlzQmxvY2tsaXN0ZWQgfHwgKCgpID0+IGZhbHNlKTsKICBjb25zdCBpc0ZyZXNoID0gRy5pc0ZyZXNoIHx8ICgoYSkgPT4gQm9vbGVhbihhICYmIGEuaGlnaGxpZ2h0KSk7CiAgY29uc3QgdmVudWVOYW1lID0gRy52ZW51ZU5hbWUgfHwgKCgpID0+ICIiKTsKICBjb25zdCBub3JtYWxpemVXZWVrRGF0YSA9CiAgICBHLm5vcm1hbGl6ZVdlZWtEYXRhIHx8CiAgICAoKHJhdykgPT4KICAgICAgcmF3ICYmIEFycmF5LmlzQXJyYXkocmF3LmFjdGl2aXRpZXMpICYmIEFycmF5LmlzQXJyYXkocmF3LnRhYnMpID8gcmF3IDogbnVsbCk7CgogIGNvbnN0IFRBQl9USEVNRSA9IHs="
 }

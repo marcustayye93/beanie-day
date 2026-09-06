@@ -1,5 +1,5 @@
 {
   "name": "filter-blocklist",
-  "old": "    let list = state.data.activities.filter((a) => a.tabs.includes(state.activeTab));",
-  "new": "    let list = state.data.activities.filter(\n      (a) => a.tabs.includes(state.activeTab) && !isBlocklisted(a)\n    );"
+  "old_b64": "ICAgIGxldCBsaXN0ID0gc3RhdGUuZGF0YS5hY3Rpdml0aWVzLmZpbHRlcigoYSkgPT4gYS50YWJzLmluY2x1ZGVzKHN0YXRlLmFjdGl2ZVRhYikpOw==",
+  "new_b64": "ICAgIGxldCBsaXN0ID0gc3RhdGUuZGF0YS5hY3Rpdml0aWVzLmZpbHRlcigKICAgICAgKGEpID0+IGEudGFicy5pbmNsdWRlcyhzdGF0ZS5hY3RpdmVUYWIpICYmICFpc0Jsb2NrbGlzdGVkKGEpCiAgICApOw=="
 }
