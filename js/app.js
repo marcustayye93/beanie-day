@@ -5,7 +5,7 @@
   for (let i = 0; i < 4; i++) parts.push("js/app.p2." + i + ".js");
   Promise.all(
     parts.map((url) =>
-      fetch("./" + url + "?v=8", { cache: "no-cache" }).then((r) => {
+      fetch("./" + url + "?v=9", { cache: "no-cache" }).then((r) => {
         if (!r.ok) throw new Error(url);
         return r.text();
       })
