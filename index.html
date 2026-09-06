@@ -7,15 +7,15 @@
   <meta name="description" content="Beanie Day — weekly discovery for Marcus & Chesa." />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="Beanie Day" />
+  <meta name="apple-mobile-web-app-title" content="Bean Plans" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="format-detection" content="telephone=no" />
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="icons/icon-192.svg" />
-  <link rel="stylesheet" href="css/styles.css?v=9" />
-  <link rel="stylesheet" href="css/polish.css?v=2" />
-  <title>Beanie Day</title>
+  <link rel="stylesheet" href="css/styles.css?v=10" />
+  <link rel="stylesheet" href="css/polish.css?v=3" />
+  <title>Bean Plans</title>
   <script>
     // Ensure trailing slash on GitHub Pages project URLs so relative assets resolve
     (function () {
@@ -77,9 +77,9 @@
   <header class="top-bar" id="nav-bar">
     <div class="top-bar-inner">
       <button type="button" class="brand-lockup brand-lockup-btn" id="home-btn" title="Back to explore" aria-label="Back to explore">
-        <div class="brand-avatar" aria-hidden="true">🧢</div>
-        <div>
-          <p class="brand-name">Beanie Day</p>
+        <span class="brand-mark" aria-hidden="true">🧢</span>
+        <div class="brand-text">
+          <p class="brand-name">Bean Plans</p>
           <p class="brand-sub" id="week-label">This week</p>
         </div>
       </button>
@@ -87,12 +87,32 @@
         <button type="button" class="fab-btn" id="install-btn" hidden title="Install" aria-label="Install">
           <span aria-hidden="true">↓</span>
         </button>
-        <button type="button" class="fab-btn" id="search-toggle" title="Search" aria-label="Search" aria-expanded="false" aria-controls="search-sheet">
+        <button type="button" class="fab-btn" id="search-toggle" title="Search" aria-label="Search" aria-expanded="false" aria-controls="search-sheet" hidden>
           <span aria-hidden="true">🔍</span>
+        </button>
+        <button type="button" class="fab-btn menu-toggle" id="menu-toggle" title="Menu" aria-label="Menu" aria-expanded="false" aria-controls="nav-drawer">
+          <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
         </button>
       </div>
     </div>
   </header>
+
+  <div class="nav-backdrop" id="nav-backdrop" hidden></div>
+  <nav class="nav-drawer" id="nav-drawer" hidden aria-label="Main menu">
+    <div class="nav-drawer-inner">
+      <p class="nav-drawer-kicker">Bean Plans</p>
+      <button type="button" class="nav-drawer-item" data-nav-action="explore">
+        <span aria-hidden="true">🏠</span> Explore
+      </button>
+      <button type="button" class="nav-drawer-item" data-nav-action="search">
+        <span aria-hidden="true">🔍</span> Search
+      </button>
+      <button type="button" class="nav-drawer-item" data-nav-action="install">
+        <span aria-hidden="true">↓</span> Install
+      </button>
+      <p class="nav-drawer-note">Woodlands-first · fresh finds only</p>
+    </div>
+  </nav>
 
   <main id="main" class="main">
     <section class="hero" id="hero">
@@ -181,7 +201,7 @@
   </dialog>
 
   <script src="js/beanie-guards.js?v=2" defer></script>
-  <script src="js/app.js?v=10" defer></script>
+  <script src="js/app.js?v=11" defer></script>
   <script>
     // If the app shell never paints cards within 8s, offer a hard reset (clears SW + caches)
     window.__beanieBoot = setTimeout(function () {

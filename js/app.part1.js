@@ -314,7 +314,7 @@
 
     const source = a.source
       ? `<a class="source-link" href="${escapeAttr(a.source.url)}" target="_blank" rel="noopener noreferrer">
-          Open ↗
+          ${escapeHtml(a.source.label || "Open")} <span aria-hidden="true">↗</span>
         </a>`
       : "";
 
