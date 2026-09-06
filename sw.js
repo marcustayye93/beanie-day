@@ -11,6 +11,7 @@ const PRECACHE = [
   "./js/app.part0.js",
   "./js/app.part1.js",
   "./js/app.part2.js",
+  "./js/zone-pass.js",
   "./js/beanie-guards.js",
   "./data/week.json",
   "./data/schema-flags.json",
