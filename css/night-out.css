@@ -1,0 +1,488 @@
+/* Bean Plans — night-out interior (after cinematic intro). Intro untouched. */
+
+body:not(.intro-active) {
+  --bg: #050505;
+  --surface: #0f0f14;
+  --ink: #fafafa;
+  --ink-2: #a1a1aa;
+  --ink-3: #71717a;
+  --line: rgba(255, 255, 255, 0.1);
+  --teal: #2dd4bf;
+  --teal-bright: #5eead4;
+  --teal-deep: #0f766e;
+  --teal-ink: #99f6e4;
+  --shadow: 0 16px 48px rgba(0, 0, 0, 0.55);
+  --shadow-sm: 0 4px 18px rgba(0, 0, 0, 0.35);
+  --radius: 16px;
+  --radius-sm: 12px;
+  color: var(--ink);
+  background: #050505;
+}
+
+body:not(.intro-active) .app-shell {
+  background: #050505;
+  color: var(--ink);
+}
+
+/* Hide pastel rainbow blobs entirely in-app */
+body:not(.intro-active) .bg-blobs {
+  display: none !important;
+}
+
+/* Kill candy loop animations on interior */
+body:not(.intro-active) .blob,
+body:not(.intro-active) .brand-avatar,
+body:not(.intro-active) .card-media-fallback,
+body:not(.intro-active) .empty-art,
+body:not(.intro-active) .tab-btn .tab-emoji,
+body:not(.intro-active) .tab-btn[aria-selected="true"] .tab-emoji {
+  animation: none !important;
+}
+
+/* Top bar — smoked glass */
+body:not(.intro-active) .top-bar {
+  background: rgba(5, 5, 5, 0.82);
+  border-bottom-color: transparent;
+}
+body:not(.intro-active) .top-bar.is-scrolled {
+  border-bottom-color: var(--line);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+}
+body:not(.intro-active) .brand-name {
+  color: #fafafa;
+  background: none;
+  -webkit-text-fill-color: #fafafa;
+  letter-spacing: 0.08em;
+}
+body:not(.intro-active) .brand-sub {
+  color: rgba(255, 255, 255, 0.55);
+}
+body:not(.intro-active) .fab-btn {
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #fafafa;
+  transition: transform 0.22s var(--spring), background 0.22s, border-color 0.22s;
+}
+body:not(.intro-active) .fab-btn:active {
+  transform: scale(0.92);
+}
+body:not(.intro-active) .fab-btn[aria-expanded="true"],
+body:not(.intro-active) .menu-toggle[aria-expanded="true"] {
+  background: rgba(45, 212, 191, 0.16);
+  border-color: rgba(45, 212, 191, 0.4);
+  box-shadow: none;
+}
+body:not(.intro-active) .menu-toggle .menu-icon span {
+  background: #fafafa;
+}
+
+/* Hero — sharp white, no gradient text */
+body:not(.intro-active) .hero-title {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: #fafafa;
+  color: #fafafa;
+  letter-spacing: -0.04em;
+}
+body:not(.intro-active) .hero-badge {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+  color: var(--ink-2);
+}
+body:not(.intro-active) .hero-note {
+  color: var(--ink-2);
+}
+body:not(.intro-active) .stat-chip {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+  border-radius: 12px;
+}
+body:not(.intro-active) .stat-emoji {
+  filter: grayscale(0.45);
+  opacity: 0.75;
+}
+
+/* Zone pass — flatter; filled = teal hairline/fill */
+body:not(.intro-active) .zone-pass {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+  border-radius: 14px;
+}
+body:not(.intro-active) .zone-chip {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--ink-2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  font-weight: 650;
+  box-shadow: none;
+}
+body:not(.intro-active) .zone-chip.is-filled {
+  background: rgba(45, 212, 191, 0.12);
+  border-color: rgba(45, 212, 191, 0.45);
+  color: #99f6e4;
+  box-shadow: none;
+}
+body:not(.intro-active) .zone-chip.is-empty,
+body:not(.intro-active) .zone-chip.is-skipped {
+  color: var(--ink-3);
+}
+
+/* Search + filters — flatter; pressed = teal hairline/fill, no candy glow */
+body:not(.intro-active) .search-field {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: none;
+  border-radius: 14px;
+  transition: border-color 0.25s var(--ease), box-shadow 0.25s;
+}
+body:not(.intro-active) .search-field:focus-within {
+  border-color: rgba(45, 212, 191, 0.55);
+  box-shadow: 0 0 0 2px rgba(45, 212, 191, 0.18);
+}
+body:not(.intro-active) .search-clear {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--ink-2);
+}
+body:not(.intro-active) .filter-pill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+  border-radius: 999px;
+  color: var(--ink-2);
+  transition: transform 0.2s var(--spring), background 0.2s, border-color 0.2s, color 0.2s;
+}
+body:not(.intro-active) .filter-pill span {
+  opacity: 0.65;
+  font-size: 12px;
+}
+body:not(.intro-active) .filter-pill[aria-pressed="true"] {
+  background: rgba(45, 212, 191, 0.14);
+  border-color: rgba(45, 212, 191, 0.5);
+  color: #ecfdf5;
+  transform: none;
+  box-shadow: none;
+}
+body:not(.intro-active) .filter-pill:active {
+  transform: scale(0.96);
+}
+
+/* Category row — text-only pills (emoji hidden) */
+body:not(.intro-active) .cat-chip {
+  min-width: auto;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: none;
+  text-align: left;
+  transition: transform 0.22s var(--spring), background 0.22s, border-color 0.22s;
+}
+body:not(.intro-active) .cat-chip::before {
+  display: none;
+}
+body:not(.intro-active) .cat-chip-emoji {
+  display: none !important;
+}
+body:not(.intro-active) .cat-chip-label {
+  font-size: 13px;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+body:not(.intro-active) .cat-chip[aria-selected="true"] {
+  transform: none;
+  background: #fafafa;
+  border-color: #fafafa;
+  box-shadow: none;
+}
+body:not(.intro-active) .cat-chip[aria-selected="true"] .cat-chip-label {
+  color: #0a0a0a;
+}
+body:not(.intro-active) .cat-chip:active {
+  transform: scale(0.97);
+}
+
+/* Section header */
+body:not(.intro-active) .section-icon {
+  display: none;
+}
+body:not(.intro-active) .section-title {
+  letter-spacing: -0.03em;
+  color: #fafafa;
+}
+body:not(.intro-active) .section-count {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fafafa;
+  box-shadow: none;
+  border-radius: 10px;
+}
+
+/* Cards — photo-forward magazine */
+body:not(.intro-active) .card {
+  background: #0f0f14;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+body:not(.intro-active) .card.is-open {
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+body:not(.intro-active) .card-media {
+  height: 210px;
+}
+body:not(.intro-active) .card-media img {
+  transition: transform 0.85s var(--ease);
+}
+body:not(.intro-active) .card:hover .card-media img,
+body:not(.intro-active) .card.is-open .card-media img {
+  transform: scale(1.06);
+}
+/* Emoji fallback only when no image — muted, no bob */
+body:not(.intro-active) .card-media-fallback {
+  opacity: 0.32;
+  filter: grayscale(0.65);
+  animation: none !important;
+  font-size: 48px;
+  transform: none !important;
+}
+body:not(.intro-active) .travel-chip,
+body:not(.intro-active) .expand-hint {
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+body:not(.intro-active) .expand-hint {
+  color: #fff;
+}
+body:not(.intro-active) .card.is-open .expand-hint {
+  background: rgba(45, 212, 191, 0.85);
+  border-color: transparent;
+  color: #042f2e;
+}
+/* Badges flatter — no candy glow */
+body:not(.intro-active) .badge {
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: none;
+  font-weight: 650;
+}
+body:not(.intro-active) .badge.top {
+  background: rgba(251, 191, 36, 0.82);
+  color: #422006;
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  box-shadow: none;
+}
+body:not(.intro-active) .badge.near {
+  background: rgba(45, 212, 191, 0.78);
+  color: #042f2e;
+  border: 1px solid rgba(45, 212, 191, 0.35);
+  box-shadow: none;
+}
+body:not(.intro-active) .fact {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--ink-2);
+  border-radius: 8px;
+}
+body:not(.intro-active) .card-meta {
+  color: var(--teal-ink);
+}
+body:not(.intro-active) .source-link {
+  background: #fafafa !important;
+  color: #0a0a0a !important;
+  box-shadow: none !important;
+  border-radius: 10px;
+  transition: transform 0.2s var(--spring), opacity 0.2s;
+}
+body:not(.intro-active) .source-link:active {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
+
+/* Tab bar — text-first; mute/hide emoji; kill bounce */
+body:not(.intro-active) .tab-bar {
+  background: rgba(5, 5, 5, 0.94);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.5);
+}
+body:not(.intro-active) .tab-btn {
+  transition: transform 0.2s var(--spring), color 0.2s;
+}
+body:not(.intro-active) .tab-btn:active {
+  transform: scale(0.94);
+}
+body:not(.intro-active) .tab-btn[aria-selected="true"] {
+  color: #5eead4;
+}
+body:not(.intro-active) .tab-btn .tab-emoji {
+  display: none !important;
+  animation: none !important;
+  transform: none !important;
+}
+body:not(.intro-active) .tab-btn[aria-selected="true"] .tab-emoji {
+  display: none !important;
+  animation: none !important;
+  transform: none !important;
+  filter: none;
+}
+body:not(.intro-active) .tab-btn .tab-label {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Drawer — keep wordmark/drawer readable */
+body:not(.intro-active) .nav-drawer {
+  background: rgba(10, 10, 14, 0.97);
+  border-left-color: rgba(255, 255, 255, 0.08);
+  box-shadow: -16px 0 48px rgba(0, 0, 0, 0.55);
+}
+body:not(.intro-active) .nav-drawer-kicker {
+  color: rgba(255, 255, 255, 0.55);
+}
+body:not(.intro-active) .nav-drawer-item {
+  background: rgba(255, 255, 255, 0.04);
+  color: #fafafa;
+  border-radius: 12px;
+  transition: background 0.2s, transform 0.2s var(--spring);
+}
+body:not(.intro-active) .nav-drawer-item:active {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(0.98);
+}
+
+body:not(.intro-active) .empty-art {
+  animation: none !important;
+  opacity: 0.45;
+  filter: grayscale(0.5);
+}
+
+/* Focus rings visible on dark */
+body:not(.intro-active) .cat-chip:focus-visible,
+body:not(.intro-active) .filter-pill:focus-visible,
+body:not(.intro-active) .tab-btn:focus-visible,
+body:not(.intro-active) .fab-btn:focus-visible,
+body:not(.intro-active) .brand-lockup-btn:focus-visible,
+body:not(.intro-active) .source-link:focus-visible,
+body:not(.intro-active) .card-hit:focus-visible,
+body:not(.intro-active) .nav-drawer-item:focus-visible,
+body:not(.intro-active) .zone-chip:focus-visible,
+body:not(.intro-active) .search-field:focus-within {
+  outline: 2px solid #5eead4;
+  outline-offset: 2px;
+}
+
+/* —— Microanimations: enter / stagger / press / ken-burns; no spam loops —— */
+@keyframes nightAppIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+    filter: brightness(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+@keyframes nightFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes nightCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.975);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes nightChipIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+body:not(.intro-active) .app-shell {
+  animation: nightAppIn 0.55s var(--ease) both;
+}
+body:not(.intro-active) .hero {
+  animation: nightFadeUp 0.55s var(--ease) both;
+}
+body:not(.intro-active) .zone-pass {
+  animation: nightFadeUp 0.6s var(--ease) 0.05s both;
+}
+body:not(.intro-active) .hero-stats .stat-chip {
+  animation: nightChipIn 0.45s var(--ease) both;
+}
+body:not(.intro-active) .hero-stats .stat-chip:nth-child(2) {
+  animation-delay: 0.07s;
+}
+body:not(.intro-active) .hero-stats .stat-chip:nth-child(3) {
+  animation-delay: 0.14s;
+}
+body:not(.intro-active) .cat-chip {
+  animation: nightChipIn 0.4s var(--ease) both;
+}
+body:not(.intro-active) .cat-chip:nth-child(1) { animation-delay: 0.04s; }
+body:not(.intro-active) .cat-chip:nth-child(2) { animation-delay: 0.08s; }
+body:not(.intro-active) .cat-chip:nth-child(3) { animation-delay: 0.12s; }
+body:not(.intro-active) .cat-chip:nth-child(4) { animation-delay: 0.16s; }
+body:not(.intro-active) .cat-chip:nth-child(5) { animation-delay: 0.2s; }
+body:not(.intro-active) .cat-chip:nth-child(6) { animation-delay: 0.24s; }
+body:not(.intro-active) .card {
+  animation: nightCardIn 0.5s var(--ease) both;
+}
+body:not(.intro-active) .card:nth-child(1) { animation-delay: 0.04s; }
+body:not(.intro-active) .card:nth-child(2) { animation-delay: 0.1s; }
+body:not(.intro-active) .card:nth-child(3) { animation-delay: 0.16s; }
+body:not(.intro-active) .card:nth-child(4) { animation-delay: 0.22s; }
+body:not(.intro-active) .card:nth-child(5) { animation-delay: 0.28s; }
+body:not(.intro-active) .card:nth-child(6) { animation-delay: 0.34s; }
+body:not(.intro-active) .section-header {
+  animation: nightFadeUp 0.45s var(--ease) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body:not(.intro-active) .app-shell,
+  body:not(.intro-active) .hero,
+  body:not(.intro-active) .zone-pass,
+  body:not(.intro-active) .hero-stats .stat-chip,
+  body:not(.intro-active) .cat-chip,
+  body:not(.intro-active) .card,
+  body:not(.intro-active) .section-header {
+    animation: none !important;
+  }
+  body:not(.intro-active) .card-media img {
+    transition: none !important;
+  }
+  body:not(.intro-active) .card:hover .card-media img,
+  body:not(.intro-active) .card.is-open .card-media img {
+    transform: none !important;
+  }
+}
