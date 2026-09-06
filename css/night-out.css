@@ -486,3 +486,189 @@ body:not(.intro-active) .section-header {
     transform: none !important;
   }
 }
+
+
+/* —— Marcus polish: sharper, no emoji, gradient bg, richer motion —— */
+body:not(.intro-active) {
+  --radius: 8px;
+  --radius-sm: 6px;
+  --bg: #050505;
+  --surface: #121218;
+  background: linear-gradient(180deg, #2a2a32 0%, #141418 42%, #000000 100%) fixed;
+  background-color: #000;
+}
+
+body:not(.intro-active) .app-shell {
+  background: linear-gradient(180deg, #2a2a32 0%, #141418 42%, #000000 100%) fixed;
+  background-color: #000;
+}
+
+body:not(.intro-active) .top-bar {
+  background: linear-gradient(180deg, rgba(42, 42, 50, 0.92), rgba(20, 20, 24, 0.82));
+  border-radius: 0;
+}
+
+body:not(.intro-active) .fab-btn,
+body:not(.intro-active) .search-field,
+body:not(.intro-active) .stat-chip,
+body:not(.intro-active) .hero-badge,
+body:not(.intro-active) .zone-pass,
+body:not(.intro-active) .zone-chip,
+body:not(.intro-active) .filter-pill,
+body:not(.intro-active) .cat-chip,
+body:not(.intro-active) .card,
+body:not(.intro-active) .section-count,
+body:not(.intro-active) .fact,
+body:not(.intro-active) .detail-block,
+body:not(.intro-active) .nav-drawer-item,
+body:not(.intro-active) .source-link,
+body:not(.intro-active) .btn-fill,
+body:not(.intro-active) .travel-chip,
+body:not(.intro-active) .expand-hint,
+body:not(.intro-active) .badge,
+body:not(.intro-active) .empty-state {
+  border-radius: 8px !important;
+}
+
+body:not(.intro-active) .filter-pill,
+body:not(.intro-active) .cat-chip,
+body:not(.intro-active) .zone-chip,
+body:not(.intro-active) .hero-badge {
+  border-radius: 6px !important;
+}
+
+body:not(.intro-active) .expand-hint {
+  border-radius: 6px !important;
+}
+
+/* Kill emoji chrome inside app */
+body:not(.intro-active) .filter-pill span,
+body:not(.intro-active) .stat-emoji,
+body:not(.intro-active) .cat-chip-emoji,
+body:not(.intro-active) .tab-btn .tab-emoji,
+body:not(.intro-active) .section-icon,
+body:not(.intro-active) .brand-mark,
+body:not(.intro-active) .search-emoji,
+body:not(.intro-active) .empty-art,
+body:not(.intro-active) .sheet-emoji,
+body:not(.intro-active) .pulse-dot {
+  display: none !important;
+}
+
+body:not(.intro-active) .card-media-fallback {
+  display: none !important;
+}
+
+/* Mute drawer emoji chrome; keep labels */
+body:not(.intro-active) .nav-drawer-item > span[aria-hidden="true"] {
+  display: none !important;
+}
+
+body:not(.intro-active) .travel-chip {
+  font-size: 11px;
+  letter-spacing: 0.02em;
+}
+
+/* Richer motion */
+@keyframes nightShellIn {
+  0% { opacity: 0; transform: translateY(28px) scale(0.98); filter: brightness(0.55); }
+  60% { opacity: 1; filter: brightness(1.02); }
+  100% { opacity: 1; transform: none; filter: none; }
+}
+@keyframes nightRise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes nightCardRise {
+  from { opacity: 0; transform: translateY(28px) scale(0.97); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes nightBarIn {
+  from { opacity: 0; transform: translateY(-12px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes nightTabIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes nightPress {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.96); }
+  100% { transform: scale(1); }
+}
+
+body:not(.intro-active) .app-shell {
+  animation: nightShellIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+body:not(.intro-active) .top-bar {
+  animation: nightBarIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+body:not(.intro-active) .tab-bar {
+  animation: nightTabIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+  border-radius: 0;
+}
+body:not(.intro-active) .hero,
+body:not(.intro-active) .zone-pass,
+body:not(.intro-active) .search-sheet,
+body:not(.intro-active) .section-header {
+  animation: nightRise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+body:not(.intro-active) .zone-pass { animation-delay: 0.06s; }
+body:not(.intro-active) .search-sheet { animation-delay: 0.1s; }
+body:not(.intro-active) .cat-scroll-wrap {
+  animation: nightRise 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+body:not(.intro-active) .card {
+  animation: nightCardRise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+body:not(.intro-active) .fab-btn:active,
+body:not(.intro-active) .filter-pill:active,
+body:not(.intro-active) .cat-chip:active,
+body:not(.intro-active) .nav-drawer-item:active,
+body:not(.intro-active) .source-link:active {
+  animation: nightPress 0.28s cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+body:not(.intro-active) .card-media img {
+  transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1), filter 0.4s;
+}
+body:not(.intro-active) .card:hover .card-media img,
+body:not(.intro-active) .card.is-open .card-media img {
+  transform: scale(1.1);
+  filter: brightness(1.05);
+}
+
+body:not(.intro-active) .nav-drawer {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body:not(.intro-active) .app-shell,
+  body:not(.intro-active) .top-bar,
+  body:not(.intro-active) .tab-bar,
+  body:not(.intro-active) .hero,
+  body:not(.intro-active) .zone-pass,
+  body:not(.intro-active) .search-sheet,
+  body:not(.intro-active) .section-header,
+  body:not(.intro-active) .cat-scroll-wrap,
+  body:not(.intro-active) .card,
+  body:not(.intro-active) .fab-btn:active,
+  body:not(.intro-active) .filter-pill:active,
+  body:not(.intro-active) .cat-chip:active {
+    animation: none !important;
+  }
+}
+
+/* —— Typography: Fjalla One + Cantarell (in-app only; intro keeps system stack) —— */
+body:not(.intro-active) {
+  --font: "Cantarell", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: var(--font);
+}
+body:not(.intro-active) .hero-title,
+body:not(.intro-active) .section-title,
+body:not(.intro-active) .card-title,
+body:not(.intro-active) .brand-name,
+body:not(.intro-active) .sheet-title,
+body:not(.intro-active) .empty-title {
+  font-family: "Fjalla One", "Cantarell", system-ui, sans-serif;
+}
