@@ -1,7 +1,7 @@
 {
   "name": "Beanie Day",
   "short_name": "Beanie Day",
-  "description": "Weekly discovery for Marcus & Chesa — cool brands, new flavours, happy hour, and things to do around Singapore.",
+  "description": "Weekly couple discovery PWA — cool brands, new flavours, happy hour, and things to do around Singapore.",
   "start_url": "./",
   "scope": "./",
   "id": "./",

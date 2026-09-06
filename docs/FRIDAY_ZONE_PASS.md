@@ -1,6 +1,6 @@
 # Friday Zone Pass
 
-Human Friday curation across Singapore zones — **not scraping**. Quality over volume. Woodlands-first Near Home stays. Blocklist unchanged (including New Bahru). **Never invent restaurant names.**
+Human Friday curation across Singapore zones — **not scraping**. Quality over volume. Near-home (North-first) taste stays. Blocklist unchanged (including New Bahru). **Never invent restaurant names.**
 
 The Beanie Day agent runs this checklist every Friday before relying on cards.
 
@@ -30,7 +30,7 @@ Suggested minimums (tuneable in `meta.zonePass.quotas`):
 | Central | 4 |
 | East | 2 |
 | West | 2 |
-| North | 2 (include near-home / Woodlands-first) |
+| North | 2 (include near-home / North-first) |
 | South | 1 |
 
 Only cards that credit a quota:

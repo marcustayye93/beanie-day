@@ -29,7 +29,7 @@
       "North": {
         "status": "filled",
         "count": 2,
-        "note": "Includes Woodlands-first near-home"
+        "note": "Includes North-first near-home"
       },
       "South": {
         "status": "skipped",
