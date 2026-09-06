@@ -50,10 +50,10 @@
             </div>
             <div class="card-footer">
               <span class="tap-hint">${isOpen ? "Tap to collapse" : "Tap for details"}</span>
-              ${source}
             </div>
           </div>
         </div>
+        ${source ? `<div class="card-source-row">${source}</div>` : ""}
       </article>
     `;
   }
@@ -76,9 +76,49 @@
       enterApp(panel.dataset.enterTab);
     });
 
+    const setNavOpen = (open) => {
+      const drawer = els.navDrawer;
+      const backdrop = els.navBackdrop;
+      const toggle = els.menuToggle;
+      if (!drawer || !toggle) return;
+      drawer.hidden = !open;
+      if (backdrop) backdrop.hidden = !open;
+      toggle.setAttribute("aria-expanded", String(open));
+      document.body.classList.toggle("nav-open", open);
+    };
+    const closeNavDrawer = () => setNavOpen(false);
+    const openNavDrawer = () => setNavOpen(true);
+
     // Logo → back to cinematic explore home
     els.homeBtn?.addEventListener("click", () => {
+      closeNavDrawer();
       showIntro();
+    });
+
+    els.menuToggle?.addEventListener("click", () => {
+      const open = els.menuToggle.getAttribute("aria-expanded") !== "true";
+      setNavOpen(open);
+    });
+    els.navBackdrop?.addEventListener("click", closeNavDrawer);
+    els.navDrawer?.addEventListener("click", (e) => {
+      const action = e.target.closest("[data-nav-action]");
+      if (!action) return;
+      const kind = action.dataset.navAction;
+      closeNavDrawer();
+      if (kind === "explore") {
+        showIntro();
+      } else if (kind === "search") {
+        els.searchSheet.hidden = false;
+        els.searchToggle?.setAttribute("aria-expanded", "true");
+        requestAnimationFrame(() => els.searchInput?.focus());
+      } else if (kind === "install") {
+        onInstallClick();
+      }
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && document.body.classList.contains("nav-open")) {
+        closeNavDrawer();
+      }
     });
 
     const onTab = (e) => {
@@ -213,7 +253,7 @@
     if (!("serviceWorker" in navigator)) return;
     window.addEventListener("load", () => {
       navigator.serviceWorker
-        .register("./sw.js?v=8")
+        .register("./sw.js?v=9")
         .then((reg) => {
           // Prefer the newest worker immediately
           if (reg.waiting) reg.waiting.postMessage("SKIP_WAITING");
