@@ -1,0 +1,56 @@
+name: Inject zonePass into week.json (one-shot)
+
+on:
+  push:
+    branches: [feat/friday-zone-pass]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  inject:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/friday-zone-pass
+      - name: Ensure meta.zonePass in data/week.json
+        run: |
+          python3 << 'PY'
+          import json
+          from pathlib import Path
+          week_path = Path("data/week.json")
+          state_path = Path("data/zone-pass.state.json")
+          week = json.loads(week_path.read_text(encoding="utf-8"))
+          meta = week.setdefault("meta", {})
+          if isinstance(meta.get("zonePass"), dict) and meta["zonePass"].get("version"):
+              print("meta.zonePass already present — nothing to do")
+              raise SystemExit(0)
+          seed = {}
+          if state_path.exists():
+              seed = json.loads(state_path.read_text(encoding="utf-8")).get("zonePass") or {}
+          meta["zonePass"] = seed or {
+              "version": 1,
+              "refreshedOn": "2026-09-06",
+              "quotas": {"Central": 4, "East": 2, "West": 2, "North": 2, "South": 1},
+              "zones": {
+                  z: {"status": "empty", "count": 0, "note": ""}
+                  for z in ("Central", "East", "West", "North", "South")
+              },
+              "summary": "Zone pass not run yet — Friday curation pending.",
+          }
+          week_path.write_text(json.dumps(week, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+          print("Injected meta.zonePass into data/week.json")
+          PY
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/week.json
+          if git diff --staged --quiet; then
+            echo "No week.json changes"
+            exit 0
+          fi
+          git commit -m "data: add meta.zonePass schema for Friday curation"
+          git push
