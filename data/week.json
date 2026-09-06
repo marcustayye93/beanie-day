@@ -1,1 +1,25 @@
-file:///workspace/beanie-pr/week.final.json
+{
+  "meta": {
+    "weekLabel": "4 Sep – 10 Sep 2026",
+    "weekStart": "2026-09-04",
+    "weekEnd": "2026-09-10",
+    "refreshedOn": "2026-09-04",
+    "nextRefresh": "2026-09-11",
+    "homeBase": "Woodlands, Singapore 730587",
+    "couple": ["Marcus", "Chesa"],
+    "note": "Only fresh finds this week — new openings, pop-ups, limited-run events, and menus you wouldn’t already have bookmarked. Familiar favourites are intentionally left out.",
+    "sourcesNote": "Scouted from City Nomads Just Opened, Eatbook, HungryGoWhere, Honeycombers, Time Out SG, Seth Lui / TheSmartLocal, Singapore Expo events, HappyHourLah, venue pages, and ParkingGoWhere / LTA rates. Always re-check hours before you go — new places change fast.",
+    "autoRefreshNote": "Auto-stamped 2026-09-04 02:23 UTC. Curate openings from City Nomads Just Opened, Eatbook, Expo events, HappyHourLah before relying on cards — auto-roll updates dates; humans keep quality high.",
+    "staleContentRisk": true
+  },
+  "tabs": [
+    {"id": "this-week", "label": "This Week", "shortLabel": "Week", "emoji": "✨", "blurb": "The freshest discoveries worth the trip this weekend and weekdays — nothing you’ve already got on autopilot."},
+    {"id": "brands", "label": "Cool Brands", "shortLabel": "Brands", "emoji": "🛍️", "blurb": "New store openings, pop-up labels, and limited drops — not the neighbourhoods you already know by heart."},
+    {"id": "flavours", "label": "New Flavours", "shortLabel": "Food", "emoji": "🍜", "blurb": "Just-opened restaurants and new menus. No café crawls, no go to the mall food court defaults."},
+    {"id": "happy-hour", "label": "Happy Hour", "shortLabel": "HH", "emoji": "🍺", "blurb": "New or time-limited deals worth knowing this week — days, times, and what’s included."},
+    {"id": "events", "label": "Events & Expo", "shortLabel": "Events", "emoji": "🎪", "blurb": "What’s actually on right now at Expo and elsewhere — one-off, seasonal, or ending soon."},
+    {"id": "near-home", "label": "Near Home", "shortLabel": "Home", "emoji": "🏡", "blurb": "New or easy-to-miss finds in the north & west — only when they’re genuinely worth it from Woodlands."},
+    {"id": "outdoor", "label": "Outdoor & Chill", "shortLabel": "Out", "emoji": "🌳", "blurb": "Seasonal outdoor moments and evening chill spots with a reason to go this week — heat notes included."}
+  ],
+  "activities": []
+}
