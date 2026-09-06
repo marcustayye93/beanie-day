@@ -8,6 +8,18 @@ const PRECACHE = [
   "./css/styles.css",
   "./css/polish.css",
   "./js/app.js",
+  "./js/app.bundle.js",
+  "./js/patches/manifest.json",
+  "./js/patches/09-sw-bust.json",
+  "./js/patches/08-card-template.json",
+  "./js/patches/07-card-badges.json",
+  "./js/patches/06-search-venue.json",
+  "./js/patches/05-filter-blocklist.json",
+  "./js/patches/04-empty-state.json",
+  "./js/patches/03-hero-stats.json",
+  "./js/patches/02-loadData-cache.json",
+  "./js/patches/01-loadData-network.json",
+  "./js/patches/00-guards-aliases.json",
   "./js/beanie-guards.js",
   "./data/week.json",
   "./data/schema-flags.json",
@@ -68,6 +80,7 @@ self.addEventListener("fetch", (event) => {
     path.endsWith("week.json") ||
     path.endsWith("schema-flags.json") ||
     path.endsWith("manifest.json") ||
+    path.includes("/patches/") ||
     req.mode === "navigate";
 
   if (isShell) {
