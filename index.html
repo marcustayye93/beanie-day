@@ -13,8 +13,8 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="icons/icon-192.svg" />
-  <link rel="stylesheet" href="css/styles.css?v=10" />
-  <link rel="stylesheet" href="css/polish.css?v=3" />
+  <link rel="stylesheet" href="css/styles.css?v=11" />
+  <link rel="stylesheet" href="css/polish.css?v=4" />
   <title>Bean Plans</title>
   <script>
     // Ensure trailing slash on GitHub Pages project URLs so relative assets resolve
@@ -122,6 +122,10 @@
       </div>
       <h1 class="hero-title">What’s new this week?</h1>
       <p class="hero-note" id="week-note">Fresh openings, pop-ups, and limited-run finds — not the places you already know.</p>
+      <div class="zone-pass" id="zone-pass" hidden>
+        <div class="zone-pass-chips" id="zone-pass-chips" role="list" aria-label="Friday zone pass"></div>
+        <p class="zone-pass-copy" id="zone-pass-copy"></p>
+      </div>
       <div class="hero-stats" id="hero-stats" aria-hidden="true">
         <div class="stat-chip"><span class="stat-emoji">🆕</span><span class="stat-num" id="stat-picks">0</span><span class="stat-lbl">fresh picks</span></div>
         <div class="stat-chip"><span class="stat-emoji">🍺</span><span class="stat-num" id="stat-hh">0</span><span class="stat-lbl">new deals</span></div>
@@ -201,7 +205,7 @@
   </dialog>
 
   <script src="js/beanie-guards.js?v=2" defer></script>
-  <script src="js/app.js?v=11" defer></script>
+  <script src="js/app.js?v=12" defer></script>
   <script>
     // If the app shell never paints cards within 8s, offer a hard reset (clears SW + caches)
     window.__beanieBoot = setTimeout(function () {
