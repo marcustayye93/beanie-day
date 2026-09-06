@@ -1,6 +1,6 @@
 # Beanie Day
 
-A personal **weekly discovery** PWA for **Marcus & Chesa** in Woodlands, Singapore (730587).
+A personal **weekly discovery** PWA for **Marcus & Chesa** in Singapore.
 
 **Purpose:** surface *new* things to do each week — openings, pop-ups, limited-run events, and menus — not familiar defaults.
 
