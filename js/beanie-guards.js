@@ -15,6 +15,7 @@
     "northpoint",
     "north point",
     "causeway point",
+    "new bahru",
   ];
 
   function isBlocklisted(activity) {
