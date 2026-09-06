@@ -5,7 +5,7 @@ Friday refresh for Beanie Day.
 - Rolls week meta to the current/next Friday window
 - Stamps refreshedOn / nextRefresh
 - Appends a curator reminder into meta (content still human-curated for quality)
-- Does NOT reintroduce familiar staples (VivoCity, Holland V, AMK Hub, Northpoint)
+- Does NOT reintroduce familiar staples (VivoCity, Holland V, AMK Hub, Northpoint, New Bahru)
 
 Run locally:
   python3 scripts/friday-refresh.py
@@ -34,6 +34,7 @@ BLOCKLIST = (
     "northpoint",
     "north point",
     "causeway point",
+    "new bahru",
 )
 
 
