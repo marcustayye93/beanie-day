@@ -253,7 +253,7 @@
     if (!("serviceWorker" in navigator)) return;
     window.addEventListener("load", () => {
       navigator.serviceWorker
-        .register("./sw.js?v=9")
+        .register("./sw.js?v=11")
         .then((reg) => {
           // Prefer the newest worker immediately
           if (reg.waiting) reg.waiting.postMessage("SKIP_WAITING");
@@ -357,5 +357,10 @@
     return escapeHtml(str).replace(/'/g, "&#39;");
   }
 
-  document.addEventListener("DOMContentLoaded", init);
+  // Parts load async after DOMContentLoaded may already have fired
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
 })();
