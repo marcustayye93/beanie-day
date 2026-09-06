@@ -23,8 +23,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "week.json"
+STATE = ROOT / "data" / "zone-pass.state.json"
 
-# Preferences that inform taste but must never appear as destination cards
 BLOCKLIST = (
     "vivocity",
     "vivo city",
@@ -43,7 +43,6 @@ DEFAULT_QUOTAS = {"Central": 4, "East": 2, "West": 2, "North": 2, "South": 1}
 
 
 def next_or_current_friday(today: date) -> date:
-    # Monday=0 … Friday=4
     delta = (4 - today.weekday()) % 7
     return today + timedelta(days=delta)
 
@@ -55,7 +54,6 @@ def format_label(start: date, end: date) -> str:
 
 
 def map_zone(raw) -> str | None:
-    """Map activity travel.zone into the five quota buckets. Missing → unknown."""
     if raw is None:
         return None
     z = str(raw).strip()
@@ -64,7 +62,6 @@ def map_zone(raw) -> str | None:
     key = z.lower().replace(" ", "").replace("_", "-")
     if key in ("central",):
         return "Central"
-    # Central-East → East (Kallang / Sports Hub fringe); also plain East
     if key in ("east", "central-east", "centraleast", "east-central", "eastcentral"):
         return "East"
     if key in ("west",):
@@ -92,7 +89,6 @@ def source_url(act: dict) -> str:
 
 
 def counts_for_quota(act: dict) -> bool:
-    """Confirmed cards only: confirmNeeded not true, real venue, concrete source.url."""
     if act.get("confirmNeeded") is True:
         return False
     if not activity_venue(act):
@@ -158,9 +154,7 @@ def recompute_zone_pass(meta: dict, activities: list, today: date) -> dict:
 def main() -> None:
     today = date.today()
     start = next_or_current_friday(today)
-    # If we're past Friday evening logic: on Fri–Thu show that Friday's week
-    # If today is Sat/Sun, still show the Friday that started this weekend
-    if today.weekday() > 4:  # Sat=5 Sun=6 → use most recent Friday
+    if today.weekday() > 4:
         start = today - timedelta(days=(today.weekday() - 4))
 
     end = start + timedelta(days=6)
@@ -190,7 +184,6 @@ def main() -> None:
         stamp = f"{extra} · {stamp}"
     meta["autoRefreshNote"] = stamp
 
-    # Safety: drop familiar staples from the feed (defensive), and flag them
     def is_blocked(act: dict) -> str | None:
         blob = " ".join(
             str(act.get(k, ""))
@@ -212,7 +205,6 @@ def main() -> None:
         if hit:
             offenders.append(f"{act.get('id')}: contains '{hit}'")
             continue
-        # Schema consistency: ensure fresh is a bool when present
         if "fresh" in act and not isinstance(act["fresh"], bool):
             act["fresh"] = bool(act["fresh"])
         if "venue" in act and act["venue"] is not None:
@@ -234,7 +226,14 @@ def main() -> None:
     else:
         meta.pop("curatorWarnings", None)
 
-    # Zone pass: recompute from confirmed activities only — never invent
+    if not isinstance(meta.get("zonePass"), dict) and STATE.exists():
+        try:
+            seed = json.loads(STATE.read_text(encoding="utf-8"))
+            if isinstance(seed.get("zonePass"), dict):
+                meta["zonePass"] = seed["zonePass"]
+        except Exception:
+            pass
+
     meta["zonePass"] = recompute_zone_pass(meta, kept, today)
 
     with DATA.open("w", encoding="utf-8") as f:
