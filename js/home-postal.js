@@ -3,7 +3,7 @@
   "use strict";
 
   var STORAGE_KEY = "beanie-home-postal";
-  var DEFAULT_POSTAL = "730587";
+  /** Internal default zone for “Continue with North Singapore” — never rendered as a postal. */
   var DEFAULT_ZONE = "N";
   var ZONES = ["N", "W", "E", "C", "S"];
 
@@ -124,7 +124,7 @@
     var home = getHome();
     if (!home || !home.zone) return null;
     var est = estimateDrive(home.zone, dest);
-    if (!est) return "—";
+    if (!est) return null;
     return est.label;
   }
 
@@ -133,12 +133,16 @@
       var raw = localStorage.getItem(STORAGE_KEY);
       if (!raw) return null;
       var data = JSON.parse(raw);
-      if (!data || !data.postal || !data.zone) return null;
+      if (!data) return null;
       var zone = normZone(data.zone);
       if (!zone) return null;
+      var postal = data.postal != null ? String(data.postal).replace(/\D/g, "") : "";
+      // Zone-only path (e.g. Continue with North Singapore) has no postal
+      if (postal && !isValidPostal(postal) && !data.zoneOnly) return null;
       return {
-        postal: String(data.postal),
+        postal: postal || "",
         zone: zone,
+        zoneOnly: !postal || !!data.zoneOnly,
         lat: data.lat != null ? Number(data.lat) : null,
         lng: data.lng != null ? Number(data.lng) : null,
         updatedAt: data.updatedAt || null
@@ -149,11 +153,15 @@
   }
 
   function saveHome(record) {
+    var zone = normZone(record.zone);
+    if (!zone) throw new Error("Missing zone");
+    var postal = record.postal != null ? String(record.postal).replace(/\D/g, "") : "";
     var payload = {
-      postal: String(record.postal),
-      zone: normZone(record.zone),
+      postal: postal,
+      zone: zone,
       updatedAt: new Date().toISOString()
     };
+    if (!postal || record.zoneOnly) payload.zoneOnly = true;
     if (record.lat != null && isFinite(Number(record.lat))) payload.lat = Number(record.lat);
     if (record.lng != null && isFinite(Number(record.lng))) payload.lng = Number(record.lng);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
@@ -192,7 +200,7 @@
     els.hint = document.getElementById("home-postal-hint");
     els.validateBtn = document.getElementById("home-postal-validate");
     els.saveBtn = document.getElementById("home-postal-save");
-    els.woodlandsBtn = document.getElementById("home-postal-woodlands");
+    els.northBtn = document.getElementById("home-postal-north");
   }
 
   function openModal(opts) {
@@ -205,11 +213,16 @@
     if (pendingRequired) document.body.classList.add("postal-pending");
     var home = getHome();
     if (els.input) {
-      els.input.value = (opts && opts.postal) || (home && home.postal) || "";
+      var prefill = (opts && opts.postal) || (home && home.postal) || "";
+      els.input.value = prefill;
     }
     setError("");
-    if (home) {
-      setHint("Saved: " + home.postal + " · " + (ZONE_LABEL[home.zone] || home.zone));
+    if (home && home.zone) {
+      if (home.postal) {
+        setHint("Saved: " + home.postal + " · " + (ZONE_LABEL[home.zone] || home.zone));
+      } else {
+        setHint("Saved: " + (ZONE_LABEL[home.zone] || home.zone) + " Singapore · drive times on");
+      }
       lastResolved = home;
     } else {
       setHint("Enter your 6-digit Singapore postal code.");
@@ -340,22 +353,17 @@
     closeModal();
   }
 
-  async function onWoodlands() {
+  function onContinueNorth() {
     cacheEls();
     setError("");
-    if (els.input) els.input.value = DEFAULT_POSTAL;
-    var resolved;
-    try {
-      resolved = await resolvePostal(DEFAULT_POSTAL);
-    } catch (_) {
-      resolved = {
-        postal: DEFAULT_POSTAL,
-        zone: DEFAULT_ZONE,
-        lat: null,
-        lng: null,
-        source: "sector"
-      };
-    }
+    var resolved = {
+      postal: "",
+      zone: DEFAULT_ZONE,
+      zoneOnly: true,
+      lat: null,
+      lng: null,
+      source: "zone-default"
+    };
     lastResolved = resolved;
     saveHome(resolved);
     closeModal();
@@ -372,8 +380,8 @@
     els.saveBtn && els.saveBtn.addEventListener("click", function () {
       onSave();
     });
-    els.woodlandsBtn && els.woodlandsBtn.addEventListener("click", function () {
-      onWoodlands();
+    els.northBtn && els.northBtn.addEventListener("click", function () {
+      onContinueNorth();
     });
     els.input &&
       els.input.addEventListener("input", function () {
@@ -391,7 +399,7 @@
     els.backdrop &&
       els.backdrop.addEventListener("click", function () {
         if (pendingRequired && !getHome()) {
-          setError("Pick a home postal once to continue.");
+          setError("Save a postal or continue with North Singapore.");
           return;
         }
         closeModal();
@@ -403,7 +411,7 @@
       if (pendingRequired && !getHome()) {
         e.preventDefault();
         e.stopPropagation();
-        setError("Pick a home postal once to continue.");
+        setError("Save a postal or continue with North Singapore.");
         return;
       }
       closeModal();

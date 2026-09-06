@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#141418" />
-  <meta name="description" content="Beanie Day — weekly discovery for Marcus & Chesa." />
+  <meta name="description" content="Beanie Day — weekly couple discovery across Singapore." />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="Bean Plans" />
@@ -16,11 +16,11 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="icons/icon-192.svg" />
-  <link rel="stylesheet" href="css/styles.css?v=15" />
+  <link rel="stylesheet" href="css/styles.css?v=17" />
   <link rel="stylesheet" href="css/polish.css?v=7" />
   <link rel="stylesheet" href="css/intro-touch.css?v=1" />
   <link rel="stylesheet" href="css/night-out.css?v=3" />
-  <link rel="stylesheet" href="css/home-postal.css?v=1" />
+  <link rel="stylesheet" href="css/home-postal.css?v=3" />
   <title>Bean Plans</title>
   <script>
     // Ensure trailing slash on GitHub Pages project URLs so relative assets resolve
@@ -48,7 +48,7 @@
         <div class="intro-panel-shade"></div>
         <div class="intro-panel-copy intro-panel-copy-top">
           <h2 class="intro-panel-title">Food</h2>
-          <p class="intro-panel-tag">TASTE, TABLE &amp; NEW MENUS</p>
+          <p class="intro-panel-tag">TASTE, TABLE & NEW MENUS</p>
         </div>
       </button>
 
@@ -57,7 +57,7 @@
         <div class="intro-panel-shade"></div>
         <div class="intro-panel-copy intro-panel-copy-mid">
           <h2 class="intro-panel-title">Drinks</h2>
-          <p class="intro-panel-tag">POUR, SIP &amp; HAPPY HOUR</p>
+          <p class="intro-panel-tag">POUR, SIP & HAPPY HOUR</p>
         </div>
       </button>
 
@@ -66,7 +66,7 @@
         <div class="intro-panel-shade"></div>
         <div class="intro-panel-copy intro-panel-copy-bottom">
           <h2 class="intro-panel-title">Activities</h2>
-          <p class="intro-panel-tag">GO, BROWSE &amp; DISCOVER</p>
+          <p class="intro-panel-tag">GO, BROWSE & DISCOVER</p>
         </div>
       </button>
     </div>
@@ -119,7 +119,7 @@
       <button type="button" class="nav-drawer-item" data-nav-action="home-postal">
         <span aria-hidden="true">📮</span> Home postal
       </button>
-      <p class="nav-drawer-note">Woodlands-first · fresh finds only</p>
+      <p class="nav-drawer-note">Near-home first · fresh finds only</p>
     </div>
   </nav>
 
@@ -127,7 +127,7 @@
     <section class="hero" id="hero">
       <div class="hero-badge">
         <span class="pulse-dot" aria-hidden="true"></span>
-        <span id="week-refresh">Marcus &amp; Chesa · Woodlands</span>
+        <span id="week-refresh">Fresh finds this week</span>
       </div>
       <h1 class="hero-title">What’s new this week?</h1>
       <p class="hero-note" id="week-note">Fresh openings, pop-ups, and limited-run finds — not the places you already know.</p>
@@ -206,15 +206,15 @@
     <div class="home-postal-card">
       <p class="home-postal-kicker">Bean Plans</p>
       <h2 class="home-postal-title" id="home-postal-title">Where’s home?</h2>
-      <p class="home-postal-copy">Save a Singapore postal once so drive times are from your zone — not a fixed Woodlands baseline.</p>
+      <p class="home-postal-copy">Save a Singapore postal once so drive times are from your zone.</p>
       <label class="home-postal-label" for="home-postal-input">6-digit postal</label>
-      <input id="home-postal-input" class="home-postal-input" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="postal-code" placeholder="730587" aria-describedby="home-postal-error home-postal-hint" />
+      <input id="home-postal-input" class="home-postal-input" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="postal-code" placeholder="e.g. 018956" aria-describedby="home-postal-error home-postal-hint" />
       <p class="home-postal-error" id="home-postal-error" hidden role="alert"></p>
       <p class="home-postal-hint" id="home-postal-hint"></p>
       <div class="home-postal-actions">
         <button type="button" class="home-postal-btn home-postal-btn-ghost" id="home-postal-validate">Validate</button>
         <button type="button" class="home-postal-btn home-postal-btn-primary" id="home-postal-save">Save</button>
-        <button type="button" class="home-postal-btn home-postal-btn-secondary" id="home-postal-woodlands">Use Woodlands (730587)</button>
+        <button type="button" class="home-postal-btn home-postal-btn-secondary" id="home-postal-north">Continue with North Singapore</button>
       </div>
     </div>
   </div>
@@ -233,8 +233,8 @@
   </dialog>
 
   <script src="js/beanie-guards.js?v=3" defer></script>
-  <script src="js/home-postal.js?v=1" defer></script>
-  <script src="js/app.js?v=16" defer></script>
+  <script src="js/home-postal.js?v=3" defer></script>
+  <script src="js/app.js?v=18" defer></script>
   <script>
     // If the app shell never paints cards within 8s, offer a hard reset (clears SW + caches)
     window.__beanieBoot = setTimeout(function () {
