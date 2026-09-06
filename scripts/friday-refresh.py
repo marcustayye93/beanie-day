@@ -34,6 +34,8 @@ BLOCKLIST = (
     "northpoint",
     "north point",
     "causeway point",
+    "new bahru",
+    "newbahru",
 )
 
 
@@ -107,6 +109,17 @@ def main() -> None:
             print(" ", o)
     else:
         meta.pop("curatorWarnings", None)
+
+    # Flag when most cards still need real venue names
+    activities = data.get("activities", [])
+    if activities:
+        confirm_needed = sum(1 for a in activities if a.get("confirmNeeded"))
+        if confirm_needed / len(activities) > 0.5:
+            meta["staleContentRisk"] = True
+        else:
+            meta.pop("staleContentRisk", None)
+    else:
+        meta.pop("staleContentRisk", None)
 
     with DATA.open("w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
