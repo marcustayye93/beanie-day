@@ -1,5 +1,5 @@
 {
   "name": "sw-bust",
-  "old": "register(\"./sw.js?v=5\")",
-  "new": "register(\"./sw.js?v=7\")"
+  "old_b64": "cmVnaXN0ZXIoIi4vc3cuanM/dj01Iik=",
+  "new_b64": "cmVnaXN0ZXIoIi4vc3cuanM/dj03Iik="
 }

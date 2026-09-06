@@ -1,5 +1,5 @@
 {
   "name": "hero-stats",
-  "old": "    els.statPicks.textContent = String(acts.filter((a) => a.highlight).length);",
-  "new": "    const freshCount = acts.filter((a) => isFresh(a)).length;\n    els.statPicks.textContent = String(freshCount || acts.filter((a) => a.highlight).length);"
+  "old_b64": "ICAgIGVscy5zdGF0UGlja3MudGV4dENvbnRlbnQgPSBTdHJpbmcoYWN0cy5maWx0ZXIoKGEpID0+IGEuaGlnaGxpZ2h0KS5sZW5ndGgpOw==",
+  "new_b64": "ICAgIGNvbnN0IGZyZXNoQ291bnQgPSBhY3RzLmZpbHRlcigoYSkgPT4gaXNGcmVzaChhKSkubGVuZ3RoOwogICAgZWxzLnN0YXRQaWNrcy50ZXh0Q29udGVudCA9IFN0cmluZyhmcmVzaENvdW50IHx8IGFjdHMuZmlsdGVyKChhKSA9PiBhLmhpZ2hsaWdodCkubGVuZ3RoKTs="
 }
