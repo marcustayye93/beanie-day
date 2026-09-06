@@ -1,6 +1,19 @@
 /** Beanie Day — apply small patches onto main app.js at runtime */
 (function () {
   "use strict";
+  function dec(b64) {
+    try {
+      return decodeURIComponent(
+        Array.prototype.map
+          .call(atob(b64), function (c) {
+            return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+          })
+          .join("")
+      );
+    } catch (e) {
+      return atob(b64);
+    }
+  }
   var BASE =
     "https://raw.githubusercontent.com/marcustayye93/beanie-day/main/js/app.js";
   fetch("js/patches/manifest.json", { cache: "no-cache" })
@@ -29,12 +42,15 @@
       var patches = pair[1] || [];
       for (var i = 0; i < patches.length; i++) {
         var p = patches[i];
-        if (!p || !p.old) continue;
-        if (code.indexOf(p.old) === -1) {
+        if (!p) continue;
+        var oldS = p.old_b64 ? dec(p.old_b64) : p.old;
+        var newS = p.new_b64 ? dec(p.new_b64) : p.new;
+        if (!oldS) continue;
+        if (code.indexOf(oldS) === -1) {
           console.warn("Beanie patch miss:", p.name || i);
           continue;
         }
-        code = code.replace(p.old, p.new);
+        code = code.replace(oldS, newS);
       }
       var s = document.createElement("script");
       s.text = code;
