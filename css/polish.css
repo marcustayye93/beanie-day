@@ -110,3 +110,181 @@
 .btn-fill {
   background: linear-gradient(135deg, var(--teal-bright), var(--teal-deep));
 }
+
+
+/* —— Bean Plans wordmark + hamburger drawer —— */
+.brand-mark {
+  font-size: 20px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  min-width: 0;
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-variant-caps: all-small-caps;
+  -webkit-font-smoothing: antialiased;
+  color: #0f766e;
+  background: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .brand-name {
+    color: #5eead4;
+  }
+}
+
+
+.menu-toggle .menu-icon {
+  display: grid;
+  gap: 4px;
+  width: 18px;
+}
+
+.menu-toggle .menu-icon span {
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  background: #0f766e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .menu-toggle .menu-icon span {
+    background: #5eead4;
+  }
+}
+
+.menu-toggle[aria-expanded="true"] {
+  background: linear-gradient(135deg, #2dd4bf, #0f766e);
+  color: #fff;
+}
+
+.menu-toggle[aria-expanded="true"] .menu-icon span {
+  background: #fff;
+}
+
+.nav-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: rgba(7, 20, 18, 0.45);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+
+.nav-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 70;
+  width: min(86vw, 320px);
+  height: 100%;
+  padding: calc(var(--safe-t, env(safe-area-inset-top, 0px)) + 18px) 18px
+    calc(env(safe-area-inset-bottom, 0px) + 24px);
+  background: rgba(255, 255, 255, 0.92);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(160%);
+  border-left: 1px solid rgba(15, 118, 110, 0.14);
+  box-shadow: -12px 0 40px rgba(15, 118, 110, 0.16);
+  transform: translateX(0);
+}
+
+@media (prefers-color-scheme: dark) {
+  .nav-drawer {
+    background: rgba(16, 32, 29, 0.94);
+    border-left-color: rgba(45, 212, 191, 0.16);
+  }
+}
+
+.nav-drawer[hidden],
+.nav-backdrop[hidden] {
+  display: none !important;
+}
+
+.nav-drawer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-drawer-kicker {
+  margin: 8px 4px 12px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #0f766e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .nav-drawer-kicker {
+    color: #5eead4;
+  }
+}
+
+.nav-drawer-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  border: 0;
+  border-radius: 14px;
+  padding: 14px 16px;
+  background: color-mix(in srgb, #0f766e 8%, transparent);
+  color: var(--ink, #0b1f1c);
+  font-size: 16px;
+  font-weight: 750;
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-drawer-item:active {
+  transform: scale(0.98);
+  background: color-mix(in srgb, #0f766e 16%, transparent);
+}
+
+.nav-drawer-note {
+  margin: 16px 4px 0;
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--ink-3, #6b8580);
+  letter-spacing: 0.01em;
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+/* Source link outside card-hit — tappable on iOS */
+.card-source-row {
+  padding: 0 14px 14px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.source-link {
+  position: relative;
+  z-index: 2;
+  pointer-events: auto !important;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  color: #fff !important;
+  background: linear-gradient(135deg, #14b8a6, #0f766e) !important;
+  box-shadow: 0 4px 14px rgba(15, 118, 110, 0.38);
+  font-weight: 800;
+  max-width: 100%;
+}
+
+.source-link span[aria-hidden="true"] {
+  margin-left: 2px;
+  opacity: 0.95;
+}
