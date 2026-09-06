@@ -262,7 +262,7 @@
     if (!("serviceWorker" in navigator)) return;
     window.addEventListener("load", () => {
       navigator.serviceWorker
-        .register("./sw.js?v=14")
+        .register("./sw.js?v=15")
         .then((reg) => {
           // Prefer the newest worker immediately
           if (reg.waiting) reg.waiting.postMessage("SKIP_WAITING");
