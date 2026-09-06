@@ -1219,6 +1219,7 @@ img {
   cursor: pointer;
   color: inherit;
   outline: none;
+  text-decoration: none;
 }
 
 .card-hit:focus-visible {

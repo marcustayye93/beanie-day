@@ -18,11 +18,19 @@
       );
     }
 
+    const href = a.source && a.source.url ? escapeAttr(a.source.url) : "";
+    const hitOpen = href
+      ? `<a class="card-hit" href="${href}" target="_blank" rel="noopener noreferrer" aria-label="${escapeAttr(
+          "Open details: " + a.title
+        )}">`
+      : `<div class="card-hit" data-toggle="${escapeAttr(a.id)}" role="button" tabindex="0"
+          aria-expanded="${isOpen}" aria-controls="${detailsId}"
+          aria-label="${escapeAttr((isOpen ? "Collapse " : "Expand ") + a.title)}">`;
+    const hitClose = href ? "</a>" : "</div>";
+
     return `
       <article class="${classes.join(" ")}" style="animation-delay:${Math.min(index, 12) * 45}ms; --card-grad:${v.grad}" data-id="${escapeAttr(a.id)}">
-        <div class="card-hit" data-toggle="${escapeAttr(a.id)}" role="button" tabindex="0"
-          aria-expanded="${isOpen}" aria-controls="${detailsId}"
-          aria-label="${escapeAttr((isOpen ? "Collapse " : "Expand ") + a.title)}">
+        ${hitOpen}
           <div class="card-media" style="background:${v.grad}">
             ${img}
             <div class="card-media-fallback" aria-hidden="true">${v.emoji}</div>
@@ -30,7 +38,7 @@
             <div class="card-media-top">${badges.join("")}</div>
             <div class="card-media-bottom">
               <span class="travel-chip">📍 ${escapeHtml(a.travel?.zone || "Singapore")}</span>
-              <span class="expand-hint" aria-hidden="true">▾</span>
+              <span class="expand-hint" aria-hidden="true">↗</span>
             </div>
           </div>
           <div class="card-body">
@@ -50,10 +58,10 @@
               </div>
             </div>
             <div class="card-footer">
-              <span class="tap-hint">${isOpen ? "Tap to collapse" : "Tap for details"}</span>
+              <span class="tap-hint">${href ? "Tap for details ↗" : isOpen ? "Tap to collapse" : "Tap for details"}</span>
             </div>
           </div>
-        </div>
+        ${hitClose}
         ${source ? `<div class="card-source-row">${source}</div>` : ""}
       </article>
     `;
@@ -262,7 +270,7 @@
     if (!("serviceWorker" in navigator)) return;
     window.addEventListener("load", () => {
       navigator.serviceWorker
-        .register("./sw.js?v=18")
+        .register("./sw.js?v=19")
         .then((reg) => {
           // Prefer the newest worker immediately
           if (reg.waiting) reg.waiting.postMessage("SKIP_WAITING");
