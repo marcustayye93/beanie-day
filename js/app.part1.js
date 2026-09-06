@@ -256,9 +256,10 @@
     if (a.tags?.includes("AC")) {
       facts.push(`<span class="fact"><span class="fact-icon">❄️</span>AC</span>`);
     }
-    if (a.travel?.fromWoodlands) {
+    const driveChip = window.BeanieHomePostal?.formatDriveChip?.(a.travel?.zone);
+    if (driveChip) {
       facts.push(
-        `<span class="fact"><span class="fact-icon">🚗</span>${escapeHtml(a.travel.fromWoodlands)}</span>`
+        `<span class="fact"><span class="fact-icon">🚗</span>${escapeHtml(driveChip)}</span>`
       );
     }
 

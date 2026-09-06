@@ -1,5 +1,5 @@
 /* Beanie Day service worker — network-first shell so updates always land */
-const CACHE_VERSION = "beanie-day-v13-night-polish";
+const CACHE_VERSION = "beanie-day-v14-home-postal";
 const PRECACHE = [
   "./",
   "./index.html",
@@ -9,12 +9,14 @@ const PRECACHE = [
   "./css/polish.css",
   "./css/intro-touch.css",
   "./css/night-out.css",
+  "./css/home-postal.css",
   "./js/app.js",
   "./js/app.part0.js",
   "./js/app.part1.js",
   "./js/app.part2.js",
   "./js/zone-pass.js",
   "./js/beanie-guards.js",
+  "./js/home-postal.js",
   "./data/week.json",
   "./data/zone-pass.state.json",
   "./data/schema-flags.json",

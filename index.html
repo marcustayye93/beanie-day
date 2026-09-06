@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="css/polish.css?v=7" />
   <link rel="stylesheet" href="css/intro-touch.css?v=1" />
   <link rel="stylesheet" href="css/night-out.css?v=3" />
+  <link rel="stylesheet" href="css/home-postal.css?v=1" />
   <title>Bean Plans</title>
   <script>
     // Ensure trailing slash on GitHub Pages project URLs so relative assets resolve
@@ -115,6 +116,9 @@
       <button type="button" class="nav-drawer-item" data-nav-action="install">
         <span aria-hidden="true">↓</span> Install
       </button>
+      <button type="button" class="nav-drawer-item" data-nav-action="home-postal">
+        <span aria-hidden="true">📮</span> Home postal
+      </button>
       <p class="nav-drawer-note">Woodlands-first · fresh finds only</p>
     </div>
   </nav>
@@ -196,6 +200,25 @@
   <nav class="tab-bar" id="tab-nav" aria-label="Sections" role="tablist"></nav>
   </div><!-- /.app-shell -->
 
+
+  <div id="home-postal-modal" class="home-postal-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="home-postal-title">
+    <div class="home-postal-backdrop" id="home-postal-backdrop"></div>
+    <div class="home-postal-card">
+      <p class="home-postal-kicker">Bean Plans</p>
+      <h2 class="home-postal-title" id="home-postal-title">Where’s home?</h2>
+      <p class="home-postal-copy">Save a Singapore postal once so drive times are from your zone — not a fixed Woodlands baseline.</p>
+      <label class="home-postal-label" for="home-postal-input">6-digit postal</label>
+      <input id="home-postal-input" class="home-postal-input" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="postal-code" placeholder="730587" aria-describedby="home-postal-error home-postal-hint" />
+      <p class="home-postal-error" id="home-postal-error" hidden role="alert"></p>
+      <p class="home-postal-hint" id="home-postal-hint"></p>
+      <div class="home-postal-actions">
+        <button type="button" class="home-postal-btn home-postal-btn-ghost" id="home-postal-validate">Validate</button>
+        <button type="button" class="home-postal-btn home-postal-btn-primary" id="home-postal-save">Save</button>
+        <button type="button" class="home-postal-btn home-postal-btn-secondary" id="home-postal-woodlands">Use Woodlands (730587)</button>
+      </div>
+    </div>
+  </div>
+
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
   <dialog class="sheet" id="ios-install-dialog">
@@ -210,7 +233,8 @@
   </dialog>
 
   <script src="js/beanie-guards.js?v=3" defer></script>
-  <script src="js/app.js?v=15" defer></script>
+  <script src="js/home-postal.js?v=1" defer></script>
+  <script src="js/app.js?v=16" defer></script>
   <script>
     // If the app shell never paints cards within 8s, offer a hard reset (clears SW + caches)
     window.__beanieBoot = setTimeout(function () {

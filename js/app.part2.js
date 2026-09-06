@@ -9,10 +9,11 @@
         )}</span>`
       );
     }
-    if (a.travel?.fromWoodlands) {
+    const driveChip = window.BeanieHomePostal?.formatDriveChip?.(a.travel?.zone);
+    if (driveChip) {
       metaBits.push(
         `<span class="card-meta-sep" aria-hidden="true">·</span><span class="card-meta-drive">${escapeHtml(
-          a.travel.fromWoodlands
+          driveChip
         )}</span>`
       );
     }
@@ -113,12 +114,20 @@
         requestAnimationFrame(() => els.searchInput?.focus());
       } else if (kind === "install") {
         onInstallClick();
+      } else if (kind === "home-postal") {
+        window.BeanieHomePostal?.openModal?.({ required: false });
       }
     });
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && document.body.classList.contains("nav-open")) {
         closeNavDrawer();
       }
+    });
+
+    window.addEventListener("beanie:home-postal-changed", () => {
+      try {
+        renderPanel();
+      } catch (_) {}
     });
 
     const onTab = (e) => {
@@ -253,7 +262,7 @@
     if (!("serviceWorker" in navigator)) return;
     window.addEventListener("load", () => {
       navigator.serviceWorker
-        .register("./sw.js?v=13")
+        .register("./sw.js?v=14")
         .then((reg) => {
           // Prefer the newest worker immediately
           if (reg.waiting) reg.waiting.postMessage("SKIP_WAITING");
