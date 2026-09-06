@@ -1,7 +1,7 @@
 /** Beanie Day — same-origin bake loader (no raw.githubusercontent.com) */
 (function () {
   "use strict";
-  var parts = ["js/app.part0.js?v=10", "js/app.part1.js?v=10", "js/app.part2.js?v=10"];
+  var parts = ["js/app.part0.js?v=11", "js/app.part1.js?v=11", "js/app.part2.js?v=11"];
   Promise.all(
     parts.map(function (u) {
       return fetch(u, { cache: "no-cache" }).then(function (r) {
