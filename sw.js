@@ -6,8 +6,14 @@ const PRECACHE = [
   "./offline.html",
   "./manifest.json",
   "./css/styles.css",
+  "./css/freshness.css",
   "./js/app.js",
   "./data/week.json",
+  "./data/visuals.json",
+  "./data/activity-pack-0.json",
+  "./data/activity-pack-1.json",
+  "./data/activity-pack-2.json",
+  "./data/activity-pack-3.json",
   "./icons/favicon.svg",
   "./icons/icon-192.svg",
   "./icons/icon-512.svg",
@@ -18,15 +24,12 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     (async () => {
       const cache = await caches.open(CACHE_VERSION);
-      // Cache one-by-one so a single failure doesn't kill install
       await Promise.all(
         PRECACHE.map(async (url) => {
           try {
             const res = await fetch(url, { cache: "reload" });
             if (res.ok) await cache.put(url, res);
-          } catch (_) {
-            /* ignore individual failures */
-          }
+          } catch (_) {}
         })
       );
       await self.skipWaiting();
@@ -55,7 +58,6 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
 
-  // Always network-first for app shell + data so deploys aren't stuck on stale cache
   const path = url.pathname;
   const isShell =
     path.endsWith("/") ||
