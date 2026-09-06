@@ -9,11 +9,11 @@
         )}</span>`
       );
     }
-    const driveChip = window.BeanieHomePostal?.formatDriveChip?.(a.travel?.zone);
-    if (driveChip) {
+    const driveMeta = window.BeanieHomePostal?.formatDriveChip?.(a.travel?.zone);
+    if (driveMeta) {
       metaBits.push(
         `<span class="card-meta-sep" aria-hidden="true">·</span><span class="card-meta-drive">${escapeHtml(
-          driveChip
+          driveMeta
         )}</span>`
       );
     }
@@ -262,7 +262,7 @@
     if (!("serviceWorker" in navigator)) return;
     window.addEventListener("load", () => {
       navigator.serviceWorker
-        .register("./sw.js?v=16")
+        .register("./sw.js?v=17")
         .then((reg) => {
           // Prefer the newest worker immediately
           if (reg.waiting) reg.waiting.postMessage("SKIP_WAITING");

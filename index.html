@@ -234,8 +234,25 @@
 
   <script src="js/beanie-guards.js?v=3" defer></script>
   <script src="js/home-postal.js?v=3" defer></script>
-  <script src="js/app.js?v=18" defer></script>
+  <script src="js/app.js?v=19" defer></script>
   <script>
+    // Intro taps must work even if the baked part loader fails
+    (function () {
+      var intro = document.getElementById("intro");
+      if (!intro) return;
+      intro.addEventListener("click", function (e) {
+        var panel = e.target && e.target.closest && e.target.closest("[data-enter-tab]");
+        if (!panel) return;
+        var tab = panel.getAttribute("data-enter-tab") || "this-week";
+        if (typeof window.__beanieEnterApp === "function") {
+          window.__beanieEnterApp(tab);
+          return;
+        }
+        document.body.classList.remove("intro-active", "postal-pending");
+        if (location.hash !== "#" + tab) location.hash = tab;
+      });
+    })();
+  </script>
     // If the app shell never paints cards within 8s, offer a hard reset (clears SW + caches)
     window.__beanieBoot = setTimeout(function () {
       var list = document.getElementById("card-list");
