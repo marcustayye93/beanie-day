@@ -1,5 +1,5 @@
 /* Beanie Day service worker — network-first shell so updates always land */
-const CACHE_VERSION = "beanie-day-v11-intro-boot";
+const CACHE_VERSION = "beanie-day-v12-night-out";
 const PRECACHE = [
   "./",
   "./index.html",
@@ -8,6 +8,7 @@ const PRECACHE = [
   "./css/styles.css",
   "./css/polish.css",
   "./css/intro-touch.css",
+  "./css/night-out.css",
   "./js/app.js",
   "./js/app.part0.js",
   "./js/app.part1.js",
