@@ -6,8 +6,11 @@ const PRECACHE = [
   "./offline.html",
   "./manifest.json",
   "./css/styles.css",
+  "./css/polish.css",
   "./js/app.js",
+  "./js/beanie-guards.js",
   "./data/week.json",
+  "./data/schema-flags.json",
   "./icons/favicon.svg",
   "./icons/icon-192.svg",
   "./icons/icon-512.svg",
@@ -63,6 +66,7 @@ self.addEventListener("fetch", (event) => {
     path.endsWith(".js") ||
     path.endsWith(".css") ||
     path.endsWith("week.json") ||
+    path.endsWith("schema-flags.json") ||
     path.endsWith("manifest.json") ||
     req.mode === "navigate";
 
