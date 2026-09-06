@@ -1,1 +1,25 @@
-PLACEHOLDER
+/* Bean Plans — night-out interior (after cinematic intro). Intro untouched. */
+
+body:not(.intro-active) {
+  --bg: #050505;
+  --surface: #0f0f14;
+  --ink: #fafafa;
+  --ink-2: #a1a1aa;
+  --ink-3: #71717a;
+  --line: rgba(255, 255, 255, 0.1);
+  --teal: #2dd4bf;
+  --teal-bright: #5eead4;
+  --teal-deep: #0f766e;
+  --teal-ink: #99f6e4;
+  --shadow: 0 16px 48px rgba(0, 0, 0, 0.55);
+  --shadow-sm: 0 4px 18px rgba(0, 0, 0, 0.35);
+  --radius: 16px;
+  --radius-sm: 12px;
+  color: var(--ink);
+  background: #050505;
+}
+
+body:not(.intro-active) .app-shell {
+  background: #050505;
+  color: var(--ink);
+}
