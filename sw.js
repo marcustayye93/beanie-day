@@ -1,5 +1,5 @@
 /* Beanie Day service worker — network-first shell so updates always land */
-const CACHE_VERSION = "beanie-day-v7-polish";
+const CACHE_VERSION = "beanie-day-v8-baked";
 const PRECACHE = [
   "./",
   "./index.html",
@@ -8,18 +8,6 @@ const PRECACHE = [
   "./css/styles.css",
   "./css/polish.css",
   "./js/app.js",
-  "./js/app.bundle.js",
-  "./js/patches/manifest.json",
-  "./js/patches/09-sw-bust.json",
-  "./js/patches/08-card-template.json",
-  "./js/patches/07-card-badges.json",
-  "./js/patches/06-search-venue.json",
-  "./js/patches/05-filter-blocklist.json",
-  "./js/patches/04-empty-state.json",
-  "./js/patches/03-hero-stats.json",
-  "./js/patches/02-loadData-cache.json",
-  "./js/patches/01-loadData-network.json",
-  "./js/patches/00-guards-aliases.json",
   "./js/beanie-guards.js",
   "./data/week.json",
   "./data/schema-flags.json",
@@ -33,15 +21,12 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     (async () => {
       const cache = await caches.open(CACHE_VERSION);
-      // Cache one-by-one so a single failure doesn't kill install
       await Promise.all(
         PRECACHE.map(async (url) => {
           try {
             const res = await fetch(url, { cache: "reload" });
             if (res.ok) await cache.put(url, res);
-          } catch (_) {
-            /* ignore individual failures */
-          }
+          } catch (_) {}
         })
       );
       await self.skipWaiting();
@@ -70,7 +55,6 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
 
-  // Always network-first for app shell + data so deploys aren't stuck on stale cache
   const path = url.pathname;
   const isShell =
     path.endsWith("/") ||
@@ -80,7 +64,6 @@ self.addEventListener("fetch", (event) => {
     path.endsWith("week.json") ||
     path.endsWith("schema-flags.json") ||
     path.endsWith("manifest.json") ||
-    path.includes("/patches/") ||
     req.mode === "navigate";
 
   if (isShell) {
