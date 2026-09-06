@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "note": "Overlay flags only — no new venues invented; venue names taken from existing real places in week.json titles/sources. New Bahru deliberately excluded (not a destination).",
+  "byId": {
+    "tw-katong-omakase-new": { "fresh": true },
+    "tw-duxton-pop-up-brand": { "fresh": true },
+    "tw-expo-public-fair": { "fresh": true, "venue": "Singapore Expo" },
+    "tw-tanjong-pagar-hh-launch": { "fresh": true },
+    "tw-north-new-restaurant": { "fresh": true },
+    "tw-artscience-show": { "fresh": true, "venue": "ArtScience Museum" },
+    "ev-expo-whats-on": { "venue": "Singapore Expo" },
+    "ev-national-gallery": { "venue": "National Gallery Singapore" },
+    "ev-esplanade-show": { "venue": "Esplanade" },
+    "nh-kallang-wave-new": { "venue": "Singapore Sports Hub" },
+    "out-gardens-by-bay-show": { "venue": "Gardens by the Bay" },
+    "out-botanic-event": { "venue": "Singapore Botanic Gardens" },
+    "out-sentosa-limited": { "venue": "Sentosa" },
+    "out-coney-seasonal": { "venue": "Coney Island" }
+  }
+}

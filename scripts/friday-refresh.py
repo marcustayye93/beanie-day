@@ -5,7 +5,7 @@ Friday refresh for Beanie Day.
 - Rolls week meta to the current/next Friday window
 - Stamps refreshedOn / nextRefresh
 - Appends a curator reminder into meta (content still human-curated for quality)
-- Does NOT reintroduce familiar staples (VivoCity, Holland V, AMK Hub, Northpoint)
+- Does NOT reintroduce familiar staples (VivoCity, Holland V, AMK Hub, Northpoint, New Bahru)
 
 Run locally:
   python3 scripts/friday-refresh.py
@@ -34,6 +34,7 @@ BLOCKLIST = (
     "northpoint",
     "north point",
     "causeway point",
+    "new bahru",
 )
 
 
@@ -84,25 +85,41 @@ def main() -> None:
         stamp = f"{extra} · {stamp}"
     meta["autoRefreshNote"] = stamp
 
-    # Safety: flag any blocked familiar destinations still in the feed
-    offenders = []
-    for act in data.get("activities", []):
+    # Safety: drop familiar staples from the feed (defensive), and flag them
+    def is_blocked(act: dict) -> str | None:
         blob = " ".join(
             str(act.get(k, ""))
-            for k in ("id", "title", "description", "why", "region")
+            for k in ("id", "title", "venue", "name", "description", "why", "region")
         ).lower()
-        region = ""
         if isinstance(act.get("travel"), dict):
-            region = str(act["travel"].get("region", "")).lower()
-            blob += " " + region
+            blob += " " + str(act["travel"].get("region", "")).lower()
         for bad in BLOCKLIST:
             if bad in blob:
-                offenders.append(f"{act.get('id')}: contains '{bad}'")
-                break
+                return bad
+        return None
+
+    kept = []
+    offenders = []
+    for act in data.get("activities", []):
+        if not isinstance(act, dict):
+            continue
+        hit = is_blocked(act)
+        if hit:
+            offenders.append(f"{act.get('id')}: contains '{hit}'")
+            continue
+        # Schema consistency: ensure fresh is a bool when present
+        if "fresh" in act and not isinstance(act["fresh"], bool):
+            act["fresh"] = bool(act["fresh"])
+        if "venue" in act and act["venue"] is not None:
+            act["venue"] = str(act["venue"]).strip()
+            if not act["venue"]:
+                act.pop("venue", None)
+        kept.append(act)
+    data["activities"] = kept
 
     if offenders:
         meta["curatorWarnings"] = offenders
-        print("WARNING: familiar staples detected:")
+        print("WARNING: familiar staples removed:")
         for o in offenders:
             print(" ", o)
     else:

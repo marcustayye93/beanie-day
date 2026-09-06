@@ -1,13 +1,19 @@
 /* Beanie Day service worker — network-first shell so updates always land */
-const CACHE_VERSION = "beanie-day-v6-intro";
+const CACHE_VERSION = "beanie-day-v8-baked";
 const PRECACHE = [
   "./",
   "./index.html",
   "./offline.html",
   "./manifest.json",
   "./css/styles.css",
+  "./css/polish.css",
   "./js/app.js",
+  "./js/app.part0.js",
+  "./js/app.part1.js",
+  "./js/app.part2.js",
+  "./js/beanie-guards.js",
   "./data/week.json",
+  "./data/schema-flags.json",
   "./icons/favicon.svg",
   "./icons/icon-192.svg",
   "./icons/icon-512.svg",
@@ -18,15 +24,12 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     (async () => {
       const cache = await caches.open(CACHE_VERSION);
-      // Cache one-by-one so a single failure doesn't kill install
       await Promise.all(
         PRECACHE.map(async (url) => {
           try {
             const res = await fetch(url, { cache: "reload" });
             if (res.ok) await cache.put(url, res);
-          } catch (_) {
-            /* ignore individual failures */
-          }
+          } catch (_) {}
         })
       );
       await self.skipWaiting();
@@ -55,7 +58,6 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
 
-  // Always network-first for app shell + data so deploys aren't stuck on stale cache
   const path = url.pathname;
   const isShell =
     path.endsWith("/") ||
@@ -63,6 +65,7 @@ self.addEventListener("fetch", (event) => {
     path.endsWith(".js") ||
     path.endsWith(".css") ||
     path.endsWith("week.json") ||
+    path.endsWith("schema-flags.json") ||
     path.endsWith("manifest.json") ||
     req.mode === "navigate";
 
