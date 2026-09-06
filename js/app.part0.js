@@ -28,172 +28,187 @@
     outdoor: { emoji: "🌳", color: "#22c55e", grad: "linear-gradient(135deg,#4ade80,#16a34a)" },
   };
 
-  /** Visual pack per activity id */
+  /* Generic category stills — mood only, never a venue lookalike */
+  const U = "https://images.unsplash.com/";
+  const Q = "?w=900&q=70&auto=format&fit=crop";
+  const CATEGORY_PHOTOS = {
+    flavours: [
+      U + "photo-1498837164877-96005e283c1c" + Q,
+      U + "photo-1467003903916-b12f468f0c8c" + Q,
+      U + "photo-1504674900247-0877df9cc836" + Q,
+      U + "photo-1540189549336-e6e99c3679fe" + Q,
+    ],
+    "happy-hour": [
+      U + "photo-1513558161293-cdaf765ed2fd" + Q,
+      U + "photo-1437418747212-8d9709afab22" + Q,
+      U + "photo-1551024709-8f23befc6f87" + Q,
+      U + "photo-1608270586620-248524c67de9" + Q,
+    ],
+    brands: [
+      U + "photo-1523381294911-8d3cead13475" + Q,
+      U + "photo-1472851294608-062f824d29cc" + Q,
+      U + "photo-1555529669-e69e7aa0ba9a" + Q,
+      U + "photo-1445205170230-053b83016050" + Q,
+    ],
+    events: [
+      U + "photo-1514525253161-7a46d19cd819" + Q,
+      U + "photo-1492684223066-81342ee5ff30" + Q,
+      U + "photo-1501281668745-f7f57925c3b4" + Q,
+      U + "photo-1519671482749-fd09be7ccebf" + Q,
+    ],
+    outdoor: [
+      U + "photo-1441974231531-c6227db76b6e" + Q,
+      U + "photo-1501785888041-af3ef285b470" + Q,
+      U + "photo-1469474968028-56623f02e42e" + Q,
+      U + "photo-1507525428034-b723cf961d3e" + Q,
+    ],
+    "near-home": [
+      U + "photo-1480714378408-67cf0d13bc1b" + Q,
+      U + "photo-1519501025264-65ba15a82390" + Q,
+      U + "photo-1449824913935-59a10b8d2000" + Q,
+      U + "photo-1477959858617-67f85cf4f1df" + Q,
+    ],
+    "this-week": [
+      U + "photo-1414235077428-338989a2e8c0" + Q,
+      U + "photo-1514362545857-3bc16c4c7d1b" + Q,
+      U + "photo-1492684223066-81342ee5ff30" + Q,
+      U + "photo-1441986300917-64674bd600d8" + Q,
+    ],
+  };
+
+  /** Emoji + gradient only. Photos come from CATEGORY_PHOTOS, never per-venue stills. */
   const VISUALS = {
     "tw-katong-omakase-new": {
       emoji: "🍣",
       grad: "linear-gradient(135deg,#fb923c,#ef4444)",
-      image: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=800&q=80&auto=format&fit=crop",
     },
     "tw-duxton-pop-up-brand": {
       emoji: "✨",
       grad: "linear-gradient(135deg,#f472b6,#a855f7)",
-      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80&auto=format&fit=crop",
     },
     "tw-expo-public-fair": {
       emoji: "🎪",
       grad: "linear-gradient(135deg,#f87171,#a855f7)",
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80&auto=format&fit=crop",
     },
     "tw-tanjong-pagar-hh-launch": {
       emoji: "🍻",
       grad: "linear-gradient(135deg,#fbbf24,#f97316)",
-      image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80&auto=format&fit=crop",
     },
     "tw-new-bahru-new-tenant": {
       emoji: "🏷️",
       grad: "linear-gradient(135deg,#e879f9,#8b5cf6)",
-      image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&q=80&auto=format&fit=crop",
     },
     "tw-north-new-restaurant": {
       emoji: "🍜",
       grad: "linear-gradient(135deg,#fb923c,#3b82f6)",
-      image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80&auto=format&fit=crop",
     },
     "tw-artscience-show": {
       emoji: "🪷",
       grad: "linear-gradient(135deg,#22d3ee,#818cf8)",
-      image: "https://images.unsplash.com/photo-1566127444979-b3d2b654e3d7?w=800&q=80&auto=format&fit=crop",
     },
     "br-keong-saik-concept": {
       emoji: "💎",
       grad: "linear-gradient(135deg,#f472b6,#6366f1)",
-      image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80&auto=format&fit=crop",
     },
     "br-orchard-limited-drop": {
       emoji: "🛍️",
       grad: "linear-gradient(135deg,#818cf8,#c084fc)",
-      image: "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&q=80&auto=format&fit=crop",
     },
     "br-bugis-weekend-market": {
       emoji: "🎨",
       grad: "linear-gradient(135deg,#f472b6,#fbbf24)",
-      image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=800&q=80&auto=format&fit=crop",
     },
     "br-joo-chiat-new": {
       emoji: "🏘️",
       grad: "linear-gradient(135deg,#fcd34d,#f97316)",
-      image: "https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?w=800&q=80&auto=format&fit=crop",
     },
     "fl-tp-new-kitchen": {
       emoji: "🍽️",
       grad: "linear-gradient(135deg,#fb923c,#ef4444)",
-      image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80&auto=format&fit=crop",
     },
     "fl-robertson-new": {
       emoji: "🥘",
       grad: "linear-gradient(135deg,#f472b6,#fb923c)",
-      image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80&auto=format&fit=crop",
     },
     "fl-chinatown-new": {
       emoji: "🧧",
       grad: "linear-gradient(135deg,#ef4444,#f59e0b)",
-      image: "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=800&q=80&auto=format&fit=crop",
     },
     "fl-west-new-opening": {
       emoji: "🌅",
       grad: "linear-gradient(135deg,#fb923c,#7c3aed)",
-      image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80&auto=format&fit=crop",
     },
     "fl-siglap-new": {
       emoji: "🌶️",
       grad: "linear-gradient(135deg,#f87171,#fbbf24)",
-      image: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80&auto=format&fit=crop",
     },
     "hh-emerald-new-deal": {
       emoji: "🥂",
       grad: "linear-gradient(135deg,#fbbf24,#b45309)",
-      image: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&q=80&auto=format&fit=crop",
     },
     "hh-telok-ayer-new": {
       emoji: "🍸",
       grad: "linear-gradient(135deg,#a78bfa,#f472b6)",
-      image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80&auto=format&fit=crop",
     },
     "hh-boat-quay-limited": {
       emoji: "🌃",
       grad: "linear-gradient(135deg,#6366f1,#ec4899)",
-      image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80&auto=format&fit=crop",
     },
     "hh-woodlands-new-venue": {
       emoji: "🍺",
       grad: "linear-gradient(135deg,#38bdf8,#2563eb)",
-      image: "https://images.unsplash.com/photo-1608270586620-248524c67de9?w=800&q=80&auto=format&fit=crop",
     },
     "ev-expo-whats-on": {
       emoji: "🏟️",
       grad: "linear-gradient(135deg,#f43f5e,#8b5cf6)",
-      image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80&auto=format&fit=crop",
     },
     "ev-marina-light": {
       emoji: "🎆",
       grad: "linear-gradient(135deg,#38bdf8,#6366f1)",
-      image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&q=80&auto=format&fit=crop",
     },
     "ev-national-gallery": {
       emoji: "🖼️",
       grad: "linear-gradient(135deg,#94a3b8,#6366f1)",
-      image: "https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=800&q=80&auto=format&fit=crop",
     },
     "ev-esplanade-show": {
       emoji: "🎭",
       grad: "linear-gradient(135deg,#f472b6,#8b5cf6)",
-      image: "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800&q=80&auto=format&fit=crop",
     },
     "nh-woodlands-new-opening": {
       emoji: "🏠",
       grad: "linear-gradient(135deg,#60a5fa,#14b8a6)",
-      image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80&auto=format&fit=crop",
     },
     "nh-sembawang-new": {
       emoji: "🆕",
       grad: "linear-gradient(135deg,#38bdf8,#22c55e)",
-      image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80&auto=format&fit=crop",
     },
     "nh-kallang-wave-new": {
       emoji: "🎫",
       grad: "linear-gradient(135deg,#f87171,#3b82f6)",
-      image: "https://images.unsplash.com/photo-1459749411177-041415906c1e?w=800&q=80&auto=format&fit=crop",
     },
     "nh-west-pop-up": {
       emoji: "📦",
       grad: "linear-gradient(135deg,#fb923c,#8b5cf6)",
-      image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&q=80&auto=format&fit=crop",
     },
     "out-gardens-by-bay-show": {
       emoji: "🌺",
       grad: "linear-gradient(135deg,#4ade80,#0ea5e9)",
-      image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80&auto=format&fit=crop",
     },
     "out-botanic-event": {
       emoji: "🎶",
       grad: "linear-gradient(135deg,#86efac,#14b8a6)",
-      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80&auto=format&fit=crop",
     },
     "out-sentosa-limited": {
       emoji: "🏝️",
       grad: "linear-gradient(135deg,#38bdf8,#fbbf24)",
-      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80&auto=format&fit=crop",
     },
     "out-coney-seasonal": {
       emoji: "🚲",
       grad: "linear-gradient(135deg,#4ade80,#0ea5e9)",
-      image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80&auto=format&fit=crop",
     },
     "out-rooftop-new": {
       emoji: "🌃",
       grad: "linear-gradient(135deg,#a78bfa,#f97316)",
-      image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80&auto=format&fit=crop",
     },
   };
 
