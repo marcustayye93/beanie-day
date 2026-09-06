@@ -301,6 +301,7 @@
     // Short exit animation then show app
     setTimeout(finish, 280);
   }
+  window.__beanieEnterApp = enterApp;
 
   function showIntro() {
     state.inIntro = true;
