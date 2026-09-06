@@ -1,0 +1,58 @@
+{
+  "_comment": "EXAMPLE ONLY — not live week data. Shows a filled zone-pass shape after Friday curation.",
+  "zonePass": {
+    "version": 1,
+    "refreshedOn": "2026-09-11",
+    "quotas": {
+      "Central": 4,
+      "East": 2,
+      "West": 2,
+      "North": 2,
+      "South": 1
+    },
+    "zones": {
+      "Central": {
+        "status": "filled",
+        "count": 4,
+        "note": "Four confirmed openings with venue + source.url"
+      },
+      "East": {
+        "status": "filled",
+        "count": 2,
+        "note": ""
+      },
+      "West": {
+        "status": "empty",
+        "count": 1,
+        "note": "Only one confirmed; left short rather than invent"
+      },
+      "North": {
+        "status": "filled",
+        "count": 2,
+        "note": "Includes Woodlands-first near-home"
+      },
+      "South": {
+        "status": "skipped",
+        "count": 0,
+        "note": "No real South opening this week — skipped"
+      }
+    },
+    "summary": "Central 4/4 · East 2/2 · West 1/2 · North 2/2 · South 0/1"
+  },
+  "exampleActivityShape": {
+    "id": "fl-example-real-venue",
+    "tabs": ["flavours", "this-week"],
+    "title": "Dinner at a named new kitchen",
+    "venue": "Example Real Restaurant Name",
+    "confirmNeeded": false,
+    "travel": {
+      "zone": "Central",
+      "fromWoodlands": "~35–45 min",
+      "region": "Tanjong Pagar"
+    },
+    "source": {
+      "label": "City Nomads Just Opened",
+      "url": "https://www.citynomads.com/just-opened-singapore"
+    }
+  }
+}
