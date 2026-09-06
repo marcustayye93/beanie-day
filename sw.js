@@ -1,5 +1,5 @@
 /* Beanie Day service worker — network-first shell so updates always land */
-const CACHE_VERSION = "beanie-day-v9-bean-plans";
+const CACHE_VERSION = "beanie-day-v10-zone-pass";
 const PRECACHE = [
   "./",
   "./index.html",
@@ -11,8 +11,10 @@ const PRECACHE = [
   "./js/app.part0.js",
   "./js/app.part1.js",
   "./js/app.part2.js",
+  "./js/zone-pass.js",
   "./js/beanie-guards.js",
   "./data/week.json",
+  "./data/zone-pass.state.json",
   "./data/schema-flags.json",
   "./icons/favicon.svg",
   "./icons/icon-192.svg",
@@ -65,6 +67,7 @@ self.addEventListener("fetch", (event) => {
     path.endsWith(".js") ||
     path.endsWith(".css") ||
     path.endsWith("week.json") ||
+    path.endsWith("zone-pass.state.json") ||
     path.endsWith("schema-flags.json") ||
     path.endsWith("manifest.json") ||
     req.mode === "navigate";

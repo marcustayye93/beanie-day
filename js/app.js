@@ -1,7 +1,7 @@
 /** Beanie Day — same-origin bake loader (no raw.githubusercontent.com) */
 (function () {
   "use strict";
-  var parts = ["js/app.part0.js?v=11", "js/app.part1.js?v=11", "js/app.part2.js?v=11"];
+  var parts = ["js/app.part0.js?v=12", "js/app.part1.js?v=12", "js/app.part2.js?v=12"];
   Promise.all(
     parts.map(function (u) {
       return fetch(u, { cache: "no-cache" }).then(function (r) {
@@ -14,6 +14,10 @@
       var s = document.createElement("script");
       s.text = texts.join("");
       document.head.appendChild(s);
+      var z = document.createElement("script");
+      z.src = "js/zone-pass.js?v=12";
+      z.defer = true;
+      document.head.appendChild(z);
     })
     .catch(function (err) {
       console.error("Beanie Day bake load failed", err);

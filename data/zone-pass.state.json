@@ -1,0 +1,22 @@
+{
+  "zonePass": {
+    "version": 1,
+    "refreshedOn": "2026-09-06",
+    "quotas": {
+      "Central": 4,
+      "East": 2,
+      "West": 2,
+      "North": 2,
+      "South": 1
+    },
+    "zones": {
+      "Central": { "status": "empty", "count": 0, "note": "" },
+      "East": { "status": "empty", "count": 0, "note": "" },
+      "West": { "status": "empty", "count": 0, "note": "" },
+      "North": { "status": "empty", "count": 0, "note": "" },
+      "South": { "status": "empty", "count": 0, "note": "" }
+    },
+    "summary": "Zone pass not run yet — Friday curation pending."
+  },
+  "_note": "Seed/fallback for meta.zonePass. friday-refresh.py persists this into data/week.json on every run."
+}
