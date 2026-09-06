@@ -1,0 +1,156 @@
+/* Home postal gate — night-out matching: sharp ~8px, dark */
+#home-postal-modal[hidden] {
+  display: none !important;
+}
+
+#home-postal-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.home-postal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 8, 12, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.home-postal-card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 380px);
+  background: #141418;
+  color: #f4f4f5;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.55);
+  padding: 22px 20px 18px;
+}
+
+.home-postal-kicker {
+  margin: 0 0 6px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(244, 244, 245, 0.55);
+}
+
+.home-postal-title {
+  margin: 0 0 8px;
+  font-family: "Fjalla One", system-ui, sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.home-postal-copy {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: rgba(244, 244, 245, 0.72);
+}
+
+.home-postal-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+  color: rgba(244, 244, 245, 0.6);
+}
+
+.home-postal-input {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #0e0e12;
+  color: #f4f4f5;
+  font-size: 20px;
+  letter-spacing: 0.18em;
+  text-align: center;
+  padding: 14px 12px;
+  outline: none;
+}
+
+.home-postal-input:focus {
+  border-color: rgba(20, 184, 166, 0.7);
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.18);
+}
+
+.home-postal-error {
+  margin: 10px 0 0;
+  min-height: 1.2em;
+  font-size: 13px;
+  color: #fb7185;
+}
+
+.home-postal-error[hidden] {
+  display: none !important;
+}
+
+.home-postal-hint {
+  margin: 8px 0 0;
+  min-height: 1.2em;
+  font-size: 12px;
+  color: rgba(244, 244, 245, 0.55);
+}
+
+.home-postal-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.home-postal-btn {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 13px 14px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.home-postal-btn:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+.home-postal-btn-primary {
+  background: linear-gradient(135deg, #14b8a6, #0f766e);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(15, 118, 110, 0.35);
+}
+
+.home-postal-btn-secondary {
+  background: transparent;
+  color: #f4f4f5;
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.home-postal-btn-ghost {
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(244, 244, 245, 0.88);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.home-postal-btn:active {
+  transform: scale(0.98);
+}
+
+/* Gate: postal must be chosen once before intro / app */
+body.postal-pending .intro,
+body.postal-pending .app-shell,
+body.postal-pending .skip-link {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+body.postal-pending {
+  overflow: hidden;
+}
