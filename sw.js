@@ -14,6 +14,7 @@ const PRECACHE = [
   "./js/zone-pass.js",
   "./js/beanie-guards.js",
   "./data/week.json",
+  "./data/zone-pass.state.json",
   "./data/schema-flags.json",
   "./icons/favicon.svg",
   "./icons/icon-192.svg",
@@ -66,6 +67,7 @@ self.addEventListener("fetch", (event) => {
     path.endsWith(".js") ||
     path.endsWith(".css") ||
     path.endsWith("week.json") ||
+    path.endsWith("zone-pass.state.json") ||
     path.endsWith("schema-flags.json") ||
     path.endsWith("manifest.json") ||
     req.mode === "navigate";
