@@ -12,7 +12,46 @@
     ],
     "note": "Only fresh finds this week — new openings, pop-ups, limited-run events, and menus you wouldn’t already have bookmarked. Familiar favourites are intentionally left out.",
     "sourcesNote": "Scouted from City Nomads Just Opened, Eatbook, HungryGoWhere, Honeycombers, Time Out SG, Seth Lui / TheSmartLocal, Singapore Expo events, HappyHourLah, venue pages, and ParkingGoWhere / LTA rates. Always re-check hours before you go — new places change fast.",
-    "autoRefreshNote": "Auto-stamped 2026-09-04 02:23 UTC. Curate openings from City Nomads Just Opened, Eatbook, Expo events, HappyHourLah before relying on cards — auto-roll updates dates; humans keep quality high."
+    "autoRefreshNote": "Auto-stamped 2026-09-04 02:23 UTC. Curate openings from City Nomads Just Opened, Eatbook, Expo events, HappyHourLah before relying on cards — auto-roll updates dates; humans keep quality high.",
+    "zonePass": {
+      "version": 1,
+      "refreshedOn": "2026-09-06",
+      "quotas": {
+        "Central": 4,
+        "East": 2,
+        "West": 2,
+        "North": 2,
+        "South": 1
+      },
+      "zones": {
+        "Central": {
+          "status": "empty",
+          "count": 0,
+          "note": ""
+        },
+        "East": {
+          "status": "empty",
+          "count": 0,
+          "note": ""
+        },
+        "West": {
+          "status": "empty",
+          "count": 0,
+          "note": ""
+        },
+        "North": {
+          "status": "empty",
+          "count": 0,
+          "note": ""
+        },
+        "South": {
+          "status": "empty",
+          "count": 0,
+          "note": ""
+        }
+      },
+      "summary": "Zone pass not run yet — Friday curation pending."
+    }
   },
   "tabs": [
     {
