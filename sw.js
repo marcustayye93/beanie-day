@@ -1,5 +1,5 @@
 /* Beanie Day service worker — network-first shell so updates always land */
-const CACHE_VERSION = "beanie-day-v6-intro";
+const CACHE_VERSION = "beanie-day-v7-polish";
 const PRECACHE = [
   "./",
   "./index.html",
