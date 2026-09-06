@@ -8,12 +8,11 @@
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
   }
-  function renderZonePass(data) {
+  function renderZonePassFromZp(zp) {
     var wrap = document.getElementById("zone-pass");
     var chips = document.getElementById("zone-pass-chips");
     var copy = document.getElementById("zone-pass-copy");
     if (!wrap || !chips || !copy) return;
-    var zp = data && data.meta && data.meta.zonePass;
     if (!zp || !zp.zones) {
       wrap.hidden = true;
       return;
@@ -36,6 +35,21 @@
     copy.textContent = allFilled
       ? "Island-wide zone pass complete for this week."
       : "Some areas of Singapore still need this week’s scout — empty is honest.";
+  }
+  function renderZonePass(data) {
+    var zp = data && data.meta && data.meta.zonePass;
+    if (zp && zp.zones) {
+      renderZonePassFromZp(zp);
+      return;
+    }
+    fetch("data/zone-pass.state.json", { cache: "no-cache" })
+      .then(function (r) {
+        return r.ok ? r.json() : null;
+      })
+      .then(function (seed) {
+        if (seed && seed.zonePass) renderZonePassFromZp(seed.zonePass);
+      })
+      .catch(function () {});
   }
   var origFetch = window.fetch;
   if (origFetch && !window.__beanieZonePassHook) {
@@ -63,6 +77,9 @@
     try {
       var cached = localStorage.getItem("beanie-day-week-cache-v3");
       if (cached) renderZonePass(JSON.parse(cached));
-    } catch (_) {}
+      else renderZonePass({});
+    } catch (_) {
+      renderZonePass({});
+    }
   }, 800);
 })();
