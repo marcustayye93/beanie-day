@@ -1,0 +1,5 @@
+{
+  "name": "search-venue",
+  "old": "          a.title,\n          a.description,",
+  "new": "          a.title,\n          a.venue,\n          a.description,"
+}

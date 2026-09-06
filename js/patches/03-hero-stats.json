@@ -1,0 +1,5 @@
+{
+  "name": "hero-stats",
+  "old": "    els.statPicks.textContent = String(acts.filter((a) => a.highlight).length);",
+  "new": "    const freshCount = acts.filter((a) => isFresh(a)).length;\n    els.statPicks.textContent = String(freshCount || acts.filter((a) => a.highlight).length);"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "filter-blocklist",
+  "old": "    let list = state.data.activities.filter((a) => a.tabs.includes(state.activeTab));",
+  "new": "    let list = state.data.activities.filter(\n      (a) => a.tabs.includes(state.activeTab) && !isBlocklisted(a)\n    );"
+}

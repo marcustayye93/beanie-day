@@ -1,0 +1,5 @@
+{
+  "name": "guards-aliases",
+  "old": "  const TAB_KEY = \"beanie-day-active-tab\";\n\n  const TAB_THEME = {",
+  "new": "  const TAB_KEY = \"beanie-day-active-tab\";\n\n  const G = window.BeanieGuards || {};\n  const isBlocklisted = G.isBlocklisted || (() => false);\n  const isFresh = G.isFresh || ((a) => Boolean(a && a.highlight));\n  const venueName = G.venueName || (() => \"\");\n  const normalizeWeekData =\n    G.normalizeWeekData ||\n    ((raw) =>\n      raw && Array.isArray(raw.activities) && Array.isArray(raw.tabs) ? raw : null);\n\n  const TAB_THEME = {"
+}
