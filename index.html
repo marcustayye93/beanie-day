@@ -234,7 +234,7 @@
 
   <script src="js/beanie-guards.js?v=3" defer></script>
   <script src="js/home-postal.js?v=3" defer></script>
-  <script src="js/app.js?v=19" defer></script>
+  <script src="js/app.js?v=20" defer></script>
   <script>
     // Intro taps must work even if the baked part loader fails
     (function () {
@@ -253,22 +253,26 @@
       });
     })();
   </script>
+  <script>
     // If the app shell never paints cards within 8s, offer a hard reset (clears SW + caches)
     window.__beanieBoot = setTimeout(function () {
       var list = document.getElementById("card-list");
       if (!list || list.querySelector(".card") || list.querySelector(".empty-state")) return;
-      list.innerHTML =
-        '<div class="empty-state" style="padding:32px 16px">' +
+      list.textContent = "";
+      var box = document.createElement("div");
+      box.className = "empty-state";
+      box.style.padding = "32px 16px";
+      box.innerHTML =
         '<div class="empty-art">🔄</div>' +
         '<p class="empty-title">Stuck loading?</p>' +
         '<p class="empty-copy">Tap below to clear the cache and reload.</p>' +
-        '<button type="button" id="beanie-hard-reset" class="btn-fill" style="margin-top:16px">Reload clean</button>' +
-        "</div>";
+        '<button type="button" id="beanie-hard-reset" class="btn-fill" style="margin-top:16px">Reload clean</button>';
+      list.appendChild(box);
       var btn = document.getElementById("beanie-hard-reset");
       if (btn) {
         btn.onclick = function () {
           var done = function () {
-            location.reload(true);
+            location.reload();
           };
           if ("serviceWorker" in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (regs) {

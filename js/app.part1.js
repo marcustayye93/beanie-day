@@ -41,11 +41,38 @@
     }
   }
 
+  function categoryKey(tabs) {
+    const order = [
+      "flavours",
+      "happy-hour",
+      "brands",
+      "events",
+      "outdoor",
+      "near-home",
+      "this-week",
+    ];
+    const set = new Set(tabs || []);
+    return order.find((k) => set.has(k)) || "this-week";
+  }
+
+  function genericPhoto(id, tabs) {
+    const key = categoryKey(tabs);
+    const pack = CATEGORY_PHOTOS[key] || CATEGORY_PHOTOS["this-week"];
+    const s = String(id || key);
+    let h = 0;
+    for (let i = 0; i < s.length; i++) h = (h * 33 + s.charCodeAt(i)) >>> 0;
+    return pack[h % pack.length];
+  }
+
   function visualFor(id, tabs) {
-    if (VISUALS[id]) return VISUALS[id];
+    const pack = VISUALS[id];
     const primary = (tabs && tabs[0]) || "this-week";
     const theme = TAB_THEME[primary] || TAB_THEME["this-week"];
-    return { emoji: theme.emoji, grad: theme.grad, image: "" };
+    return {
+      emoji: (pack && pack.emoji) || theme.emoji,
+      grad: (pack && pack.grad) || theme.grad,
+      image: genericPhoto(id, tabs),
+    };
   }
 
   function shortDesc(text, max = 100) {
