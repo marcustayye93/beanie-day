@@ -1,0 +1,6 @@
+/* Intro tap affordance — prevent iOS text selection on panels */
+.intro-panel {
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+}
