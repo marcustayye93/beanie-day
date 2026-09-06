@@ -1,22 +1,46 @@
-/** Assemble Beanie Day app from part files (static GH Pages) */
+/** Beanie Day — apply small patches onto main app.js at runtime */
 (function () {
   "use strict";
-  var parts = ["js/app.part1.js.txt", "js/app.part2.js.txt", "js/app.part3.js.txt"];
-  Promise.all(
-    parts.map(function (u) {
-      return fetch(u, { cache: "no-cache" }).then(function (r) {
-        if (!r.ok) throw new Error("missing " + u);
-        return r.text();
-      });
+  var BASE =
+    "https://raw.githubusercontent.com/marcustayye93/beanie-day/main/js/app.js";
+  fetch("js/patches/manifest.json", { cache: "no-cache" })
+    .then(function (r) {
+      if (!r.ok) throw new Error("manifest failed");
+      return r.json();
     })
-  )
-    .then(function (texts) {
-      var code = texts.join("");
+    .then(function (files) {
+      return Promise.all([
+        fetch(BASE, { cache: "no-cache" }).then(function (r) {
+          if (!r.ok) throw new Error("base app fetch failed");
+          return r.text();
+        }),
+        Promise.all(
+          files.map(function (u) {
+            return fetch(u, { cache: "no-cache" }).then(function (r) {
+              if (!r.ok) throw new Error("patch failed " + u);
+              return r.json();
+            });
+          })
+        ),
+      ]);
+    })
+    .then(function (pair) {
+      var code = pair[0];
+      var patches = pair[1] || [];
+      for (var i = 0; i < patches.length; i++) {
+        var p = patches[i];
+        if (!p || !p.old) continue;
+        if (code.indexOf(p.old) === -1) {
+          console.warn("Beanie patch miss:", p.name || i);
+          continue;
+        }
+        code = code.replace(p.old, p.new);
+      }
       var s = document.createElement("script");
       s.text = code;
       document.head.appendChild(s);
     })
     .catch(function (err) {
-      console.error("Beanie Day assemble failed", err);
+      console.error("Beanie Day patch boot failed", err);
     });
 })();

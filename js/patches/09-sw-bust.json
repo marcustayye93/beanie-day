@@ -1,0 +1,5 @@
+{
+  "name": "sw-bust",
+  "old": "register(\"./sw.js?v=5\")",
+  "new": "register(\"./sw.js?v=7\")"
+}
