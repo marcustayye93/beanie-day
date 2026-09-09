@@ -73,5 +73,30 @@
     "query": "60 Jalan Mempurong Singapore 759058",
     "lat": 1.45904,
     "lng": 103.84365
+  },
+  "Stickies Bar (Dhoby Ghaut)": {
+    "query": "178 Clemenceau Avenue Singapore 239926",
+    "lat": 1.29679,
+    "lng": 103.84416
+  },
+  "Morganfield's (Suntec City)": {
+    "query": "3 Temasek Boulevard Singapore 038983",
+    "lat": 1.29593,
+    "lng": 103.85901
+  },
+  "Al Capone's (Upper East Coast)": {
+    "query": "106 Upper East Coast Road Singapore 455296",
+    "lat": 1.31317,
+    "lng": 103.92931
+  },
+  "Al Capone's (NEWest)": {
+    "query": "1 West Coast Drive Singapore 128020",
+    "lat": 1.31641,
+    "lng": 103.75745
+  },
+  "Wine Connection (i12 Katong)": {
+    "query": "112 East Coast Road Singapore 428802",
+    "lat": 1.30521,
+    "lng": 103.90505
   }
 }

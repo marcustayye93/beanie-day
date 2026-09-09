@@ -1,19 +1,19 @@
 {
   "generatedAt": "2026-09-09",
-  "count": 15,
+  "count": 19,
   "note": "Cheapest verified draught pours. Sizes differ (half pint vs pint) — check the pour column. 'Everyday' means regular cheap pricing, not a timed happy hour. Prices change; verify before heading out.",
   "bars": [
     {
-      "id": "hhp-stickies-bar",
-      "bar": "Stickies Bar",
-      "area": "Clarke Quay",
-      "address": "11 Keng Cheow St, #01-10 Riverside Piazza, Singapore 059608",
+      "id": "hhp-stickies-bar--dhoby-ghau",
+      "bar": "Stickies Bar (Dhoby Ghaut)",
+      "area": "Dhoby Ghaut",
+      "address": "178 Clemenceau Avenue, #B1-00 Haw Par Glass Tower, Singapore 239926",
       "hh_days": "Daily",
       "hh_hours": "2pm-10pm",
       "pour": "house draught (half pint, Beer O'Clock)",
       "hh_price": 2.0,
       "regular_price": null,
-      "price_note": "Beer O'Clock: half-pint draught $2+ at 2pm, +$1 every hour; Guinness pint $7.50+; prices ++",
+      "price_note": "Beer O'Clock: half-pint draught $2+ at 2pm, +$1 every hour; Guinness pint $7.50+; prices ++ Keng Cheow outlet closed Jan 2024; entry now points to the Dhoby Ghaut outlet (operating per 2026 listings).",
       "deal_kind": "happy-hour",
       "source": {
         "label": "TheSmartLocal",
@@ -21,11 +21,11 @@
       },
       "verified": "2026-09-09",
       "travel": {
-        "region": "Clarke Quay",
+        "region": "Dhoby Ghaut",
         "zone": "Central",
-        "lat": 1.28849,
-        "lng": 103.84405,
-        "nearestMrt": "Clarke Quay"
+        "lat": 1.29679,
+        "lng": 103.84416,
+        "nearestMrt": "Dhoby Ghaut"
       }
     },
     {
@@ -51,6 +51,31 @@
         "lat": 1.30181,
         "lng": 103.84018,
         "nearestMrt": "Somerset"
+      }
+    },
+    {
+      "id": "hhp-morganfield-s--suntec-ci",
+      "bar": "Morganfield's (Suntec City)",
+      "area": "Suntec / Marina Centre",
+      "address": "3 Temasek Boulevard, #01-645/646 Suntec City Mall, Singapore 038983",
+      "hh_days": "Daily",
+      "hh_hours": "All day (promo from 31 Aug 2026, no end date)",
+      "pour": "San Miguel Pale Pilsen pint",
+      "hh_price": 5.0,
+      "regular_price": null,
+      "price_note": "San Miguel pint $5 (venue site) / $5++ (EverydayOnSales) — notation conflict. Draught implied by 'pouring'/'pint' but not explicitly stated. Promo, no end date given. Venue site says $5, EverydayOnSales says $5++; venue's wording is 'pouring ... a pint' (draught). Promo live from 31 Aug 2026, no end date stated.",
+      "deal_kind": "happy-hour",
+      "source": {
+        "label": "morganfields.com.sg",
+        "url": "https://morganfields.com.sg/promotions/"
+      },
+      "verified": "2026-09-09",
+      "travel": {
+        "region": "Suntec / Marina Centre",
+        "zone": "Central",
+        "lat": 1.29593,
+        "lng": 103.85901,
+        "nearestMrt": "Promenade"
       }
     },
     {
@@ -176,6 +201,56 @@
         "lat": 1.45352,
         "lng": 103.8327,
         "nearestMrt": "Canberra"
+      }
+    },
+    {
+      "id": "hhp-al-capone-s--upper-east-",
+      "bar": "Al Capone's (Upper East Coast)",
+      "area": "Siglap / Upper East Coast",
+      "address": "106 Upper East Coast Road, Singapore 455296",
+      "hh_days": "Monday",
+      "hh_hours": "All day",
+      "pour": "full pint of Guinness draught (Mabuk Monday)",
+      "hh_price": 7.9,
+      "regular_price": null,
+      "price_note": "Mabuk Monday is the chain's signature promo (brand site: 'famous for... Mabuk Mondays'); $7.90 verified at Jurong East + Sembawang outlets. ++/nett not specified by venue. Assumed chain-wide — flag if an outlet opts out.",
+      "deal_kind": "happy-hour",
+      "source": {
+        "label": "alcaponesg.com",
+        "url": "https://alcaponesg.com/"
+      },
+      "verified": "2026-09-09",
+      "travel": {
+        "region": "Siglap / Upper East Coast",
+        "zone": "East",
+        "lat": 1.31317,
+        "lng": 103.92931,
+        "nearestMrt": "Siglap"
+      }
+    },
+    {
+      "id": "hhp-al-capone-s--newest",
+      "bar": "Al Capone's (NEWest)",
+      "area": "West Coast",
+      "address": "1 West Coast Drive, #01-01 NEWest, Singapore 128020",
+      "hh_days": "Monday",
+      "hh_hours": "All day",
+      "pour": "full pint of Guinness draught (Mabuk Monday)",
+      "hh_price": 7.9,
+      "regular_price": null,
+      "price_note": "Mabuk Monday chain signature; $7.90 verified at Jurong East + Sembawang. ++/nett unspecified. West-coast outlet fills thin western coverage.",
+      "deal_kind": "happy-hour",
+      "source": {
+        "label": "alcaponesg.com",
+        "url": "https://alcaponesg.com/"
+      },
+      "verified": "2026-09-09",
+      "travel": {
+        "region": "West Coast",
+        "zone": "Central",
+        "lat": 1.31641,
+        "lng": 103.75745,
+        "nearestMrt": "Clementi"
       }
     },
     {
@@ -376,6 +451,31 @@
         "lat": 1.28827,
         "lng": 103.84855,
         "nearestMrt": "Clarke Quay"
+      }
+    },
+    {
+      "id": "hhp-wine-connection--i12-kat",
+      "bar": "Wine Connection (i12 Katong)",
+      "area": "Katong",
+      "address": "112 East Coast Road, i12 Katong, Singapore 428802",
+      "hh_days": "Mon–Fri",
+      "hh_hours": "All day until 7pm",
+      "pour": "draught pint (2 full pints for $20)",
+      "hh_price": 10.0,
+      "regular_price": null,
+      "price_note": "$20 for 2 full pints = $10/pint; till 7pm daily",
+      "deal_kind": "happy-hour",
+      "source": {
+        "label": "Wine Connection",
+        "url": "https://www.wineconnection.com.sg/blogs/news/happy-hour-just-got-happier"
+      },
+      "verified": "2026-09-09",
+      "travel": {
+        "region": "Katong",
+        "zone": "East",
+        "lat": 1.30521,
+        "lng": 103.90505,
+        "nearestMrt": "Marine Parade"
       }
     }
   ]
