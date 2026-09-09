@@ -1,0 +1,57 @@
+{
+  "Loof": {
+    "query": "331 North Bridge Rd, #03-07 Odeon Towers Extension Rooftop, Singapore 188720",
+    "lat": 1.29625,
+    "lng": 103.85319
+  },
+  "Wine Connection": {
+    "query": "10 Tampines Central 1, Tampines 1, Singapore",
+    "lat": 1.35426,
+    "lng": 103.94507
+  },
+  "Druggists": {
+    "query": "119 Tyrwhitt Road, Singapore 207547",
+    "lat": 1.31116,
+    "lng": 103.85968
+  },
+  "The Public House": {
+    "query": "Circular Road, Boat Quay, Singapore",
+    "lat": 1.28827,
+    "lng": 103.84855
+  },
+  "Mischief": {
+    "query": "8 Raffles Avenue Singapore 039802",
+    "lat": 1.28965,
+    "lng": 103.85627
+  },
+  "Ice-Cold B's": {
+    "query": "50 Stamford Road Singapore 178899",
+    "lat": 1.29509,
+    "lng": 103.85057
+  },
+  "Five Izakaya Bar": {
+    "query": "5 Changi Business Park Central 1 Singapore 486038",
+    "lat": 1.33408,
+    "lng": 103.96295
+  },
+  "Stickies Bar": {
+    "query": "11 Keng Cheow Street Singapore 059608",
+    "lat": 1.28849,
+    "lng": 103.84405
+  },
+  "The Good Beer Company": {
+    "query": "335 Smith Street Singapore 050335",
+    "lat": 1.28227,
+    "lng": 103.84324
+  },
+  "Al Capone's Ristorante & Bar": {
+    "query": "2 Jurong Gateway Road Singapore",
+    "lat": 1.33664,
+    "lng": 103.74477
+  },
+  "Five Tapas Bar": {
+    "query": "Cuppage Terrace Singapore",
+    "lat": 1.30181,
+    "lng": 103.84018
+  }
+}

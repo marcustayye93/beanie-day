@@ -41,6 +41,10 @@ CANDIDATES = ROOT / "data" / "candidates.json"
 HOME_POSTAL = os.environ.get("HOME_POSTAL", "730587").strip() or "730587"
 ONEMAP_SEARCH = "https://www.onemap.gov.sg/api/common/elastic/search"
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from mrt import stamp_nearest_mrt  # noqa: E402  (nearest-MRT stamping)
+from zones import zone_from_latlng as _zone_ll  # noqa: E402  (shared thresholds)
+
 # Heartland anchors for candidate discovery. Editorial sources are
 # downtown-biased; sweeping the API around these anchors (instead of one home
 # point) is what surfaces suburban events — the core gap for a public audience.
@@ -160,16 +164,8 @@ def haversine_km(lat1, lng1, lat2, lng2):
 
 
 def zone_from_latlng(lat, lng):
-    """Mirror of js/home-postal.js zoneFromLatLng thresholds."""
-    if lat >= 1.405:
-        return "North"
-    if lat <= 1.275:
-        return "South"
-    if lng >= 103.92:
-        return "East"
-    if lng <= 103.74:
-        return "West"
-    return "Central"
+    """Shared thresholds (scripts/zones.py); full zone names."""
+    return _zone_ll(lat, lng) or "Central"
 
 
 def map_zone(raw):
@@ -217,6 +213,7 @@ def cmd_geocode(_args):
             travel["distanceKm"] = round(
                 haversine_km(home_lat, home_lng, travel["lat"], travel["lng"]), 1
             )
+            stamp_nearest_mrt(travel)
             filled += 1
             continue
         region = travel.get("region") or ""
@@ -233,6 +230,7 @@ def cmd_geocode(_args):
         travel["geoSource"] = "onemap"
         travel["geoQuery"] = query
         travel["distanceKm"] = round(haversine_km(home_lat, home_lng, lat, lng), 1)
+        stamp_nearest_mrt(travel)
         filled += 1
 
     with WEEK.open("w", encoding="utf-8") as f:

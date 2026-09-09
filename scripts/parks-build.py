@@ -30,6 +30,10 @@ from datetime import datetime, timezone
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(REPO, "data", "parks.json")
 
+sys.path.insert(0, os.path.join(REPO, "scripts"))
+from mrt import stamp_nearest_mrt  # noqa: E402 (nearest-MRT stamping)
+from zones import zone_from_latlng as _zone_ll  # noqa: E402 (shared thresholds)
+
 POLL_API = "https://api-open.data.gov.sg/v1/public/api/datasets/{}/poll-download"
 DATASETS = {
     "parks_sg": "d_99b71f5d34cf57a3a592fbfdef1f42b6",
@@ -119,21 +123,9 @@ def clean_attractions(raw):
 
 
 def zone_from_latlng(lat, lng):
-    try:
-        la, ln = float(lat), float(lng)
-    except (TypeError, ValueError):
-        return None
-    if not (1.15 <= la <= 1.48 and 103.6 <= ln <= 104.1):
-        return None
-    if la >= 1.405:
-        return "N"
-    if la <= 1.275:
-        return "S"
-    if ln >= 103.92:
-        return "E"
-    if ln <= 103.74:
-        return "W"
-    return "C"
+    # Letter form, matching this script's zone labels.
+    z = _zone_ll(lat, lng)
+    return {"North": "N", "South": "S", "East": "E", "West": "W", "Central": "C"}.get(z)
 
 
 def guess_town(name, street):
@@ -238,6 +230,8 @@ def main():
         source_note = "NParks Parks points (data.gov.sg) fallback"
 
     parks.sort(key=lambda p: p["name"].lower())
+    for p in parks:
+        stamp_nearest_mrt(p.get("travel"))
     payload = {
         "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "count": len(parks),

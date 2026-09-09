@@ -198,7 +198,7 @@ body.intro-active .intro {
   position: absolute;
   z-index: 2;
   left: 22px;
-  right: 22px;
+  right: 34px;
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
@@ -228,7 +228,7 @@ body.intro-active .intro {
   margin: 8px 0 0;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.82);
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
@@ -997,6 +997,84 @@ img {
 .badge.top {
   background: linear-gradient(135deg, #fbbf24, #f59e0b);
   color: #422006;
+}
+
+.badge.rank {
+  background: linear-gradient(135deg, #fde047, #eab308);
+  color: #422006;
+}
+
+/* Top-3 carousel */
+.top3-wrap {
+  margin: 0 0 20px;
+}
+
+.top3-title {
+  font-size: 15px;
+  font-weight: 800;
+  margin: 0 0 10px;
+  letter-spacing: 0.01em;
+}
+
+.top3-carousel {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  margin: 0 -4px;
+  padding: 4px 4px 12px;
+}
+
+.top3-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.top3-carousel .card {
+  flex: 0 0 80%;
+  max-width: 340px;
+  scroll-snap-align: start;
+}
+
+/* Happy-hour banner → cheapest-pints ranking */
+.hh-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 14px;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.16), rgba(217, 119, 6, 0.08));
+  border: 1px solid rgba(234, 179, 8, 0.35);
+}
+
+.hh-banner-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 13px;
+}
+
+.hh-banner-text strong {
+  font-size: 14px;
+}
+
+.hh-banner-text span {
+  color: var(--ink-soft);
+}
+
+.hh-banner-cta {
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #422006;
+  background: linear-gradient(135deg, #fde047, #f59e0b);
+  cursor: pointer;
 }
 
 .badge.near {

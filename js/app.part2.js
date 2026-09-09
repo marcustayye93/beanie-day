@@ -1,5 +1,5 @@
 
-    const detailsId = `card-details-${escapeAttr(a.id)}`;
+    const detailsId = `card-details-${escapeAttr(a.id)}${idSuffix}`;
     const metaBits = [];
     if (venue) metaBits.push(`<span class="card-venue">${escapeHtml(venue)}</span>`);
     if (a.travel?.zone) {
@@ -23,13 +23,13 @@
       ? `<a class="card-hit" href="${href}" target="_blank" rel="noopener noreferrer" aria-label="${escapeAttr(
           "Open details: " + a.title
         )}">`
-      : `<div class="card-hit" data-toggle="${escapeAttr(a.id)}" role="button" tabindex="0"
+      : `<div class="card-hit" data-toggle="${escapeAttr(a.id)}${idSuffix}" role="button" tabindex="0"
           aria-expanded="${isOpen}" aria-controls="${detailsId}"
           aria-label="${escapeAttr((isOpen ? "Collapse " : "Expand ") + a.title)}">`;
     const hitClose = href ? "</a>" : "</div>";
 
     return `
-      <article class="${classes.join(" ")}" style="animation-delay:${Math.min(index, 12) * 45}ms; --card-grad:${v.grad}" data-id="${escapeAttr(a.id)}">
+      <article class="${classes.join(" ")}" style="animation-delay:${Math.min(index, 12) * 45}ms; --card-grad:${v.grad}" data-id="${escapeAttr(a.id)}${idSuffix}">
         ${hitOpen}
           <div class="card-media" style="background:${v.grad}">
             ${img}
@@ -58,7 +58,7 @@
               </div>
             </div>
             <div class="card-footer">
-              <span class="tap-hint">${href ? "Tap for details ↗" : isOpen ? "Tap to collapse" : "Tap for details"}</span>
+              <span class="tap-hint">${href ? "Read more ↗" : isOpen ? "Tap to collapse" : "Tap for details"}</span>
             </div>
           </div>
         ${hitClose}
@@ -84,6 +84,9 @@
       if (!panel) return;
       enterApp(panel.dataset.enterTab);
     });
+
+    // Happy-hour banner → cheapest-pints ranking
+    els.hhBannerLink?.addEventListener("click", () => setTab("hh-prices"));
 
     const setNavOpen = (open) => {
       const drawer = els.navDrawer;

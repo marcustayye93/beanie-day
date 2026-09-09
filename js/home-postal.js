@@ -3,8 +3,6 @@
   "use strict";
 
   var STORAGE_KEY = "beanie-home-postal";
-  /** Internal default zone for “Continue with North Singapore” — never rendered as a postal. */
-  var DEFAULT_ZONE = "N";
   var ZONES = ["N", "W", "E", "C", "S"];
 
   /** First-2-digit postal sector → N/W/E/C/S (bundled offline fallback). */
@@ -81,7 +79,8 @@
     return SECTOR_ZONE[sector] || null;
   }
 
-  /** Rough lat/lng → zone when OneMap returns geometry (Singapore bbox). */
+  /** Rough lat/lng → zone when OneMap returns geometry (Singapore bbox).
+      Thresholds mirror scripts/zones.py — keep them in sync. */
   function zoneFromLatLng(lat, lng) {
     var la = Number(lat);
     var ln = Number(lng);
@@ -89,8 +88,8 @@
     if (la < 1.15 || la > 1.48 || ln < 103.6 || ln > 104.1) return null;
     if (la >= 1.405) return "N";
     if (la <= 1.275) return "S";
-    if (ln >= 103.92) return "E";
-    if (ln <= 103.74) return "W";
+    if (ln >= 103.88) return "E";
+    if (ln <= 103.745) return "W";
     return "C";
   }
 
@@ -169,15 +168,25 @@
       if (!raw) return null;
       var data = JSON.parse(raw);
       if (!data) return null;
+      // Neutral skip: no postal, no zone — distances/drive chips stay hidden.
+      if (data.skipped) {
+        return {
+          postal: "",
+          zone: null,
+          skipped: true,
+          lat: null,
+          lng: null,
+          updatedAt: data.updatedAt || null
+        };
+      }
       var zone = normZone(data.zone);
       if (!zone) return null;
       var postal = data.postal != null ? String(data.postal).replace(/\D/g, "") : "";
-      // Zone-only path (e.g. Continue with North Singapore) has no postal
-      if (postal && !isValidPostal(postal) && !data.zoneOnly) return null;
+      if (postal && !isValidPostal(postal)) return null;
       return {
         postal: postal || "",
         zone: zone,
-        zoneOnly: !postal || !!data.zoneOnly,
+        zoneOnly: false,
         lat: data.lat != null ? Number(data.lat) : null,
         lng: data.lng != null ? Number(data.lng) : null,
         updatedAt: data.updatedAt || null
@@ -188,6 +197,21 @@
   }
 
   function saveHome(record) {
+    // Neutral skip — persists the choice so we don't nag on every visit.
+    if (record && record.skipped) {
+      var payload = {
+        skipped: true,
+        postal: "",
+        zone: null,
+        updatedAt: new Date().toISOString()
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+      lastResolved = payload;
+      window.dispatchEvent(
+        new CustomEvent("beanie:home-postal-changed", { detail: payload })
+      );
+      return payload;
+    }
     var zone = normZone(record.zone);
     if (!zone) throw new Error("Missing zone");
     var postal = record.postal != null ? String(record.postal).replace(/\D/g, "") : "";
@@ -196,7 +220,6 @@
       zone: zone,
       updatedAt: new Date().toISOString()
     };
-    if (!postal || record.zoneOnly) payload.zoneOnly = true;
     if (record.lat != null && isFinite(Number(record.lat))) payload.lat = Number(record.lat);
     if (record.lng != null && isFinite(Number(record.lng))) payload.lng = Number(record.lng);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
@@ -233,9 +256,8 @@
     els.input = document.getElementById("home-postal-input");
     els.error = document.getElementById("home-postal-error");
     els.hint = document.getElementById("home-postal-hint");
-    els.validateBtn = document.getElementById("home-postal-validate");
     els.saveBtn = document.getElementById("home-postal-save");
-    els.northBtn = document.getElementById("home-postal-north");
+    els.skipBtn = document.getElementById("home-postal-skip");
   }
 
   function openModal(opts) {
@@ -345,7 +367,8 @@
     return offline;
   }
 
-  async function onValidate() {
+  /** Validate + resolve the typed postal (internal — Save calls this). */
+  async function validateInput() {
     cacheEls();
     setError("");
     var postal = els.input ? els.input.value.trim() : "";
@@ -354,24 +377,14 @@
       lastResolved = null;
       return null;
     }
-    if (els.validateBtn) els.validateBtn.disabled = true;
     try {
       var resolved = await resolvePostal(postal);
       lastResolved = resolved;
-      setHint(
-        "Looks good · " +
-          postal +
-          " · " +
-          (ZONE_LABEL[resolved.zone] || resolved.zone) +
-          (resolved.source === "sector" ? " (offline map)" : "")
-      );
       return resolved;
     } catch (err) {
       lastResolved = null;
       setError((err && err.message) || "Couldn’t validate that postal.");
       return null;
-    } finally {
-      if (els.validateBtn) els.validateBtn.disabled = false;
     }
   }
 
@@ -381,26 +394,19 @@
     var postal = els.input ? els.input.value.trim() : "";
     var resolved = lastResolved;
     if (!resolved || String(resolved.postal) !== postal) {
-      resolved = await onValidate();
+      resolved = await validateInput();
     }
     if (!resolved) return;
     saveHome(resolved);
     closeModal();
   }
 
-  function onContinueNorth() {
+  /** Neutral skip — no postal, no zone; distances stay hidden until set. */
+  function onSkip() {
     cacheEls();
     setError("");
-    var resolved = {
-      postal: "",
-      zone: DEFAULT_ZONE,
-      zoneOnly: true,
-      lat: null,
-      lng: null,
-      source: "zone-default"
-    };
-    lastResolved = resolved;
-    saveHome(resolved);
+    saveHome({ skipped: true });
+    lastResolved = null;
     closeModal();
   }
 
@@ -409,14 +415,11 @@
     if (!els.modal || els.modal.dataset.bound === "1") return;
     els.modal.dataset.bound = "1";
 
-    els.validateBtn && els.validateBtn.addEventListener("click", function () {
-      onValidate();
-    });
     els.saveBtn && els.saveBtn.addEventListener("click", function () {
       onSave();
     });
-    els.northBtn && els.northBtn.addEventListener("click", function () {
-      onContinueNorth();
+    els.skipBtn && els.skipBtn.addEventListener("click", function () {
+      onSkip();
     });
     els.input &&
       els.input.addEventListener("input", function () {
@@ -434,7 +437,7 @@
     els.backdrop &&
       els.backdrop.addEventListener("click", function () {
         if (pendingRequired && !getHome()) {
-          setError("Save a postal or continue with North Singapore.");
+          setError("Save a postal or skip for now.");
           return;
         }
         closeModal();
@@ -446,7 +449,7 @@
       if (pendingRequired && !getHome()) {
         e.preventDefault();
         e.stopPropagation();
-        setError("Save a postal or continue with North Singapore.");
+        setError("Save a postal or skip for now.");
         return;
       }
       closeModal();

@@ -17,6 +17,7 @@
       if (!normalized) throw new Error("Invalid week data shape");
       state.data = normalized;
       state.parks = await loadParks();
+      state.hhPrices = await loadHappyHours();
       try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(normalized));
         // Drop legacy caches that may be stale familiar-place content
@@ -33,6 +34,7 @@
           if (normalized) {
             state.data = normalized;
             state.parks = await loadParks();
+      state.hhPrices = await loadHappyHours();
             els.offlineStatus.hidden = false;
             toast("Offline — showing saved week");
             return;
@@ -45,6 +47,32 @@
 
   const PARKS_URL = "data/parks.json";
   const PARKS_CACHE_KEY = "beanie-day-parks-cache-v1";
+  const HH_URL = "data/happy-hours.json";
+  const HH_CACHE_KEY = "beanie-day-hh-cache-v1";
+
+  /** Cheapest-pints ranking (scripts/build-hh.py). Optional — never fatal. */
+  async function loadHappyHours() {
+    const valid = (p) => (p && Array.isArray(p.bars) ? p.bars : null);
+    try {
+      const res = await fetchWithTimeout(HH_URL, 6000);
+      if (res.ok) {
+        const payload = valid(await res.json());
+        if (payload) {
+          try {
+            localStorage.setItem(HH_CACHE_KEY, JSON.stringify(payload));
+          } catch (_) {}
+          return payload;
+        }
+      }
+    } catch (_) {
+      /* offline or missing — fall through to cache */
+    }
+    try {
+      const cached = valid(JSON.parse(localStorage.getItem(HH_CACHE_KEY) || "null"));
+      if (cached) return cached;
+    } catch (_) {}
+    return [];
+  }
 
   /** Stable POI layer (NParks via scripts/parks-build.py). Optional — never fatal. */
   async function loadParks() {
@@ -75,6 +103,7 @@
     const order = [
       "flavours",
       "happy-hour",
+      "hh-prices",
       "brands",
       "events",
       "outdoor",
@@ -134,7 +163,7 @@
     const acts = state.data.activities;
     const freshCount = acts.filter((a) => isFresh(a)).length;
     els.statPicks.textContent = String(freshCount || acts.filter((a) => a.highlight).length);
-    els.statHh.textContent = String(acts.filter((a) => a.tabs.includes("happy-hour")).length);
+    els.statHh.textContent = String(state.hhPrices.length);
     els.statNear.textContent = String(
       acts.filter((a) => a.nearHomeBonus || a.tabs.includes("near-home")).length
     );
@@ -192,6 +221,7 @@
     els.panelTitle.textContent = tab.label;
     els.panelBlurb.textContent = tab.blurb;
     els.sectionIcon.textContent = theme.emoji;
+    if (els.hhBanner) els.hhBanner.hidden = state.activeTab !== "happy-hour";
 
     if (items.length) {
       els.sectionCount.hidden = false;
@@ -218,12 +248,40 @@
     }
 
     els.emptyState.hidden = true;
-    els.cardList.innerHTML = items.map((a, i) => cardHtml(a, i)).join("");
+
+    // Top-3 carousel: quick editorial picks first, then the full library.
+    // Skipped on the ranking tab (already ordered) and while searching/filtering.
+    const hasFilters = state.filters.size > 0 || Boolean(state.query.trim());
+    const top3 =
+      state.activeTab === "hh-prices" || hasFilters
+        ? []
+        : items
+            .filter((a) => (a.top3Tabs || []).includes(state.activeTab))
+            .slice(0, 3);
+    let lead = "";
+    if (top3.length) {
+      lead =
+        `<div class="top3-wrap">` +
+        `<h3 class="top3-title">⭐ Top picks</h3>` +
+        `<div class="top3-carousel">${top3
+          .map((a, i) => cardHtml(a, i, "-top3"))
+          .join("")}</div>` +
+        `</div>`;
+    }
+    els.cardList.innerHTML =
+      lead + items.map((a, i) => cardHtml(a, i)).join("");
   }
 
   /** Adapt a park record to the card shape activities use. */
   function parkToCard(p) {
     const t = p.travel || {};
+    // Editorial top-3 for the Parks carousel: one classic, one central
+    // heartland green, one northern waterfront.
+    const PARKS_TOP3 = new Set([
+      "park-east-coast-park",
+      "park-bishan-ang-mo-kio-park",
+      "park-woodlands-waterfront-park",
+    ]);
     return {
       id: p.id,
       title: p.name,
@@ -239,12 +297,112 @@
       tabs: ["parks"],
       highlight: false,
       nearHomeBonus: false,
-      travel: { lat: t.lat, lng: t.lng, zone: t.zone, region: t.region },
+      top3Tabs: PARKS_TOP3.has(p.id) ? ["parks"] : [],
+      travel: { lat: t.lat, lng: t.lng, zone: t.zone, region: t.region, nearestMrt: t.nearestMrt },
       source: p.url ? { label: "NParks", url: p.url } : null,
     };
   }
 
+  /** Adapt a happy-hour price record to the card shape activities use.
+      idx = 0-based position in the cheapest-first ranking. */
+  function hhPriceToCard(b, idx, ranked) {
+    const t = b.travel || {};
+    const price =
+      typeof b.hh_price === "number" ? `$${b.hh_price.toFixed(2)}` : "";
+    const whenBits = [b.hh_days, b.hh_hours].filter(Boolean).join(" · ");
+    return {
+      id: b.id,
+      title: b.bar,
+      venue: b.area || "",
+      description: `${b.pour ? b.pour + " · " : ""}${whenBits}`.trim() || b.area || "",
+      why: "",
+      when: whenBits,
+      deal:
+        `${price ? price + (b.deal_kind === "everyday" ? " everyday pour" : " happy-hour pour") : "Happy-hour pour"}` +
+        `${b.pour ? " · " + b.pour : ""}` +
+        `${
+          typeof b.regular_price === "number"
+            ? ` (usual $${b.regular_price.toFixed(2)})`
+            : ""
+        }` +
+        `${b.price_note ? " — " + b.price_note : ""}`,
+      parking: "",
+      heatNote: "",
+      days: [],
+      tags: ["Indoor"],
+      tabs: ["hh-prices"],
+      highlight: false,
+      nearHomeBonus: false,
+      rank: ranked ? idx + 1 : null,
+      top3Tabs: idx < 3 ? ["happy-hour"] : [],
+      travel: {
+        lat: t.lat,
+        lng: t.lng,
+        zone: t.zone,
+        region: t.region || b.area,
+        nearestMrt: t.nearestMrt,
+      },
+      source:
+        b.source && b.source.url
+          ? { label: b.source.label || "Source", url: b.source.url }
+          : null,
+    };
+  }
+
   function getFilteredActivities() {
+    // Happy-hour tab: full bar library, nearest-first by live per-user distance.
+    // The banner above it links to the cheapest-first ranking (hh-prices tab).
+    if (state.activeTab === "happy-hour") {
+      const q = state.query.trim().toLowerCase();
+      let list = (state.hhPrices || []).map((b, i) => hhPriceToCard(b, i, false));
+      if (q) {
+        list = list.filter((a) =>
+          [
+            a.title,
+            a.venue,
+            a.description,
+            a.deal,
+            a.when,
+            a.travel?.zone,
+            a.travel?.region,
+            a.travel?.nearestMrt,
+          ]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase()
+            .includes(q)
+        );
+      }
+      const distOf = (x) => {
+        const d = window.BeanieHomePostal?.distanceKmTo?.(x);
+        return typeof d === "number" && isFinite(d) ? d : Infinity;
+      };
+      return [...list].sort((a, b) => distOf(a) - distOf(b));
+    }
+    // Cheapest-pints tab: ranked cheapest-first by scripts/build-hh.py.
+    if (state.activeTab === "hh-prices") {
+      const q = state.query.trim().toLowerCase();
+      let list = (state.hhPrices || []).map((b, i) => hhPriceToCard(b, i, true));
+      if (q) {
+        list = list.filter((a) =>
+          [
+            a.title,
+            a.venue,
+            a.description,
+            a.deal,
+            a.when,
+            a.travel?.zone,
+            a.travel?.region,
+            a.travel?.nearestMrt,
+          ]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase()
+            .includes(q)
+        );
+      }
+      return list;
+    }
     // Parks tab: stable NParks POI layer, nearest-first by live per-user distance.
     if (state.activeTab === "parks") {
       const q = state.query.trim().toLowerCase();
@@ -334,9 +492,9 @@
     return list;
   }
 
-  function cardHtml(a, index) {
+  function cardHtml(a, index, idSuffix = "") {
     const v = visualFor(a.id, a.tabs);
-    const isOpen = state.openCardId === a.id;
+    const isOpen = state.openCardId === a.id + idSuffix;
     const fresh = isFresh(a);
     const venue = venueName(a);
     const classes = ["card"];
@@ -347,6 +505,7 @@
 
     const badges = [];
     if (fresh) badges.push(`<span class="badge fresh">🆕 This week</span>`);
+    if (a.rank) badges.push(`<span class="badge rank">#${a.rank} cheapest</span>`);
     if (a.highlight) badges.push(`<span class="badge top">⭐ Top</span>`);
     if (a.nearHomeBonus) badges.push(`<span class="badge near">🏡 Near</span>`);
     (a.tags || []).slice(0, 2).forEach((t) => {
@@ -369,6 +528,11 @@
     if (driveChip) {
       facts.push(
         `<span class="fact"><span class="fact-icon">🚗</span>${escapeHtml(driveChip)}</span>`
+      );
+    }
+    if (a.travel?.nearestMrt) {
+      facts.push(
+        `<span class="fact"><span class="fact-icon">🚇</span>${escapeHtml(a.travel.nearestMrt)} MRT</span>`
       );
     }
 

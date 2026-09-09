@@ -16,7 +16,7 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="icons/icon-192.svg" />
-  <link rel="stylesheet" href="css/styles.css?v=18" />
+  <link rel="stylesheet" href="css/styles.css?v=19" />
   <link rel="stylesheet" href="css/polish.css?v=7" />
   <link rel="stylesheet" href="css/intro-touch.css?v=1" />
   <link rel="stylesheet" href="css/night-out.css?v=3" />
@@ -134,10 +134,6 @@
       </div>
       <h1 class="hero-title">What’s new this week?</h1>
       <p class="hero-note" id="week-note">Fresh openings, pop-ups, and limited-run finds — not the places you already know.</p>
-      <div class="zone-pass" id="zone-pass" hidden>
-        <div class="zone-pass-chips" id="zone-pass-chips" role="list" aria-label="Friday zone pass"></div>
-        <p class="zone-pass-copy" id="zone-pass-copy"></p>
-      </div>
       <div class="hero-stats" id="hero-stats" aria-hidden="true">
         <div class="stat-chip"><span class="stat-emoji">🆕</span><span class="stat-num" id="stat-picks">0</span><span class="stat-lbl">fresh picks</span></div>
         <div class="stat-chip"><span class="stat-emoji">🍺</span><span class="stat-num" id="stat-hh">0</span><span class="stat-lbl">new deals</span></div>
@@ -177,6 +173,14 @@
         <span class="section-count" id="section-count" hidden></span>
       </header>
 
+      <div class="hh-banner" id="hh-banner" hidden>
+        <div class="hh-banner-text">
+          <strong>🍻 Hunting the cheapest pint?</strong>
+          <span>Happy-hour draught prices across Singapore, ranked cheapest first.</span>
+        </div>
+        <button type="button" class="hh-banner-cta" id="hh-banner-link">See ranking →</button>
+      </div>
+
       <div class="card-list" id="card-list">
         <div class="loading-state">
           <div class="loading-cards" aria-hidden="true">
@@ -215,9 +219,8 @@
       <p class="home-postal-error" id="home-postal-error" hidden role="alert"></p>
       <p class="home-postal-hint" id="home-postal-hint"></p>
       <div class="home-postal-actions">
-        <button type="button" class="home-postal-btn home-postal-btn-ghost" id="home-postal-validate">Validate</button>
         <button type="button" class="home-postal-btn home-postal-btn-primary" id="home-postal-save">Save</button>
-        <button type="button" class="home-postal-btn home-postal-btn-secondary" id="home-postal-north">Continue with North Singapore</button>
+        <button type="button" class="home-postal-btn home-postal-btn-secondary" id="home-postal-skip">Skip for now</button>
       </div>
     </div>
   </div>
@@ -236,8 +239,8 @@
   </dialog>
 
   <script src="js/beanie-guards.js?v=3" defer></script>
-  <script src="js/home-postal.js?v=4" defer></script>
-  <script src="js/app.js?v=22" defer></script>
+  <script src="js/home-postal.js?v=6" defer></script>
+  <script src="js/app.js?v=24" defer></script>
   <script>
     // Intro taps must work even if the baked part loader fails
     (function () {

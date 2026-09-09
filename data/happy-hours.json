@@ -1,0 +1,282 @@
+{
+  "generatedAt": "2026-09-09",
+  "count": 11,
+  "note": "Cheapest verified draught pours. Sizes differ (half pint vs pint) — check the pour column. 'Everyday' means regular cheap pricing, not a timed happy hour. Prices change; verify before heading out.",
+  "bars": [
+    {
+      "id": "hhp-stickies-bar",
+      "bar": "Stickies Bar",
+      "area": "Clarke Quay",
+      "address": "11 Keng Cheow St, #01-10 Riverside Piazza, Singapore 059608",
+      "hh_days": "Daily",
+      "hh_hours": "2pm-10pm",
+      "pour": "house draught (half pint, Beer O'Clock)",
+      "hh_price": 2.0,
+      "regular_price": null,
+      "price_note": "Beer O'Clock: half-pint draught $2+ at 2pm, +$1 every hour; Guinness pint $7.50+; prices ++",
+      "deal_kind": "happy-hour",
+      "source": {
+        "label": "TheSmartLocal",
+        "url": "https://thesmartlocal.com/?p=157669"
+      },
+      "verified": "2026-09-09",
+      "travel": {
+        "region": "Clarke Quay",
+        "zone": "Central",
+        "lat": 1.28849,
+        "lng": 103.84405,
+        "nearestMrt": "Clarke Quay"
+      }
+    },
+    {
+      "id": "hhp-five-tapas-bar",
+      "bar": "Five Tapas Bar",
+      "area": "Orchard / Somerset",
+      "address": "37 Cuppage Terrace, Singapore 229205",
+      "hh_days": "Daily",
+      "hh_hours": "All day",
+      "pour": "draught beer (half pint)",
+      "hh_price": 5.0,
+      "regular_price": null,
+      "price_note": "$5 drinks all day incl. half-pint draught, sake, wine, spirits",
+      "deal_kind": "happy-hour",
+      "source": {
+        "label": "SecretSingapore",
+        "url": "https://secretsingapore.co/cheap-bars-singapore/"
+      },
+      "verified": "2026-09-09",
+      "travel": {
+        "region": "Orchard / Somerset",
+        "zone": "Central",
+        "lat": 1.30181,
+        "lng": 103.84018,
+        "nearestMrt": "Somerset"
+      }
+    },
+    {
+      "id": "hhp-the-good-beer-company",
+      "bar": "The Good Beer Company",
+      "area": "Chinatown",
+      "address": "Chinatown Complex Food Centre, 335 Smith St, Singapore 050335",
+      "hh_days": "Daily",
+      "hh_hours": "Regular pricing",
+      "pour": "beer (from $6)",
+      "hh_price": 6.0,
+      "regular_price": null,
+      "price_note": "Hawker-centre bar; imported beers/ciders from $6; no formal happy hour",
+      "deal_kind": "everyday",
+      "source": {
+        "label": "Hotels.com",
+        "url": "https://it.hotels.com/go/singapore/best-singapore-cheap-bars"
+      },
+      "verified": "2026-09-09",
+      "travel": {
+        "region": "Chinatown",
+        "zone": "Central",
+        "lat": 1.28227,
+        "lng": 103.84324,
+        "nearestMrt": "Maxwell"
+      }
+    },
+    {
+      "id": "hhp-mischief",
+      "bar": "Mischief",
+      "area": "Marina Centre",
+      "address": "8 Raffles Avenue, #01-12 Esplanade Mall, Singapore 039802",
+      "hh_days": "Sun-Thu",
+      "hh_hours": "5pm-8pm",
+      "pour": "draught beer (half pint)",
+      "hh_price": 6.9,
+      "regular_price": null,
+      "price_note": "Half-pint pours from $6.90; full-pint equivalent ~$13.80",
+      "deal_kind": "happy-hour",
+      "source": {
+        "label": "TheSmartLocal",
+        "url": "https://thesmartlocal.com/read/cheap-bars-town/"
+      },
+      "verified": "2026-09-09",
+      "travel": {
+        "region": "Marina Centre",
+        "zone": "Central",
+        "lat": 1.28965,
+        "lng": 103.85627,
+        "nearestMrt": "Esplanade"
+      }
+    },
+    {
+      "id": "hhp-al-capone-s-ristorante--",
+      "bar": "Al Capone's Ristorante & Bar",
+      "area": "Jurong East",
+      "address": "2 Jurong Gateway Road, #01-02, Singapore 608531",
+      "hh_days": "Mon",
+      "hh_hours": "All day",
+      "pour": "house draught pint",
+      "hh_price": 7.9,
+      "regular_price": 9.5,
+      "price_note": "Mabuk Monday: full pint $7.90 all day; 3 pints $23.70 every day; nett prices; 10+ outlets islandwide",
+      "deal_kind": "happy-hour",
+      "source": {
+        "label": "Al Capone's (Facebook)",
+        "url": "https://www.findglocal.com/SG/Singapore/108366281937274/Al-Capone%27s-Jurong-Gateway-Road"
+      },
+      "verified": "2026-09-09",
+      "travel": {
+        "region": "Jurong East",
+        "zone": "Central",
+        "lat": 1.33664,
+        "lng": 103.74477,
+        "nearestMrt": "Jurong East"
+      }
+    },
+    {
+      "id": "hhp-ice-cold-b-s",
+      "bar": "Ice-Cold B's",
+      "area": "City Hall",
+      "address": "50 Stamford Rd, #01-01, Singapore 178899",
+      "hh_days": "Daily",
+      "hh_hours": "Regular pricing",
+      "pour": "Stella pint",
+      "hh_price": 9.0,
+      "regular_price": null,
+      "price_note": "No timed happy hour; student-favourite everyday pricing; jugs just over $20",
+      "deal_kind": "everyday",
+      "source": {
+        "label": "Hotels.com",
+        "url": "https://it.hotels.com/go/singapore/best-singapore-cheap-bars"
+      },
+      "verified": "2026-09-09",
+      "travel": {
+        "region": "City Hall",
+        "zone": "Central",
+        "lat": 1.29509,
+        "lng": 103.85057,
+        "nearestMrt": "Bras Basah"
+      }
+    },
+    {
+      "id": "hhp-five-izakaya-bar",
+      "bar": "Five Izakaya Bar",
+      "area": "Changi Business Park",
+      "address": "5 Changi Business Park Central 1, #01-66/67, Singapore 486038",
+      "hh_days": "Daily",
+      "hh_hours": "All day",
+      "pour": "Asahi pint",
+      "hh_price": 10.0,
+      "regular_price": null,
+      "price_note": "$5 house pours (beer/wine/spirit) all day, every day; Asahi pint ~$10",
+      "deal_kind": "happy-hour",
+      "source": {
+        "label": "Hotels.com",
+        "url": "https://it.hotels.com/go/singapore/best-singapore-cheap-bars"
+      },
+      "verified": "2026-09-09",
+      "travel": {
+        "region": "Changi Business Park",
+        "zone": "East",
+        "lat": 1.33408,
+        "lng": 103.96295,
+        "nearestMrt": "Expo"
+      }
+    },
+    {
+      "id": "hhp-loof",
+      "bar": "Loof",
+      "area": "City Hall",
+      "address": "331 North Bridge Rd, #03-07 Odeon Towers Extension Rooftop, Singapore 188720",
+      "hh_days": "Mon-Fri",
+      "hh_hours": "5pm-8pm",
+      "pour": "draught pint",
+      "hh_price": 10.0,
+      "regular_price": null,
+      "price_note": "Beat the Clock: house pours/wines $5 from 5pm (+$1/hr till 8pm); pints from $10",
+      "deal_kind": "happy-hour",
+      "source": {
+        "label": "Hotels.com",
+        "url": "https://it.hotels.com/go/singapore/best-singapore-cheap-bars"
+      },
+      "verified": "2026-09-09",
+      "travel": {
+        "region": "City Hall",
+        "zone": "Central",
+        "lat": 1.29625,
+        "lng": 103.85319,
+        "nearestMrt": "Bras Basah"
+      }
+    },
+    {
+      "id": "hhp-wine-connection",
+      "bar": "Wine Connection",
+      "area": "Tampines",
+      "address": "10 Tampines Central 1, Tampines 1, Singapore",
+      "hh_days": "Daily",
+      "hh_hours": "All day till 7pm",
+      "pour": "draught pint (2 for $20)",
+      "hh_price": 10.0,
+      "regular_price": null,
+      "price_note": "$20 for 2 full pints = $10/pint; till 7pm daily",
+      "deal_kind": "happy-hour",
+      "source": {
+        "label": "Wine Connection",
+        "url": "https://www.wineconnection.com.sg/blogs/news/happy-hour-just-got-happier"
+      },
+      "verified": "2026-09-09",
+      "travel": {
+        "region": "Tampines",
+        "zone": "East",
+        "lat": 1.35426,
+        "lng": 103.94507,
+        "nearestMrt": "Tampines"
+      }
+    },
+    {
+      "id": "hhp-druggists",
+      "bar": "Druggists",
+      "area": "Jalan Besar",
+      "address": "119 Tyrwhitt Road, Singapore 207547",
+      "hh_days": "Sun-Thu",
+      "hh_hours": "Opening-7pm",
+      "pour": "craft beer pint",
+      "hh_price": 10.0,
+      "regular_price": null,
+      "price_note": "23 rotating craft taps; $10 craft beers/wines/highballs; excl. PH and PH eves",
+      "deal_kind": "happy-hour",
+      "source": {
+        "label": "AsiaOne",
+        "url": "https://www.asiaone.com/lifestyle/best-happy-hours-singapore-where-go-cheaper-cocktails-beers-and-bar-bites-0"
+      },
+      "verified": "2026-09-09",
+      "travel": {
+        "region": "Jalan Besar",
+        "zone": "Central",
+        "lat": 1.31116,
+        "lng": 103.85968,
+        "nearestMrt": "Bendemeer"
+      }
+    },
+    {
+      "id": "hhp-the-public-house",
+      "bar": "The Public House",
+      "area": "Boat Quay",
+      "address": "Circular Road, Boat Quay, Singapore",
+      "hh_days": "Daily",
+      "hh_hours": "Regular pricing",
+      "pour": "draught beer",
+      "hh_price": 10.0,
+      "regular_price": null,
+      "price_note": "From $10 on the regular menu; old-school British pub, not a timed happy hour",
+      "deal_kind": "everyday",
+      "source": {
+        "label": "SecretSingapore",
+        "url": "https://secretsingapore.co/cheap-bars-singapore/"
+      },
+      "verified": "2026-09-09",
+      "travel": {
+        "region": "Boat Quay",
+        "zone": "Central",
+        "lat": 1.28827,
+        "lng": 103.84855,
+        "nearestMrt": "Clarke Quay"
+      }
+    }
+  ]
+}
