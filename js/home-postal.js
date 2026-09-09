@@ -144,8 +144,8 @@
   /**
    * Live per-user distance (km) from the saved home postal to an activity.
    * Uses activity.travel.lat/lng stamped by scripts/friday-ingest.py geocode.
-   * Returns null when the user skipped postal entry (zone-only path) or the
-   * activity has no coordinates. This is the source of truth for the public
+   * Returns null when no postal is saved yet or the activity has no
+   * coordinates. This is the source of truth for the public
    * app — the baked travel.distanceKm in week.json is only a curator reference.
    */
   function distanceKmTo(activity) {
@@ -168,16 +168,10 @@
       if (!raw) return null;
       var data = JSON.parse(raw);
       if (!data) return null;
-      // Neutral skip: no postal, no zone — distances/drive chips stay hidden.
+      // A persisted skip counts as "no home" — the postal prompt comes back
+      // on every launch until a postal code is actually saved.
       if (data.skipped) {
-        return {
-          postal: "",
-          zone: null,
-          skipped: true,
-          lat: null,
-          lng: null,
-          updatedAt: data.updatedAt || null
-        };
+        return null;
       }
       var zone = normZone(data.zone);
       if (!zone) return null;
@@ -197,21 +191,6 @@
   }
 
   function saveHome(record) {
-    // Neutral skip — persists the choice so we don't nag on every visit.
-    if (record && record.skipped) {
-      var payload = {
-        skipped: true,
-        postal: "",
-        zone: null,
-        updatedAt: new Date().toISOString()
-      };
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
-      lastResolved = payload;
-      window.dispatchEvent(
-        new CustomEvent("beanie:home-postal-changed", { detail: payload })
-      );
-      return payload;
-    }
     var zone = normZone(record.zone);
     if (!zone) throw new Error("Missing zone");
     var postal = record.postal != null ? String(record.postal).replace(/\D/g, "") : "";
@@ -401,12 +380,12 @@
     closeModal();
   }
 
-  /** Neutral skip — no postal, no zone; distances stay hidden until set. */
+  /** Skip is per-visit only — the prompt returns on the next launch. */
   function onSkip() {
     cacheEls();
     setError("");
-    saveHome({ skipped: true });
     lastResolved = null;
+    pendingRequired = false;
     closeModal();
   }
 
