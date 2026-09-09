@@ -1,0 +1,52 @@
+{
+  "generatedAt": "2026-09-09T06:22:30+00:00",
+  "homePostal": "730587",
+  "home": {
+    "lat": 1.42845,
+    "lng": 103.79529
+  },
+  "anchors": [
+    {
+      "name": "Woodlands",
+      "lat": 1.439,
+      "lng": 103.789,
+      "radiusKm": 12
+    },
+    {
+      "name": "Jurong East",
+      "lat": 1.3331,
+      "lng": 103.7422,
+      "radiusKm": 12
+    },
+    {
+      "name": "Tampines",
+      "lat": 1.3531,
+      "lng": 103.9452,
+      "radiusKm": 12
+    },
+    {
+      "name": "Punggol",
+      "lat": 1.4043,
+      "lng": 103.9025,
+      "radiusKm": 12
+    }
+  ],
+  "weekWindow": {
+    "start": "2026-09-11",
+    "end": "2026-09-18"
+  },
+  "sources": {
+    "eventbrite": {
+      "status": "missing_token",
+      "note": "set EVENTBRITE_TOKEN to enable",
+      "new": 0
+    },
+    "ticketmaster": {
+      "status": "missing_token",
+      "note": "set TICKETMASTER_API_KEY to enable",
+      "new": 0
+    }
+  },
+  "_note": "Human review queue. Promote by hand into data/week.json activities[]; never auto-publish.",
+  "candidates": []
+}

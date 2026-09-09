@@ -128,6 +128,41 @@
     return est.label;
   }
 
+  function haversineKm(lat1, lng1, lat2, lng2) {
+    var R = 6371;
+    var toRad = function (d) {
+      return (d * Math.PI) / 180;
+    };
+    var dLat = toRad(lat2 - lat1);
+    var dLng = toRad(lng2 - lng1);
+    var h =
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+        Math.sin(dLng / 2) * Math.sin(dLng / 2);
+    return 2 * R * Math.asin(Math.sqrt(h));
+  }
+
+  /**
+   * Live per-user distance (km) from the saved home postal to an activity.
+   * Uses activity.travel.lat/lng stamped by scripts/friday-ingest.py geocode.
+   * Returns null when the user skipped postal entry (zone-only path) or the
+   * activity has no coordinates. This is the source of truth for the public
+   * app — the baked travel.distanceKm in week.json is only a curator reference.
+   */
+  function distanceKmTo(activity) {
+    var home = getHome();
+    if (!home || home.lat == null || home.lng == null) return null;
+    var hLat = Number(home.lat);
+    var hLng = Number(home.lng);
+    if (!isFinite(hLat) || !isFinite(hLng)) return null;
+    var t = activity && activity.travel;
+    if (!t) return null;
+    var aLat = Number(t.lat);
+    var aLng = Number(t.lng);
+    if (!isFinite(aLat) || !isFinite(aLng)) return null;
+    return haversineKm(hLat, hLng, aLat, aLng);
+  }
+
   function getHome() {
     try {
       var raw = localStorage.getItem(STORAGE_KEY);
@@ -434,6 +469,7 @@
     estimateDrive: estimateDrive,
     formatDriveChip: formatDriveChip,
     resolvePostal: resolvePostal,
+    distanceKmTo: distanceKmTo,
     zoneFromSector: zoneFromSector,
     openModal: openModal,
     closeModal: closeModal,

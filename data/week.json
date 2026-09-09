@@ -1,16 +1,16 @@
 {
   "meta": {
-    "weekLabel": "4 Sep – 10 Sep 2026",
-    "weekStart": "2026-09-04",
-    "weekEnd": "2026-09-10",
-    "refreshedOn": "2026-09-04",
-    "nextRefresh": "2026-09-11",
+    "weekLabel": "11 Sep – 17 Sep 2026",
+    "weekStart": "2026-09-11",
+    "weekEnd": "2026-09-17",
+    "refreshedOn": "2026-09-09",
+    "nextRefresh": "2026-09-18",
     "note": "Only fresh finds this week — new openings, pop-ups, limited-run events, and menus you wouldn’t already have bookmarked. Familiar favourites are intentionally left out.",
     "sourcesNote": "Scouted from City Nomads Just Opened, Eatbook, HungryGoWhere, Honeycombers, Time Out SG, Seth Lui / TheSmartLocal, Singapore Expo events, HappyHourLah, venue pages, and ParkingGoWhere / LTA rates. Always re-check hours before you go — new places change fast.",
-    "autoRefreshNote": "Auto-stamped 2026-09-04 02:23 UTC. Curate openings from City Nomads Just Opened, Eatbook, Expo events, HappyHourLah before relying on cards — auto-roll updates dates; humans keep quality high.",
+    "autoRefreshNote": "Auto-stamped 2026-09-09 06:22 UTC. Curate openings from City Nomads Just Opened, Eatbook, Expo events, HappyHourLah before relying on cards — auto-roll updates dates; humans keep quality high.",
     "zonePass": {
       "version": 1,
-      "refreshedOn": "2026-09-06",
+      "refreshedOn": "2026-09-09",
       "quotas": {
         "Central": 4,
         "East": 2,
@@ -18,35 +18,51 @@
         "North": 2,
         "South": 1
       },
+      "caps": {
+        "Central": 10
+      },
       "zones": {
         "Central": {
           "status": "empty",
           "count": 0,
-          "note": ""
+          "rawCount": 18,
+          "overCap": true,
+          "note": "OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 18 items vs cap 10 — trim before cards go out."
         },
         "East": {
           "status": "empty",
           "count": 0,
+          "rawCount": 6,
+          "overCap": false,
           "note": ""
         },
         "West": {
           "status": "empty",
           "count": 0,
+          "rawCount": 2,
+          "overCap": false,
           "note": ""
         },
         "North": {
           "status": "empty",
           "count": 0,
+          "rawCount": 5,
+          "overCap": false,
           "note": ""
         },
         "South": {
           "status": "empty",
           "count": 0,
+          "rawCount": 1,
+          "overCap": false,
           "note": ""
         }
       },
-      "summary": "Zone pass not run yet — Friday curation pending."
-    }
+      "summary": "Central 18/4 (cap 10!) · East 6/2 · West 2/2 · North 5/2 · South 1/1"
+    },
+    "curatorWarnings": [
+      "Central: 18 items vs cap 10 — trim or move items out of Central"
+    ]
   },
   "tabs": [
     {
@@ -97,6 +113,13 @@
       "shortLabel": "Out",
       "emoji": "🌳",
       "blurb": "Seasonal outdoor moments and evening chill spots with a reason to go this week — heat notes included."
+    },
+    {
+      "id": "parks",
+      "label": "Parks & Nature",
+      "shortLabel": "Parks",
+      "emoji": "🌲",
+      "blurb": "Singapore’s public parks and their highlights — free, outdoors, sorted nearest-first from your postal code."
     }
   ],
   "activities": [
@@ -115,7 +138,12 @@
       "travel": {
         "zone": "East",
         "fromWoodlands": "~45–55 min",
-        "region": "Katong / East Coast"
+        "region": "Katong / East Coast",
+        "lat": 1.3046,
+        "lng": 103.9047,
+        "geoSource": "onemap",
+        "geoQuery": "Katong",
+        "distanceKm": 18.4
       },
       "parking": "Street lots along East Coast Rd fill early; Parkway Parade multi-storey (~5–8 min walk) is the reliable backup. Check Parking.sg for evening rates.",
       "when": "Dinner sittings; confirm booking windows on their page",
@@ -147,7 +175,12 @@
       "travel": {
         "zone": "Central",
         "fromWoodlands": "~35–45 min",
-        "region": "Duxton / Tanjong Pagar"
+        "region": "Duxton / Tanjong Pagar",
+        "lat": 1.27873,
+        "lng": 103.84322,
+        "geoSource": "onemap",
+        "geoQuery": "Duxton",
+        "distanceKm": 17.5
       },
       "parking": "Amara / Icon Village multi-storey. Weekday late afternoon is easier than Saturday noon.",
       "when": "Pop-up window this month — confirm end date on the listing",
@@ -179,7 +212,12 @@
       "travel": {
         "zone": "East",
         "fromWoodlands": "~45–60 min",
-        "region": "Expo / Changi"
+        "region": "Expo / Changi",
+        "lat": 1.3344,
+        "lng": 103.96036,
+        "geoSource": "onemap",
+        "geoQuery": "Singapore Expo",
+        "distanceKm": 21.1
       },
       "parking": "Expo multi-storey — arrive early on Saturday. Some ticket tiers include parking perks; check the event page.",
       "when": "Public days typically 10am–7pm — verify on singaporeexpo.com.sg",
@@ -209,7 +247,12 @@
       "travel": {
         "zone": "Central",
         "fromWoodlands": "~35–45 min",
-        "region": "Tanjong Pagar"
+        "region": "Tanjong Pagar",
+        "lat": 1.27188,
+        "lng": 103.83675,
+        "geoSource": "onemap",
+        "geoQuery": "Tanjong Pagar",
+        "distanceKm": 18.0
       },
       "parking": "Guoco Tower / nearby multi-storey. Weekday 4–6pm is workable; avoid 7pm peak.",
       "when": "Mon–Fri roughly 4pm–7pm launch promo — confirm board specials",
@@ -229,37 +272,6 @@
       "why": "New venue + real afternoon deal. Worth the drive once while the promo is hot."
     },
     {
-      "id": "tw-new-bahru-new-tenant",
-      "tabs": [
-        "this-week",
-        "brands"
-      ],
-      "title": "New Bahru — new tenant worth a look",
-      "description": "Not a generic complex loop: a newly opened design / fashion tenant has been getting coverage this month. Go for that shop first, then decide if anything else nearby is new enough to linger.",
-      "tags": [
-        "Indoor",
-        "AC"
-      ],
-      "travel": {
-        "zone": "Central",
-        "fromWoodlands": "~35–45 min",
-        "region": "River Valley"
-      },
-      "parking": "New Bahru multi-storey; weekends ~$2–3 first hour typical. Validate live rates on Parking.sg.",
-      "when": "Tue–Sun typical; check the new tenant’s hours",
-      "days": [
-        "Sat",
-        "Sun",
-        "Fri"
-      ],
-      "source": {
-        "label": "City Nomads Just Opened",
-        "url": "https://citynomads.com/food-and-drinks/food-section/just-opened-in-singapore/"
-      },
-      "highlight": true,
-      "why": "Specific new opening inside a place you like — not a rehash of the whole complex."
-    },
-    {
       "id": "tw-north-new-restaurant",
       "tabs": [
         "this-week",
@@ -275,7 +287,12 @@
       "travel": {
         "zone": "North",
         "fromWoodlands": "~10–20 min",
-        "region": "Yishun / Sembawang fringe"
+        "region": "Yishun / Sembawang fringe",
+        "lat": 1.46428,
+        "lng": 103.8153,
+        "geoSource": "onemap",
+        "geoQuery": "Sembawang",
+        "distanceKm": 4.6
       },
       "parking": "Usually mall- or HDB-adjacent multi-storey nearby — confirm on the venue page. North parking is typically easier than CBD.",
       "when": "Dinner Wed–Sun; lunch if they open midweek",
@@ -309,7 +326,12 @@
       "travel": {
         "zone": "Central",
         "fromWoodlands": "~35–45 min",
-        "region": "Marina Bay"
+        "region": "Marina Bay",
+        "lat": 1.29349,
+        "lng": 103.85878,
+        "geoSource": "onemap",
+        "geoQuery": "Marina Bay",
+        "distanceKm": 16.6
       },
       "parking": "MBS / Marina Square multi-storey. Some tickets include parking validation — check current offers.",
       "when": "Any day; weekday mornings quieter",
@@ -343,7 +365,12 @@
       "travel": {
         "zone": "Central",
         "fromWoodlands": "~35–45 min",
-        "region": "Keong Saik / Outram"
+        "region": "Keong Saik / Outram",
+        "lat": 1.27892,
+        "lng": 103.84142,
+        "geoSource": "onemap",
+        "geoQuery": "Keong Saik",
+        "distanceKm": 17.4
       },
       "parking": "Nearby hotel/mall multi-storey; street lots scarce on weekends.",
       "when": "Afternoons into evening; closed days vary — check listing",
@@ -373,7 +400,12 @@
       "travel": {
         "zone": "Central",
         "fromWoodlands": "~30–40 min",
-        "region": "Orchard"
+        "region": "Orchard",
+        "lat": 1.30323,
+        "lng": 103.83668,
+        "geoSource": "onemap",
+        "geoQuery": "Orchard Road",
+        "distanceKm": 14.7
       },
       "parking": "ION / Wisma linked multi-storey; weekday free-parking promos with spend still appear — check boards.",
       "when": "Any day 11am–9pm; weekday afternoons for stock",
@@ -405,7 +437,12 @@
       "travel": {
         "zone": "Central",
         "fromWoodlands": "~35–45 min",
-        "region": "Bugis / Kampong Glam"
+        "region": "Bugis / Kampong Glam",
+        "lat": 1.29692,
+        "lng": 103.85556,
+        "geoSource": "onemap",
+        "geoQuery": "Bugis",
+        "distanceKm": 16.1
       },
       "parking": "Bugis+ multi-storey is the practical default.",
       "when": "Sat–Sun; verify market is on this weekend first",
@@ -434,7 +471,12 @@
       "travel": {
         "zone": "East",
         "fromWoodlands": "~45–55 min",
-        "region": "Joo Chiat / Katong"
+        "region": "Joo Chiat / Katong",
+        "lat": 1.31149,
+        "lng": 103.90125,
+        "geoSource": "onemap",
+        "geoQuery": "Joo Chiat",
+        "distanceKm": 17.5
       },
       "parking": "Parkway Parade or local multi-storey; estate street lots tight on weekends.",
       "when": "Sat–Sun afternoon or weekday late afternoon",
@@ -463,7 +505,12 @@
       "travel": {
         "zone": "Central",
         "fromWoodlands": "~35–45 min",
-        "region": "Tanjong Pagar"
+        "region": "Tanjong Pagar",
+        "lat": 1.27188,
+        "lng": 103.83675,
+        "geoSource": "onemap",
+        "geoQuery": "Tanjong Pagar",
+        "distanceKm": 18.0
       },
       "parking": "CBD multi-storey (Guoco / nearby). Dinner duration often $4–8 parking — budget for it.",
       "when": "Dinner Thu–Sun; weekday lunch for less wait",
@@ -493,7 +540,12 @@
       "travel": {
         "zone": "Central",
         "fromWoodlands": "~35–45 min",
-        "region": "Robertson Quay"
+        "region": "Robertson Quay",
+        "lat": 1.28822,
+        "lng": 103.83741,
+        "geoSource": "onemap",
+        "geoQuery": "Robertson Quay",
+        "distanceKm": 16.3
       },
       "parking": "UE Square / nearby multi-storey. Weekends busier from 7pm.",
       "when": "Dinner Fri–Sun; weekday evenings quieter",
@@ -524,7 +576,12 @@
       "travel": {
         "zone": "Central",
         "fromWoodlands": "~35–45 min",
-        "region": "Chinatown / Club Street"
+        "region": "Chinatown / Club Street",
+        "lat": 1.28179,
+        "lng": 103.84381,
+        "geoSource": "onemap",
+        "geoQuery": "Chinatown",
+        "distanceKm": 17.2
       },
       "parking": "Chin@town Point / People’s Park Complex multi-storey.",
       "when": "Dinner or late lunch weekends",
@@ -554,7 +611,12 @@
       "travel": {
         "zone": "West",
         "fromWoodlands": "~25–35 min",
-        "region": "Jurong East / west fringe"
+        "region": "Jurong East / west fringe",
+        "lat": 1.34442,
+        "lng": 103.73051,
+        "geoSource": "onemap",
+        "geoQuery": "Jurong East",
+        "distanceKm": 11.8
       },
       "parking": "Usually mall multi-storey adjacent — easier than town evenings.",
       "when": "Dinner Thu–Sun",
@@ -585,7 +647,12 @@
       "travel": {
         "zone": "East",
         "fromWoodlands": "~45–55 min",
-        "region": "Siglap / East Coast"
+        "region": "Siglap / East Coast",
+        "lat": 1.3136,
+        "lng": 103.92831,
+        "geoSource": "onemap",
+        "geoQuery": "Siglap",
+        "distanceKm": 19.5
       },
       "parking": "Parkway Parade or local multi-storey near Upper East Coast.",
       "when": "Dinner Wed–Sun",
@@ -616,7 +683,12 @@
       "travel": {
         "zone": "Central",
         "fromWoodlands": "~30–40 min",
-        "region": "Orchard / Emerald Hill"
+        "region": "Orchard / Emerald Hill",
+        "lat": 1.30337,
+        "lng": 103.83889,
+        "geoSource": "onemap",
+        "geoQuery": "Emerald Hill",
+        "distanceKm": 14.7
       },
       "parking": "ION / Ngee Ann City multi-storey; walk to Emerald Hill after.",
       "when": "Mon–Fri ~3pm–7pm (venue-dependent)",
@@ -648,7 +720,12 @@
       "travel": {
         "zone": "Central",
         "fromWoodlands": "~35–45 min",
-        "region": "Telok Ayer / CBD"
+        "region": "Telok Ayer / CBD",
+        "lat": 1.28125,
+        "lng": 103.84769,
+        "geoSource": "onemap",
+        "geoQuery": "Telok Ayer",
+        "distanceKm": 17.4
       },
       "parking": "CBD multi-storey after office hours can free up — still tighter than suburbs.",
       "when": "Mon–Fri ~5pm–8pm",
@@ -680,7 +757,12 @@
       "travel": {
         "zone": "Central",
         "fromWoodlands": "~35–45 min",
-        "region": "Boat Quay / Clarke fringe"
+        "region": "Boat Quay / Clarke fringe",
+        "lat": 1.28814,
+        "lng": 103.84893,
+        "geoSource": "onemap",
+        "geoQuery": "Boat Quay",
+        "distanceKm": 16.7
       },
       "parking": "Funan / Central Mall multi-storey; weekday HH is the parking-friendly window.",
       "when": "Weekday 4pm–8pm",
@@ -712,7 +794,12 @@
       "travel": {
         "zone": "North",
         "fromWoodlands": "~5–15 min",
-        "region": "North / Yishun"
+        "region": "North / Yishun",
+        "lat": 1.43222,
+        "lng": 103.82756,
+        "geoSource": "onemap",
+        "geoQuery": "Yishun",
+        "distanceKm": 3.6
       },
       "parking": "Usually free/easy mall multi-storey nearby.",
       "when": "Weekday evenings when promo is active",
@@ -745,7 +832,12 @@
       "travel": {
         "zone": "East",
         "fromWoodlands": "~45–60 min",
-        "region": "Expo"
+        "region": "Expo",
+        "lat": 1.3344,
+        "lng": 103.96036,
+        "geoSource": "onemap",
+        "geoQuery": "Singapore Expo",
+        "distanceKm": 21.1
       },
       "parking": "Expo car parks; event days fill — early arrival helps.",
       "when": "Public event hours (often 10am–7pm)",
@@ -775,7 +867,12 @@
       "travel": {
         "zone": "Central",
         "fromWoodlands": "~35–45 min",
-        "region": "Marina Bay"
+        "region": "Marina Bay",
+        "lat": 1.29349,
+        "lng": 103.85878,
+        "geoSource": "onemap",
+        "geoQuery": "Marina Bay",
+        "distanceKm": 16.6
       },
       "parking": "MBS / Marina Square / Suntec — pricey evenings; MRT is a valid plan B.",
       "when": "Evenings while the programme runs",
@@ -804,7 +901,12 @@
       "travel": {
         "zone": "Central",
         "fromWoodlands": "~35–45 min",
-        "region": "City Hall / Padang"
+        "region": "City Hall / Padang",
+        "lat": 1.32496,
+        "lng": 103.83833,
+        "geoSource": "onemap",
+        "geoQuery": "Padang Singapore",
+        "distanceKm": 12.5
       },
       "parking": "City Hall / Capitol / Funan multi-storey.",
       "when": "Any day; free/discounted periods sometimes apply — check site",
@@ -836,7 +938,12 @@
       "travel": {
         "zone": "Central",
         "fromWoodlands": "~35–45 min",
-        "region": "Esplanade / Bayfront"
+        "region": "Esplanade / Bayfront",
+        "lat": 1.29021,
+        "lng": 103.85557,
+        "geoSource": "onemap",
+        "geoQuery": "Esplanade Theatres",
+        "distanceKm": 16.8
       },
       "parking": "Esplanade / MBS / Suntec multi-storey.",
       "when": "Show times vary — buy tickets ahead for popular acts",
@@ -867,7 +974,12 @@
       "travel": {
         "zone": "North",
         "fromWoodlands": "5–15 min",
-        "region": "Admiralty"
+        "region": "Admiralty",
+        "lat": 1.44059,
+        "lng": 103.80099,
+        "geoSource": "onemap",
+        "geoQuery": "Admiralty MRT Station",
+        "distanceKm": 1.5
       },
       "parking": "Usually straightforward multi-storey or HDB nearby.",
       "when": "Evenings and weekends once open",
@@ -899,7 +1011,12 @@
       "travel": {
         "zone": "North",
         "fromWoodlands": "~10–20 min",
-        "region": "Sembawang / Canberra"
+        "region": "Sembawang / Canberra",
+        "lat": 1.46428,
+        "lng": 103.8153,
+        "geoSource": "onemap",
+        "geoQuery": "Sembawang",
+        "distanceKm": 4.6
       },
       "parking": "Mall or HDB multi-storey — generally easy evenings.",
       "when": "When the new venue’s hours allow",
@@ -932,7 +1049,12 @@
       "travel": {
         "zone": "Central-East",
         "fromWoodlands": "~30–40 min",
-        "region": "Kallang"
+        "region": "Kallang",
+        "lat": 1.31215,
+        "lng": 103.8629,
+        "geoSource": "onemap",
+        "geoQuery": "Kallang",
+        "distanceKm": 15.0
       },
       "parking": "Sports Hub multi-storey — event pricing and queues apply; arrive early.",
       "when": "Event day/time only",
@@ -963,7 +1085,12 @@
       "travel": {
         "zone": "West",
         "fromWoodlands": "~25–35 min",
-        "region": "Jurong / West"
+        "region": "Jurong / West",
+        "lat": 1.34442,
+        "lng": 103.73051,
+        "geoSource": "onemap",
+        "geoQuery": "Jurong East",
+        "distanceKm": 11.8
       },
       "parking": "Mall multi-storey typically.",
       "when": "Pop-up dates only — confirm before driving",
@@ -995,7 +1122,12 @@
       "travel": {
         "zone": "Central",
         "fromWoodlands": "~35–45 min",
-        "region": "Marina Bay / Bayfront"
+        "region": "Marina Bay / Bayfront",
+        "lat": 1.29349,
+        "lng": 103.85878,
+        "geoSource": "onemap",
+        "geoQuery": "Marina Bay",
+        "distanceKm": 16.6
       },
       "parking": "Gardens / MBS multi-storey. Evening rates apply.",
       "when": "Evenings while the programme runs",
@@ -1024,7 +1156,12 @@
       "travel": {
         "zone": "Central",
         "fromWoodlands": "~30–40 min",
-        "region": "Botanic Gardens / Tanglin"
+        "region": "Botanic Gardens / Tanglin",
+        "lat": 1.31348,
+        "lng": 103.81318,
+        "geoSource": "onemap",
+        "geoQuery": "Singapore Botanic Gardens",
+        "distanceKm": 12.9
       },
       "parking": "Botanic Gardens car parks; free periods may apply for short stays — check signs.",
       "when": "Event evening only; otherwise skip",
@@ -1056,7 +1193,12 @@
       "travel": {
         "zone": "South",
         "fromWoodlands": "~45–55 min",
-        "region": "Sentosa / HarbourFront"
+        "region": "Sentosa / HarbourFront",
+        "lat": 1.2468,
+        "lng": 103.82635,
+        "geoSource": "onemap",
+        "geoQuery": "Sentosa",
+        "distanceKm": 20.5
       },
       "parking": "Sentosa / HarbourFront multi-storey — weekend evenings queue; consider earlier arrival.",
       "when": "Event evenings only",
@@ -1086,7 +1228,12 @@
       "travel": {
         "zone": "North",
         "fromWoodlands": "~20–25 min",
-        "region": "Punggol / Coney"
+        "region": "Punggol / Coney",
+        "lat": 1.41477,
+        "lng": 103.91061,
+        "geoSource": "onemap",
+        "geoQuery": "Punggol",
+        "distanceKm": 12.9
       },
       "parking": "Punggol Point / nearby public lots — check NParks access notes.",
       "when": "Late afternoon / early evening only",
@@ -1118,7 +1265,12 @@
       "travel": {
         "zone": "Central",
         "fromWoodlands": "~30–45 min",
-        "region": "CBD / Orchard fringe"
+        "region": "CBD / Orchard fringe",
+        "lat": 1.30323,
+        "lng": 103.83668,
+        "geoSource": "onemap",
+        "geoQuery": "Orchard Road",
+        "distanceKm": 14.7
       },
       "parking": "Building multi-storey; evening rates vary widely.",
       "when": "After 6:30pm; weekday launch promos best",

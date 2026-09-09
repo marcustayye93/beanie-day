@@ -26,6 +26,7 @@
     events: { emoji: "🎪", color: "#ef4444", grad: "linear-gradient(135deg,#f87171,#dc2626)" },
     "near-home": { emoji: "🏡", color: "#3b82f6", grad: "linear-gradient(135deg,#60a5fa,#2563eb)" },
     outdoor: { emoji: "🌳", color: "#22c55e", grad: "linear-gradient(135deg,#4ade80,#16a34a)" },
+    parks: { emoji: "🌲", color: "#16a34a", grad: "linear-gradient(135deg,#4ade80,#15803d)" },
   };
 
   /* Generic category stills — mood only, never a venue lookalike */
@@ -62,6 +63,12 @@
       U + "photo-1469474968028-56623f02e42e" + Q,
       U + "photo-1507525428034-b723cf961d3e" + Q,
     ],
+    parks: [
+      U + "photo-1441974231531-c6227db76b6e" + Q,
+      U + "photo-1476231682828-37e571bc172f" + Q,
+      U + "photo-1502082553048-f009c37129b9" + Q,
+      U + "photo-1447752875215-b2761acb3c5d" + Q,
+    ],
     "near-home": [
       U + "photo-1480714378408-67cf0d13bc1b" + Q,
       U + "photo-1519501025264-65ba15a82390" + Q,
@@ -93,10 +100,6 @@
     "tw-tanjong-pagar-hh-launch": {
       emoji: "🍻",
       grad: "linear-gradient(135deg,#fbbf24,#f97316)",
-    },
-    "tw-new-bahru-new-tenant": {
-      emoji: "🏷️",
-      grad: "linear-gradient(135deg,#e879f9,#8b5cf6)",
     },
     "tw-north-new-restaurant": {
       emoji: "🍜",
@@ -221,6 +224,7 @@
 
   const state = {
     data: null,
+    parks: [],
     activeTab: "this-week",
     query: "",
     filters: new Set(),

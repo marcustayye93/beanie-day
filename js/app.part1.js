@@ -16,6 +16,7 @@
       const normalized = normalizeWeekData(json);
       if (!normalized) throw new Error("Invalid week data shape");
       state.data = normalized;
+      state.parks = await loadParks();
       try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(normalized));
         // Drop legacy caches that may be stale familiar-place content
@@ -31,6 +32,7 @@
           const normalized = normalizeWeekData(json);
           if (normalized) {
             state.data = normalized;
+            state.parks = await loadParks();
             els.offlineStatus.hidden = false;
             toast("Offline — showing saved week");
             return;
@@ -41,6 +43,34 @@
     }
   }
 
+  const PARKS_URL = "data/parks.json";
+  const PARKS_CACHE_KEY = "beanie-day-parks-cache-v1";
+
+  /** Stable POI layer (NParks via scripts/parks-build.py). Optional — never fatal. */
+  async function loadParks() {
+    const valid = (p) =>
+      p && Array.isArray(p.parks) ? p.parks : null;
+    try {
+      const res = await fetchWithTimeout(PARKS_URL, 6000);
+      if (res.ok) {
+        const payload = valid(await res.json());
+        if (payload) {
+          try {
+            localStorage.setItem(PARKS_CACHE_KEY, JSON.stringify(payload));
+          } catch (_) {}
+          return payload;
+        }
+      }
+    } catch (_) {
+      /* offline or missing — fall through to cache */
+    }
+    try {
+      const cached = valid(JSON.parse(localStorage.getItem(PARKS_CACHE_KEY) || "null"));
+      if (cached) return cached;
+    } catch (_) {}
+    return [];
+  }
+
   function categoryKey(tabs) {
     const order = [
       "flavours",
@@ -48,6 +78,7 @@
       "brands",
       "events",
       "outdoor",
+      "parks",
       "near-home",
       "this-week",
     ];
@@ -190,7 +221,50 @@
     els.cardList.innerHTML = items.map((a, i) => cardHtml(a, i)).join("");
   }
 
+  /** Adapt a park record to the card shape activities use. */
+  function parkToCard(p) {
+    const t = p.travel || {};
+    return {
+      id: p.id,
+      title: p.name,
+      venue: "",
+      description: (p.attractions || []).join(" · "),
+      why: "",
+      when: "",
+      deal: "",
+      parking: "",
+      heatNote: "",
+      days: [],
+      tags: ["Outdoor"],
+      tabs: ["parks"],
+      highlight: false,
+      nearHomeBonus: false,
+      travel: { lat: t.lat, lng: t.lng, zone: t.zone, region: t.region },
+      source: p.url ? { label: "NParks", url: p.url } : null,
+    };
+  }
+
   function getFilteredActivities() {
+    // Parks tab: stable NParks POI layer, nearest-first by live per-user distance.
+    if (state.activeTab === "parks") {
+      const q = state.query.trim().toLowerCase();
+      let list = (state.parks || []).map(parkToCard);
+      if (q) {
+        list = list.filter((a) =>
+          [a.title, a.description, a.travel?.zone, a.travel?.region, ...(a.tags || [])]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase()
+            .includes(q)
+        );
+      }
+      const distOf = (x) => {
+        const d = window.BeanieHomePostal?.distanceKmTo?.(x);
+        return typeof d === "number" && isFinite(d) ? d : Infinity;
+      };
+      return [...list].sort((a, b) => distOf(a) - distOf(b));
+    }
+
     let list = state.data.activities.filter(
       (a) => a.tabs.includes(state.activeTab) && !isBlocklisted(a)
     );
@@ -239,6 +313,14 @@
         const score = (x) => (x.highlight ? 2 : 0) + (x.nearHomeBonus ? 1 : 0);
         return score(b) - score(a);
       });
+    } else if (state.activeTab === "near-home") {
+      // Closest first — live per-user distance from the saved postal code.
+      // Anything without a computable distance sinks to the bottom.
+      const distOf = (x) => {
+        const d = window.BeanieHomePostal?.distanceKmTo?.(x);
+        return typeof d === "number" && isFinite(d) ? d : Infinity;
+      };
+      list = [...list].sort((a, b) => distOf(a) - distOf(b));
     } else if (state.activeTab !== "near-home") {
       list = [...list].sort((a, b) => {
         if (a.nearHomeBonus === b.nearHomeBonus) {
@@ -327,10 +409,17 @@
         </div>`);
     }
     if (a.travel?.region) {
+      // Live per-user distance from the saved postal. Falls back to nothing
+      // (not the baked curator reference) when the user skipped postal entry.
+      const liveKm = window.BeanieHomePostal?.distanceKmTo?.(a);
+      const dist =
+        typeof liveKm === "number" && isFinite(liveKm)
+          ? ` · ≈${Math.round(liveKm)} km from you`
+          : "";
       details.push(`
         <div class="detail-block detail-when">
           <div class="label">📍 Area</div>
-          ${escapeHtml(a.travel.region)} · ${escapeHtml(a.travel.zone || "")}
+          ${escapeHtml(a.travel.region)} · ${escapeHtml(a.travel.zone || "")}${dist}
         </div>`);
     }
 

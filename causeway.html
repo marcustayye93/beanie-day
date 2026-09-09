@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Live causeway traffic cameras — Woodlands and Tuas checkpoints, both directions." />
+  <meta name="theme-color" content="#0f766e" />
+  <title>Causeway Traffic · Bean Plans</title>
+  <link rel="stylesheet" href="css/styles.css?v=18" />
+  <link rel="stylesheet" href="css/causeway.css?v=1" />
+</head>
+<body>
+  <div class="cw-shell">
+    <header class="cw-header">
+      <a class="cw-back" href="index.html" aria-label="Back to Bean Plans">‹</a>
+      <div class="cw-title">
+        <h1>🛣️ Causeway Traffic</h1>
+        <p id="cw-status" class="cw-status">Connecting…</p>
+      </div>
+      <button type="button" class="cw-refresh" id="cw-refresh" title="Refresh now" aria-label="Refresh now">↻</button>
+    </header>
+
+    <main id="cw-main">
+      <section class="cw-section" aria-label="Woodlands Causeway">
+        <h2><span aria-hidden="true">🌉</span> Woodlands Causeway</h2>
+        <div class="cw-grid" id="cw-woodlands"></div>
+      </section>
+      <section class="cw-section" aria-label="Tuas Second Link">
+        <h2><span aria-hidden="true">🛤️</span> Tuas Second Link</h2>
+        <div class="cw-grid" id="cw-tuas"></div>
+      </section>
+      <p class="cw-note">
+        Snapshots from LTA via data.gov.sg, refreshed about every 3 minutes — no sign-up needed.
+        Cameras face the departure queues; the AYE camera also shows the arrival carriageway.
+      </p>
+    </main>
+  </div>
+  <script src="js/causeway.js?v=1" defer></script>
+</body>
+</html>

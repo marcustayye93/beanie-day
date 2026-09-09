@@ -1,8 +1,22 @@
 # Friday Zone Pass
 
-Human Friday curation across Singapore zones — **not scraping**. Quality over volume. Near-home (North-first) taste stays. Blocklist unchanged (including New Bahru). **Never invent restaurant names.**
+Human Friday curation across Singapore zones — **not scraping**. Quality over volume.
+
+**The mission:** Beanie Day is for the public, not one household. Singapore's
+activities concentrate downtown, so suburban Singaporeans routinely get a thin
+week. Everything below exists to correct that: quotas pull the heartlands up,
+the Central cap keeps downtown from flooding the week, and API candidates are
+swept around heartland anchors — not one home point. Blocklist unchanged
+(including New Bahru). **Never invent restaurant names.**
 
 The Beanie Day agent runs this checklist every Friday before relying on cards.
+
+**Per-user distance:** every activity carries `travel.lat`/`travel.lng`
+(stamped by `friday-ingest.py geocode`). The app computes live distance from
+each visitor's own saved postal code (`BeanieHomePostal.distanceKmTo`) for the
+near-home sort and the "≈N km from you" line. The baked `travel.distanceKm`
+in `week.json` is a curator reference only (measured from `HOME_POSTAL`,
+default `730587`) — never shown as a visitor's distance.
 
 ## Scout sources
 
@@ -19,6 +33,54 @@ Check these for real openings / limited-run finds (then confirm on venue pages):
 - Urban List
 - Venue pages (hours, menus, end dates)
 
+### API candidates (review queue, not auto-publish)
+
+`python3 scripts/friday-ingest.py fetch` pulls structured candidates into
+`data/candidates.json` for human review. Nothing is auto-published into `week.json`.
+
+- **Eventbrite** — geographic sweep around four heartland anchors
+  (Woodlands, Jurong East, Tampines, Punggol, 12 km each; see `SEARCH_ANCHORS`
+  in `scripts/friday-ingest.py`). Needs `EVENTBRITE_TOKEN`; get a private token
+  at eventbrite.com/platform/api-keys. This is the big heartland fix: it
+  surfaces neighbourhood workshops, markets, and classes the editorial sites
+  never cover. Candidates record their nearest anchor; the app recomputes
+  distance per visitor.
+- **Ticketmaster** — keyword sweep (concert, comedy, theatre, musical,
+  festival, orchestra, ballet, opera, gig, exhibition) filtered to SG and the
+  week window via the public Discovery API. This is the structured answer to
+  the SISTIC gap (SISTIC has no public API): ticketed shows at Esplanade, the
+  Star, Indoor Stadium, etc. Needs `TICKETMASTER_API_KEY`; free at
+  developer.ticketmaster.com. Set it as a GitHub secret of the same name for
+  the Friday workflow. Events are re-filtered to the week by localDate because
+  the API's own date filter is loose.
+- **STB Tourism Information Hub** (tih.stb.gov.sg) — free business account,
+  then request an API key under "My Setting". Add as a second adapter in
+  `SOURCES` in `scripts/friday-ingest.py` once the key is in hand.
+
+### NParks parks layer (stable POI, not weekly)
+
+`python3 scripts/parks-build.py` rebuilds `data/parks.json` from the official
+data.gov.sg NParks datasets (Parks@SG: 52 parks with per-park attraction
+descriptions + NParks page URLs; no key needed). Parks barely change, so this
+runs **monthly** (`.github/workflows/parks-refresh.yml`), not on Fridays. The
+app's 🌲 Parks tab renders them nearest-first by live per-user distance — pure
+heartland content, free and always open.
+
+### Heartland beats (explicit North / West searches)
+
+Editorial sources are structurally downtown-biased. Every Friday, run at least
+one explicit search per beat below — this is where non-central coverage comes from:
+
+- **North:** Mandai / Zoo / Night Safari / Bird Paradise programming, Kranji
+  countryside & farm events, Sungei Buloh Wetland Reserve activities,
+  Woodlands Waterfront / Admiralty / Canberra / Yishun CC and mall atriums
+  (Causeway Point excluded — blocklisted), Sembawang Hot Spring Park happenings
+- **West:** Jurong Lake Gardens / Chinese Garden events, Science Centre,
+  IMM / JEM / Westgate atrium roadshows, Bukit Batok / Choa Chu Kang CC events
+- **Island-wide:** NLB library programmes (nlb.gov.sg), onePA community-centre
+  courses & events (onepa.gov.sg), NParks events (nparks.gov.sg), mall atrium
+  roadshows outside the core
+
 ## Zone quotas
 
 Fill quotas for: **North**, **West**, **East**, **Central**, **South**.
@@ -30,14 +92,34 @@ Suggested minimums (tuneable in `meta.zonePass.quotas`):
 | Central | 4 |
 | East | 2 |
 | West | 2 |
-| North | 2 (include near-home / North-first) |
+| North | 2 |
 | South | 1 |
+
+Quotas are audience-neutral minimums: every zone deserves a real week, not
+just downtown. They pair with the Central cap below.
 
 Only cards that credit a quota:
 
 - Real `venue` / `venueName` (no placeholders)
 - Concrete `source.url`
 - `confirmNeeded: false`
+
+## Zone caps (the downtown guardrail)
+
+Quotas set minimums but never maximums — so Central can hit its quota of 4 and
+keep going to 19. Caps fix that. Tuneable in `meta.zonePass.caps` / the
+`caps` key of `data/zone-pass.state.json`.
+
+| Zone | Cap |
+|------|-----|
+| Central | 10 |
+| East / West / North / South | none |
+
+When a zone exceeds its cap, `friday-refresh.py` flags it: the zone gets
+`"overCap": true`, a note in `meta.zonePass.zones.<Zone>.note`, a `(cap N!)`
+marker in the summary, and a warning in `meta.curatorWarnings` plus the
+console output. The Friday workflow still runs green — the cap is a loud
+signal, not a hard failure. Trim or move items before cards go out.
 
 ## Empty zones
 
@@ -58,7 +140,19 @@ Mark `meta.zonePass.zones.<Zone>.status`:
 ## After editing `data/week.json`
 
 ```bash
+python3 scripts/friday-ingest.py geocode   # stamp lat/lng + distanceKm via OneMap
+python3 scripts/friday-ingest.py fetch     # API candidates -> data/candidates.json (review queue)
+python3 scripts/friday-ingest.py zones     # raw zone counts vs quotas + caps
 python3 scripts/friday-refresh.py
 ```
 
-This rolls week meta dates, filters the blocklist, and **recomputes** `meta.zonePass` counts / status / summary from confirmed activities only. It does not invent activities.
+`friday-ingest.py geocode` fills any missing `travel.lat` / `travel.lng` (OneMap)
+and stamps `travel.distanceKm` from `HOME_POSTAL` (default `730587`) as a
+curator reference. The app itself computes live per-user distance from each
+visitor's saved postal code — the near-home tab sorts by that, and cards show
+"≈N km from you". Visitors who skip postal entry see no km line (their
+zone-bucket drive estimates still work).
+
+`friday-refresh.py` rolls week meta dates, filters the blocklist, and
+**recomputes** `meta.zonePass` counts / status / summary from confirmed
+activities only. It does not invent activities.

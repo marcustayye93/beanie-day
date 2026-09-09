@@ -40,6 +40,9 @@ BLOCKLIST = (
 
 ZONE_ORDER = ("Central", "East", "West", "North", "South")
 DEFAULT_QUOTAS = {"Central": 4, "East": 2, "West": 2, "North": 2, "South": 1}
+# Maximum share guard: Central may exceed its quota, but never the cap.
+# Quotas pull the heartlands up; the cap keeps downtown from flooding the week.
+DEFAULT_CAPS = {"Central": 10}
 
 
 def next_or_current_friday(today: date) -> date:
@@ -110,15 +113,28 @@ def recompute_zone_pass(meta: dict, activities: list, today: date) -> dict:
                 except (TypeError, ValueError):
                     pass
 
+    caps = dict(DEFAULT_CAPS)
+    if isinstance(existing.get("caps"), dict):
+        for k, v in existing["caps"].items():
+            if k in ZONE_ORDER:
+                try:
+                    caps[k] = int(v)
+                except (TypeError, ValueError):
+                    pass
+
     prev_zones = existing.get("zones") if isinstance(existing.get("zones"), dict) else {}
     counts = {z: 0 for z in ZONE_ORDER}
+    raw_counts = {z: 0 for z in ZONE_ORDER}
 
     for act in activities:
-        if not isinstance(act, dict) or not counts_for_quota(act):
+        if not isinstance(act, dict):
             continue
         travel = act.get("travel") if isinstance(act.get("travel"), dict) else {}
         bucket = map_zone(travel.get("zone"))
         if bucket is None:
+            continue
+        raw_counts[bucket] += 1
+        if not counts_for_quota(act):
             continue
         counts[bucket] += 1
 
@@ -134,18 +150,33 @@ def recompute_zone_pass(meta: dict, activities: list, today: date) -> dict:
             status = "skipped"
         else:
             status = "empty"
+        note = str(prev.get("note") or "")
+        cap = caps.get(z)
+        over_cap = cap is not None and raw_counts[z] > cap
+        if over_cap:
+            add = f"OVER CAP: {raw_counts[z]} items vs cap {cap} — trim before cards go out."
+            note = f"{note} {add}".strip()
         zones[z] = {
             "status": status,
             "count": count,
-            "note": str(prev.get("note") or ""),
+            "rawCount": raw_counts[z],
+            "overCap": over_cap,
+            "note": note,
         }
 
-    summary = " · ".join(f"{z} {counts[z]}/{quotas[z]}" for z in ZONE_ORDER)
+    def summary_part(z):
+        s = f"{z} {raw_counts[z]}/{quotas[z]}"
+        if caps.get(z) is not None and raw_counts[z] > caps[z]:
+            s += f" (cap {caps[z]}!)"
+        return s
+
+    summary = " · ".join(summary_part(z) for z in ZONE_ORDER)
 
     return {
         "version": int(existing.get("version") or 1),
         "refreshedOn": today.isoformat(),
         "quotas": quotas,
+        "caps": caps,
         "zones": zones,
         "summary": summary,
     }
@@ -235,6 +266,21 @@ def main() -> None:
             pass
 
     meta["zonePass"] = recompute_zone_pass(meta, kept, today)
+
+    cap_hits = [
+        f"{z}: {meta['zonePass']['zones'][z]['rawCount']} items vs cap "
+        f"{meta['zonePass']['caps'][z]} — trim or move items out of {z}"
+        for z in ZONE_ORDER
+        if meta["zonePass"]["zones"][z].get("overCap")
+    ]
+    if cap_hits:
+        warns = meta.get("curatorWarnings")
+        if not isinstance(warns, list):
+            warns = []
+        meta["curatorWarnings"] = warns + cap_hits
+        print("WARNING: zone cap exceeded:")
+        for w in cap_hits:
+            print(" ", w)
 
     with DATA.open("w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
