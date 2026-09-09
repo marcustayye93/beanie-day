@@ -116,9 +116,11 @@
   }
 
   function genericPhoto(id, tabs) {
+    const sid = String(id || "");
+    if (PHOTO_OVERRIDES[sid]) return PHOTO_OVERRIDES[sid];
     const key = categoryKey(tabs);
     const pack = CATEGORY_PHOTOS[key] || CATEGORY_PHOTOS["this-week"];
-    const s = String(id || key);
+    const s = sid || key;
     let h = 0;
     for (let i = 0; i < s.length; i++) h = (h * 33 + s.charCodeAt(i)) >>> 0;
     return pack[h % pack.length];

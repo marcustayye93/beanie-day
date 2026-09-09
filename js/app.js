@@ -90,6 +90,17 @@
     ],
   };
 
+  /** Per-activity photo overrides — content-matched generic stills for cards
+      where the category pack misleads (e.g. food spots landing in the
+      near-home residential pack). Mood only, never a venue lookalike. */
+  const PHOTO_OVERRIDES = {
+    "nh-rb-caifan": U + "photo-1546069901-ba9599a7e63c" + Q, // rice piled with dishes
+    "nh-wild-honey-pie": U + "photo-1565308662296-af995458ea2d" + Q, // pie slice + coffee
+    "nh-wingstop-jp": U + "photo-1562967914-608f82629710" + Q, // crispy fried chicken
+    "nh-yishun-park-hc": U + "photo-1555939594-58d7cb561ad1" + Q, // hawker-style skewers
+    "nh-one-punggol-bash": U + "photo-1492684223066-81342ee5ff30" + Q, // festival lights bokeh
+  };
+
   /** Emoji + gradient only. Photos come from CATEGORY_PHOTOS, never per-venue stills. */
   const VISUALS = {
     "tw-katong-omakase-new": {
@@ -475,9 +486,11 @@
   }
 
   function genericPhoto(id, tabs) {
+    const sid = String(id || "");
+    if (PHOTO_OVERRIDES[sid]) return PHOTO_OVERRIDES[sid];
     const key = categoryKey(tabs);
     const pack = CATEGORY_PHOTOS[key] || CATEGORY_PHOTOS["this-week"];
-    const s = String(id || key);
+    const s = sid || key;
     let h = 0;
     for (let i = 0; i < s.length; i++) h = (h * 33 + s.charCodeAt(i)) >>> 0;
     return pack[h % pack.length];

@@ -215,6 +215,15 @@ body.intro-active .intro {
   text-align: right;
 }
 
+.intro-panel-copy-causeway {
+  bottom: max(28px, calc(env(safe-area-inset-bottom, 0px) + 20px));
+  text-align: left;
+}
+
+a.intro-panel {
+  text-decoration: none;
+}
+
 .intro-panel-title {
   margin: 0;
   font-size: clamp(36px, 10vw, 48px);
@@ -279,7 +288,8 @@ body:not(.intro-active) .app-shell {
 
   .intro-panel-food,
   .intro-panel-drinks,
-  .intro-panel-activities {
+  .intro-panel-activities,
+  .intro-panel-causeway {
     clip-path: none;
     margin: 0;
     flex: 1;
@@ -287,24 +297,32 @@ body:not(.intro-active) .app-shell {
 
   .intro-panel-food {
     clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%);
-    z-index: 3;
+    z-index: 4;
   }
 
   .intro-panel-drinks {
+    clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+    z-index: 3;
+    margin-left: -4%;
+    margin-right: -4%;
+  }
+
+  .intro-panel-activities {
     clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
     z-index: 2;
     margin-left: -4%;
     margin-right: -4%;
   }
 
-  .intro-panel-activities {
+  .intro-panel-causeway {
     clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
     z-index: 1;
   }
 
   .intro-panel-copy-top,
   .intro-panel-copy-mid,
-  .intro-panel-copy-bottom {
+  .intro-panel-copy-bottom,
+  .intro-panel-copy-causeway {
     top: auto;
     bottom: 40px;
     text-align: left;
