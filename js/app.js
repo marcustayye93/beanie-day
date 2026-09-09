@@ -35,8 +35,8 @@
   const Q = "?w=900&q=70&auto=format&fit=crop";
   const CATEGORY_PHOTOS = {
     flavours: [
-      U + "photo-1498837164877-96005e283c1c" + Q,
-      U + "photo-1467003903916-b12f468f0c8c" + Q,
+      U + "photo-1565299624946-b28f40a0ae38" + Q,
+      U + "photo-1555939594-58d7cb561ad1" + Q,
       U + "photo-1504674900247-0877df9cc836" + Q,
       U + "photo-1540189549336-e6e99c3679fe" + Q,
     ],
@@ -45,6 +45,12 @@
       U + "photo-1437418747212-8d9709afab22" + Q,
       U + "photo-1551024709-8f23befc6f87" + Q,
       U + "photo-1608270586620-248524c67de9" + Q,
+    ],
+    "hh-prices": [
+      U + "photo-1436076863939-06870fe779c2" + Q,
+      U + "photo-1535958636474-b021ee887b13" + Q,
+      U + "photo-1600788886242-5c96aabe3757" + Q,
+      U + "photo-1571613316887-6f8d5cbf7ef7" + Q,
     ],
     brands: [
       U + "photo-1523381294911-8d3cead13475" + Q,
@@ -60,7 +66,7 @@
     ],
     outdoor: [
       U + "photo-1441974231531-c6227db76b6e" + Q,
-      U + "photo-1501785888041-af3ef285b470" + Q,
+      U + "photo-1506929562872-bb421503ef21" + Q,
       U + "photo-1469474968028-56623f02e42e" + Q,
       U + "photo-1507525428034-b723cf961d3e" + Q,
     ],
@@ -71,10 +77,10 @@
       U + "photo-1447752875215-b2761acb3c5d" + Q,
     ],
     "near-home": [
-      U + "photo-1480714378408-67cf0d13bc1b" + Q,
-      U + "photo-1519501025264-65ba15a82390" + Q,
-      U + "photo-1449824913935-59a10b8d2000" + Q,
-      U + "photo-1477959858617-67f85cf4f1df" + Q,
+      U + "photo-1545324418-cc1a3fa10c00" + Q,
+      U + "photo-1515263487990-61b07816b324" + Q,
+      U + "photo-1460317442991-0ec209397118" + Q,
+      U + "photo-1600585154340-be6161a56a0c" + Q,
     ],
     "this-week": [
       U + "photo-1414235077428-338989a2e8c0" + Q,
