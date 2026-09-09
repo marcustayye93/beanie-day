@@ -189,8 +189,15 @@ body.intro-active .intro {
 }
 
 .intro-panel-activities {
-  clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 12%, 100% 0, 100% 88%, 0 100%);
   z-index: 1;
+  margin-top: -4%;
+  margin-bottom: -8%;
+}
+
+.intro-panel-causeway {
+  clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+  z-index: 0;
   margin-top: -4%;
 }
 
@@ -212,7 +219,7 @@ body.intro-active .intro {
 
 .intro-panel-copy-bottom {
   bottom: max(28px, calc(env(safe-area-inset-bottom, 0px) + 20px));
-  text-align: right;
+  text-align: left;
 }
 
 .intro-panel-copy-causeway {
