@@ -1,5 +1,5 @@
 /**
- * Beanie Day — defensive guards (blocklist, freshness, schema normalize)
+ * Bean There — defensive guards (blocklist, freshness, schema normalize)
  * Loaded before app.js
  */
 (function (global) {

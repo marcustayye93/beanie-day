@@ -1,7 +1,7 @@
 {
-  "name": "Beanie Day",
-  "short_name": "Beanie Day",
-  "description": "Weekly couple discovery PWA — cool brands, new flavours, happy hour, and things to do around Singapore.",
+  "name": "Bean There",
+  "short_name": "Bean There",
+  "description": "What's on across Singapore — happy hours, cheapest pints, events, parks and near-home finds.",
   "start_url": "./",
   "scope": "./",
   "id": "./",
@@ -13,21 +13,21 @@
   "categories": ["lifestyle", "travel", "food"],
   "icons": [
     {
-      "src": "icons/icon-192.svg",
+      "src": "icons/icon-192.png",
       "sizes": "192x192",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icons/icon-512.svg",
+      "src": "icons/icon-512.png",
       "sizes": "512x512",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icons/icon-maskable.svg",
+      "src": "icons/icon-maskable.png",
       "sizes": "512x512",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "maskable"
     }
   ],

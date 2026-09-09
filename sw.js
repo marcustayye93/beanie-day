@@ -1,4 +1,4 @@
-/* Beanie Day service worker — network-first shell so updates always land */
+/* Bean There service worker — network-first shell so updates always land */
 const CACHE_VERSION = "beanie-day-v22-perf";
 const PRECACHE = [
   "./",
@@ -14,10 +14,11 @@ const PRECACHE = [
   "./causeway.html",
   "./css/causeway.css",
   "./js/causeway.js",
-  "./icons/favicon.svg",
-  "./icons/icon-192.svg",
-  "./icons/icon-512.svg",
-  "./icons/icon-maskable.svg",
+  "./icons/favicon-32.png",
+  "./icons/icon-180.png",
+  "./icons/icon-192.png",
+  "./icons/icon-512.png",
+  "./icons/icon-maskable.png",
 ];
 
 self.addEventListener("install", (event) => {

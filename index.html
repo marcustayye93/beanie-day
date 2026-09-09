@@ -4,20 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#141418" />
-  <meta name="description" content="Beanie Day — weekly couple discovery across Singapore." />
+  <meta name="description" content="Bean There — what's on across Singapore: happy hours, cheapest pints, events, parks and near-home finds." />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="Bean Plans" />
+  <meta name="apple-mobile-web-app-title" content="Bean There" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="format-detection" content="telephone=no" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400&family=Fjalla+One&display=swap" rel="stylesheet" />
   <link rel="manifest" href="manifest.json" />
-  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="icons/icon-192.svg" />
+  <link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="icons/icon-180.png" />
   <link rel="stylesheet" href="css/app.css?v=1" />
-  <title>Bean Plans</title>
+  <title>Bean There</title>
   <script>
     // Ensure trailing slash on GitHub Pages project URLs so relative assets resolve
     (function () {
@@ -32,12 +32,12 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <noscript>
     <div style="padding:24px;font-family:system-ui;text-align:center">
-      Beanie Day needs JavaScript enabled to load this week’s finds.
+      Bean There needs JavaScript enabled to load this week’s finds.
     </div>
   </noscript>
 
   <!-- Cinematic intro (Meat Mastery–style) -->
-  <section class="intro" id="intro" aria-label="Explore Beanie Day">
+  <section class="intro" id="intro" aria-label="Explore Bean There">
     <div class="intro-panels">
       <button type="button" class="intro-panel intro-panel-food" data-enter-tab="flavours" aria-label="Explore Food">
         <div class="intro-panel-media" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80&auto=format&fit=crop')"></div>
@@ -79,9 +79,9 @@
   <header class="top-bar" id="nav-bar">
     <div class="top-bar-inner">
       <button type="button" class="brand-lockup brand-lockup-btn" id="home-btn" title="Back to explore" aria-label="Back to explore">
-        <span class="brand-mark" aria-hidden="true">🧢</span>
+        <span class="brand-mark" aria-hidden="true">📍</span>
         <div class="brand-text">
-          <p class="brand-name">Bean Plans</p>
+          <p class="brand-name">Bean There</p>
           <p class="brand-sub" id="week-label">This week</p>
         </div>
       </button>
@@ -102,7 +102,7 @@
   <div class="nav-backdrop" id="nav-backdrop" hidden></div>
   <nav class="nav-drawer" id="nav-drawer" hidden aria-label="Main menu">
     <div class="nav-drawer-inner">
-      <p class="nav-drawer-kicker">Bean Plans</p>
+      <p class="nav-drawer-kicker">Bean There</p>
       <button type="button" class="nav-drawer-item" data-nav-action="explore">
         <span aria-hidden="true">🏠</span> Explore
       </button>
@@ -207,7 +207,7 @@
   <div id="home-postal-modal" class="home-postal-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="home-postal-title">
     <div class="home-postal-backdrop" id="home-postal-backdrop"></div>
     <div class="home-postal-card">
-      <p class="home-postal-kicker">Bean Plans</p>
+      <p class="home-postal-kicker">Bean There</p>
       <h2 class="home-postal-title" id="home-postal-title">Where’s home?</h2>
       <p class="home-postal-copy">Save a Singapore postal once so drive times are from your zone.</p>
       <label class="home-postal-label" for="home-postal-input">6-digit postal</label>
@@ -236,7 +236,7 @@
 
   <script src="js/beanie-guards.js?v=3" defer></script>
   <script src="js/home-postal.js?v=6" defer></script>
-  <script src="js/app.js?v=27" defer></script>
+  <script src="js/app.js?v=28" defer></script>
   <script>
     // Intro taps must work even if the baked part loader fails
     (function () {

@@ -1,4 +1,4 @@
-/** Beanie Day — home postal gate + zone drive estimates (no analytics) */
+/** Bean There — home postal gate + zone drive estimates (no analytics) */
 (function () {
   "use strict";
 

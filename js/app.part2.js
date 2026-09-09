@@ -253,7 +253,7 @@
     window.addEventListener("appinstalled", () => {
       state.deferredInstall = null;
       els.installBtn.hidden = true;
-      toast("Beanie Day installed ✨");
+      toast("Bean There installed \u2728");
     });
     if (isIos() && !isStandalone()) els.installBtn.hidden = false;
   }

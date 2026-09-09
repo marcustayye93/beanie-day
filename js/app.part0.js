@@ -1,6 +1,6 @@
-/* Beanie Day — baked polish (no raw.githubusercontent.com boot). Patches from improve/discovery-polish. */
+/* Bean There — baked polish (no raw.githubusercontent.com boot). Patches from improve/discovery-polish. */
 /**
- * Beanie Day — weekly discovery PWA (new finds only)
+ * Bean There — weekly discovery PWA (new finds only)
  */
 (function () {
   "use strict";
