@@ -53,5 +53,25 @@
     "query": "Cuppage Terrace Singapore",
     "lat": 1.30181,
     "lng": 103.84018
+  },
+  "HaveFun Karaoke & Outdoor Beer Garden": {
+    "query": "60 Yishun Avenue 4 Singapore 769027",
+    "lat": 1.4243,
+    "lng": 103.8409
+  },
+  "Al Capone's Ristorante & Bar (Sembawang)": {
+    "query": "1030 Sembawang Road Singapore 758501",
+    "lat": 1.45352,
+    "lng": 103.8327
+  },
+  "The Carpenters Bar": {
+    "query": "28 Woodlands Sector 2 Singapore 737686",
+    "lat": 1.46123,
+    "lng": 103.80785
+  },
+  "The Patio SG": {
+    "query": "60 Jalan Mempurong Singapore 759058",
+    "lat": 1.45904,
+    "lng": 103.84365
   }
 }

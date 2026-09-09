@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-09-09",
-  "count": 11,
+  "count": 15,
   "note": "Cheapest verified draught pours. Sizes differ (half pint vs pint) — check the pour column. 'Everyday' means regular cheap pricing, not a timed happy hour. Prices change; verify before heading out.",
   "bars": [
     {
@@ -79,6 +79,31 @@
       }
     },
     {
+      "id": "hhp-havefun-karaoke---outdoo",
+      "bar": "HaveFun Karaoke & Outdoor Beer Garden",
+      "area": "Yishun",
+      "address": "60 Yishun Avenue 4, #01-04/05/06, Singapore 769027",
+      "hh_days": "Wednesday",
+      "hh_hours": "All day",
+      "pour": "Heineken pint (draught), 1-for-1 on Wednesdays",
+      "hh_price": 6.5,
+      "regular_price": 13.0,
+      "price_note": "Effective $6.50 per pint when buying two (1-for-1). Base price $13++ per Heineken pint from SAFRA Yishun beverage menu; ++ means plus service charge and GST. Promotion page is undated; menu PDF filename suggests Dec 2020. Confirm current pricing before visiting.",
+      "deal_kind": "happy-hour",
+      "source": {
+        "label": "havefunkaraoke.com",
+        "url": "https://havefunkaraoke.com/enjoy-your-heart-out-at-safra-yishun-outlet/"
+      },
+      "verified": "2026-09-09",
+      "travel": {
+        "region": "Yishun",
+        "zone": "North",
+        "lat": 1.4243,
+        "lng": 103.8409,
+        "nearestMrt": "Yishun"
+      }
+    },
+    {
       "id": "hhp-mischief",
       "bar": "Mischief",
       "area": "Marina Centre",
@@ -113,7 +138,7 @@
       "pour": "house draught pint",
       "hh_price": 7.9,
       "regular_price": 9.5,
-      "price_note": "Mabuk Monday: full pint $7.90 all day; 3 pints $23.70 every day; nett prices; 10+ outlets islandwide",
+      "price_note": "Mabuk Monday: full pint $7.90 all day; 3 pints $23.70 every day; 10+ outlets islandwide",
       "deal_kind": "happy-hour",
       "source": {
         "label": "Al Capone's (Facebook)",
@@ -122,10 +147,35 @@
       "verified": "2026-09-09",
       "travel": {
         "region": "Jurong East",
-        "zone": "Central",
+        "zone": "West",
         "lat": 1.33664,
         "lng": 103.74477,
         "nearestMrt": "Jurong East"
+      }
+    },
+    {
+      "id": "hhp-al-capone-s-ristorante--",
+      "bar": "Al Capone's Ristorante & Bar (Sembawang)",
+      "area": "Sembawang",
+      "address": "1030 Sembawang Road, Singapore 758501",
+      "hh_days": "Monday",
+      "hh_hours": "all day",
+      "pour": "full pint of Guinness draught",
+      "hh_price": 7.9,
+      "regular_price": null,
+      "price_note": "Mabuk Monday: full pint $7.90 all day (venue's May 2025 Facebook post; does not specify ++/nett). SingSaver (Nov 2024) described it as $7.90++ Guinness. Also 3 full pints for $23.70 per Mar 2025 post ($7.90/pint). Promo available at every outlet per venue.",
+      "deal_kind": "happy-hour",
+      "source": {
+        "label": "www.singsaver.com.sg",
+        "url": "https://www.singsaver.com.sg/blog/happy-hour-drink-promotions"
+      },
+      "verified": "2026-09-09",
+      "travel": {
+        "region": "Sembawang",
+        "zone": "North",
+        "lat": 1.45352,
+        "lng": 103.8327,
+        "nearestMrt": "Canberra"
       }
     },
     {
@@ -151,6 +201,56 @@
         "lat": 1.29509,
         "lng": 103.85057,
         "nearestMrt": "Bras Basah"
+      }
+    },
+    {
+      "id": "hhp-the-carpenters-bar",
+      "bar": "The Carpenters Bar",
+      "area": "Woodlands",
+      "address": "28 Woodlands Sector 2, Singapore 737686",
+      "hh_days": "Mon–Fri, Sat–Sun",
+      "hh_hours": "Mon–Fri 12pm–6:59pm; Sat–Sun all night (excl PH & eve of PH)",
+      "pour": "Carlsberg pint (draught)",
+      "hh_price": 9.0,
+      "regular_price": 12.0,
+      "price_note": "NETT, no GST or service charge (explicitly stated on menu). Guinness pint HH $10 nett; 1664 Blanc pint HH $12 nett. Prices from venue's Apr–Jun 2022 menu PDF; current prices should be confirmed as menu is dated.",
+      "deal_kind": "happy-hour",
+      "source": {
+        "label": "www.thecarpentersbar.com.sg",
+        "url": "https://www.thecarpentersbar.com.sg/pdf/APR-JUN-2022-DINNER-MENU.pdf"
+      },
+      "verified": "2026-09-09",
+      "travel": {
+        "region": "Woodlands",
+        "zone": "North",
+        "lat": 1.46123,
+        "lng": 103.80785,
+        "nearestMrt": "Sembawang"
+      }
+    },
+    {
+      "id": "hhp-the-patio-sg",
+      "bar": "The Patio SG",
+      "area": "Sembawang",
+      "address": "60 Jalan Mempurong, #02-01, PAssion Wave @ Sembawang, Singapore 759058",
+      "hh_days": "Tue–Sun",
+      "hh_hours": "Hoegaarden $9.80++ throughout the night; Guinness draught $10++ before 7pm",
+      "pour": "Hoegaarden pint (draught)",
+      "hh_price": 9.8,
+      "regular_price": null,
+      "price_note": "$9.80++ Hoegaarden pint all night; Guinness draught $10++ before 7pm. Explicitly draught beer from tap. Prices from 2023 2bearbear review; venue's Apr–Jun 2026 Facebook posts confirm 'Daily Happy Hour' continues (Tue–Fri from 4pm, weekends from noon, closed Mon) but do not restate beer prices.",
+      "deal_kind": "happy-hour",
+      "source": {
+        "label": "www.2bearbear.com",
+        "url": "https://www.2bearbear.com/the-patio-sg-review-affordable-beers-tasty-hawker-fares-with-amazing-sea-views/"
+      },
+      "verified": "2026-09-09",
+      "travel": {
+        "region": "Sembawang",
+        "zone": "North",
+        "lat": 1.45904,
+        "lng": 103.84365,
+        "nearestMrt": "Canberra"
       }
     },
     {

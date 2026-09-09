@@ -44,6 +44,10 @@ GEOCODE_OVERRIDES = {
     "Al Capone's Ristorante & Bar": "2 Jurong Gateway Road Singapore",
     "Five Tapas Bar": "Cuppage Terrace Singapore",
     "The Good Beer Company": "335 Smith Street Singapore 050335",
+    "HaveFun Karaoke & Outdoor Beer Garden": "60 Yishun Avenue 4 Singapore 769027",
+    "Al Capone's Ristorante & Bar (Sembawang)": "1030 Sembawang Road Singapore 758501",
+    "The Carpenters Bar": "28 Woodlands Sector 2 Singapore 737686",
+    "The Patio SG": "60 Jalan Mempurong Singapore 759058",
 }
 
 SOURCE_LABELS = {
@@ -107,8 +111,6 @@ def onemap_search(query, tries=3):
                 return None
     return None
 
-
-def main():
 
 def geocode_cached(name, query):
     """Return (lat, lng), consulting the on-disk cache before OneMap."""
