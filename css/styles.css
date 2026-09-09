@@ -1082,6 +1082,30 @@ img {
   color: #fff;
 }
 
+/* Honest fallback notice when a distance-sorted tab can't compute distances */
+.geo-note {
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  background: rgba(96, 165, 250, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.geo-note-btn {
+  border: 0;
+  background: none;
+  padding: 0;
+  margin-left: 4px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #3b82f6;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .badge.tag {
   background: rgba(15, 23, 42, 0.55);
   color: #fff;

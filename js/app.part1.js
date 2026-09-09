@@ -223,6 +223,25 @@
     els.sectionIcon.textContent = theme.emoji;
     if (els.hhBanner) els.hhBanner.hidden = state.activeTab !== "happy-hour";
 
+    // Tabs that sort by live per-user distance. If the user saved a postal
+    // but we never got coordinates for it (geocode failed), the sort silently
+    // degrades to dataset order — say so instead of implying "nearest".
+    const DIST_TABS = ["happy-hour", "near-home", "parks"];
+    let geoNote = "";
+    try {
+      const home = window.BeanieHomePostal?.getHome?.();
+      const geoMissing =
+        home && !home.skipped && home.postal && (home.lat == null || home.lng == null);
+      if (geoMissing && DIST_TABS.includes(state.activeTab)) {
+        geoNote =
+          `<div class="geo-note">📍 We couldn’t pin your postal code, so this list ` +
+          `isn’t sorted by distance — showing island-wide order. ` +
+          `<button type="button" class="geo-note-btn" id="geo-note-retry">Re-enter postal code</button></div>`;
+      }
+    } catch (_) {
+      /* non-fatal */
+    }
+
     if (items.length) {
       els.sectionCount.hidden = false;
       els.sectionCount.textContent = String(items.length);
@@ -251,25 +270,48 @@
 
     // Top-3 carousel: quick editorial picks first, then the full library.
     // Skipped on the ranking tab (already ordered) and while searching/filtering.
+    // Happy Hour is location-aware: with a pinned postal it shows the 3 nearest
+    // bars (the list below is nearest-sorted), otherwise the 3 cheapest.
     const hasFilters = state.filters.size > 0 || Boolean(state.query.trim());
-    const top3 =
-      state.activeTab === "hh-prices" || hasFilters
-        ? []
-        : items
-            .filter((a) => (a.top3Tabs || []).includes(state.activeTab))
-            .slice(0, 3);
+    let top3Title = "⭐ Top picks";
+    let top3 = [];
+    if (state.activeTab !== "hh-prices" && !hasFilters) {
+      if (state.activeTab === "happy-hour") {
+        let hasGeo = false;
+        try {
+          const h = window.BeanieHomePostal?.getHome?.();
+          hasGeo = !!(h && !h.skipped && h.lat != null && h.lng != null);
+        } catch (_) {}
+        if (hasGeo) {
+          top3 = items.slice(0, 3); // already nearest-sorted
+          top3Title = "⭐ Nearest to you";
+        } else {
+          top3 = items.filter((a) => (a.top3Tabs || []).includes("happy-hour")).slice(0, 3);
+          top3Title = "⭐ Cheapest island-wide";
+        }
+      } else {
+        top3 = items.filter((a) => (a.top3Tabs || []).includes(state.activeTab)).slice(0, 3);
+      }
+    }
     let lead = "";
     if (top3.length) {
       lead =
         `<div class="top3-wrap">` +
-        `<h3 class="top3-title">⭐ Top picks</h3>` +
+        `<h3 class="top3-title">${escapeHtml(top3Title)}</h3>` +
         `<div class="top3-carousel">${top3
           .map((a, i) => cardHtml(a, i, "-top3"))
           .join("")}</div>` +
         `</div>`;
     }
     els.cardList.innerHTML =
-      lead + items.map((a, i) => cardHtml(a, i)).join("");
+      geoNote + lead + items.map((a, i) => cardHtml(a, i)).join("");
+    // Wire the "re-enter postal code" button in the geo notice, if present.
+    const retryBtn = document.getElementById("geo-note-retry");
+    if (retryBtn) {
+      retryBtn.addEventListener("click", () => {
+        if (window.BeanieHomePostal?.openModal) window.BeanieHomePostal.openModal();
+      });
+    }
   }
 
   /** Adapt a park record to the card shape activities use. */
