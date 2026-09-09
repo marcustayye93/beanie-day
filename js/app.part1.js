@@ -16,8 +16,8 @@
       const normalized = normalizeWeekData(json);
       if (!normalized) throw new Error("Invalid week data shape");
       state.data = normalized;
-      state.parks = await loadParks();
-      state.hhPrices = await loadHappyHours();
+      state.parks = await parksP;
+      state.hhPrices = await hhP;
       try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(normalized));
         // Drop legacy caches that may be stale familiar-place content
@@ -33,8 +33,8 @@
           const normalized = normalizeWeekData(json);
           if (normalized) {
             state.data = normalized;
-            state.parks = await loadParks();
-      state.hhPrices = await loadHappyHours();
+            state.parks = await parksP;
+            state.hhPrices = await hhP;
             els.offlineStatus.hidden = false;
             toast("Offline — showing saved week");
             return;

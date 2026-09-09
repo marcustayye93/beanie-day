@@ -337,12 +337,17 @@
   function fetchWithTimeout(url, ms) {
     const ctrl = new AbortController();
     const t = setTimeout(() => ctrl.abort(), ms);
-    return fetch(url, { cache: "no-cache", signal: ctrl.signal }).finally(() =>
-      clearTimeout(t)
-    );
+    // No `cache: "no-cache"` here on purpose: the service worker already
+    // guarantees freshness (network-first for shell/data), and forcing
+    // revalidation on every load defeats the SW + HTTP cache on repeat visits.
+    return fetch(url, { signal: ctrl.signal }).finally(() => clearTimeout(t));
   }
 
   async function loadData() {
+    // Parks + happy-hours don't depend on week.json: kick them off first so
+    // all three download in parallel instead of serially.
+    const parksP = loadParks();
+    const hhP = loadHappyHours();
     try {
       const res = await fetchWithTimeout(DATA_URL, 6000);
       if (!res.ok) throw new Error("Network response not ok");
