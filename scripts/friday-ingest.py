@@ -25,6 +25,7 @@ from __future__ import annotations
 import json
 import math
 import os
+import re
 import sys
 import time
 import urllib.parse
@@ -260,15 +261,44 @@ def existing_titles():
 
 
 # ---------------------------------------------------------------------------
-# Ticketmaster Discovery (Singapore) — the structured answer to the SISTIC gap:
-# ticketed concerts, theatre, comedy and shows. Direct HTTPS via the public
-# Discovery API; needs TICKETMASTER_API_KEY (free at developer.ticketmaster.com).
+# SISTIC (Singapore) — the main local ticketing platform: concerts, theatre,
+# comedy, musicals. No public API is offered, so this adapter reads the same
+# CMS JSON the sistic.com.sg site itself uses (verified 2026-09-09):
+#   GET https://cms.sistic.com.sg/sistic/docroot/api/get-solr-search-results
+#       ?client=1&first=0&limit=100&search=a&sort_type=date&sort_order=ASC
+#       &genre=&index=global
+# It is an undocumented, unauthenticated endpoint — no key needed — but it can
+# change without notice, so failures degrade to ("error", ...) like any source.
 # ---------------------------------------------------------------------------
-TM_API = "https://app.ticketmaster.com/discovery/v2/events.json"
-TM_KEYWORDS = [
-    "concert", "comedy", "theatre", "musical", "festival",
-    "orchestra", "ballet", "opera", "gig", "exhibition",
+SISTIC_API = "https://cms.sistic.com.sg/sistic/docroot/api/get-solr-search-results"
+SISTIC_EVENT_URL = "https://www.sistic.com.sg/events/{}"
+
+# Venue-name fallbacks: SISTIC often lists hall names OneMap doesn't know
+# ("Esplanade Recital Studio"). Each query below was verified against OneMap
+# on 2026-09-09 — add new rows only after verifying the same way.
+SISTIC_VENUE_HINTS = [
+    ("esplanade", "Esplanade Singapore"),
+    ("scape", "Scape Orchard Singapore"),
+    ("victoria concert hall", "Victoria Concert Hall Singapore"),
+    ("national gallery", "National Gallery Singapore"),
+    ("arts house", "The Arts House Singapore"),
 ]
+
+
+def geocode_sistic_venue(venue):
+    """Best-effort lat/lng for a SISTIC venue string. Returns (lat, lng, hint_used)."""
+    if not venue:
+        return None, None, False
+    ll = onemap_search(venue + " Singapore")
+    if ll:
+        return round(ll[0], 5), round(ll[1], 5), False
+    lowered = venue.lower()
+    for keyword, query in SISTIC_VENUE_HINTS:
+        if keyword in lowered:
+            ll = onemap_search(query)
+            if ll:
+                return round(ll[0], 5), round(ll[1], 5), True
+    return None, None, False
 
 
 def nearest_anchor(lat, lng):
@@ -279,89 +309,123 @@ def nearest_anchor(lat, lng):
             best, best_d = name, d
     return best, (round(best_d, 1) if best_d is not None else None)
 
+_SISTIC_DATE_RE = re.compile(
+    r"(\d{1,2})\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+(\d{4})",
+    re.IGNORECASE,
+)
 
-def fetch_ticketmaster(home_lat, home_lng, start, end):
-    """Ticketmaster Discovery sweep for SG events in the week window.
 
-    Returns (status, note, candidates). Events are filtered to the week by
-    localDate — the API's date filter is loose, so we enforce it client-side.
+def parse_sistic_date(text):
+    """First concrete calendar date in SISTIC's free-text event_date.
+
+    Returns a date or None. Handles 'Mon, 19 Oct 2026, 8pm',
+    'Fri, 21 Aug 2026 - Wed, 30 Sep 2026' (takes the start) and multi-show
+    strings. Returns None for 'Daily', 'Valid for 90 days…' and the like —
+    those are evergreen listings, not week-specific candidates.
     """
-    key = (os.environ.get("TICKETMASTER_API_KEY") or "").strip()
-    if not key:
-        return ("missing_token", "set TICKETMASTER_API_KEY to enable", [])
+    m = _SISTIC_DATE_RE.search(text or "")
+    if not m:
+        return None
+    try:
+        return datetime.strptime(
+            f"{m.group(1)} {m.group(2)[:3].title()} {m.group(3)}", "%d %b %Y"
+        ).date()
+    except ValueError:
+        return None
+
+
+def strip_html(text):
+    return re.sub(r"<[^>]+>", " ", text or "")
+
+
+def fetch_sistic(home_lat, home_lng, start, end):
+    """SISTIC CMS sweep for events in the week window.
+
+    Returns (status, note, candidates). No API key needed. The week filter is
+    applied client-side on the parsed event_date; geocoding uses the existing
+    OneMap helper so candidates carry zone + nearest anchor for the curator.
+    """
     start_d = start.date() if hasattr(start, "date") else start
     end_d = end.date() if hasattr(end, "date") else end
     seen = set()
-    out = []
+    dated = []
     try:
-        for kw in TM_KEYWORDS:
+        first = 0
+        total = None
+        while total is None or first < total:
             params = {
-                "apikey": key,
-                "countryCode": "SG",
-                "keyword": kw,
-                "startDateTime": start.strftime("%Y-%m-%dT00:00:00"),
-                "endDateTime": end.strftime("%Y-%m-%dT23:59:59"),
-                "size": 50,
-                "sort": "date,asc",
+                "client": "1",
+                "first": first,
+                "limit": 100,
+                "search": "a",  # mandatory param; broad match
+                "sort_type": "date",
+                "sort_order": "ASC",
+                "genre": "",
+                "index": "global",
             }
-            data = http_get_json(TM_API, params)
-            for ev in (data.get("_embedded") or {}).get("events", []):
-                eid = ev.get("id")
-                if not eid or eid in seen:
+            data = http_get_json(SISTIC_API, params)
+            if total is None:
+                total = int(data.get("total_records") or 0)
+            rows = data.get("data") or []
+            if not rows:
+                break
+            for ev in rows:
+                nid = ev.get("nid")
+                if not nid or nid in seen:
                     continue
-                seen.add(eid)
-                cand = tm_event_to_candidate(ev, start_d, end_d)
-                if cand:
-                    out.append(cand)
-            time.sleep(0.4)  # be polite between keyword sweeps
+                seen.add(nid)
+                ev_date = parse_sistic_date(ev.get("event_date"))
+                if ev_date is None:
+                    continue  # evergreen / undated listing
+                if ev_date < start_d or ev_date > end_d:
+                    continue
+                dated.append((ev, ev_date))
+            first += len(rows)
+            time.sleep(0.3)  # be polite between pages
     except Exception as exc:
-        return ("error", str(exc)[:160], out)
-    return ("ok", f"{len(out)} unique events in week window", out)
+        return ("error", str(exc)[:160], [])
+    out = []
+    for ev, ev_date in dated:
+        cand = sistic_event_to_candidate(ev, ev_date)
+        if cand:
+            out.append(cand)
+            time.sleep(0.25)  # be polite to the OneMap endpoint
+    return ("ok", f"{len(out)} dated events in week window ({len(seen)} scanned)", out)
 
 
-def tm_event_to_candidate(ev, start_d, end_d):
-    eid = ev.get("id")
-    name = (ev.get("name") or "").strip()
-    if not eid or not name:
+def sistic_event_to_candidate(ev, ev_date):
+    nid = ev.get("nid")
+    title = (ev.get("title") or "").strip()
+    if not nid or not title:
         return None
-    dates = (ev.get("dates") or {}).get("start") or {}
-    local_date = (dates.get("localDate") or "").strip()
+    alias = (ev.get("alias") or "").strip()
+    url = SISTIC_EVENT_URL.format(alias) if alias else ""
+    venue = (ev.get("venue") or "").strip()
+    genre = (ev.get("genre") or "").strip()
+    bits = [b for b in [genre] if b]
     try:
-        ev_date = datetime.strptime(local_date, "%Y-%m-%d").date()
-    except ValueError:
-        return None
-    if ev_date < start_d or ev_date > end_d:
-        return None
-    local_time = (dates.get("localTime") or "").strip()
-    venues = ((ev.get("_embedded") or {}).get("venues")) or [{}]
-    venue = venues[0] or {}
-    vname = (venue.get("name") or "").strip()
-    loc = venue.get("location") or {}
-    try:
-        vlat = float(loc.get("latitude")) if loc.get("latitude") else None
-        vlng = float(loc.get("longitude")) if loc.get("longitude") else None
+        price = float(ev.get("min_price")) if ev.get("min_price") else None
     except (TypeError, ValueError):
-        vlat, vlng = None, None
+        price = None
+    if price:
+        bits.append(f"from S${price:g}")
+    syn = strip_html(ev.get("synopsis"))
+    syn = re.sub(r"\s+", " ", syn).strip()
+    if syn:
+        bits.append(syn[:220] + ("…" if len(syn) > 220 else ""))
+    vlat, vlng, hinted = geocode_sistic_venue(venue)
     zone = zone_from_latlng(vlat, vlng) if vlat and vlng else None
     anchor, dist = nearest_anchor(vlat, vlng) if vlat and vlng else (None, None)
-    classifications = []
-    for c in ev.get("classifications", []) or []:
-        seg = ((c.get("segment") or {}).get("name") or "").strip()
-        gen = ((c.get("genre") or {}).get("name") or "").strip()
-        if seg and seg not in classifications:
-            classifications.append(seg)
-        if gen and gen not in classifications:
-            classifications.append(gen)
-    when = local_date + (f" {local_time[:5]}" if local_time else "")
     return {
-        "id": f"cand-tm-{eid}",
-        "origin": "ticketmaster",
+        "id": f"cand-sistic-{nid}",
+        "origin": "sistic",
         "status": "proposed",
-        "title": name,
-        "description": " · ".join(classifications[:3]),
-        "when": when,
-        "venue": vname,
-        "url": ev.get("url") or "",
+        "title": title,
+        "description": " · ".join(bits),
+        "when": (ev.get("event_date") or "").strip(),
+        "date": ev_date.isoformat(),
+        "venue": venue,
+        "url": url,
         "tabs": ["events"],
         "anchor": anchor,
         "travel": {
@@ -370,9 +434,9 @@ def tm_event_to_candidate(ev, start_d, end_d):
             "lat": vlat,
             "lng": vlng,
             "distanceKm": dist,
-            "geoSource": "ticketmaster",
+            "geoSource": ("onemap-hint" if hinted else "onemap") if vlat else None,
         },
-        "source": {"label": "Ticketmaster", "url": ev.get("url") or ""},
+        "source": {"label": "SISTIC", "url": url},
     }
 
 
@@ -465,7 +529,7 @@ def event_to_candidate(ev, anchor_name, alat, alng):
 # (home_lat, home_lng, start, end) and returns (status, note, candidates).
 SOURCES = {
     "eventbrite": fetch_eventbrite,
-    "ticketmaster": fetch_ticketmaster,
+    "sistic": fetch_sistic,
     # Next adapters (documented in docs/FRIDAY_ZONE_PASS.md):
     # - STB Tourism Information Hub (tih.stb.gov.sg) — free business account + API key
     # - NLB library events / onePA CC events — no public API; manual Friday beats

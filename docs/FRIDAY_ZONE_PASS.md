@@ -45,14 +45,16 @@ Check these for real openings / limited-run finds (then confirm on venue pages):
   surfaces neighbourhood workshops, markets, and classes the editorial sites
   never cover. Candidates record their nearest anchor; the app recomputes
   distance per visitor.
-- **Ticketmaster** — keyword sweep (concert, comedy, theatre, musical,
-  festival, orchestra, ballet, opera, gig, exhibition) filtered to SG and the
-  week window via the public Discovery API. This is the structured answer to
-  the SISTIC gap (SISTIC has no public API): ticketed shows at Esplanade, the
-  Star, Indoor Stadium, etc. Needs `TICKETMASTER_API_KEY`; free at
-  developer.ticketmaster.com. Set it as a GitHub secret of the same name for
-  the Friday workflow. Events are re-filtered to the week by localDate because
-  the API's own date filter is loose.
+- **SISTIC** — Singapore's main ticketing platform: concerts, theatre, comedy,
+  musicals. No public API is offered, so the adapter reads the same CMS JSON
+  the sistic.com.sg site itself uses
+  (`cms.sistic.com.sg/sistic/docroot/api/get-solr-search-results`, client=1 —
+  verified 2026-09-09). No key needed; it is unauthenticated but undocumented,
+  so treat it as fragile and watch for breakage. Events are filtered to the
+  week by parsing the free-text `event_date` (ranges take the start date;
+  "Daily" evergreen listings are skipped as not week-specific). Venue strings
+  are geocoded via OneMap with a small verified hint map for hall names OneMap
+  doesn't know (`SISTIC_VENUE_HINTS` in the script).
 - **STB Tourism Information Hub** (tih.stb.gov.sg) — free business account,
   then request an API key under "My Setting". Add as a second adapter in
   `SOURCES` in `scripts/friday-ingest.py` once the key is in hand.
