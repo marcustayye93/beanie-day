@@ -1527,6 +1527,431 @@
         "label": "The Honeycombers",
         "url": "https://thehoneycombers.com/singapore/things-to-do-this-weekend-singapore/"
       }
+    },
+    {
+      "id": "ev-eb-mooncake-kids",
+      "title": "Kids' mooncake-making workshop at Holland International School",
+      "venue": "Bukit Timah",
+      "description": "A hands-on Mid-Autumn workshop where kids make mooncake dough from scratch, shape their own mooncakes and take them home to share with family. All ingredients are halal and vegetarian; children under 14 attend with a parent. Well timed for the Mid-Autumn Festival on 25 September.",
+      "why": "A seasonal, hands-on cultural tradition — kids leave with mooncakes they made themselves.",
+      "when": "Sat 12 Sep, 1:30–3pm",
+      "deal": "Tickets $69",
+      "parking": "Free parking on site, per the event listing.",
+      "heatNote": "",
+      "days": [
+        "Sat"
+      ],
+      "tags": [
+        "Indoor"
+      ],
+      "tabs": [
+        "events",
+        "this-week"
+      ],
+      "highlight": false,
+      "nearHomeBonus": false,
+      "top3Tabs": [],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "15–25 min",
+        "region": "Bukit Timah",
+        "lat": 1.34547,
+        "lng": 103.78991,
+        "geoSource": "eventbrite",
+        "geoQuery": "65 Bukit Tinggi Road, Singapore 289757",
+        "distanceKm": 9.2,
+        "nearestMrt": "King Albert Park"
+      },
+      "google": null,
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.com/e/mooncake-making-workshop-for-children-tickets-1999005864352"
+      }
+    },
+    {
+      "id": "ev-eb-eco-festival",
+      "title": "Bilingual Eco-Festival 2026 — free family festival at One Punggol",
+      "venue": "Punggol",
+      "description": "A free family festival celebrating bilingualism and sustainability through storytelling, performances, hands-on activities and eco-learning, held at the One Punggol community hub.",
+      "why": "Free, bilingual and green — a full family morning in Punggol with real substance.",
+      "when": "Sat 12 Sep, 11am",
+      "deal": "Free entry",
+      "parking": "",
+      "heatNote": "",
+      "days": [
+        "Sat"
+      ],
+      "tags": [
+        "Outdoor"
+      ],
+      "tabs": [
+        "events",
+        "this-week"
+      ],
+      "highlight": true,
+      "nearHomeBonus": false,
+      "top3Tabs": [],
+      "travel": {
+        "zone": "North",
+        "fromWoodlands": "25–40 min",
+        "region": "Punggol",
+        "lat": 1.40825,
+        "lng": 103.90504,
+        "geoSource": "eventbrite",
+        "geoQuery": "1 Punggol Drive, Singapore 828629",
+        "distanceKm": 12.4,
+        "nearestMrt": "Punggol"
+      },
+      "google": {
+        "rating": 4.3,
+        "reviews": 1770
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/bilingual-eco-festival-2026-tickets-1995858092281"
+      }
+    },
+    {
+      "id": "ev-eb-intertidal-biogirl",
+      "title": "Dawn intertidal marine tour at Changi Beach with Biogirl MJ",
+      "venue": "Changi",
+      "description": "A guided dawn walk across Changi's intertidal zone with marine educator Biogirl MJ, discovering the hidden marine life on Singapore's own shores — crabs, seastars and more at low tide. Listed at a special price for this date.",
+      "why": "Singapore's wild side before sunrise — a marine biologist shows you what the tide leaves behind.",
+      "when": "Sun 13 Sep, 5:30am",
+      "deal": "From $39",
+      "parking": "",
+      "heatNote": "",
+      "days": [
+        "Sun"
+      ],
+      "tags": [
+        "Outdoor"
+      ],
+      "tabs": [
+        "events",
+        "this-week"
+      ],
+      "highlight": true,
+      "nearHomeBonus": false,
+      "top3Tabs": [],
+      "travel": {
+        "zone": "East",
+        "fromWoodlands": "45–65 min",
+        "region": "Changi",
+        "lat": 1.38833,
+        "lng": 104.00139,
+        "geoSource": "eventbrite",
+        "geoQuery": "Changi Beach, Singapore",
+        "distanceKm": 23.3,
+        "nearestMrt": "Changi Airport"
+      },
+      "google": {
+        "rating": 4.6,
+        "reviews": 114
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/marine-intertidal-tour-with-biogirl-mj-special-price-tickets-1996374305288"
+      }
+    },
+    {
+      "id": "ev-eb-daddy-hair",
+      "title": "Daddy & daughter hair workshop at Love Hair, Keong Saik",
+      "venue": "Keong Saik",
+      "description": "A hands-on workshop at Keong Saik salon Love Hair where dads learn real hair skills — braids, buns and beyond — to bond with their daughters. Small, practical and genuinely sweet.",
+      "why": "The most wholesome two hours of the weekend: dads leave able to do more than a ponytail.",
+      "when": "Sun 13 Sep, 4pm",
+      "deal": "Tickets $158",
+      "parking": "",
+      "heatNote": "",
+      "days": [
+        "Sun"
+      ],
+      "tags": [
+        "Indoor"
+      ],
+      "tabs": [
+        "events",
+        "this-week"
+      ],
+      "highlight": false,
+      "nearHomeBonus": false,
+      "top3Tabs": [],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "25–40 min",
+        "region": "Keong Saik",
+        "lat": 1.27984,
+        "lng": 103.84148,
+        "geoSource": "eventbrite",
+        "geoQuery": "23 Keong Saik Road, Singapore 089130",
+        "distanceKm": 17.3,
+        "nearestMrt": "Outram Park"
+      },
+      "google": {
+        "rating": 4.9,
+        "reviews": 236
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.hk/e/dads-guide-to-doing-hair-daddy-daughter-workshop-tickets-1989442085833"
+      }
+    },
+    {
+      "id": "ev-eb-cleanup-day",
+      "title": "World Cleanup Day family cleanup at East Coast Park",
+      "venue": "East Coast Park",
+      "description": "Join a family-and-all-generations community cleanup at East Coast Park's Raintree Cove (near carpark C3 & C4) for World Cleanup Day. All welcome — a meaningful late-afternoon outdoors with the kids.",
+      "why": "Do some good together — a free, feel-good family afternoon on the beach.",
+      "when": "Sat 12 Sep, 4:30pm",
+      "deal": "Free",
+      "parking": "",
+      "heatNote": "",
+      "days": [
+        "Sat"
+      ],
+      "tags": [
+        "Outdoor"
+      ],
+      "tabs": [
+        "events",
+        "this-week"
+      ],
+      "highlight": false,
+      "nearHomeBonus": false,
+      "top3Tabs": [],
+      "travel": {
+        "zone": "East",
+        "fromWoodlands": "25–40 min",
+        "region": "East Coast Park",
+        "lat": 1.30194,
+        "lng": 103.91602,
+        "geoSource": "eventbrite",
+        "geoQuery": "East Coast Park, Raintree Cove (near carpark C3 & C4), Singapore",
+        "distanceKm": 19.4,
+        "nearestMrt": "Marine Terrace"
+      },
+      "google": {
+        "rating": 4.6,
+        "reviews": 32161
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.com/e/world-cleanup-day-2026-family-intergenerational-cleanup-tickets-1998661613689"
+      }
+    },
+    {
+      "id": "ev-eb-kayak-tour",
+      "title": "Private kayaking at Pasir Ris Beach — kids & pets welcome",
+      "venue": "Pasir Ris",
+      "description": "A private, guided kayaking experience launching from Pasir Ris Beach with KOKOMO Beach Club. Kids and even pets are welcome, so the whole family — dog included — can paddle together.",
+      "why": "Kayaking with the kids — and the dog. Private, guided and genuinely different.",
+      "when": "Fri 11 Sep, 9am",
+      "deal": "From $53",
+      "parking": "",
+      "heatNote": "",
+      "days": [
+        "Fri"
+      ],
+      "tags": [
+        "Outdoor"
+      ],
+      "tabs": [
+        "events",
+        "this-week"
+      ],
+      "highlight": false,
+      "nearHomeBonus": false,
+      "top3Tabs": [],
+      "travel": {
+        "zone": "East",
+        "fromWoodlands": "25–40 min",
+        "region": "Pasir Ris",
+        "lat": 1.38473,
+        "lng": 103.94367,
+        "geoSource": "eventbrite",
+        "geoQuery": "131 Pasir Ris Road (Carpark E), Pasir Ris Beach, Singapore 519148",
+        "distanceKm": 17.2,
+        "nearestMrt": "Pasir Ris"
+      },
+      "google": {
+        "rating": 4.7,
+        "reviews": 46
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/singapore-private-kayaking-tourkids-pets-friendly-tickets-1985694504717"
+      }
+    },
+    {
+      "id": "ev-eb-lamian-challenge",
+      "title": "Kids' lamian-pulling challenge at Western Mahua, HarbourFront",
+      "venue": "HarbourFront",
+      "description": "A family session at hand-pulled noodle restaurant Western Mahua where parents and kids learn to pull lamian by hand, enjoy a meal together and take home a surprise. Also runs 11 Oct.",
+      "why": "Kids learn to pull noodles like pros, then eat them — dinner and a show in one.",
+      "when": "Sun 13 Sep, 3:30–5pm",
+      "deal": "From $19",
+      "parking": "",
+      "heatNote": "",
+      "days": [
+        "Sun"
+      ],
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "tabs": [
+        "events",
+        "this-week"
+      ],
+      "highlight": false,
+      "nearHomeBonus": false,
+      "top3Tabs": [],
+      "travel": {
+        "zone": "South",
+        "fromWoodlands": "25–40 min",
+        "region": "HarbourFront",
+        "lat": 1.26357,
+        "lng": 103.82124,
+        "geoSource": "eventbrite",
+        "geoQuery": "1 HarbourFront Walk, #03-11 VivoCity, Singapore 098585",
+        "distanceKm": 18.6,
+        "nearestMrt": "HarbourFront"
+      },
+      "google": {
+        "rating": 4.4,
+        "reviews": 442
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.com/e/13-sept-11-oct-western-mahua-kids-lamian-challenge-tickets-1999070598975"
+      }
+    },
+    {
+      "id": "ev-eb-yoga-ecp",
+      "title": "Charity yoga at Coastal Playgrove, East Coast Park",
+      "venue": "East Coast Park",
+      "description": "Yoga for a Change runs weekly charity yoga classes at East Coast Park's Coastal Playgrove every Sunday morning — an hour of open-air flow where your ticket supports a good cause.",
+      "why": "Sunday-morning yoga by the sea, and the fee does good.",
+      "when": "Sun 13 Sep, 8–9am",
+      "deal": "Tickets $20",
+      "parking": "",
+      "heatNote": "",
+      "days": [
+        "Sun"
+      ],
+      "tags": [
+        "Outdoor"
+      ],
+      "tabs": [
+        "events",
+        "this-week"
+      ],
+      "highlight": false,
+      "nearHomeBonus": false,
+      "top3Tabs": [],
+      "travel": {
+        "zone": "East",
+        "fromWoodlands": "25–40 min",
+        "region": "East Coast Park",
+        "lat": 1.29691,
+        "lng": 103.89967,
+        "geoSource": "eventbrite",
+        "geoQuery": "Coastal Playgrove, East Coast Park, Singapore 449874",
+        "distanceKm": 18.7,
+        "nearestMrt": "Tanjong Katong"
+      },
+      "google": {
+        "rating": 4.5,
+        "reviews": 637
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/yoga-for-a-change-at-east-coast-park-coastal-playgrove-tickets-1993110445997"
+      }
+    },
+    {
+      "id": "ev-eb-pichwai",
+      "title": "One-day Pichwai painting workshop in Serangoon",
+      "venue": "Serangoon",
+      "description": "A 2.5-hour workshop in the traditional Rajasthani art of Pichwai — intricate devotional painting — and you leave carrying a finished piece you painted yourself. Exact studio details on booking.",
+      "why": "A rare chance to try a centuries-old Indian art form in a single afternoon.",
+      "when": "Fri 11 Sep, 11am–1:30pm",
+      "deal": "Tickets $90",
+      "parking": "",
+      "heatNote": "",
+      "days": [
+        "Fri"
+      ],
+      "tags": [
+        "Indoor"
+      ],
+      "tabs": [
+        "events",
+        "this-week"
+      ],
+      "highlight": false,
+      "nearHomeBonus": false,
+      "top3Tabs": [],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "15–25 min",
+        "region": "Serangoon",
+        "lat": 1.35126,
+        "lng": 103.86358,
+        "geoSource": "eventbrite",
+        "geoQuery": "143 Serangoon Avenue 3, Singapore 556121",
+        "distanceKm": 11.5,
+        "nearestMrt": "Lorong Chuan"
+      },
+      "google": null,
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/one-day-pichwai-painting-workshop-in-singapore-tickets-1343870405559"
+      }
+    },
+    {
+      "id": "ev-eb-hiit-charity",
+      "title": "Charity HIIT bootcamp at The Lawn, Marina Bay",
+      "venue": "Marina Bay",
+      "description": "A high-intensity bootcamp on The Lawn at Marina Bay run by Because – Sports to Support, where your sweat raises money for charity. Monday-night training with a conscience.",
+      "why": "Twelve dollars, one hard workout, money to charity — the easiest good deed of the week.",
+      "when": "Mon 14 Sep, 7:30pm",
+      "deal": "Tickets $12",
+      "parking": "",
+      "heatNote": "",
+      "days": [
+        "Mon"
+      ],
+      "tags": [
+        "Outdoor"
+      ],
+      "tabs": [
+        "events",
+        "this-week"
+      ],
+      "highlight": false,
+      "nearHomeBonus": false,
+      "top3Tabs": [],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "25–40 min",
+        "region": "Marina Bay",
+        "lat": 1.28032,
+        "lng": 103.85335,
+        "geoSource": "eventbrite",
+        "geoQuery": "8A Marina Boulevard, The Lawn @ Marina Bay, Singapore 018984",
+        "distanceKm": 17.7,
+        "nearestMrt": "Downtown"
+      },
+      "google": {
+        "rating": 4.5,
+        "reviews": 572
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/hiit-bootcamp-for-a-charity-tickets-1888098496429"
+      }
     }
   ]
 }

@@ -652,5 +652,173 @@
   "hours": [],
   "match_ratio": 0.75,
   "fetched_at": "2026-09-10T05:50:52+00:00"
+ },
+ "ev-eb-eco-festival": {
+  "place_id": "ChIJOwX-M38V2jERCfpqYreVyCI",
+  "name": "One Punggol Public Space",
+  "address": "1 Punggol Dr., Singapore 828629",
+  "rating": 4.3,
+  "userRatingCount": 1770,
+  "businessStatus": "OPERATIONAL",
+  "priceLevel": null,
+  "lat": 1.4081635,
+  "lng": 103.90522659999999,
+  "hours": [
+   "Monday: 10:00 AM – 6:00 PM",
+   "Tuesday: 10:00 AM – 6:00 PM",
+   "Wednesday: 10:00 AM – 6:00 PM",
+   "Thursday: 10:00 AM – 6:00 PM",
+   "Friday: 10:00 AM – 6:00 PM",
+   "Saturday: 10:00 AM – 6:00 PM",
+   "Sunday: 10:00 AM – 6:00 PM"
+  ],
+  "match_ratio": 1.0,
+  "fetched_at": "2026-09-10T08:28:37+00:00"
+ },
+ "ev-eb-intertidal-biogirl": {
+  "place_id": "ChIJLRKw0g482jERvSABjQ_gA7Q",
+  "name": "Changi Beach",
+  "address": "Changi Beach, Singapore",
+  "rating": 4.6,
+  "userRatingCount": 114,
+  "businessStatus": "OPERATIONAL",
+  "priceLevel": null,
+  "lat": 1.3883333,
+  "lng": 104.0013889,
+  "hours": [],
+  "match_ratio": 1.0,
+  "fetched_at": "2026-09-10T08:28:37+00:00"
+ },
+ "ev-eb-daddy-hair": {
+  "place_id": "ChIJIZOPREAb2jER-Bl9waLGAH4",
+  "name": "Love Hair",
+  "address": "23 Keong Saik Rd., Singapore 089130",
+  "rating": 4.9,
+  "userRatingCount": 236,
+  "businessStatus": "OPERATIONAL",
+  "priceLevel": null,
+  "lat": 1.2804615,
+  "lng": 103.8416804,
+  "hours": [
+   "Monday: Closed",
+   "Tuesday: 12:00 – 9:00 PM",
+   "Wednesday: 12:00 – 9:00 PM",
+   "Thursday: 9:00 AM – 6:00 PM",
+   "Friday: 9:00 AM – 6:00 PM",
+   "Saturday: 9:00 AM – 6:00 PM",
+   "Sunday: Closed"
+  ],
+  "match_ratio": 1.0,
+  "fetched_at": "2026-09-10T08:28:37+00:00"
+ },
+ "ev-eb-cleanup-day": {
+  "place_id": "ChIJ0QX_Brki2jER-pZKNdqk_a8",
+  "name": "East Coast Park",
+  "address": "Singapore",
+  "rating": 4.6,
+  "userRatingCount": 32161,
+  "businessStatus": "OPERATIONAL",
+  "priceLevel": null,
+  "lat": 1.3007841999999998,
+  "lng": 103.9121866,
+  "hours": [
+   "Monday: Open 24 hours",
+   "Tuesday: Open 24 hours",
+   "Wednesday: Open 24 hours",
+   "Thursday: Open 24 hours",
+   "Friday: Open 24 hours",
+   "Saturday: Open 24 hours",
+   "Sunday: Open 24 hours"
+  ],
+  "match_ratio": 1.0,
+  "fetched_at": "2026-09-10T08:28:37+00:00"
+ },
+ "ev-eb-kayak-tour": {
+  "place_id": "ChIJrx3s14E92jER3ppoSwnjxZY",
+  "name": "KOKOMO Beach Club",
+  "address": "131 Pasir Ris Road, Carpark E, Park, Singapore 519148",
+  "rating": 4.7,
+  "userRatingCount": 46,
+  "businessStatus": "OPERATIONAL",
+  "priceLevel": null,
+  "lat": 1.3851457999999999,
+  "lng": 103.9446839,
+  "hours": [
+   "Monday: 9:00 AM – 5:30 PM",
+   "Tuesday: 9:00 AM – 5:30 PM",
+   "Wednesday: 9:00 AM – 5:30 PM",
+   "Thursday: 9:00 AM – 5:30 PM",
+   "Friday: 9:00 AM – 5:30 PM",
+   "Saturday: 9:00 AM – 6:30 PM",
+   "Sunday: 9:00 AM – 6:30 PM"
+  ],
+  "match_ratio": 1.0,
+  "fetched_at": "2026-09-10T08:28:37+00:00"
+ },
+ "ev-eb-lamian-challenge": {
+  "place_id": "ChIJI7LwUmkZ2jERAyIpdQrsQSs",
+  "name": "Western Mahua 西部马华中华第一面",
+  "address": "1 HarbourFront Walk, #03 - 11 VivoCity, Singapore 098585",
+  "rating": 4.4,
+  "userRatingCount": 442,
+  "businessStatus": "OPERATIONAL",
+  "priceLevel": "PRICE_LEVEL_MODERATE",
+  "lat": 1.2635697,
+  "lng": 103.8212405,
+  "hours": [
+   "Monday: 11:00 AM – 3:00 PM, 5:30 – 9:00 PM",
+   "Tuesday: 11:00 AM – 3:00 PM, 5:30 – 9:00 PM",
+   "Wednesday: 11:00 AM – 3:00 PM, 5:30 – 9:00 PM",
+   "Thursday: 11:00 AM – 3:00 PM, 5:30 – 9:00 PM",
+   "Friday: 11:00 AM – 3:00 PM, 5:30 – 9:00 PM",
+   "Saturday: 11:00 AM – 3:00 PM, 5:30 – 9:00 PM",
+   "Sunday: 11:00 AM – 3:00 PM, 5:30 – 9:00 PM"
+  ],
+  "match_ratio": 1.0,
+  "fetched_at": "2026-09-10T08:28:37+00:00"
+ },
+ "ev-eb-yoga-ecp": {
+  "place_id": "ChIJUblRbI4Z2jERxFFX4oTirxA",
+  "name": "Coastal Playgrove",
+  "address": "902 E Coast Park Service Rd, Singapore 449874",
+  "rating": 4.5,
+  "userRatingCount": 637,
+  "businessStatus": "OPERATIONAL",
+  "priceLevel": null,
+  "lat": 1.2969058999999998,
+  "lng": 103.89967419999999,
+  "hours": [
+   "Monday: Closed",
+   "Tuesday: 8:00 AM – 8:00 PM",
+   "Wednesday: 8:00 AM – 8:00 PM",
+   "Thursday: 8:00 AM – 8:00 PM",
+   "Friday: 8:00 AM – 8:00 PM",
+   "Saturday: 8:00 AM – 8:00 PM",
+   "Sunday: 8:00 AM – 8:00 PM"
+  ],
+  "match_ratio": 1.0,
+  "fetched_at": "2026-09-10T08:28:37+00:00"
+ },
+ "ev-eb-hiit-charity": {
+  "place_id": "ChIJYVWI5A8Z2jERLlmpK-mGy5w",
+  "name": "The Lawn @ Marina Bay",
+  "address": "8A Marina Blvd, Singapore 018984",
+  "rating": 4.5,
+  "userRatingCount": 572,
+  "businessStatus": "OPERATIONAL",
+  "priceLevel": null,
+  "lat": 1.2803166,
+  "lng": 103.8533528,
+  "hours": [
+   "Monday: Open 24 hours",
+   "Tuesday: Open 24 hours",
+   "Wednesday: Open 24 hours",
+   "Thursday: Open 24 hours",
+   "Friday: Open 24 hours",
+   "Saturday: Open 24 hours",
+   "Sunday: Open 24 hours"
+  ],
+  "match_ratio": 1.0,
+  "fetched_at": "2026-09-10T08:28:37+00:00"
  }
 }

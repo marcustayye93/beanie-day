@@ -167,15 +167,23 @@ def main():
     for p in picks:
         pid = p.get("id")
         addr = p.get("address") or ""
-        # Strip unit numbers ("#01-02") — they break OneMap search.
-        addr = re.sub(r",?\s*#[0-9A-Za-z\-]+", "", addr).strip()
-        query = QUERY_OVERRIDES.get(pid) or (
-            addr if "singapore" in addr.lower() else (addr + " Singapore" if addr else "")
-        )
-        ll = onemap_search(query) if query else None
-        if not ll and p.get("neighbourhood"):
-            ll = onemap_search(p["neighbourhood"] + " Singapore")
-        time.sleep(0.3)
+        # Explicit coordinates (e.g. verified Eventbrite JSON-LD) win over
+        # OneMap search — they pin the exact event spot, not the street.
+        ll = None
+        geo_source = "onemap"
+        if p.get("lat") is not None and p.get("lng") is not None:
+            ll = (float(p["lat"]), float(p["lng"]))
+            geo_source = p.get("geoSource") or "explicit"
+        if ll is None:
+            # Strip unit numbers ("#01-02") — they break OneMap search.
+            addr = re.sub(r",?\s*#[0-9A-Za-z\-]+", "", addr).strip()
+            query = QUERY_OVERRIDES.get(pid) or (
+                addr if "singapore" in addr.lower() else (addr + " Singapore" if addr else "")
+            )
+            ll = onemap_search(query) if query else None
+            if not ll and p.get("neighbourhood"):
+                ll = onemap_search(p["neighbourhood"] + " Singapore")
+            time.sleep(0.3)
         zone_letter = zone_from_latlng(*ll) if ll else "C"
         travel = {
             "zone": ZONE_FULL[zone_letter],
@@ -183,7 +191,7 @@ def main():
             "region": p.get("neighbourhood", ""),
             "lat": round(ll[0], 5) if ll else None,
             "lng": round(ll[1], 5) if ll else None,
-            "geoSource": "onemap",
+            "geoSource": geo_source,
             "geoQuery": addr,
             "distanceKm": round(haversine_km(home[0], home[1], ll[0], ll[1]), 1) if ll else None,
             "nearestMrt": "",

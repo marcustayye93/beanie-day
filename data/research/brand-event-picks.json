@@ -1,212 +1,493 @@
 [
-  {
-    "id": "br-salomon-imm",
-    "title": "Salomon's first SG outlet opens at IMM — up to 50% off",
-    "description": "Salomon opened its first-ever Singapore outlet at IMM on 5 September 2026, marking the occasion with opening deals of up to 50% off selected products plus exclusive gifts with purchase. The store stocks the French outdoor brand's trail-running shoes, hiking footwear and everyday athleisure — worth a look if comfortable travel or walking shoes are on your list.",
-    "why": "First Salomon outlet in Singapore with opening-week discounts of up to 50% — the best prices you'll see on the brand for a while.",
-    "when": "Daily 10am-10pm (opening promo while stocks last)",
-    "days": [
-      "Fri",
-      "Sat",
-      "Sun",
-      "Mon",
-      "Tue",
-      "Wed",
-      "Thu"
-    ],
-    "address": "#02-43, IMM Building, 2 Jurong East Street 21, Singapore 609601",
-    "neighbourhood": "Jurong East",
-    "parking": "IMM multi-storey carpark; Jurong East MRT is next door.",
-    "price": "Up to 50% off opening deals",
-    "tabs": [
-      "brands"
-    ],
-    "tags": [
-      "Indoor",
-      "AC"
-    ],
-    "highlight": true,
-    "source": {
-      "label": "EverydayOnSales",
-      "url": "https://sg.everydayonsales.com/5-september-2026-salomon-singapore-up-to-50-off-at-new-imm-outlet-with-opening-gifts-promotion/"
-    }
-  },
-  {
-    "id": "br-novela-changi-city-point",
-    "title": "Novela opens at Changi City Point — $160 beauty bag promo",
-    "description": "Beauty retailer Novela opened a new outlet at Changi City Point (B1-24/25) on 3 September 2026. Until 16 September, VIP Gold members who spend $188 in a single transaction receive an exclusive Beauty Bag worth up to $160 — including two full-sized Kenzo and Monotheme fragrances plus gifts from Embryolisse, ISDIN, Clarins, ELIXIR and ANESSA, and a $10 off $100 voucher.",
-    "why": "Opening promo runs to 16 Sep only — a $160 beauty bag for VIP Gold members spending $188, while stocks last.",
-    "when": "Daily 11am-10pm, until 16 Sep 2026",
-    "days": [
-      "Fri",
-      "Sat",
-      "Sun",
-      "Mon",
-      "Tue",
-      "Wed"
-    ],
-    "address": "B1-24/25, Changi City Point, 5 Changi Business Park Central 1, Singapore 486038",
-    "neighbourhood": "Changi / Expo",
-    "parking": "Changi City Point carpark; Expo MRT is beside the mall.",
-    "price": "$188 spend for beauty bag (VIP Gold)",
-    "tabs": [
-      "brands"
-    ],
-    "tags": [
-      "Indoor",
-      "AC"
-    ],
-    "highlight": false,
-    "source": {
-      "label": "EverydayOnSales",
-      "url": "https://sg.everydayonsales.com/3-16-september-2026-novela-singapore-opening-promotion-at-changi-city-point-with-exclusive-beauty-bag-worth-up-to-160/"
-    }
-  },
-  {
-    "id": "br-chagee-suntec-family",
-    "title": "CHAGEE's first family-friendly store lands at Suntec City",
-    "description": "CHAGEE opened its first family-friendly concept store at Suntec City in early September 2026. The refreshed format centres on a tiered play seating area for children with multi-level booths, soft-touch materials, a digital screen with motion-based games, and complimentary milk for young visitors — while parents get their tea fix nearby.",
-    "why": "Brand-new store concept opened days ago — the first CHAGEE designed around kids, with play seating and free milk for children.",
-    "when": "Daily 10am-10pm",
-    "days": [
-      "Fri",
-      "Sat",
-      "Sun",
-      "Mon",
-      "Tue",
-      "Wed",
-      "Thu"
-    ],
-    "address": "Suntec City, 3 Temasek Boulevard, Singapore 038983",
-    "neighbourhood": "Marina Centre",
-    "parking": "Suntec City carpark; Promenade / Esplanade / City Hall MRT nearby.",
-    "price": "~$5-8/drink",
-    "tabs": [
-      "brands"
-    ],
-    "tags": [
-      "Indoor",
-      "AC",
-      "Family-friendly"
-    ],
-    "highlight": false,
-    "source": {
-      "label": "Marketing-Interactive",
-      "url": "https://www.marketing-interactive.com/chagee-opens-first-family-friendly-store-in-singapore-at-suntec-city"
-    }
-  },
-  {
-    "id": "ev-homegrown-2026",
-    "title": "HOMEGROWN Festival 2026 — free gigs with Regina Song & brb.",
-    "description": "HOMEGROWN Festival returns for its third edition at PLQ Plaza, Paya Lebar, from 11 to 13 September 2026. Organised by the Music & Drama Company, it's headlined by bedroom-pop star Regina Song and pop-groove favourites brb., with Forests, Ice Cream Sundays, 10pm Noise Complaint and MDC talents RINES, Dominic Chin and Gail Belmonte also on the bill. Entry is free, with pop-up retail booths on site.",
-    "why": "Catch international-level Singapore talent live for free — Regina Song and brb. headline a three-day festival this weekend.",
-    "when": "11-13 Sep, various timings",
-    "days": [
-      "Fri",
-      "Sat",
-      "Sun"
-    ],
-    "address": "PLQ Plaza, 10 Paya Lebar Road, Singapore 409057",
-    "neighbourhood": "Paya Lebar",
-    "parking": "PLQ Mall carpark; Paya Lebar MRT is right there.",
-    "price": "Free entry",
-    "tabs": [
-      "events"
-    ],
-    "tags": [
-      "Outdoor"
-    ],
-    "highlight": true,
-    "source": {
-      "label": "Wonderwall.sg",
-      "url": "https://wonderwall.sg/workplay/things-to-do-this-week-in-singapore"
-    }
-  },
-  {
-    "id": "ev-liberation-sg",
-    "title": "Liberation of Singapore — 81 years of freedom, free events",
-    "description": "Marking 81 years since the end of WWII, Liberation of Singapore runs 11-13 September across two venues: Changi Chapel and Museum, and Reflections at Bukit Chandu. The programme includes walking tours, talks, kids' craft sessions and 'Heritage in Harmony', a concert of WWII camp songs performed live for the first time since the war ended. All events are free but registration is required.",
-    "why": "A rare long-weekend of free heritage programming — including WWII camp songs performed live for the first time since 1945.",
-    "when": "11-13 Sep, various timings (registration required)",
-    "days": [
-      "Fri",
-      "Sat",
-      "Sun"
-    ],
-    "address": "Changi Chapel and Museum, 1000 Upper Changi Road North, Singapore 507707",
-    "neighbourhood": "Changi",
-    "parking": "On-site parking at the museum; shuttle/taxi recommended.",
-    "price": "Free (register for a spot)",
-    "tabs": [
-      "events"
-    ],
-    "tags": [
-      "Indoor",
-      "Outdoor"
-    ],
-    "highlight": false,
-    "source": {
-      "label": "Wonderwall.sg",
-      "url": "https://wonderwall.sg/workplay/things-to-do-this-week-in-singapore"
-    }
-  },
-  {
-    "id": "ev-srf-2026",
-    "title": "Singapore River Festival 2026 — The Quay Collective",
-    "description": "The Singapore River Festival marks its 10th edition from 11 to 20 September 2026 with 'The Quay Collective'. All three quays get experience zones: an Acai Social dance session inside Clarke Quay's oldest heritage building, an outdoor Monopoly: Hidden Singapore clue adventure, the Whispers of the Twin Quays boat-and-walk tour, and the River Echo Chambers projection wall at Boat Quay. Admission is free, with some ticketed experiences.",
-    "why": "The 10th edition of the river festival runs through the whole week — riverside light art, dance floors and bumboat tours, mostly free.",
-    "when": "11-20 Sep, various timings",
-    "days": [
-      "Fri",
-      "Sat",
-      "Sun",
-      "Mon",
-      "Tue",
-      "Wed",
-      "Thu"
-    ],
-    "address": "Various venues along the Singapore River — Clarke Quay, Robertson Quay, Boat Quay, Singapore",
-    "neighbourhood": "Singapore River",
-    "parking": "Clarke Quay / Riverside Point carparks; Clarke Quay MRT nearby.",
-    "price": "Free entry; some ticketed events",
-    "tabs": [
-      "events"
-    ],
-    "tags": [
-      "Outdoor"
-    ],
-    "highlight": true,
-    "source": {
-      "label": "The Honeycombers",
-      "url": "https://thehoneycombers.com/singapore/things-to-do-this-weekend-singapore/"
-    }
-  },
-  {
-    "id": "ev-twilight-flea-feast",
-    "title": "Twilight: Flea & Feast — giant indoor pasar malam at Suntec",
-    "description": "Twilight: Flea & Feast takes over Halls 401-403 of Suntec City Convention Centre from 11 to 13 September 2026, turning two huge convention halls into one of the biggest indoor markets in the city. Expect food, beauty, fashion and lifestyle stalls plus a schedule of performances — all under air-con, so the weekend heat is a non-issue. Admission is free.",
-    "why": "One of Singapore's biggest indoor markets runs this weekend only — free entry, AC-cooled, and packed with food and shopping stalls.",
-    "when": "11-13 Sep, 12pm-10pm",
-    "days": [
-      "Fri",
-      "Sat",
-      "Sun"
-    ],
-    "address": "Hall 401-403, Suntec City Convention Centre, 1 Raffles Boulevard, Singapore 039593",
-    "neighbourhood": "Marina Centre",
-    "parking": "Suntec City carpark; Promenade / Esplanade MRT nearby.",
-    "price": "Free admission",
-    "tabs": [
-      "events"
-    ],
-    "tags": [
-      "Indoor",
-      "AC"
-    ],
-    "highlight": false,
-    "source": {
-      "label": "The Honeycombers",
-      "url": "https://thehoneycombers.com/singapore/things-to-do-this-weekend-singapore/"
-    }
+ {
+  "id": "br-salomon-imm",
+  "title": "Salomon's first SG outlet opens at IMM — up to 50% off",
+  "description": "Salomon opened its first-ever Singapore outlet at IMM on 5 September 2026, marking the occasion with opening deals of up to 50% off selected products plus exclusive gifts with purchase. The store stocks the French outdoor brand's trail-running shoes, hiking footwear and everyday athleisure — worth a look if comfortable travel or walking shoes are on your list.",
+  "why": "First Salomon outlet in Singapore with opening-week discounts of up to 50% — the best prices you'll see on the brand for a while.",
+  "when": "Daily 10am-10pm (opening promo while stocks last)",
+  "days": [
+   "Fri",
+   "Sat",
+   "Sun",
+   "Mon",
+   "Tue",
+   "Wed",
+   "Thu"
+  ],
+  "address": "#02-43, IMM Building, 2 Jurong East Street 21, Singapore 609601",
+  "neighbourhood": "Jurong East",
+  "parking": "IMM multi-storey carpark; Jurong East MRT is next door.",
+  "price": "Up to 50% off opening deals",
+  "tabs": [
+   "brands"
+  ],
+  "tags": [
+   "Indoor",
+   "AC"
+  ],
+  "highlight": true,
+  "source": {
+   "label": "EverydayOnSales",
+   "url": "https://sg.everydayonsales.com/5-september-2026-salomon-singapore-up-to-50-off-at-new-imm-outlet-with-opening-gifts-promotion/"
   }
+ },
+ {
+  "id": "br-novela-changi-city-point",
+  "title": "Novela opens at Changi City Point — $160 beauty bag promo",
+  "description": "Beauty retailer Novela opened a new outlet at Changi City Point (B1-24/25) on 3 September 2026. Until 16 September, VIP Gold members who spend $188 in a single transaction receive an exclusive Beauty Bag worth up to $160 — including two full-sized Kenzo and Monotheme fragrances plus gifts from Embryolisse, ISDIN, Clarins, ELIXIR and ANESSA, and a $10 off $100 voucher.",
+  "why": "Opening promo runs to 16 Sep only — a $160 beauty bag for VIP Gold members spending $188, while stocks last.",
+  "when": "Daily 11am-10pm, until 16 Sep 2026",
+  "days": [
+   "Fri",
+   "Sat",
+   "Sun",
+   "Mon",
+   "Tue",
+   "Wed"
+  ],
+  "address": "B1-24/25, Changi City Point, 5 Changi Business Park Central 1, Singapore 486038",
+  "neighbourhood": "Changi / Expo",
+  "parking": "Changi City Point carpark; Expo MRT is beside the mall.",
+  "price": "$188 spend for beauty bag (VIP Gold)",
+  "tabs": [
+   "brands"
+  ],
+  "tags": [
+   "Indoor",
+   "AC"
+  ],
+  "highlight": false,
+  "source": {
+   "label": "EverydayOnSales",
+   "url": "https://sg.everydayonsales.com/3-16-september-2026-novela-singapore-opening-promotion-at-changi-city-point-with-exclusive-beauty-bag-worth-up-to-160/"
+  }
+ },
+ {
+  "id": "br-chagee-suntec-family",
+  "title": "CHAGEE's first family-friendly store lands at Suntec City",
+  "description": "CHAGEE opened its first family-friendly concept store at Suntec City in early September 2026. The refreshed format centres on a tiered play seating area for children with multi-level booths, soft-touch materials, a digital screen with motion-based games, and complimentary milk for young visitors — while parents get their tea fix nearby.",
+  "why": "Brand-new store concept opened days ago — the first CHAGEE designed around kids, with play seating and free milk for children.",
+  "when": "Daily 10am-10pm",
+  "days": [
+   "Fri",
+   "Sat",
+   "Sun",
+   "Mon",
+   "Tue",
+   "Wed",
+   "Thu"
+  ],
+  "address": "Suntec City, 3 Temasek Boulevard, Singapore 038983",
+  "neighbourhood": "Marina Centre",
+  "parking": "Suntec City carpark; Promenade / Esplanade / City Hall MRT nearby.",
+  "price": "~$5-8/drink",
+  "tabs": [
+   "brands"
+  ],
+  "tags": [
+   "Indoor",
+   "AC",
+   "Family-friendly"
+  ],
+  "highlight": false,
+  "source": {
+   "label": "Marketing-Interactive",
+   "url": "https://www.marketing-interactive.com/chagee-opens-first-family-friendly-store-in-singapore-at-suntec-city"
+  }
+ },
+ {
+  "id": "ev-homegrown-2026",
+  "title": "HOMEGROWN Festival 2026 — free gigs with Regina Song & brb.",
+  "description": "HOMEGROWN Festival returns for its third edition at PLQ Plaza, Paya Lebar, from 11 to 13 September 2026. Organised by the Music & Drama Company, it's headlined by bedroom-pop star Regina Song and pop-groove favourites brb., with Forests, Ice Cream Sundays, 10pm Noise Complaint and MDC talents RINES, Dominic Chin and Gail Belmonte also on the bill. Entry is free, with pop-up retail booths on site.",
+  "why": "Catch international-level Singapore talent live for free — Regina Song and brb. headline a three-day festival this weekend.",
+  "when": "11-13 Sep, various timings",
+  "days": [
+   "Fri",
+   "Sat",
+   "Sun"
+  ],
+  "address": "PLQ Plaza, 10 Paya Lebar Road, Singapore 409057",
+  "neighbourhood": "Paya Lebar",
+  "parking": "PLQ Mall carpark; Paya Lebar MRT is right there.",
+  "price": "Free entry",
+  "tabs": [
+   "events"
+  ],
+  "tags": [
+   "Outdoor"
+  ],
+  "highlight": true,
+  "source": {
+   "label": "Wonderwall.sg",
+   "url": "https://wonderwall.sg/workplay/things-to-do-this-week-in-singapore"
+  }
+ },
+ {
+  "id": "ev-liberation-sg",
+  "title": "Liberation of Singapore — 81 years of freedom, free events",
+  "description": "Marking 81 years since the end of WWII, Liberation of Singapore runs 11-13 September across two venues: Changi Chapel and Museum, and Reflections at Bukit Chandu. The programme includes walking tours, talks, kids' craft sessions and 'Heritage in Harmony', a concert of WWII camp songs performed live for the first time since the war ended. All events are free but registration is required.",
+  "why": "A rare long-weekend of free heritage programming — including WWII camp songs performed live for the first time since 1945.",
+  "when": "11-13 Sep, various timings (registration required)",
+  "days": [
+   "Fri",
+   "Sat",
+   "Sun"
+  ],
+  "address": "Changi Chapel and Museum, 1000 Upper Changi Road North, Singapore 507707",
+  "neighbourhood": "Changi",
+  "parking": "On-site parking at the museum; shuttle/taxi recommended.",
+  "price": "Free (register for a spot)",
+  "tabs": [
+   "events"
+  ],
+  "tags": [
+   "Indoor",
+   "Outdoor"
+  ],
+  "highlight": false,
+  "source": {
+   "label": "Wonderwall.sg",
+   "url": "https://wonderwall.sg/workplay/things-to-do-this-week-in-singapore"
+  }
+ },
+ {
+  "id": "ev-srf-2026",
+  "title": "Singapore River Festival 2026 — The Quay Collective",
+  "description": "The Singapore River Festival marks its 10th edition from 11 to 20 September 2026 with 'The Quay Collective'. All three quays get experience zones: an Acai Social dance session inside Clarke Quay's oldest heritage building, an outdoor Monopoly: Hidden Singapore clue adventure, the Whispers of the Twin Quays boat-and-walk tour, and the River Echo Chambers projection wall at Boat Quay. Admission is free, with some ticketed experiences.",
+  "why": "The 10th edition of the river festival runs through the whole week — riverside light art, dance floors and bumboat tours, mostly free.",
+  "when": "11-20 Sep, various timings",
+  "days": [
+   "Fri",
+   "Sat",
+   "Sun",
+   "Mon",
+   "Tue",
+   "Wed",
+   "Thu"
+  ],
+  "address": "Various venues along the Singapore River — Clarke Quay, Robertson Quay, Boat Quay, Singapore",
+  "neighbourhood": "Singapore River",
+  "parking": "Clarke Quay / Riverside Point carparks; Clarke Quay MRT nearby.",
+  "price": "Free entry; some ticketed events",
+  "tabs": [
+   "events"
+  ],
+  "tags": [
+   "Outdoor"
+  ],
+  "highlight": true,
+  "source": {
+   "label": "The Honeycombers",
+   "url": "https://thehoneycombers.com/singapore/things-to-do-this-weekend-singapore/"
+  }
+ },
+ {
+  "id": "ev-twilight-flea-feast",
+  "title": "Twilight: Flea & Feast — giant indoor pasar malam at Suntec",
+  "description": "Twilight: Flea & Feast takes over Halls 401-403 of Suntec City Convention Centre from 11 to 13 September 2026, turning two huge convention halls into one of the biggest indoor markets in the city. Expect food, beauty, fashion and lifestyle stalls plus a schedule of performances — all under air-con, so the weekend heat is a non-issue. Admission is free.",
+  "why": "One of Singapore's biggest indoor markets runs this weekend only — free entry, AC-cooled, and packed with food and shopping stalls.",
+  "when": "11-13 Sep, 12pm-10pm",
+  "days": [
+   "Fri",
+   "Sat",
+   "Sun"
+  ],
+  "address": "Hall 401-403, Suntec City Convention Centre, 1 Raffles Boulevard, Singapore 039593",
+  "neighbourhood": "Marina Centre",
+  "parking": "Suntec City carpark; Promenade / Esplanade MRT nearby.",
+  "price": "Free admission",
+  "tabs": [
+   "events"
+  ],
+  "tags": [
+   "Indoor",
+   "AC"
+  ],
+  "highlight": false,
+  "source": {
+   "label": "The Honeycombers",
+   "url": "https://thehoneycombers.com/singapore/things-to-do-this-weekend-singapore/"
+  }
+ },
+ {
+  "id": "ev-eb-mooncake-kids",
+  "title": "Kids' mooncake-making workshop at Holland International School",
+  "description": "A hands-on Mid-Autumn workshop where kids make mooncake dough from scratch, shape their own mooncakes and take them home to share with family. All ingredients are halal and vegetarian; children under 14 attend with a parent. Well timed for the Mid-Autumn Festival on 25 September.",
+  "why": "A seasonal, hands-on cultural tradition — kids leave with mooncakes they made themselves.",
+  "when": "Sat 12 Sep, 1:30–3pm",
+  "days": [
+   "Sat"
+  ],
+  "address": "65 Bukit Tinggi Road, Singapore 289757",
+  "neighbourhood": "Bukit Timah",
+  "lat": 1.34547,
+  "lng": 103.78991,
+  "geoSource": "eventbrite",
+  "parking": "Free parking on site, per the event listing.",
+  "price": "Tickets $69",
+  "tabs": [
+   "events"
+  ],
+  "tags": [
+   "Indoor"
+  ],
+  "highlight": false,
+  "source": {
+   "label": "Eventbrite",
+   "url": "https://www.eventbrite.com/e/mooncake-making-workshop-for-children-tickets-1999005864352"
+  }
+ },
+ {
+  "id": "ev-eb-eco-festival",
+  "title": "Bilingual Eco-Festival 2026 — free family festival at One Punggol",
+  "description": "A free family festival celebrating bilingualism and sustainability through storytelling, performances, hands-on activities and eco-learning, held at the One Punggol community hub.",
+  "why": "Free, bilingual and green — a full family morning in Punggol with real substance.",
+  "when": "Sat 12 Sep, 11am",
+  "days": [
+   "Sat"
+  ],
+  "address": "1 Punggol Drive, Singapore 828629",
+  "neighbourhood": "Punggol",
+  "lat": 1.40825,
+  "lng": 103.90504,
+  "geoSource": "eventbrite",
+  "parking": "",
+  "price": "Free entry",
+  "tabs": [
+   "events"
+  ],
+  "tags": [
+   "Outdoor"
+  ],
+  "highlight": true,
+  "source": {
+   "label": "Eventbrite",
+   "url": "https://www.eventbrite.sg/e/bilingual-eco-festival-2026-tickets-1995858092281"
+  }
+ },
+ {
+  "id": "ev-eb-intertidal-biogirl",
+  "title": "Dawn intertidal marine tour at Changi Beach with Biogirl MJ",
+  "description": "A guided dawn walk across Changi's intertidal zone with marine educator Biogirl MJ, discovering the hidden marine life on Singapore's own shores — crabs, seastars and more at low tide. Listed at a special price for this date.",
+  "why": "Singapore's wild side before sunrise — a marine biologist shows you what the tide leaves behind.",
+  "when": "Sun 13 Sep, 5:30am",
+  "days": [
+   "Sun"
+  ],
+  "address": "Changi Beach, Singapore",
+  "neighbourhood": "Changi",
+  "lat": 1.38833,
+  "lng": 104.00139,
+  "geoSource": "eventbrite",
+  "parking": "",
+  "price": "From $39",
+  "tabs": [
+   "events"
+  ],
+  "tags": [
+   "Outdoor"
+  ],
+  "highlight": true,
+  "source": {
+   "label": "Eventbrite",
+   "url": "https://www.eventbrite.sg/e/marine-intertidal-tour-with-biogirl-mj-special-price-tickets-1996374305288"
+  }
+ },
+ {
+  "id": "ev-eb-daddy-hair",
+  "title": "Daddy & daughter hair workshop at Love Hair, Keong Saik",
+  "description": "A hands-on workshop at Keong Saik salon Love Hair where dads learn real hair skills — braids, buns and beyond — to bond with their daughters. Small, practical and genuinely sweet.",
+  "why": "The most wholesome two hours of the weekend: dads leave able to do more than a ponytail.",
+  "when": "Sun 13 Sep, 4pm",
+  "days": [
+   "Sun"
+  ],
+  "address": "23 Keong Saik Road, Singapore 089130",
+  "neighbourhood": "Keong Saik",
+  "lat": 1.27984,
+  "lng": 103.84148,
+  "geoSource": "eventbrite",
+  "parking": "",
+  "price": "Tickets $158",
+  "tabs": [
+   "events"
+  ],
+  "tags": [
+   "Indoor"
+  ],
+  "highlight": false,
+  "source": {
+   "label": "Eventbrite",
+   "url": "https://www.eventbrite.hk/e/dads-guide-to-doing-hair-daddy-daughter-workshop-tickets-1989442085833"
+  }
+ },
+ {
+  "id": "ev-eb-cleanup-day",
+  "title": "World Cleanup Day family cleanup at East Coast Park",
+  "description": "Join a family-and-all-generations community cleanup at East Coast Park's Raintree Cove (near carpark C3 & C4) for World Cleanup Day. All welcome — a meaningful late-afternoon outdoors with the kids.",
+  "why": "Do some good together — a free, feel-good family afternoon on the beach.",
+  "when": "Sat 12 Sep, 4:30pm",
+  "days": [
+   "Sat"
+  ],
+  "address": "East Coast Park, Raintree Cove (near carpark C3 & C4), Singapore",
+  "neighbourhood": "East Coast Park",
+  "lat": 1.30194,
+  "lng": 103.91602,
+  "geoSource": "eventbrite",
+  "parking": "",
+  "price": "Free",
+  "tabs": [
+   "events"
+  ],
+  "tags": [
+   "Outdoor"
+  ],
+  "highlight": false,
+  "source": {
+   "label": "Eventbrite",
+   "url": "https://www.eventbrite.com/e/world-cleanup-day-2026-family-intergenerational-cleanup-tickets-1998661613689"
+  }
+ },
+ {
+  "id": "ev-eb-kayak-tour",
+  "title": "Private kayaking at Pasir Ris Beach — kids & pets welcome",
+  "description": "A private, guided kayaking experience launching from Pasir Ris Beach with KOKOMO Beach Club. Kids and even pets are welcome, so the whole family — dog included — can paddle together.",
+  "why": "Kayaking with the kids — and the dog. Private, guided and genuinely different.",
+  "when": "Fri 11 Sep, 9am",
+  "days": [
+   "Fri"
+  ],
+  "address": "131 Pasir Ris Road (Carpark E), Pasir Ris Beach, Singapore 519148",
+  "neighbourhood": "Pasir Ris",
+  "lat": 1.38473,
+  "lng": 103.94367,
+  "geoSource": "eventbrite",
+  "parking": "",
+  "price": "From $53",
+  "tabs": [
+   "events"
+  ],
+  "tags": [
+   "Outdoor"
+  ],
+  "highlight": false,
+  "source": {
+   "label": "Eventbrite",
+   "url": "https://www.eventbrite.sg/e/singapore-private-kayaking-tourkids-pets-friendly-tickets-1985694504717"
+  }
+ },
+ {
+  "id": "ev-eb-lamian-challenge",
+  "title": "Kids' lamian-pulling challenge at Western Mahua, HarbourFront",
+  "description": "A family session at hand-pulled noodle restaurant Western Mahua where parents and kids learn to pull lamian by hand, enjoy a meal together and take home a surprise. Also runs 11 Oct.",
+  "why": "Kids learn to pull noodles like pros, then eat them — dinner and a show in one.",
+  "when": "Sun 13 Sep, 3:30–5pm",
+  "days": [
+   "Sun"
+  ],
+  "address": "1 HarbourFront Walk, #03-11 VivoCity, Singapore 098585",
+  "neighbourhood": "HarbourFront",
+  "lat": 1.26357,
+  "lng": 103.82124,
+  "geoSource": "eventbrite",
+  "parking": "",
+  "price": "From $19",
+  "tabs": [
+   "events"
+  ],
+  "tags": [
+   "Indoor",
+   "AC"
+  ],
+  "highlight": false,
+  "source": {
+   "label": "Eventbrite",
+   "url": "https://www.eventbrite.com/e/13-sept-11-oct-western-mahua-kids-lamian-challenge-tickets-1999070598975"
+  }
+ },
+ {
+  "id": "ev-eb-yoga-ecp",
+  "title": "Charity yoga at Coastal Playgrove, East Coast Park",
+  "description": "Yoga for a Change runs weekly charity yoga classes at East Coast Park's Coastal Playgrove every Sunday morning — an hour of open-air flow where your ticket supports a good cause.",
+  "why": "Sunday-morning yoga by the sea, and the fee does good.",
+  "when": "Sun 13 Sep, 8–9am",
+  "days": [
+   "Sun"
+  ],
+  "address": "Coastal Playgrove, East Coast Park, Singapore 449874",
+  "neighbourhood": "East Coast Park",
+  "lat": 1.29691,
+  "lng": 103.89967,
+  "geoSource": "eventbrite",
+  "parking": "",
+  "price": "Tickets $20",
+  "tabs": [
+   "events"
+  ],
+  "tags": [
+   "Outdoor"
+  ],
+  "highlight": false,
+  "source": {
+   "label": "Eventbrite",
+   "url": "https://www.eventbrite.sg/e/yoga-for-a-change-at-east-coast-park-coastal-playgrove-tickets-1993110445997"
+  }
+ },
+ {
+  "id": "ev-eb-pichwai",
+  "title": "One-day Pichwai painting workshop in Serangoon",
+  "description": "A 2.5-hour workshop in the traditional Rajasthani art of Pichwai — intricate devotional painting — and you leave carrying a finished piece you painted yourself. Exact studio details on booking.",
+  "why": "A rare chance to try a centuries-old Indian art form in a single afternoon.",
+  "when": "Fri 11 Sep, 11am–1:30pm",
+  "days": [
+   "Fri"
+  ],
+  "address": "143 Serangoon Avenue 3, Singapore 556121",
+  "neighbourhood": "Serangoon",
+  "lat": 1.35126,
+  "lng": 103.86358,
+  "geoSource": "eventbrite",
+  "parking": "",
+  "price": "Tickets $90",
+  "tabs": [
+   "events"
+  ],
+  "tags": [
+   "Indoor"
+  ],
+  "highlight": false,
+  "source": {
+   "label": "Eventbrite",
+   "url": "https://www.eventbrite.sg/e/one-day-pichwai-painting-workshop-in-singapore-tickets-1343870405559"
+  }
+ },
+ {
+  "id": "ev-eb-hiit-charity",
+  "title": "Charity HIIT bootcamp at The Lawn, Marina Bay",
+  "description": "A high-intensity bootcamp on The Lawn at Marina Bay run by Because – Sports to Support, where your sweat raises money for charity. Monday-night training with a conscience.",
+  "why": "Twelve dollars, one hard workout, money to charity — the easiest good deed of the week.",
+  "when": "Mon 14 Sep, 7:30pm",
+  "days": [
+   "Mon"
+  ],
+  "address": "8A Marina Boulevard, The Lawn @ Marina Bay, Singapore 018984",
+  "neighbourhood": "Marina Bay",
+  "lat": 1.28032,
+  "lng": 103.85335,
+  "geoSource": "eventbrite",
+  "parking": "",
+  "price": "Tickets $12",
+  "tabs": [
+   "events"
+  ],
+  "tags": [
+   "Outdoor"
+  ],
+  "highlight": false,
+  "source": {
+   "label": "Eventbrite",
+   "url": "https://www.eventbrite.sg/e/hiit-bootcamp-for-a-charity-tickets-1888098496429"
+  }
+ }
 ]
