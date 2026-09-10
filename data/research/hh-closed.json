@@ -1,0 +1,42 @@
+[
+ {
+  "bar": "Stickies Bar (Dhoby Ghaut)",
+  "reason": "Google Places CLOSED_PERMANENTLY (2026-09-10); address 178 Clemenceau Ave exact match",
+  "removed_on": "2026-09-10"
+ },
+ {
+  "bar": "Al Capone's Ristorante & Bar",
+  "reason": "Google Places CLOSED_PERMANENTLY (2026-09-10); 2 Jurong Gateway Rd #01-02 exact match (Jurong East outlet only; Sembawang outlet verified OPERATIONAL and kept)",
+  "removed_on": "2026-09-10"
+ },
+ {
+  "bar": "Five Tapas Bar",
+  "reason": "Google Places CLOSED_PERMANENTLY for 'Five Bar' at 25 Cuppage Rd (same venue per Uncover Asia/LadyIronChef/LookupSG; our record had 37 Cuppage Terrace)",
+  "removed_on": "2026-09-10"
+ },
+ {
+  "bar": "Mischief",
+  "reason": "Google Places CLOSED_PERMANENTLY (2026-09-10); 8 Raffles Ave #01-10/12 Esplanade Mall exact match",
+  "removed_on": "2026-09-10"
+ },
+ {
+  "bar": "Ice-Cold B's",
+  "reason": "ACRA entity 53085458M Cancelled (Non-Renewal) 2018-05-21; no Google listing; 50 Stamford Rd SMU",
+  "removed_on": "2026-09-10"
+ },
+ {
+  "bar": "Five Izakaya Bar",
+  "reason": "Google Places CLOSED_PERMANENTLY (2026-09-10); 5 Changi Business Park Central 1 #01-66/67 exact match",
+  "removed_on": "2026-09-10"
+ },
+ {
+  "bar": "Loof",
+  "reason": "Google Places CLOSED_PERMANENTLY (2026-09-10); 331 North Bridge Rd #03-07 Odeon Towers exact match",
+  "removed_on": "2026-09-10"
+ },
+ {
+  "bar": "The Carpenters Bar",
+  "reason": "Google Places CLOSED_TEMPORARILY (2026-09-10); Marcus reported closure 2026-09-10; 28 Woodlands Sector 2 exact match",
+  "removed_on": "2026-09-10"
+ }
+]

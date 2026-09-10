@@ -194,9 +194,53 @@ def cmd_verify(_args):
     return 0
 
 
+BARS = os.path.join(REPO, "data", "happy-hours.json")
+
+
+def cmd_enrich_bars(_args):
+    """Verify every bar in data/happy-hours.json (the Cheapest Pints list).
+
+    Bars were never in the Friday pipeline; this closes that gap. Closed
+    venues are flagged for human removal, never auto-deleted.
+    """
+    data = json.load(open(BARS))
+    bars = data.get("bars", data) if isinstance(data, dict) else data
+    cache = load_cache()
+    report = []
+    for b in bars:
+        bid = b["id"]
+        entry = cache.get(bid)
+        if entry and fresh(entry):
+            rec, flags = entry, []
+            print(f"  cached {bid}: {rec.get('rating')} x {rec.get('userRatingCount')} {rec.get('businessStatus')}")
+        else:
+            query = f"{b['bar']} {b.get('area','')} Singapore".strip()
+            rec, flags = enrich_one(bid, query)
+            if rec:
+                cache[bid] = rec
+            status = "ok " if not flags else "FLAG"
+            if rec:
+                print(f"  {status} {bid}: {rec['name']} ({rec['rating']} x {rec['userRatingCount']}, {rec['businessStatus']})")
+            else:
+                print(f"  -- {bid}: {'; '.join(flags)}")
+            time.sleep(0.4)
+        if flags:
+            report.append((bid, flags))
+    save_cache(cache)
+    print()
+    if not report:
+        print("enrich-bars: no flags — all bars look operational.")
+    else:
+        print("enrich-bars: HUMAN REVIEW NEEDED")
+        for bid, flags in report:
+            print(f"  !! {bid}: {'; '.join(flags)}")
+    return 0
+
+
 COMMANDS = {
     "enrich-picks": cmd_enrich_picks,
     "enrich-candidates": cmd_enrich_candidates,
+    "enrich-bars": cmd_enrich_bars,
     "verify": cmd_verify,
 }
 
