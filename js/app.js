@@ -99,6 +99,10 @@
     "nh-wingstop-jp": U + "photo-1562967914-608f82629710" + Q, // crispy fried chicken
     "nh-yishun-park-hc": U + "photo-1555939594-58d7cb561ad1" + Q, // hawker-style skewers
     "nh-one-punggol-bash": U + "photo-1492684223066-81342ee5ff30" + Q, // festival lights bokeh
+    // Woodlands food batch (2026-09-10) — CC stills via Openverse, viewed + 200-verified
+    "fl-jin-le-claypot": "https://live.staticflickr.com/3169/2875122676_2a7b3d3810_b.jpg", // salted fish claypot rice
+    "fl-ivans-carbina": "https://live.staticflickr.com/3587/3393834605_7db7d4da59_b.jpg", // golden rosti in pan
+    "fl-yan-ji-soup": "https://live.staticflickr.com/8491/8390786441_9884e16be2_b.jpg", // fish ball + minced pork soup
   };
 
   /** Emoji + gradient only. Photos come from CATEGORY_PHOTOS, never per-venue stills. */
@@ -990,6 +994,12 @@
     if (driveChip) {
       facts.push(
         `<span class="fact"><span class="fact-icon">🚗</span>${escapeHtml(driveChip)}</span>`
+      );
+    }
+    if (a.google?.rating != null) {
+      const rc = a.google.reviews ? ` (${a.google.reviews})` : "";
+      facts.push(
+        `<span class="fact" title="Google rating"><span class="fact-icon">⭐</span>${Number(a.google.rating).toFixed(1)}${rc}</span>`
       );
     }
     if (a.travel?.nearestMrt) {

@@ -59,6 +59,23 @@ Check these for real openings / limited-run finds (then confirm on venue pages):
   then request an API key under "My Setting". Add as a second adapter in
   `SOURCES` in `scripts/friday-ingest.py` once the key is in hand.
 
+### Google verification (review queue, not auto-publish)
+
+`python3 scripts/friday-ingest.py verify` (via `scripts/google-enrich.py`)
+checks every candidate in `data/candidates.json` against the Google Places
+API and stamps `candidate.google` with open status, rating, review count,
+and match confidence. Results are cached 30 days in
+`data/research/google-cache.json` (one text-search + one details call per
+uncached place — inside the free tier at our volumes).
+
+It flags, never deletes: `CLOSED_PERMANENTLY` / `CLOSED_TEMPORARILY`
+venues and weak name matches print under "HUMAN REVIEW NEEDED". The same
+script verifies `data/research/food-picks.json`
+(`google-enrich.py enrich-picks`); `rebuild-week.py` reads the cache and
+stamps `activity.google = {rating, reviews}`, which the card renderer shows
+as a ⭐ fact chip. Skips cleanly in CI where the google-places skill isn't
+installed.
+
 ### NParks parks layer (stable POI, not weekly)
 
 `python3 scripts/parks-build.py` rebuilds `data/parks.json` from the official
@@ -144,6 +161,7 @@ Mark `meta.zonePass.zones.<Zone>.status`:
 ```bash
 python3 scripts/friday-ingest.py geocode   # stamp lat/lng + distanceKm via OneMap
 python3 scripts/friday-ingest.py fetch     # API candidates -> data/candidates.json (review queue)
+python3 scripts/friday-ingest.py verify    # Google-verify candidates (status/rating/hours); flags closures
 python3 scripts/friday-ingest.py zones     # raw zone counts vs quotas + caps
 python3 scripts/friday-refresh.py
 ```

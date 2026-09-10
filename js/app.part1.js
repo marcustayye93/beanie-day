@@ -622,6 +622,12 @@
         `<span class="fact"><span class="fact-icon">🚗</span>${escapeHtml(driveChip)}</span>`
       );
     }
+    if (a.google?.rating != null) {
+      const rc = a.google.reviews ? ` (${a.google.reviews})` : "";
+      facts.push(
+        `<span class="fact" title="Google rating"><span class="fact-icon">⭐</span>${Number(a.google.rating).toFixed(1)}${rc}</span>`
+      );
+    }
     if (a.travel?.nearestMrt) {
       facts.push(
         `<span class="fact"><span class="fact-icon">🚇</span>${escapeHtml(a.travel.nearestMrt)} MRT</span>`

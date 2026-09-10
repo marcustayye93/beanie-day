@@ -26,6 +26,25 @@ from mrt import stamp_nearest_mrt  # noqa: E402
 from zones import zone_from_latlng as _zone_ll  # noqa: E402
 
 
+def load_google_cache():
+    """Google verification cache (scripts/google-enrich.py). Returns {} when absent."""
+    path = os.path.join(REPO, "data", "research", "google-cache.json")
+    try:
+        return json.load(open(path))
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+GOOGLE_CACHE = load_google_cache()
+
+
+def google_stamp(pid):
+    g = GOOGLE_CACHE.get(pid) or {}
+    if g.get("rating") is None:
+        return None
+    return {"rating": g["rating"], "reviews": g.get("userRatingCount")}
+
+
 def zone_from_latlng(lat, lng):
     # Letter form, matching this script's ZONE_FULL lookup.
     z = _zone_ll(lat, lng)
@@ -85,6 +104,11 @@ QUERY_OVERRIDES = {
     "br-novela-changi-city-point": "Changi City Point",
     "br-chagee-suntec-family": "Suntec City Singapore",
     "ev-twilight-flea-feast": "1 Raffles Boulevard Singapore 039593",
+    # Woodlands food batch (2026-09-10): OneMap misses comma-form addresses and
+    # unit-suffixed blocks; these resolve to Google-confirmed coordinates.
+    "fl-jin-le-claypot": "111 Woodlands Street 13 Singapore 730111",
+    "fl-ivans-carbina": "730354 Singapore",  # Blk 354 Woodlands Ave 5 (Lucky Star Coffeeshop)
+    "fl-yan-ji-soup": "Marsiling Mall Hawker Centre Singapore",
 }
 # Editorial top-3 per category (carousel). Item id -> list of tab ids.
 TOP3 = {
@@ -186,6 +210,7 @@ def main():
                 "nearHomeBonus": "near-home" in tabs,
                 "top3Tabs": TOP3.get(p["id"], []),
                 "travel": travel,
+                "google": google_stamp(p["id"]),
                 "source": p.get("source"),
             }
         )

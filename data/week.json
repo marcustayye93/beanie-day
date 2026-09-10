@@ -175,6 +175,10 @@
         "distanceKm": 17.5,
         "nearestMrt": "Tampines"
       },
+      "google": {
+        "rating": 4.6,
+        "reviews": 476
+      },
       "source": {
         "label": "HungryGoWhere",
         "url": "https://hungrygowhere.com/food-news/casa-vostra-tampines-mall/"
@@ -224,6 +228,10 @@
         "distanceKm": 17.5,
         "nearestMrt": "Tampines"
       },
+      "google": {
+        "rating": 5,
+        "reviews": 124
+      },
       "source": {
         "label": "HungryGoWhere",
         "url": "https://hungrygowhere.com/?p=68540"
@@ -271,6 +279,10 @@
         "distanceKm": 17.5,
         "nearestMrt": "Tampines"
       },
+      "google": {
+        "rating": 4.3,
+        "reviews": 497
+      },
       "source": {
         "label": "HungryGoWhere",
         "url": "https://hungrygowhere.com/food-news/heartland-by-enjoy-restaurant/"
@@ -315,6 +327,10 @@
         "geoQuery": "907 East Coast Road, Singapore 459107",
         "distanceKm": 19.3,
         "nearestMrt": "Siglap"
+      },
+      "google": {
+        "rating": 4.8,
+        "reviews": 1663
       },
       "source": {
         "label": "HungryGoWhere",
@@ -363,6 +379,10 @@
         "distanceKm": 12.9,
         "nearestMrt": "Punggol Coast"
       },
+      "google": {
+        "rating": 3.9,
+        "reviews": 552
+      },
       "source": {
         "label": "CNA Lifestyle",
         "url": "https://cnalifestyle.channelnewsasia.com/dining/punggol-coast-hawker-centre-stalls-try-469776"
@@ -410,6 +430,10 @@
         "distanceKm": 17.1,
         "nearestMrt": "Telok Ayer"
       },
+      "google": {
+        "rating": 4.4,
+        "reviews": 208
+      },
       "source": {
         "label": "Eatbook",
         "url": "https://eatbook.sg/new-restaurants-september-2026/"
@@ -454,6 +478,10 @@
         "geoQuery": "6A Shenton Way, OUE Downtown 2, Singapore 068815",
         "distanceKm": 17.8,
         "nearestMrt": "Shenton Way"
+      },
+      "google": {
+        "rating": 4.3,
+        "reviews": 110
       },
       "source": {
         "label": "Eatbook",
@@ -501,6 +529,10 @@
         "distanceKm": 16.3,
         "nearestMrt": "City Hall"
       },
+      "google": {
+        "rating": 4.7,
+        "reviews": 409
+      },
       "source": {
         "label": "Eatbook",
         "url": "https://eatbook.sg/new-restaurants-september-2026/"
@@ -546,6 +578,10 @@
         "geoQuery": "17 Mohamed Sultan Road, Singapore 238966",
         "distanceKm": 15.5,
         "nearestMrt": "Somerset"
+      },
+      "google": {
+        "rating": 4.8,
+        "reviews": 549
       },
       "source": {
         "label": "Eatbook",
@@ -595,9 +631,162 @@
         "distanceKm": 18.7,
         "nearestMrt": "Marine Parade"
       },
+      "google": {
+        "rating": 5,
+        "reviews": 41
+      },
       "source": {
         "label": "Eatbook",
         "url": "https://eatbook.sg/new-restaurants-september-2026/"
+      }
+    },
+    {
+      "id": "fl-jin-le-claypot",
+      "title": "Jin Le Claypot Rice — the north's claypot institution",
+      "venue": "Woodlands",
+      "description": "The Woodlands claypot name regulars swear by: claypot chicken rice (S$6 nett) with a generous slab of salted fish, and the gongbao frog leg (S$14 nett) in a punchy oyster-sauce gravy with chilli padi heat. Burpple reviewers call the sauce 'much much better than most' and note one pot comfortably feeds two. 4.3 stars across 140+ Google reviews.",
+      "why": "Gongbao frog leg and claypot rice in the heart of Woodlands - the north finally gets its food-tab spotlight.",
+      "when": "Mon-Tue, Thu-Sun 11am-9pm (closed Wed)",
+      "deal": "~$8-15/pax",
+      "parking": "HDB carpark at Blk 111; a short walk from Woodlands MRT.",
+      "heatNote": "",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun",
+        "Mon",
+        "Tue",
+        "Thu"
+      ],
+      "tags": [
+        "Hawker",
+        "Family-friendly",
+        "Budget"
+      ],
+      "tabs": [
+        "flavours",
+        "this-week"
+      ],
+      "highlight": false,
+      "nearHomeBonus": false,
+      "top3Tabs": [],
+      "travel": {
+        "zone": "North",
+        "fromWoodlands": "5–15 min",
+        "region": "Woodlands",
+        "lat": 1.43794,
+        "lng": 103.78206,
+        "geoSource": "onemap",
+        "geoQuery": "111 Woodlands Street 13, Singapore 730111",
+        "distanceKm": 1.8,
+        "nearestMrt": "Woodlands"
+      },
+      "google": {
+        "rating": 4.3,
+        "reviews": 141
+      },
+      "source": {
+        "label": "Burpple",
+        "url": "https://www.burpple.com/jin-le-woodlands-claypot-rice"
+      }
+    },
+    {
+      "id": "fl-ivans-carbina",
+      "title": "Ivan's Carbina — Swiss rösti in a Woodlands kopitiam",
+      "venue": "Woodlands",
+      "description": "A Woodlands original for over a decade: a humble kopitiam stall doing crisp Swiss-style rösti — crackly golden crust, soft buttery middle — paired with chicken chop (S$7.80), snail pork sausage (S$11) or a carbonara (S$5.50). Sour cream with a lemon lift comes on the side. Eatbook's verdict: decent Western food for cheap prices, worth the trip if you're in the neighbourhood. 4.2 stars from 600+ Google reviews.",
+      "why": "Crisp rösti at kopitiam prices — a Woodlands institution for more than ten years.",
+      "when": "Tue-Sun 11am-8:45pm (closed Mon)",
+      "deal": "~$8-12/pax",
+      "parking": "Street parking near Lucky Star Coffeeshop; about 6 min on foot from Woodlands MRT.",
+      "heatNote": "",
+      "days": [
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "tags": [
+        "Hawker",
+        "Budget"
+      ],
+      "tabs": [
+        "flavours",
+        "this-week"
+      ],
+      "highlight": false,
+      "nearHomeBonus": false,
+      "top3Tabs": [],
+      "travel": {
+        "zone": "North",
+        "fromWoodlands": "5–15 min",
+        "region": "Woodlands",
+        "lat": 1.43239,
+        "lng": 103.78507,
+        "geoSource": "onemap",
+        "geoQuery": "354A Woodlands Avenue 5, Lucky Star Coffeeshop, Singapore 730354",
+        "distanceKm": 1.2,
+        "nearestMrt": "Woodlands"
+      },
+      "google": {
+        "rating": 4.2,
+        "reviews": 606
+      },
+      "source": {
+        "label": "Eatbook",
+        "url": "https://eatbook.sg/ivans-carbina/"
+      }
+    },
+    {
+      "id": "fl-yan-ji-soup",
+      "title": "Yan Ji Seafood Soup — 40 years of rich broth in Marsiling",
+      "venue": "Marsiling",
+      "description": "A 40-year-old family brand at Marsiling Mall Hawker Centre: broth slow-cooked up to six hours with old hen, pork ribs, Chinese ham and Japanese scallops. The Straits Times singled out the minced pork — pounded with toasted dried sole fish for deep umami. Bowls from S$7.50 (dory) to S$18 (crayfish); braised pig trotters (S$7) for the adventurous.",
+      "why": "A 40-year-old seafood soup institution — the dried-sole minced pork is the order.",
+      "when": "Tue-Sun 11am-3pm, 5-8:30pm (closed Mon)",
+      "deal": "~$8-15/pax",
+      "parking": "Marsiling Mall hawker centre; Marsiling MRT is minutes away on foot.",
+      "heatNote": "",
+      "days": [
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "tags": [
+        "Hawker",
+        "Family-friendly",
+        "Budget"
+      ],
+      "tabs": [
+        "flavours",
+        "this-week"
+      ],
+      "highlight": false,
+      "nearHomeBonus": false,
+      "top3Tabs": [],
+      "travel": {
+        "zone": "North",
+        "fromWoodlands": "5–15 min",
+        "region": "Marsiling",
+        "lat": 1.43354,
+        "lng": 103.77988,
+        "geoSource": "onemap",
+        "geoQuery": "4 Woodlands Street 12, Marsiling Mall Hawker Centre, Singapore 738623",
+        "distanceKm": 1.8,
+        "nearestMrt": "Marsiling"
+      },
+      "google": {
+        "rating": 3.6,
+        "reviews": 534
+      },
+      "source": {
+        "label": "Eatbook",
+        "url": "https://eatbook.sg/yan-ji-seafood-soup/"
       }
     },
     {
@@ -640,6 +829,7 @@
         "distanceKm": 1.7,
         "nearestMrt": "Woodlands"
       },
+      "google": null,
       "source": {
         "label": "Mothership",
         "url": "https://mothership.sg/2026/07/buffet-economy-rice-woodlands/"
@@ -681,6 +871,7 @@
         "distanceKm": 12.5,
         "nearestMrt": "Hougang"
       },
+      "google": null,
       "source": {
         "label": "Straits Times",
         "url": "https://www.straitstimes.com/life/food/your-daily-bread-is-getting-more-posh"
@@ -727,6 +918,7 @@
         "distanceKm": 12.6,
         "nearestMrt": "Jurong East"
       },
+      "google": null,
       "source": {
         "label": "HungryGoWhere",
         "url": "https://hungrygowhere.com/food-news/wingstop-jurong-point/"
@@ -774,6 +966,7 @@
         "distanceKm": 3.6,
         "nearestMrt": "Yishun"
       },
+      "google": null,
       "source": {
         "label": "Mothership",
         "url": "https://mothership.sg/2026/05/canopy-hawkers-yishun-park-hawker-centre-july-2026/"
@@ -817,6 +1010,7 @@
         "distanceKm": 12.9,
         "nearestMrt": "Punggol Coast"
       },
+      "google": null,
       "source": {
         "label": "BYKidO",
         "url": "https://www.bykido.com/blogs/events-and-activities/september-school-holiday-activities-for-kids-in-singapore"
@@ -864,6 +1058,7 @@
         "distanceKm": 17.9,
         "nearestMrt": "Bayfront"
       },
+      "google": null,
       "source": {
         "label": "BYKidO",
         "url": "https://www.bykido.com/blogs/events-and-activities/mid-autumn-festival-events-and-activities"
@@ -910,6 +1105,7 @@
         "distanceKm": 17.9,
         "nearestMrt": "Bayfront"
       },
+      "google": null,
       "source": {
         "label": "TTG Asia",
         "url": "https://www.ttgasia.com/2026/08/25/gardens-by-the-bay-launches-egyptian-themed-lilytopia-floral-display/"
@@ -951,6 +1147,7 @@
         "distanceKm": 7.3,
         "nearestMrt": "Kranji"
       },
+      "google": null,
       "source": {
         "label": "NParks",
         "url": "https://www.nparks.gov.sg/visit/parks/sungei-buloh-wetland-reserve/activities/nature-walks-tours/"
@@ -998,6 +1195,7 @@
         "distanceKm": 20.5,
         "nearestMrt": "HarbourFront"
       },
+      "google": null,
       "source": {
         "label": "Sentosa",
         "url": "https://www.sentosa.com.sg/en/things-to-do/attractions/wings-of-time"
@@ -1046,6 +1244,7 @@
         "distanceKm": 11.8,
         "nearestMrt": "Chinese Garden"
       },
+      "google": null,
       "source": {
         "label": "EverydayOnSales",
         "url": "https://sg.everydayonsales.com/5-september-2026-salomon-singapore-up-to-50-off-at-new-imm-outlet-with-opening-gifts-promotion/"
@@ -1089,10 +1288,11 @@
         "lat": 1.33404,
         "lng": 103.96292,
         "geoSource": "onemap",
-        "geoQuery": "Changi City Point",
+        "geoQuery": "B1-24/25, Changi City Point, 5 Changi Business Park Central 1, Singapore 486038",
         "distanceKm": 21.4,
         "nearestMrt": "Expo"
       },
+      "google": null,
       "source": {
         "label": "EverydayOnSales",
         "url": "https://sg.everydayonsales.com/3-16-september-2026-novela-singapore-opening-promotion-at-changi-city-point-with-exclusive-beauty-bag-worth-up-to-160/"
@@ -1142,6 +1342,7 @@
         "distanceKm": 16.3,
         "nearestMrt": "Promenade"
       },
+      "google": null,
       "source": {
         "label": "Marketing-Interactive",
         "url": "https://www.marketing-interactive.com/chagee-opens-first-family-friendly-store-in-singapore-at-suntec-city"
@@ -1185,6 +1386,7 @@
         "distanceKm": 13.0,
         "nearestMrt": "Bartley"
       },
+      "google": null,
       "source": {
         "label": "Wonderwall.sg",
         "url": "https://wonderwall.sg/workplay/things-to-do-this-week-in-singapore"
@@ -1227,6 +1429,7 @@
         "distanceKm": 21.2,
         "nearestMrt": "Changi Airport"
       },
+      "google": null,
       "source": {
         "label": "Wonderwall.sg",
         "url": "https://wonderwall.sg/workplay/things-to-do-this-week-in-singapore"
@@ -1274,6 +1477,7 @@
         "distanceKm": 16.1,
         "nearestMrt": "Havelock"
       },
+      "google": null,
       "source": {
         "label": "The Honeycombers",
         "url": "https://thehoneycombers.com/singapore/things-to-do-this-weekend-singapore/"
@@ -1318,6 +1522,7 @@
         "distanceKm": 16.5,
         "nearestMrt": "Esplanade"
       },
+      "google": null,
       "source": {
         "label": "The Honeycombers",
         "url": "https://thehoneycombers.com/singapore/things-to-do-this-weekend-singapore/"

@@ -11,8 +11,10 @@ Fills the gaps a human curator can't cover alone:
                data/candidates.json (a human review queue; nothing is
                auto-published into week.json)
   3. zones   — report raw zone counts vs quotas + caps so Central can't flood
+  4. verify  — Google-verify candidates.json (open status, rating, hours);
+               flags closures for human review, never auto-publishes
 
-Run order on Fridays:  geocode -> fetch -> zones -> friday-refresh.py
+Run order on Fridays:  geocode -> fetch -> verify -> zones -> friday-refresh.py
 
 Env:
   HOME_POSTAL       Home postal for distance math. Default 730587 (Woodlands).
@@ -647,9 +649,28 @@ def cmd_zones(_args):
 
 # ---------------------------------------------------------------- main
 
+def cmd_verify(_args):
+    """Google-verify the candidate review queue (scripts/google-enrich.py).
+
+    Stamps open status / rating / hours onto candidates.json and flags
+    closures for human review. Nothing is auto-published or deleted.
+    """
+    import subprocess
+
+    script = str(ROOT / "scripts" / "google-enrich.py")
+    cli = os.path.expanduser("~/workspace/skills/google-places/bin/gplaces")
+    if not os.path.exists(cli):
+        # CI / environments without the google-places skill: skip cleanly.
+        print("verify: skipped (google-places skill not installed here)")
+        return 0
+    r = subprocess.run([sys.executable, script, "verify"])
+    return r.returncode
+
+
 COMMANDS = {
     "geocode": cmd_geocode,
     "fetch": cmd_fetch,
+    "verify": cmd_verify,
     "zones": cmd_zones,
 }
 
@@ -657,7 +678,7 @@ COMMANDS = {
 def main(argv):
     cmds = [c for c in argv[1:] if not c.startswith("-")]
     if not cmds or any(c not in COMMANDS for c in cmds):
-        print("usage: friday-ingest.py [geocode] [fetch] [zones]  (runs in given order)", file=sys.stderr)
+        print("usage: friday-ingest.py [geocode] [fetch] [verify] [zones]  (runs in given order)", file=sys.stderr)
         return 2
     try:
         for cmd in cmds:
