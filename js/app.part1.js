@@ -145,6 +145,7 @@
   }
 
   function renderAll() {
+    refreshNearBonuses();
     renderWeekMeta();
     renderHeroStats();
     renderTabs();
@@ -274,6 +275,8 @@
     // Skipped on the ranking tab (already ordered) and while searching/filtering.
     // Happy Hour is location-aware: with a pinned postal it shows the 3 nearest
     // bars (the list below is nearest-sorted), otherwise the 3 cheapest.
+    // Food is location-aware the same way: nearest 3 when pinned, editorial
+    // picks otherwise.
     const hasFilters = state.filters.size > 0 || Boolean(state.query.trim());
     let top3Title = "⭐ Top picks";
     let top3 = [];
@@ -291,6 +294,11 @@
           top3 = items.filter((a) => (a.top3Tabs || []).includes("happy-hour")).slice(0, 3);
           top3Title = "⭐ Cheapest island-wide";
         }
+      } else if (state.activeTab === "flavours" && hasPinnedGeo()) {
+        // Food with a pinned postal: lead with the 3 nearest kitchens
+        // (items are already nearest-sorted), not the editorial picks.
+        top3 = items.slice(0, 3);
+        top3Title = "⭐ Nearest to you";
       } else {
         top3 = items.filter((a) => (a.top3Tabs || []).includes(state.activeTab)).slice(0, 3);
       }
@@ -393,7 +401,43 @@
     };
   }
 
+  /** "Near" is always relative to the visitor's own saved postal code.
+      The baked nearHomeBonus flag in week.json is curator data (it meant
+      "in the near-home tab"), so it is recomputed live on every render and
+      never trusted for display. No pinned postal => nothing is "near". */
+  var NEAR_KM = 6;
+  function hasPinnedGeo() {
+    try {
+      var h =
+        window.BeanieHomePostal && window.BeanieHomePostal.getHome
+          ? window.BeanieHomePostal.getHome()
+          : null;
+      return !!(h && !h.skipped && h.lat != null && h.lng != null);
+    } catch (_) {
+      return false;
+    }
+  }
+  function liveDistanceKm(a) {
+    try {
+      var d =
+        window.BeanieHomePostal && window.BeanieHomePostal.distanceKmTo
+          ? window.BeanieHomePostal.distanceKmTo(a)
+          : null;
+      return typeof d === "number" && isFinite(d) ? d : Infinity;
+    } catch (_) {
+      return Infinity;
+    }
+  }
+  function refreshNearBonuses() {
+    var acts = (state.data && state.data.activities) || [];
+    for (var i = 0; i < acts.length; i++) {
+      acts[i].nearHomeBonus = liveDistanceKm(acts[i]) <= NEAR_KM;
+    }
+  }
+
   function getFilteredActivities() {
+    // Recompute "Near" from the visitor's own postal on every render.
+    refreshNearBonuses();
     // Happy-hour tab: full bar library, nearest-first by live per-user distance.
     // The banner above it links to the cheapest-first ranking (hh-prices tab).
     if (state.activeTab === "happy-hour") {
@@ -523,6 +567,10 @@
         return typeof d === "number" && isFinite(d) ? d : Infinity;
       };
       list = [...list].sort((a, b) => distOf(a) - distOf(b));
+    } else if (state.activeTab === "flavours" && hasPinnedGeo()) {
+      // Food with a pinned postal: closest first. A visitor in Woodlands
+      // should see the nearest kitchens lead, not the farthest ones.
+      list = [...list].sort((a, b) => liveDistanceKm(a) - liveDistanceKm(b));
     } else if (state.activeTab !== "near-home") {
       list = [...list].sort((a, b) => {
         if (a.nearHomeBonus === b.nearHomeBonus) {
