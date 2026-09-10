@@ -1,753 +1,2391 @@
 {
- "generatedAt": "2026-09-09T09:23:31+00:00",
- "homePostal": "730587",
- "home": {
-  "lat": 1.42845,
-  "lng": 103.79529
- },
- "anchors": [
-  {
-   "name": "Woodlands",
-   "lat": 1.439,
-   "lng": 103.789,
-   "radiusKm": 12
+  "generatedAt": "2026-09-10T08:08:35+00:00",
+  "homePostal": "730587",
+  "home": {
+    "lat": 1.42845,
+    "lng": 103.79529
   },
-  {
-   "name": "Jurong East",
-   "lat": 1.3331,
-   "lng": 103.7422,
-   "radiusKm": 12
+  "anchors": [
+    {
+      "name": "Woodlands",
+      "lat": 1.439,
+      "lng": 103.789,
+      "radiusKm": 12
+    },
+    {
+      "name": "Jurong East",
+      "lat": 1.3331,
+      "lng": 103.7422,
+      "radiusKm": 12
+    },
+    {
+      "name": "Tampines",
+      "lat": 1.3531,
+      "lng": 103.9452,
+      "radiusKm": 12
+    },
+    {
+      "name": "Punggol",
+      "lat": 1.4043,
+      "lng": 103.9025,
+      "radiusKm": 12
+    }
+  ],
+  "weekWindow": {
+    "start": "2026-09-11",
+    "end": "2026-09-18"
   },
-  {
-   "name": "Tampines",
-   "lat": 1.3531,
-   "lng": 103.9452,
-   "radiusKm": 12
+  "sources": {
+    "eventbrite": {
+      "status": "ok",
+      "note": "68 events in window (island-wide, 4 pages)",
+      "new": 63
+    },
+    "sistic": {
+      "status": "ok",
+      "note": "16 dated events in week window (308 scanned)",
+      "new": 0
+    }
   },
-  {
-   "name": "Punggol",
-   "lat": 1.4043,
-   "lng": 103.9025,
-   "radiusKm": 12
-  }
- ],
- "weekWindow": {
-  "start": "2026-09-11",
-  "end": "2026-09-18"
- },
- "sources": {
-  "eventbrite": {
-   "status": "missing_token",
-   "note": "set EVENTBRITE_TOKEN to enable",
-   "new": 0
-  },
-  "sistic": {
-   "status": "ok",
-   "note": "20 dated events in week window (279 scanned)",
-   "new": 20
-  }
- },
- "_note": "Human review queue. Promote by hand into data/week.json activities[]; never auto-publish.",
- "candidates": [
-  {
-   "id": "cand-sistic-156796",
-   "origin": "sistic",
-   "status": "proposed",
-   "title": "Esplanade Presents | Coffee Morning & Afternoon Tea Yesterday Once More by Tokyo Square",
-   "description": "Concert · from S$21 · “Within you’ll remain and always will” The hit song Within You’ll Remain by Singapore band Tokyo Square solidified their position in the homegrown music scene of the 1980s, propelling the band across the region as well. …",
-   "when": "Mon, 14 Sep 2026, 10.30am & 3pm",
-   "date": "2026-09-14",
-   "venue": "Esplanade Recital Studio",
-   "url": "https://www.sistic.com.sg/events/cmat0926",
-   "tabs": [
-    "events"
-   ],
-   "anchor": "Tampines",
-   "travel": {
-    "zone": "Central",
-    "region": "Central",
-    "lat": 1.28649,
-    "lng": 103.85457,
-    "distanceKm": 12.5,
-    "geoSource": "onemap-hint"
-   },
-   "source": {
-    "label": "SISTIC",
-    "url": "https://www.sistic.com.sg/events/cmat0926"
-   },
-   "google": {
-    "place_id": "ChIJs2Ma7KcZ2jERIWNlV4-YM7Y",
-    "name": "Esplanade Recital Studio",
-    "rating": 4.5,
-    "userRatingCount": 54,
-    "businessStatus": "OPERATIONAL",
-    "match_ratio": 0.75
-   }
-  },
-  {
-   "id": "cand-sistic-159863",
-   "origin": "sistic",
-   "status": "proposed",
-   "title": "ART by Godot Theatre Company 果陀剧场",
-   "description": "Theatre · from S$48 · Are you who you think you are? Or are you who your friends think you are? Taiwan’s Godot Theatre Company returns to Esplanade with ART, three years after its successful run at Huayi – Chinese Festival of Arts 2023 ! Humo…",
-   "when": "Fri, 18 Sep 2026 - Sun, 20 Sep 2026",
-   "date": "2026-09-18",
-   "venue": "Esplanade Theatre",
-   "url": "https://www.sistic.com.sg/events/art0926",
-   "tabs": [
-    "events"
-   ],
-   "anchor": "Tampines",
-   "travel": {
-    "zone": "Central",
-    "region": "Central",
-    "lat": 1.2888,
-    "lng": 103.856,
-    "distanceKm": 12.2,
-    "geoSource": "onemap"
-   },
-   "source": {
-    "label": "SISTIC",
-    "url": "https://www.sistic.com.sg/events/art0926"
-   },
-   "google": {
-    "place_id": "ChIJSeUa7KcZ2jERNVg2CvmlVbk",
-    "name": "Esplanade - Theatres on the Bay, Singapore",
-    "rating": 4.6,
-    "userRatingCount": 20361,
-    "businessStatus": "OPERATIONAL",
-    "match_ratio": 0.67
-   }
-  },
-  {
-   "id": "cand-sistic-170231",
-   "origin": "sistic",
-   "status": "proposed",
-   "title": "AFC CHAMPIONS LEAGUE TWO 2026/27™ - LION CITY SAILORS (SGP) VS BG PATHUM UNITED (THA)",
-   "description": "Sports · from S$30 · Singapore’s only privatised football club Lion City Sailors kick off their 2026/27 AFC Champions League (ACL) Two campaign on home soil with a tantalising clash against Thai powerhouse BG Pathum United. Having strengthen…",
-   "when": "Thu, 17 Sep 2026, 6.00pm",
-   "date": "2026-09-17",
-   "venue": "Jalan Besar Stadium",
-   "url": "https://www.sistic.com.sg/events/afc2026",
-   "tabs": [
-    "events"
-   ],
-   "anchor": "Tampines",
-   "travel": {
-    "zone": "Central",
-    "region": "Central",
-    "lat": 1.30965,
-    "lng": 103.86009,
-    "distanceKm": 10.6,
-    "geoSource": "onemap"
-   },
-   "source": {
-    "label": "SISTIC",
-    "url": "https://www.sistic.com.sg/events/afc2026"
-   },
-   "google": {
-    "place_id": "ChIJY2LsCckZ2jERJrcMS91EpJU",
-    "name": "Jalan Besar Stadium",
-    "rating": 4.3,
-    "userRatingCount": 1605,
-    "businessStatus": "OPERATIONAL",
-    "match_ratio": 0.75
-   }
-  },
-  {
-   "id": "cand-sistic-170394",
-   "origin": "sistic",
-   "status": "proposed",
-   "title": "Rachael Yamagata Starlit Alchemy Tour - Live In Singapore",
-   "description": "Concert · from S$98 · Rachael Yamagata is making her long-awaited return to Singapore! Happening on 16 September at Foo Chow Hall , this upcoming show marks the singer-songwriter’s first gig here since 2018, and her only Southeast Asia stop f…",
-   "when": "Wed, 16 Sep 2026, 7pm",
-   "date": "2026-09-16",
-   "venue": "Foo Chow Hall",
-   "url": "https://www.sistic.com.sg/events/rachael0926",
-   "tabs": [
-    "events"
-   ],
-   "anchor": null,
-   "travel": {
-    "zone": null,
-    "region": "",
-    "lat": null,
-    "lng": null,
-    "distanceKm": null,
-    "geoSource": null
-   },
-   "source": {
-    "label": "SISTIC",
-    "url": "https://www.sistic.com.sg/events/rachael0926"
-   },
-   "google": {
-    "place_id": "ChIJBWoxMcoZ2jERO6v-uBSFLNQ",
-    "name": "Foochow Building Event Hall",
-    "rating": 4.5,
-    "userRatingCount": 99,
-    "businessStatus": "OPERATIONAL",
-    "match_ratio": 0.25
-   }
-  },
-  {
-   "id": "cand-sistic-161600",
-   "origin": "sistic",
-   "status": "proposed",
-   "title": "Andrea Molteni in Recital",
-   "description": "Solo-Western · from S$18 · Supremely gifted international pianist Andrea Molteni brings his signature \"virtuosic agility\" (Fanfare Magazine) to the Victoria Concert Hall for one night only. A champion of new works, and a passionate researcher, Mol…",
-   "when": "Fri, 18 Sep 2026 7pm",
-   "date": "2026-09-18",
-   "venue": "Victoria Concert Hall",
-   "url": "https://www.sistic.com.sg/events/andrea0926",
-   "tabs": [
-    "events"
-   ],
-   "anchor": "Tampines",
-   "travel": {
-    "zone": "Central",
-    "region": "Central",
-    "lat": 1.28835,
-    "lng": 103.85158,
-    "distanceKm": 12.7,
-    "geoSource": "onemap"
-   },
-   "source": {
-    "label": "SISTIC",
-    "url": "https://www.sistic.com.sg/events/andrea0926"
-   },
-   "google": {
-    "place_id": "ChIJzf487wkZ2jERP3nJhCFBdrE",
-    "name": "Victoria Concert Hall",
-    "rating": 4.7,
-    "userRatingCount": 2545,
-    "businessStatus": "OPERATIONAL",
-    "match_ratio": 0.75
-   }
-  },
-  {
-   "id": "cand-sistic-161522",
-   "origin": "sistic",
-   "status": "proposed",
-   "title": "美秀集團《AS= =》TOUR新加坡站 Amazing Show 《AS= =》Tour Singapore Stop",
-   "description": "Concert · from S$88 · Amazing Show – 美秀集團 One of Taiwan's most distinctive bands, Amazing Show (美秀集團), is renowned for its genre-defying music, creative songwriting, and electrifying live performances that have captivated fans across Asia. Bl…",
-   "when": "Fri, 11 Sep 2026, 7.00pmDoors Open: 6.15pm",
-   "date": "2026-09-11",
-   "venue": "Gateway Theatre",
-   "url": "https://www.sistic.com.sg/events/as0926",
-   "tabs": [
-    "events"
-   ],
-   "anchor": "Jurong East",
-   "travel": {
-    "zone": "Central",
-    "region": "Central",
-    "lat": 1.28397,
-    "lng": 103.8166,
-    "distanceKm": 9.9,
-    "geoSource": "onemap"
-   },
-   "source": {
-    "label": "SISTIC",
-    "url": "https://www.sistic.com.sg/events/as0926"
-   },
-   "google": {
-    "place_id": "ChIJy0lqpdYb2jERGWw0K4hWVJk",
-    "name": "Gateway Theatre",
-    "rating": 4.5,
-    "userRatingCount": 946,
-    "businessStatus": "OPERATIONAL",
-    "match_ratio": 0.67
-   }
-  },
-  {
-   "id": "cand-sistic-170107",
-   "origin": "sistic",
-   "status": "proposed",
-   "title": "CITY BALLET ACADEMY ANNUAL PERFORMANCE 2026",
-   "description": "Dance · from S$29 · City Ballet Academy’s Annual Performance 2026 celebrates the joy of dance and the remarkable journey that unfolds through every stage of a dancer’s growth. From the first steps of our youngest performers to the confidenc…",
-   "when": "Sun, 13 Sep 2026, 3pm",
-   "date": "2026-09-13",
-   "venue": "University Cultural Centre Theatre",
-   "url": "https://www.sistic.com.sg/events/cbap0926",
-   "tabs": [
-    "events"
-   ],
-   "anchor": null,
-   "travel": {
-    "zone": null,
-    "region": "",
-    "lat": null,
-    "lng": null,
-    "distanceKm": null,
-    "geoSource": null
-   },
-   "source": {
-    "label": "SISTIC",
-    "url": "https://www.sistic.com.sg/events/cbap0926"
-   },
-   "google": {
-    "place_id": "ChIJG9Hi-PYa2jERyttcYSZxhp0",
-    "name": "University Cultural Centre",
-    "rating": 4.5,
-    "userRatingCount": 219,
-    "businessStatus": "OPERATIONAL",
-    "match_ratio": 0.6
-   }
-  },
-  {
-   "id": "cand-sistic-166158",
-   "origin": "sistic",
-   "status": "proposed",
-   "title": "ELIAS J.TV Band & DONEKLA: Laugh hard, Dance Harder!",
-   "description": "Concert · from S$69 · Get ready for an unforgettable afternoon of music, laughter, and pure entertainment as Elias J.TV Band and Donekla take center stage for an electrifying Concert and Comedy Show! Experience the perfect blend of live music…",
-   "when": "Sun, 13 Sep 2026, 3pm",
-   "date": "2026-09-13",
-   "venue": "*SCAPE Playspace",
-   "url": "https://www.sistic.com.sg/events/dance0926",
-   "tabs": [
-    "events"
-   ],
-   "anchor": "Jurong East",
-   "travel": {
-    "zone": "Central",
-    "region": "Central",
-    "lat": 1.30101,
-    "lng": 103.83572,
-    "distanceKm": 11.0,
-    "geoSource": "onemap-hint"
-   },
-   "source": {
-    "label": "SISTIC",
-    "url": "https://www.sistic.com.sg/events/dance0926"
-   },
-   "google": {
-    "place_id": "ChIJCW1snYkZ2jERhhP5XIO0hjo",
-    "name": "*SCAPE",
-    "rating": 4.1,
-    "userRatingCount": 2185,
-    "businessStatus": "OPERATIONAL",
-    "match_ratio": 0.33
-   }
-  },
-  {
-   "id": "cand-sistic-160019",
-   "origin": "sistic",
-   "status": "proposed",
-   "title": "HAPPY MONDAYS Live in Singapore",
-   "description": "Concert · UK Alt-Rock Icons Happy Mondays to perform in Singapore for the very first time! Get ready for a night of euphoric grooves, timeless anthems, and pure Madchester energy as Happy Mondays arrive in Singapore on 15 Septembe…",
-   "when": "Tue, 15 Sep 2026, 8pm",
-   "date": "2026-09-15",
-   "venue": "Foo Chow Hall",
-   "url": "https://www.sistic.com.sg/events/happymondays0926",
-   "tabs": [
-    "events"
-   ],
-   "anchor": null,
-   "travel": {
-    "zone": null,
-    "region": "",
-    "lat": null,
-    "lng": null,
-    "distanceKm": null,
-    "geoSource": null
-   },
-   "source": {
-    "label": "SISTIC",
-    "url": "https://www.sistic.com.sg/events/happymondays0926"
-   },
-   "google": {
-    "place_id": "ChIJBWoxMcoZ2jERO6v-uBSFLNQ",
-    "name": "Foochow Building Event Hall",
-    "rating": 4.5,
-    "userRatingCount": 99,
-    "businessStatus": "OPERATIONAL",
-    "match_ratio": 0.25
-   }
-  },
-  {
-   "id": "cand-sistic-169008",
-   "origin": "sistic",
-   "status": "proposed",
-   "title": "Paruvangal",
-   "description": "Dance · from S$25 · Within the cycles of nature, a woman’s heart finds its reflection; as the seasons shift, so does the landscape of her soul. The seasons and emotion intertwine in a constant dance of change, where every falling leaf and e…",
-   "when": "Sun, 13 Sep 2026 6pm",
-   "date": "2026-09-13",
-   "venue": "Drama Centre Theatre, National Library 100 Victoria St, #03-01, Singapore 188064",
-   "url": "https://www.sistic.com.sg/events/paruvangal0926",
-   "tabs": [
-    "events"
-   ],
-   "anchor": null,
-   "travel": {
-    "zone": null,
-    "region": "",
-    "lat": null,
-    "lng": null,
-    "distanceKm": null,
-    "geoSource": null
-   },
-   "source": {
-    "label": "SISTIC",
-    "url": "https://www.sistic.com.sg/events/paruvangal0926"
-   },
-   "google": {
-    "place_id": "ChIJqx4LJqUZ2jERP7htHLwGIag",
-    "name": "Drama Centre",
-    "rating": 4.5,
-    "userRatingCount": 535,
-    "businessStatus": "OPERATIONAL",
-    "match_ratio": 0.17
-   }
-  },
-  {
-   "id": "cand-sistic-161414",
-   "origin": "sistic",
-   "status": "proposed",
-   "title": "Esplanade Presents | Raga Sanjya Chhaya by WeCanDoIt",
-   "description": "Theatre · from S$60 · Retirement, as often told, is when life slows down. Sanjya and Chhaya clearly did not get the memo. In their early sixties, this energetic couple run a Happiness Centre, a free community initiative where people drop in w…",
-   "when": "Fri, 18 Sep 2026 - Sat, 19 Sep 2026",
-   "date": "2026-09-18",
-   "venue": "Esplanade Theatre Studio",
-   "url": "https://www.sistic.com.sg/events/sanjya0926",
-   "tabs": [
-    "events"
-   ],
-   "anchor": "Tampines",
-   "travel": {
-    "zone": "Central",
-    "region": "Central",
-    "lat": 1.28649,
-    "lng": 103.85457,
-    "distanceKm": 12.5,
-    "geoSource": "onemap-hint"
-   },
-   "source": {
-    "label": "SISTIC",
-    "url": "https://www.sistic.com.sg/events/sanjya0926"
-   },
-   "google": {
-    "place_id": "ChIJSeUa7KcZ2jERNVg2CvmlVbk",
-    "name": "Esplanade - Theatres on the Bay, Singapore",
-    "rating": 4.6,
-    "userRatingCount": 20361,
-    "businessStatus": "OPERATIONAL",
-    "match_ratio": 0.5
-   }
-  },
-  {
-   "id": "cand-sistic-158714",
-   "origin": "sistic",
-   "status": "proposed",
-   "title": "丁噹《愛了一百萬次的我》新加坡演唱会 Della ‘Loving You a Million Times Over’ Live in Concert [G]",
-   "description": "Concert · from S$88 · 無論千萬次愛情的試煉與淬鍊， 我們都還在愛。 那些哭過、笑過、失去過的瞬間， 都收藏成此刻的自己 這一晚，新加坡限定！ 丁噹以《愛了一百萬次的我》為名， 唱出愛裡的酸甜苦辣，那些屬於你的回憶殺、愛情成長軌跡，都將在現場一次傾瀉。 擁有「偶像劇歌姬」、「全民情歌天后」美譽的丁噹， 唱過無數搭劇金曲—— 〈我愛他〉、〈猜不透〉、〈手掌心〉、〈我是一隻小小鳥〉、〈你為什麼說謊〉、〈親人〉、〈離家出走〉⋯⋯ 每一首都深植人心，傳唱至今。 我們總…",
-   "when": "Fri, 18 September 2026, 8pm",
-   "date": "2026-09-18",
-   "venue": "Sands Theatre, Marina Bay Sands",
-   "url": "https://www.sistic.com.sg/events/dingdang0926",
-   "tabs": [
-    "events"
-   ],
-   "anchor": null,
-   "travel": {
-    "zone": null,
-    "region": "",
-    "lat": null,
-    "lng": null,
-    "distanceKm": null,
-    "geoSource": null
-   },
-   "source": {
-    "label": "SISTIC",
-    "url": "https://www.sistic.com.sg/events/dingdang0926"
-   },
-   "google": {
-    "place_id": "ChIJPdzVjAYZ2jERP1LN4MtGjZI",
-    "name": "Sands Theatre",
-    "rating": 4.5,
-    "userRatingCount": 2105,
-    "businessStatus": "OPERATIONAL",
-    "match_ratio": 0.4
-   }
-  },
-  {
-   "id": "cand-sistic-160315",
-   "origin": "sistic",
-   "status": "proposed",
-   "title": "Batu Bo Makan Gegat (The Impossible)",
-   "description": "Theatre · from S$88 · \"Batu Bo Makan Gegat” - An Impossible Set in modern-day Singapore,“Batu Bo Makan Gegat” takes its title from the playful and ironic line of a traditional Peranakan saying “Jat Berejat,Batu Bo Makan Gegat”—suggesting some…",
-   "when": "Fri 11 Sep 2026 - Sat 12 Sep 2026",
-   "date": "2026-09-11",
-   "venue": "Singapore Chinese Cultural Centre Auditorium, Level 9 新加坡华族文化中心表演厅, 九楼",
-   "url": "https://www.sistic.com.sg/events/impossible0926",
-   "tabs": [
-    "events"
-   ],
-   "anchor": null,
-   "travel": {
-    "zone": null,
-    "region": "",
-    "lat": null,
-    "lng": null,
-    "distanceKm": null,
-    "geoSource": null
-   },
-   "source": {
-    "label": "SISTIC",
-    "url": "https://www.sistic.com.sg/events/impossible0926"
-   },
-   "google": {
-    "place_id": "ChIJ_xvk7hMZ2jERYNfvhEUMFWc",
-    "name": "Singapore Chinese Cultural Centre",
-    "rating": 4.5,
-    "userRatingCount": 2402,
-    "businessStatus": "OPERATIONAL",
-    "match_ratio": 0.57
-   }
-  },
-  {
-   "id": "cand-sistic-154768",
-   "origin": "sistic",
-   "status": "proposed",
-   "title": "Vasily Petrenko & Gautier Capuçon",
-   "description": "Concert · from S$15 · Laughter and fruitfulness fill Our Garden , a cantata for children’s choir and orchestra by Estonia’s most famous composer today, Arvo Pärt. Hear its infectious joy radiate from the Singapore Symphony Children’s Choir in…",
-   "when": "Fri, 18 September 2026, 7.30pmSat, 19 September 2026, 7.30pm",
-   "date": "2026-09-18",
-   "venue": "Esplanade Concert Hall",
-   "url": "https://www.sistic.com.sg/events/SOT2638-1a",
-   "tabs": [
-    "events"
-   ],
-   "anchor": "Tampines",
-   "travel": {
-    "zone": "Central",
-    "region": "Central",
-    "lat": 1.28649,
-    "lng": 103.85457,
-    "distanceKm": 12.5,
-    "geoSource": "onemap-hint"
-   },
-   "source": {
-    "label": "SISTIC",
-    "url": "https://www.sistic.com.sg/events/SOT2638-1a"
-   },
-   "google": {
-    "place_id": "ChIJ3df086cZ2jERaV7-qaG4B34",
-    "name": "Esplanade Public Space",
-    "rating": 4.7,
-    "userRatingCount": 1167,
-    "businessStatus": "OPERATIONAL",
-    "match_ratio": 0.25
-   }
-  },
-  {
-   "id": "cand-sistic-169633",
-   "origin": "sistic",
-   "status": "proposed",
-   "title": "“Insight: A 400-Year Journey Through Piano Music” Fu Ning Piano Concert",
-   "description": "Concert · from S$38 · “Insight: A 400-Year Journey Through Piano Music” Fu Ning Piano Concert will be a guided concert on Baroque · Classical · Romantic · Modern Piano Masterpieces, presented by Steinway Artist Fu Ning, traces the 400-year ev…",
-   "when": "Fri, 11 Sep 2026, 7.30pm",
-   "date": "2026-09-11",
-   "venue": "Esplanade Concert Hall",
-   "url": "https://www.sistic.com.sg/events/funing0926",
-   "tabs": [
-    "events"
-   ],
-   "anchor": "Tampines",
-   "travel": {
-    "zone": "Central",
-    "region": "Central",
-    "lat": 1.28649,
-    "lng": 103.85457,
-    "distanceKm": 12.5,
-    "geoSource": "onemap-hint"
-   },
-   "source": {
-    "label": "SISTIC",
-    "url": "https://www.sistic.com.sg/events/funing0926"
-   },
-   "google": {
-    "place_id": "ChIJ3df086cZ2jERaV7-qaG4B34",
-    "name": "Esplanade Public Space",
-    "rating": 4.7,
-    "userRatingCount": 1167,
-    "businessStatus": "OPERATIONAL",
-    "match_ratio": 0.25
-   }
-  },
-  {
-   "id": "cand-sistic-170076",
-   "origin": "sistic",
-   "status": "proposed",
-   "title": "Esplanade Presents | Beautiful Sunday Nanyang Technological University Chinese Orchestra",
-   "description": "Orchestra · Sweeping strings and stirring melodies take centre stage as the Nanyang Technological University Chinese Orchestra brings the rich sounds of Chinese tradition to life, promising a journey through time, culture and herita…",
-   "when": "Sun, 13 Sep 2026, 2pm",
-   "date": "2026-09-13",
-   "venue": "Esplanade Concert Hall",
-   "url": "https://www.sistic.com.sg/events/bsun0926",
-   "tabs": [
-    "events"
-   ],
-   "anchor": "Tampines",
-   "travel": {
-    "zone": "Central",
-    "region": "Central",
-    "lat": 1.28649,
-    "lng": 103.85457,
-    "distanceKm": 12.5,
-    "geoSource": "onemap-hint"
-   },
-   "source": {
-    "label": "SISTIC",
-    "url": "https://www.sistic.com.sg/events/bsun0926"
-   },
-   "google": {
-    "place_id": "ChIJ3df086cZ2jERaV7-qaG4B34",
-    "name": "Esplanade Public Space",
-    "rating": 4.7,
-    "userRatingCount": 1167,
-    "businessStatus": "OPERATIONAL",
-    "match_ratio": 0.25
-   }
-  },
-  {
-   "id": "cand-sistic-169638",
-   "origin": "sistic",
-   "status": "proposed",
-   "title": "GROWTH",
-   "description": "concert · from S$48 · GROWTH is an original concert by TLQ, a trio of Singaporean sisters who write, create and perform music together. Led by singer-songwriter YQ Tan, the concert showcases songs from her upcoming EP, “Growth”, alongside sel…",
-   "when": "Sun, 13 Sep 2026 4.00pm",
-   "date": "2026-09-13",
-   "venue": "The Art House, Chamber",
-   "url": "https://www.sistic.com.sg/events/growth0926",
-   "tabs": [
-    "events"
-   ],
-   "anchor": null,
-   "travel": {
-    "zone": null,
-    "region": "",
-    "lat": null,
-    "lng": null,
-    "distanceKm": null,
-    "geoSource": null
-   },
-   "source": {
-    "label": "SISTIC",
-    "url": "https://www.sistic.com.sg/events/growth0926"
-   },
-   "google": {
-    "place_id": "ChIJZdJB9AkZ2jERBPmjHz9bOg4",
-    "name": "The Arts House at the Old Parliament",
-    "rating": 4.6,
-    "userRatingCount": 1766,
-    "businessStatus": "OPERATIONAL",
-    "match_ratio": 0.4
-   }
-  },
-  {
-   "id": "cand-sistic-161788",
-   "origin": "sistic",
-   "status": "proposed",
-   "title": "DIFFERENT: Drift",
-   "description": "Concert · from S$43 · DIFFERENT: Drift Some concerts happen to you. This one you drift through. DIFFERENT returns for its third edition at Flock at Kampong Java with a programme that spans eight centuries and refuses to stay in any one of the…",
-   "when": "Sat, 12 Sep 2026 7.30pm",
-   "date": "2026-09-12",
-   "venue": "Flock at Kampong Java - The Hall",
-   "url": "https://www.sistic.com.sg/events/drift0926",
-   "tabs": [
-    "events"
-   ],
-   "anchor": null,
-   "travel": {
-    "zone": null,
-    "region": "",
-    "lat": null,
-    "lng": null,
-    "distanceKm": null,
-    "geoSource": null
-   },
-   "source": {
-    "label": "SISTIC",
-    "url": "https://www.sistic.com.sg/events/drift0926"
-   },
-   "google": {
-    "place_id": "ChIJD3yARQAZ2jERTJjUe0ztJ9U",
-    "name": "Flock @ KJ",
-    "rating": 4,
-    "userRatingCount": 1,
-    "businessStatus": "OPERATIONAL",
-    "match_ratio": 0.14
-   }
-  },
-  {
-   "id": "cand-sistic-168658",
-   "origin": "sistic",
-   "status": "proposed",
-   "title": "英歌 Odes to Heroes",
-   "description": "Theatre · from S$48 · Yingge is a powerful and award-winning dance drama inspired by the vibrant Yingge culture of Chaoshan. The work incorporates themes of migration, and the rich artistic traditions of Chaoshan culture. The story takes plac…",
-   "when": "Fri, 18 Sep 2026 - Sat, 19 Sep 2026",
-   "date": "2026-09-18",
-   "venue": "The Theatre at Mediacorp",
-   "url": "https://www.sistic.com.sg/events/heroes0926",
-   "tabs": [
-    "events"
-   ],
-   "anchor": null,
-   "travel": {
-    "zone": null,
-    "region": "",
-    "lat": null,
-    "lng": null,
-    "distanceKm": null,
-    "geoSource": null
-   },
-   "source": {
-    "label": "SISTIC",
-    "url": "https://www.sistic.com.sg/events/heroes0926"
-   },
-   "google": {
-    "place_id": "ChIJMV2F2Rwb2jERCz20MHQ1dIE",
-    "name": "The Theatre at Mediacorp",
-    "rating": 4.3,
-    "userRatingCount": 380,
-    "businessStatus": "OPERATIONAL",
-    "match_ratio": 0.8
-   }
-  },
-  {
-   "id": "cand-sistic-155116",
-   "origin": "sistic",
-   "status": "proposed",
-   "title": "President’s Young Performers Concert",
-   "description": "Concert · from S$15 · The 2026 President’s Young Performers Concert proudly presents three superlative young talents from Singapore: bassoonist Shi Jia Ao, soprano Natasha Da Costa and violinist Kaelyn Soh. Be wowed by their musical virtuosit…",
-   "when": "Sat, 12 September 2026, 7.30pm",
-   "date": "2026-09-12",
-   "venue": "Victoria Concert Hall",
-   "url": "https://www.sistic.com.sg/events/SOT2637-1",
-   "tabs": [
-    "events"
-   ],
-   "anchor": "Tampines",
-   "travel": {
-    "zone": "Central",
-    "region": "Central",
-    "lat": 1.28835,
-    "lng": 103.85158,
-    "distanceKm": 12.7,
-    "geoSource": "onemap"
-   },
-   "source": {
-    "label": "SISTIC",
-    "url": "https://www.sistic.com.sg/events/SOT2637-1"
-   },
-   "google": {
-    "place_id": "ChIJzf487wkZ2jERP3nJhCFBdrE",
-    "name": "Victoria Concert Hall",
-    "rating": 4.7,
-    "userRatingCount": 2545,
-    "businessStatus": "OPERATIONAL",
-    "match_ratio": 0.75
-   }
-  }
- ]
+  "_note": "Human review queue. Promote by hand into data/week.json activities[]; never auto-publish.",
+  "candidates": [
+    {
+      "id": "cand-sistic-156796",
+      "origin": "sistic",
+      "status": "proposed",
+      "title": "Esplanade Presents | Coffee Morning & Afternoon Tea Yesterday Once More by Tokyo Square",
+      "description": "Concert · from S$21 · “Within you’ll remain and always will” The hit song Within You’ll Remain by Singapore band Tokyo Square solidified their position in the homegrown music scene of the 1980s, propelling the band across the region as well. …",
+      "when": "Mon, 14 Sep 2026, 10.30am & 3pm",
+      "date": "2026-09-14",
+      "venue": "Esplanade Recital Studio",
+      "url": "https://www.sistic.com.sg/events/cmat0926",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Tampines",
+      "travel": {
+        "zone": "Central",
+        "region": "Central",
+        "lat": 1.28649,
+        "lng": 103.85457,
+        "distanceKm": 12.5,
+        "geoSource": "onemap-hint"
+      },
+      "source": {
+        "label": "SISTIC",
+        "url": "https://www.sistic.com.sg/events/cmat0926"
+      },
+      "google": {
+        "place_id": "ChIJs2Ma7KcZ2jERIWNlV4-YM7Y",
+        "name": "Esplanade Recital Studio",
+        "rating": 4.5,
+        "userRatingCount": 54,
+        "businessStatus": "OPERATIONAL",
+        "match_ratio": 0.75
+      }
+    },
+    {
+      "id": "cand-sistic-159863",
+      "origin": "sistic",
+      "status": "proposed",
+      "title": "ART by Godot Theatre Company 果陀剧场",
+      "description": "Theatre · from S$48 · Are you who you think you are? Or are you who your friends think you are? Taiwan’s Godot Theatre Company returns to Esplanade with ART, three years after its successful run at Huayi – Chinese Festival of Arts 2023 ! Humo…",
+      "when": "Fri, 18 Sep 2026 - Sun, 20 Sep 2026",
+      "date": "2026-09-18",
+      "venue": "Esplanade Theatre",
+      "url": "https://www.sistic.com.sg/events/art0926",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Tampines",
+      "travel": {
+        "zone": "Central",
+        "region": "Central",
+        "lat": 1.2888,
+        "lng": 103.856,
+        "distanceKm": 12.2,
+        "geoSource": "onemap"
+      },
+      "source": {
+        "label": "SISTIC",
+        "url": "https://www.sistic.com.sg/events/art0926"
+      },
+      "google": {
+        "place_id": "ChIJSeUa7KcZ2jERNVg2CvmlVbk",
+        "name": "Esplanade - Theatres on the Bay, Singapore",
+        "rating": 4.6,
+        "userRatingCount": 20361,
+        "businessStatus": "OPERATIONAL",
+        "match_ratio": 0.67
+      }
+    },
+    {
+      "id": "cand-sistic-170231",
+      "origin": "sistic",
+      "status": "proposed",
+      "title": "AFC CHAMPIONS LEAGUE TWO 2026/27™ - LION CITY SAILORS (SGP) VS BG PATHUM UNITED (THA)",
+      "description": "Sports · from S$30 · Singapore’s only privatised football club Lion City Sailors kick off their 2026/27 AFC Champions League (ACL) Two campaign on home soil with a tantalising clash against Thai powerhouse BG Pathum United. Having strengthen…",
+      "when": "Thu, 17 Sep 2026, 6.00pm",
+      "date": "2026-09-17",
+      "venue": "Jalan Besar Stadium",
+      "url": "https://www.sistic.com.sg/events/afc2026",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Tampines",
+      "travel": {
+        "zone": "Central",
+        "region": "Central",
+        "lat": 1.30965,
+        "lng": 103.86009,
+        "distanceKm": 10.6,
+        "geoSource": "onemap"
+      },
+      "source": {
+        "label": "SISTIC",
+        "url": "https://www.sistic.com.sg/events/afc2026"
+      },
+      "google": {
+        "place_id": "ChIJY2LsCckZ2jERJrcMS91EpJU",
+        "name": "Jalan Besar Stadium",
+        "rating": 4.3,
+        "userRatingCount": 1605,
+        "businessStatus": "OPERATIONAL",
+        "match_ratio": 0.75
+      }
+    },
+    {
+      "id": "cand-sistic-170394",
+      "origin": "sistic",
+      "status": "proposed",
+      "title": "Rachael Yamagata Starlit Alchemy Tour - Live In Singapore",
+      "description": "Concert · from S$98 · Rachael Yamagata is making her long-awaited return to Singapore! Happening on 16 September at Foo Chow Hall , this upcoming show marks the singer-songwriter’s first gig here since 2018, and her only Southeast Asia stop f…",
+      "when": "Wed, 16 Sep 2026, 7pm",
+      "date": "2026-09-16",
+      "venue": "Foo Chow Hall",
+      "url": "https://www.sistic.com.sg/events/rachael0926",
+      "tabs": [
+        "events"
+      ],
+      "anchor": null,
+      "travel": {
+        "zone": null,
+        "region": "",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "SISTIC",
+        "url": "https://www.sistic.com.sg/events/rachael0926"
+      },
+      "google": {
+        "place_id": "ChIJBWoxMcoZ2jERO6v-uBSFLNQ",
+        "name": "Foochow Building Event Hall",
+        "rating": 4.5,
+        "userRatingCount": 99,
+        "businessStatus": "OPERATIONAL",
+        "match_ratio": 0.25
+      }
+    },
+    {
+      "id": "cand-sistic-161600",
+      "origin": "sistic",
+      "status": "proposed",
+      "title": "Andrea Molteni in Recital",
+      "description": "Solo-Western · from S$18 · Supremely gifted international pianist Andrea Molteni brings his signature \"virtuosic agility\" (Fanfare Magazine) to the Victoria Concert Hall for one night only. A champion of new works, and a passionate researcher, Mol…",
+      "when": "Fri, 18 Sep 2026 7pm",
+      "date": "2026-09-18",
+      "venue": "Victoria Concert Hall",
+      "url": "https://www.sistic.com.sg/events/andrea0926",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Tampines",
+      "travel": {
+        "zone": "Central",
+        "region": "Central",
+        "lat": 1.28835,
+        "lng": 103.85158,
+        "distanceKm": 12.7,
+        "geoSource": "onemap"
+      },
+      "source": {
+        "label": "SISTIC",
+        "url": "https://www.sistic.com.sg/events/andrea0926"
+      },
+      "google": {
+        "place_id": "ChIJzf487wkZ2jERP3nJhCFBdrE",
+        "name": "Victoria Concert Hall",
+        "rating": 4.7,
+        "userRatingCount": 2545,
+        "businessStatus": "OPERATIONAL",
+        "match_ratio": 0.75
+      }
+    },
+    {
+      "id": "cand-sistic-161522",
+      "origin": "sistic",
+      "status": "proposed",
+      "title": "美秀集團《AS= =》TOUR新加坡站 Amazing Show 《AS= =》Tour Singapore Stop",
+      "description": "Concert · from S$88 · Amazing Show – 美秀集團 One of Taiwan's most distinctive bands, Amazing Show (美秀集團), is renowned for its genre-defying music, creative songwriting, and electrifying live performances that have captivated fans across Asia. Bl…",
+      "when": "Fri, 11 Sep 2026, 7.00pmDoors Open: 6.15pm",
+      "date": "2026-09-11",
+      "venue": "Gateway Theatre",
+      "url": "https://www.sistic.com.sg/events/as0926",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Jurong East",
+      "travel": {
+        "zone": "Central",
+        "region": "Central",
+        "lat": 1.28397,
+        "lng": 103.8166,
+        "distanceKm": 9.9,
+        "geoSource": "onemap"
+      },
+      "source": {
+        "label": "SISTIC",
+        "url": "https://www.sistic.com.sg/events/as0926"
+      },
+      "google": {
+        "place_id": "ChIJy0lqpdYb2jERGWw0K4hWVJk",
+        "name": "Gateway Theatre",
+        "rating": 4.5,
+        "userRatingCount": 946,
+        "businessStatus": "OPERATIONAL",
+        "match_ratio": 0.67
+      }
+    },
+    {
+      "id": "cand-sistic-170107",
+      "origin": "sistic",
+      "status": "proposed",
+      "title": "CITY BALLET ACADEMY ANNUAL PERFORMANCE 2026",
+      "description": "Dance · from S$29 · City Ballet Academy’s Annual Performance 2026 celebrates the joy of dance and the remarkable journey that unfolds through every stage of a dancer’s growth. From the first steps of our youngest performers to the confidenc…",
+      "when": "Sun, 13 Sep 2026, 3pm",
+      "date": "2026-09-13",
+      "venue": "University Cultural Centre Theatre",
+      "url": "https://www.sistic.com.sg/events/cbap0926",
+      "tabs": [
+        "events"
+      ],
+      "anchor": null,
+      "travel": {
+        "zone": null,
+        "region": "",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "SISTIC",
+        "url": "https://www.sistic.com.sg/events/cbap0926"
+      },
+      "google": {
+        "place_id": "ChIJG9Hi-PYa2jERyttcYSZxhp0",
+        "name": "University Cultural Centre",
+        "rating": 4.5,
+        "userRatingCount": 219,
+        "businessStatus": "OPERATIONAL",
+        "match_ratio": 0.6
+      }
+    },
+    {
+      "id": "cand-sistic-166158",
+      "origin": "sistic",
+      "status": "proposed",
+      "title": "ELIAS J.TV Band & DONEKLA: Laugh hard, Dance Harder!",
+      "description": "Concert · from S$69 · Get ready for an unforgettable afternoon of music, laughter, and pure entertainment as Elias J.TV Band and Donekla take center stage for an electrifying Concert and Comedy Show! Experience the perfect blend of live music…",
+      "when": "Sun, 13 Sep 2026, 3pm",
+      "date": "2026-09-13",
+      "venue": "*SCAPE Playspace",
+      "url": "https://www.sistic.com.sg/events/dance0926",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Jurong East",
+      "travel": {
+        "zone": "Central",
+        "region": "Central",
+        "lat": 1.30101,
+        "lng": 103.83572,
+        "distanceKm": 11.0,
+        "geoSource": "onemap-hint"
+      },
+      "source": {
+        "label": "SISTIC",
+        "url": "https://www.sistic.com.sg/events/dance0926"
+      },
+      "google": {
+        "place_id": "ChIJCW1snYkZ2jERhhP5XIO0hjo",
+        "name": "*SCAPE",
+        "rating": 4.1,
+        "userRatingCount": 2185,
+        "businessStatus": "OPERATIONAL",
+        "match_ratio": 0.33
+      }
+    },
+    {
+      "id": "cand-sistic-160019",
+      "origin": "sistic",
+      "status": "proposed",
+      "title": "HAPPY MONDAYS Live in Singapore",
+      "description": "Concert · UK Alt-Rock Icons Happy Mondays to perform in Singapore for the very first time! Get ready for a night of euphoric grooves, timeless anthems, and pure Madchester energy as Happy Mondays arrive in Singapore on 15 Septembe…",
+      "when": "Tue, 15 Sep 2026, 8pm",
+      "date": "2026-09-15",
+      "venue": "Foo Chow Hall",
+      "url": "https://www.sistic.com.sg/events/happymondays0926",
+      "tabs": [
+        "events"
+      ],
+      "anchor": null,
+      "travel": {
+        "zone": null,
+        "region": "",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "SISTIC",
+        "url": "https://www.sistic.com.sg/events/happymondays0926"
+      },
+      "google": {
+        "place_id": "ChIJBWoxMcoZ2jERO6v-uBSFLNQ",
+        "name": "Foochow Building Event Hall",
+        "rating": 4.5,
+        "userRatingCount": 99,
+        "businessStatus": "OPERATIONAL",
+        "match_ratio": 0.25
+      }
+    },
+    {
+      "id": "cand-sistic-169008",
+      "origin": "sistic",
+      "status": "proposed",
+      "title": "Paruvangal",
+      "description": "Dance · from S$25 · Within the cycles of nature, a woman’s heart finds its reflection; as the seasons shift, so does the landscape of her soul. The seasons and emotion intertwine in a constant dance of change, where every falling leaf and e…",
+      "when": "Sun, 13 Sep 2026 6pm",
+      "date": "2026-09-13",
+      "venue": "Drama Centre Theatre, National Library 100 Victoria St, #03-01, Singapore 188064",
+      "url": "https://www.sistic.com.sg/events/paruvangal0926",
+      "tabs": [
+        "events"
+      ],
+      "anchor": null,
+      "travel": {
+        "zone": null,
+        "region": "",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "SISTIC",
+        "url": "https://www.sistic.com.sg/events/paruvangal0926"
+      },
+      "google": {
+        "place_id": "ChIJqx4LJqUZ2jERP7htHLwGIag",
+        "name": "Drama Centre",
+        "rating": 4.5,
+        "userRatingCount": 535,
+        "businessStatus": "OPERATIONAL",
+        "match_ratio": 0.17
+      }
+    },
+    {
+      "id": "cand-sistic-161414",
+      "origin": "sistic",
+      "status": "proposed",
+      "title": "Esplanade Presents | Raga Sanjya Chhaya by WeCanDoIt",
+      "description": "Theatre · from S$60 · Retirement, as often told, is when life slows down. Sanjya and Chhaya clearly did not get the memo. In their early sixties, this energetic couple run a Happiness Centre, a free community initiative where people drop in w…",
+      "when": "Fri, 18 Sep 2026 - Sat, 19 Sep 2026",
+      "date": "2026-09-18",
+      "venue": "Esplanade Theatre Studio",
+      "url": "https://www.sistic.com.sg/events/sanjya0926",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Tampines",
+      "travel": {
+        "zone": "Central",
+        "region": "Central",
+        "lat": 1.28649,
+        "lng": 103.85457,
+        "distanceKm": 12.5,
+        "geoSource": "onemap-hint"
+      },
+      "source": {
+        "label": "SISTIC",
+        "url": "https://www.sistic.com.sg/events/sanjya0926"
+      },
+      "google": {
+        "place_id": "ChIJSeUa7KcZ2jERNVg2CvmlVbk",
+        "name": "Esplanade - Theatres on the Bay, Singapore",
+        "rating": 4.6,
+        "userRatingCount": 20361,
+        "businessStatus": "OPERATIONAL",
+        "match_ratio": 0.5
+      }
+    },
+    {
+      "id": "cand-sistic-158714",
+      "origin": "sistic",
+      "status": "proposed",
+      "title": "丁噹《愛了一百萬次的我》新加坡演唱会 Della ‘Loving You a Million Times Over’ Live in Concert [G]",
+      "description": "Concert · from S$88 · 無論千萬次愛情的試煉與淬鍊， 我們都還在愛。 那些哭過、笑過、失去過的瞬間， 都收藏成此刻的自己 這一晚，新加坡限定！ 丁噹以《愛了一百萬次的我》為名， 唱出愛裡的酸甜苦辣，那些屬於你的回憶殺、愛情成長軌跡，都將在現場一次傾瀉。 擁有「偶像劇歌姬」、「全民情歌天后」美譽的丁噹， 唱過無數搭劇金曲—— 〈我愛他〉、〈猜不透〉、〈手掌心〉、〈我是一隻小小鳥〉、〈你為什麼說謊〉、〈親人〉、〈離家出走〉⋯⋯ 每一首都深植人心，傳唱至今。 我們總…",
+      "when": "Fri, 18 September 2026, 8pm",
+      "date": "2026-09-18",
+      "venue": "Sands Theatre, Marina Bay Sands",
+      "url": "https://www.sistic.com.sg/events/dingdang0926",
+      "tabs": [
+        "events"
+      ],
+      "anchor": null,
+      "travel": {
+        "zone": null,
+        "region": "",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "SISTIC",
+        "url": "https://www.sistic.com.sg/events/dingdang0926"
+      },
+      "google": {
+        "place_id": "ChIJPdzVjAYZ2jERP1LN4MtGjZI",
+        "name": "Sands Theatre",
+        "rating": 4.5,
+        "userRatingCount": 2105,
+        "businessStatus": "OPERATIONAL",
+        "match_ratio": 0.4
+      }
+    },
+    {
+      "id": "cand-sistic-160315",
+      "origin": "sistic",
+      "status": "proposed",
+      "title": "Batu Bo Makan Gegat (The Impossible)",
+      "description": "Theatre · from S$88 · \"Batu Bo Makan Gegat” - An Impossible Set in modern-day Singapore,“Batu Bo Makan Gegat” takes its title from the playful and ironic line of a traditional Peranakan saying “Jat Berejat,Batu Bo Makan Gegat”—suggesting some…",
+      "when": "Fri 11 Sep 2026 - Sat 12 Sep 2026",
+      "date": "2026-09-11",
+      "venue": "Singapore Chinese Cultural Centre Auditorium, Level 9 新加坡华族文化中心表演厅, 九楼",
+      "url": "https://www.sistic.com.sg/events/impossible0926",
+      "tabs": [
+        "events"
+      ],
+      "anchor": null,
+      "travel": {
+        "zone": null,
+        "region": "",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "SISTIC",
+        "url": "https://www.sistic.com.sg/events/impossible0926"
+      },
+      "google": {
+        "place_id": "ChIJ_xvk7hMZ2jERYNfvhEUMFWc",
+        "name": "Singapore Chinese Cultural Centre",
+        "rating": 4.5,
+        "userRatingCount": 2402,
+        "businessStatus": "OPERATIONAL",
+        "match_ratio": 0.57
+      }
+    },
+    {
+      "id": "cand-sistic-154768",
+      "origin": "sistic",
+      "status": "proposed",
+      "title": "Vasily Petrenko & Gautier Capuçon",
+      "description": "Concert · from S$15 · Laughter and fruitfulness fill Our Garden , a cantata for children’s choir and orchestra by Estonia’s most famous composer today, Arvo Pärt. Hear its infectious joy radiate from the Singapore Symphony Children’s Choir in…",
+      "when": "Fri, 18 September 2026, 7.30pmSat, 19 September 2026, 7.30pm",
+      "date": "2026-09-18",
+      "venue": "Esplanade Concert Hall",
+      "url": "https://www.sistic.com.sg/events/SOT2638-1a",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Tampines",
+      "travel": {
+        "zone": "Central",
+        "region": "Central",
+        "lat": 1.28649,
+        "lng": 103.85457,
+        "distanceKm": 12.5,
+        "geoSource": "onemap-hint"
+      },
+      "source": {
+        "label": "SISTIC",
+        "url": "https://www.sistic.com.sg/events/SOT2638-1a"
+      },
+      "google": {
+        "place_id": "ChIJ3df086cZ2jERaV7-qaG4B34",
+        "name": "Esplanade Public Space",
+        "rating": 4.7,
+        "userRatingCount": 1167,
+        "businessStatus": "OPERATIONAL",
+        "match_ratio": 0.25
+      }
+    },
+    {
+      "id": "cand-sistic-169633",
+      "origin": "sistic",
+      "status": "proposed",
+      "title": "“Insight: A 400-Year Journey Through Piano Music” Fu Ning Piano Concert",
+      "description": "Concert · from S$38 · “Insight: A 400-Year Journey Through Piano Music” Fu Ning Piano Concert will be a guided concert on Baroque · Classical · Romantic · Modern Piano Masterpieces, presented by Steinway Artist Fu Ning, traces the 400-year ev…",
+      "when": "Fri, 11 Sep 2026, 7.30pm",
+      "date": "2026-09-11",
+      "venue": "Esplanade Concert Hall",
+      "url": "https://www.sistic.com.sg/events/funing0926",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Tampines",
+      "travel": {
+        "zone": "Central",
+        "region": "Central",
+        "lat": 1.28649,
+        "lng": 103.85457,
+        "distanceKm": 12.5,
+        "geoSource": "onemap-hint"
+      },
+      "source": {
+        "label": "SISTIC",
+        "url": "https://www.sistic.com.sg/events/funing0926"
+      },
+      "google": {
+        "place_id": "ChIJ3df086cZ2jERaV7-qaG4B34",
+        "name": "Esplanade Public Space",
+        "rating": 4.7,
+        "userRatingCount": 1167,
+        "businessStatus": "OPERATIONAL",
+        "match_ratio": 0.25
+      }
+    },
+    {
+      "id": "cand-sistic-170076",
+      "origin": "sistic",
+      "status": "proposed",
+      "title": "Esplanade Presents | Beautiful Sunday Nanyang Technological University Chinese Orchestra",
+      "description": "Orchestra · Sweeping strings and stirring melodies take centre stage as the Nanyang Technological University Chinese Orchestra brings the rich sounds of Chinese tradition to life, promising a journey through time, culture and herita…",
+      "when": "Sun, 13 Sep 2026, 2pm",
+      "date": "2026-09-13",
+      "venue": "Esplanade Concert Hall",
+      "url": "https://www.sistic.com.sg/events/bsun0926",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Tampines",
+      "travel": {
+        "zone": "Central",
+        "region": "Central",
+        "lat": 1.28649,
+        "lng": 103.85457,
+        "distanceKm": 12.5,
+        "geoSource": "onemap-hint"
+      },
+      "source": {
+        "label": "SISTIC",
+        "url": "https://www.sistic.com.sg/events/bsun0926"
+      },
+      "google": {
+        "place_id": "ChIJ3df086cZ2jERaV7-qaG4B34",
+        "name": "Esplanade Public Space",
+        "rating": 4.7,
+        "userRatingCount": 1167,
+        "businessStatus": "OPERATIONAL",
+        "match_ratio": 0.25
+      }
+    },
+    {
+      "id": "cand-sistic-169638",
+      "origin": "sistic",
+      "status": "proposed",
+      "title": "GROWTH",
+      "description": "concert · from S$48 · GROWTH is an original concert by TLQ, a trio of Singaporean sisters who write, create and perform music together. Led by singer-songwriter YQ Tan, the concert showcases songs from her upcoming EP, “Growth”, alongside sel…",
+      "when": "Sun, 13 Sep 2026 4.00pm",
+      "date": "2026-09-13",
+      "venue": "The Art House, Chamber",
+      "url": "https://www.sistic.com.sg/events/growth0926",
+      "tabs": [
+        "events"
+      ],
+      "anchor": null,
+      "travel": {
+        "zone": null,
+        "region": "",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "SISTIC",
+        "url": "https://www.sistic.com.sg/events/growth0926"
+      },
+      "google": {
+        "place_id": "ChIJZdJB9AkZ2jERBPmjHz9bOg4",
+        "name": "The Arts House at the Old Parliament",
+        "rating": 4.6,
+        "userRatingCount": 1766,
+        "businessStatus": "OPERATIONAL",
+        "match_ratio": 0.4
+      }
+    },
+    {
+      "id": "cand-sistic-161788",
+      "origin": "sistic",
+      "status": "proposed",
+      "title": "DIFFERENT: Drift",
+      "description": "Concert · from S$43 · DIFFERENT: Drift Some concerts happen to you. This one you drift through. DIFFERENT returns for its third edition at Flock at Kampong Java with a programme that spans eight centuries and refuses to stay in any one of the…",
+      "when": "Sat, 12 Sep 2026 7.30pm",
+      "date": "2026-09-12",
+      "venue": "Flock at Kampong Java - The Hall",
+      "url": "https://www.sistic.com.sg/events/drift0926",
+      "tabs": [
+        "events"
+      ],
+      "anchor": null,
+      "travel": {
+        "zone": null,
+        "region": "",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "SISTIC",
+        "url": "https://www.sistic.com.sg/events/drift0926"
+      },
+      "google": {
+        "place_id": "ChIJD3yARQAZ2jERTJjUe0ztJ9U",
+        "name": "Flock @ KJ",
+        "rating": 4,
+        "userRatingCount": 1,
+        "businessStatus": "OPERATIONAL",
+        "match_ratio": 0.14
+      }
+    },
+    {
+      "id": "cand-sistic-168658",
+      "origin": "sistic",
+      "status": "proposed",
+      "title": "英歌 Odes to Heroes",
+      "description": "Theatre · from S$48 · Yingge is a powerful and award-winning dance drama inspired by the vibrant Yingge culture of Chaoshan. The work incorporates themes of migration, and the rich artistic traditions of Chaoshan culture. The story takes plac…",
+      "when": "Fri, 18 Sep 2026 - Sat, 19 Sep 2026",
+      "date": "2026-09-18",
+      "venue": "The Theatre at Mediacorp",
+      "url": "https://www.sistic.com.sg/events/heroes0926",
+      "tabs": [
+        "events"
+      ],
+      "anchor": null,
+      "travel": {
+        "zone": null,
+        "region": "",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "SISTIC",
+        "url": "https://www.sistic.com.sg/events/heroes0926"
+      },
+      "google": {
+        "place_id": "ChIJMV2F2Rwb2jERCz20MHQ1dIE",
+        "name": "The Theatre at Mediacorp",
+        "rating": 4.3,
+        "userRatingCount": 380,
+        "businessStatus": "OPERATIONAL",
+        "match_ratio": 0.8
+      }
+    },
+    {
+      "id": "cand-sistic-155116",
+      "origin": "sistic",
+      "status": "proposed",
+      "title": "President’s Young Performers Concert",
+      "description": "Concert · from S$15 · The 2026 President’s Young Performers Concert proudly presents three superlative young talents from Singapore: bassoonist Shi Jia Ao, soprano Natasha Da Costa and violinist Kaelyn Soh. Be wowed by their musical virtuosit…",
+      "when": "Sat, 12 September 2026, 7.30pm",
+      "date": "2026-09-12",
+      "venue": "Victoria Concert Hall",
+      "url": "https://www.sistic.com.sg/events/SOT2637-1",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Tampines",
+      "travel": {
+        "zone": "Central",
+        "region": "Central",
+        "lat": 1.28835,
+        "lng": 103.85158,
+        "distanceKm": 12.7,
+        "geoSource": "onemap"
+      },
+      "source": {
+        "label": "SISTIC",
+        "url": "https://www.sistic.com.sg/events/SOT2637-1"
+      },
+      "google": {
+        "place_id": "ChIJzf487wkZ2jERP3nJhCFBdrE",
+        "name": "Victoria Concert Hall",
+        "rating": 4.7,
+        "userRatingCount": 2545,
+        "businessStatus": "OPERATIONAL",
+        "match_ratio": 0.75
+      }
+    },
+    {
+      "id": "cand-eb-1999005864352",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Mooncake Making Workshop for Children",
+      "description": "Join us in person for a fun Mooncake Making Workshop where kids get creative and  make delicious mooncakes!",
+      "when": "2026-09-12 13:30–15:00",
+      "venue": null,
+      "url": "https://www.eventbrite.com/e/mooncake-making-workshop-for-children-tickets-1999005864352",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.com/e/mooncake-making-workshop-for-children-tickets-1999005864352"
+      }
+    },
+    {
+      "id": "cand-eb-1985118803780",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Coding School for Kids Near Me: Minecraft Coding Trial Classes (Ages 8–12)",
+      "description": "Minecraft Coding Trial Classes – Beginner-friendly coding & game development classes for kids aged 8–12",
+      "when": "2026-09-12 16:00–17:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/coding-school-for-kids-near-me-minecraft-coding-trial-classes-ages-812-tickets-1985118803780",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/coding-school-for-kids-near-me-minecraft-coding-trial-classes-ages-812-tickets-1985118803780"
+      }
+    },
+    {
+      "id": "cand-eb-1983665725584",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Coding School for Kids Near Me: Lego Robotics Trial Classes (Ages 4 -12)",
+      "description": "Lego Robotics Trial Classes – Beginner-friendly coding and robotics classes for kids aged 4 –12",
+      "when": "2026-09-12 09:00–10:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/coding-school-for-kids-near-me-lego-robotics-trial-classes-ages-4-12-tickets-1983665725584",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/coding-school-for-kids-near-me-lego-robotics-trial-classes-ages-4-12-tickets-1983665725584"
+      }
+    },
+    {
+      "id": "cand-eb-1983662753695",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Coding School for Kids Near Me: Roblox Coding Trial Classes (Ages 9–19)",
+      "description": "Roblox Coding Trial Classes – Beginner-friendly game design and coding classes for kids aged 9–19",
+      "when": "2026-09-12 11:00–12:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/coding-school-for-kids-near-me-roblox-coding-trial-classes-ages-919-tickets-1983662753695",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/coding-school-for-kids-near-me-roblox-coding-trial-classes-ages-919-tickets-1983662753695"
+      }
+    },
+    {
+      "id": "cand-eb-1999745076355",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "EcoTrain Workshop Series: Protect the Glaciers with Just Keep Thinking!",
+      "description": "Explore the newly revamped CDL EcoTrain! Learn about the Arctic and Antarctic in an engaging workshop with Just Keep Thinking!",
+      "when": "2026-09-12 11:30–13:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/ecotrain-workshop-series-protect-the-glaciers-with-just-keep-thinking-tickets-1999745076355",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/ecotrain-workshop-series-protect-the-glaciers-with-just-keep-thinking-tickets-1999745076355"
+      }
+    },
+    {
+      "id": "cand-eb-1999070598975",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "[13 Sept & 11 Oct] Western Mahua Kids Lamian Challenge",
+      "description": "A fun family experience for parents and kids! Learn to hand-pull lamian, enjoy a meal together and receive a special surprise.",
+      "when": "2026-09-13 15:30–17:00",
+      "venue": null,
+      "url": "https://www.eventbrite.com/e/13-sept-11-oct-western-mahua-kids-lamian-challenge-tickets-1999070598975",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.com/e/13-sept-11-oct-western-mahua-kids-lamian-challenge-tickets-1999070598975"
+      }
+    },
+    {
+      "id": "cand-eb-1998662449188",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Arkki September Holidays  - Garden of Wonders (7-12y.o.)",
+      "description": "Children become landscape architects as they design and build their own living masterpiece.",
+      "when": "2026-09-11 09:00–12:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/arkki-september-holidays-garden-of-wonders-7-12yo-tickets-1998662449188",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/arkki-september-holidays-garden-of-wonders-7-12yo-tickets-1998662449188"
+      }
+    },
+    {
+      "id": "cand-eb-1986051017055",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Kids Drawing and Sketching Art Course on Mondays (7-9 YO) - VAC Art Studio",
+      "description": "Kids (7-9 Years Old) Regular Art Classes for Drawing and Sketching & Line Drawing with Watercolour Painting @ VAC Dhoby Ghaut.",
+      "when": "2026-09-14 11:00–13:15",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/kids-drawing-and-sketching-art-course-on-mondays-7-9-yo-vac-art-studio-tickets-1986051017055",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/kids-drawing-and-sketching-art-course-on-mondays-7-9-yo-vac-art-studio-tickets-1986051017055"
+      }
+    },
+    {
+      "id": "cand-eb-1993997862283",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Italian Tavern",
+      "description": "Get ready to dive into some authentic vibes and tasty bites at the chillest Italian hangout around!",
+      "when": "2026-09-11 19:00–21:30",
+      "venue": null,
+      "url": "https://www.eventbrite.com/e/italian-tavern-tickets-1993997862283",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.com/e/italian-tavern-tickets-1993997862283"
+      }
+    },
+    {
+      "id": "cand-eb-1998042204018",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Piano Course for Children (Age 6 - 8) @ Clementi",
+      "description": "Enroll your child in Yamaha's piano classes and they'll develop music skills that will stay with them for life.",
+      "when": "2026-09-18 20:00–21:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/piano-course-for-children-age-6-8-clementi-tickets-1998042204018",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/piano-course-for-children-age-6-8-clementi-tickets-1998042204018"
+      }
+    },
+    {
+      "id": "cand-eb-1999958064408",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "My First Shopping Adventure | Parent-Child Workshop (Children Ages 4–8)",
+      "description": "A fun parent-child shopping adventure where children aged 4–8 build confidence, independence and everyday money skills through play!",
+      "when": "2026-09-12 15:00–16:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/my-first-shopping-adventure-parent-child-workshop-children-ages-48-tickets-1999958064408",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/my-first-shopping-adventure-parent-child-workshop-children-ages-48-tickets-1999958064408"
+      }
+    },
+    {
+      "id": "cand-eb-1981307897256",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Kids Beatbox Trial Class",
+      "description": "Try the newest kids activity trend—beatboxing! Interactive games, beginner-friendly sounds, and a mini routine. No equipment needed.",
+      "when": "2026-09-12 15:00–16:00",
+      "venue": null,
+      "url": "https://www.eventbrite.com/e/kids-beatbox-trial-class-tickets-1981307897256",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.com/e/kids-beatbox-trial-class-tickets-1981307897256"
+      }
+    },
+    {
+      "id": "cand-eb-1993188772273",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Beading for Kids",
+      "description": "Come and join us for a magical afternoon of beading!",
+      "when": "2026-09-11 10:00–11:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/beading-for-kids-registration-1993188772273",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/beading-for-kids-registration-1993188772273"
+      }
+    },
+    {
+      "id": "cand-eb-1999462090938",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Youth Engineering Holiday camp",
+      "description": "Join the Youth Engineering Holiday Camp for hands-on fun and cool tech projects this break!",
+      "when": "2026-09-11 13:30–16:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/youth-engineering-holiday-camp-tickets-1999462090938",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/youth-engineering-holiday-camp-tickets-1999462090938"
+      }
+    },
+    {
+      "id": "cand-eb-1985694504717",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Singapore Private Kayaking Tour(Kids & Pets Friendly)",
+      "description": "Enjoy a private kayaking experience in Singapore with your kids and pets. Safe, guided and full of fun!",
+      "when": "2026-09-11 09:00–12:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/singapore-private-kayaking-tourkids-pets-friendly-tickets-1985694504717",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/singapore-private-kayaking-tourkids-pets-friendly-tickets-1985694504717"
+      }
+    },
+    {
+      "id": "cand-eb-1888098496429",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "HIIT BOOTCAMP for a charity",
+      "description": "Get ready to sweat for a good cause with 'Because - Sports to Support' at our Charity HIIT",
+      "when": "2026-09-14 19:30–20:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/hiit-bootcamp-for-a-charity-tickets-1888098496429",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/hiit-bootcamp-for-a-charity-tickets-1888098496429"
+      }
+    },
+    {
+      "id": "cand-eb-1993182663000",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Chunky Knit Bag",
+      "description": "Get ready for a fun-filled knitting adventure with our Chunky Knit Bag Workshop, perfect for children and adults!",
+      "when": "2026-09-11 10:00–11:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/chunky-knit-bag-tickets-1993182663000",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/chunky-knit-bag-tickets-1993182663000"
+      }
+    },
+    {
+      "id": "cand-eb-1993183868606",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Sanrio-themed Decoden Cream Workshop",
+      "description": "Come and join us for a magical afternoon of Decoden crafting!",
+      "when": "2026-09-11 10:00–11:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/sanrio-themed-decoden-cream-workshop-tickets-1993183868606",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/sanrio-themed-decoden-cream-workshop-tickets-1993183868606"
+      }
+    },
+    {
+      "id": "cand-eb-1989442085833",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Dad’s Guide to Doing Hair – Daddy & Daughter Workshop",
+      "description": "Join us for a fun, hands-on workshop where dads learn awesome hair skills to bond with their daughters!",
+      "when": "2026-09-13 16:00–17:30",
+      "venue": null,
+      "url": "https://www.eventbrite.hk/e/dads-guide-to-doing-hair-daddy-daughter-workshop-tickets-1989442085833",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.hk/e/dads-guide-to-doing-hair-daddy-daughter-workshop-tickets-1989442085833"
+      }
+    },
+    {
+      "id": "cand-eb-1999378809842",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Financial Literacy for Kids",
+      "description": "Join us for fun, hands-on activities that teach kids the basics of money and saving!",
+      "when": "2026-09-12 10:00–13:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/financial-literacy-for-kids-tickets-1999378809842",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/financial-literacy-for-kids-tickets-1999378809842"
+      }
+    },
+    {
+      "id": "cand-eb-1993184414238",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Affirmation Bottle",
+      "description": "Come and join us for a magical afternoon of positive vibes!",
+      "when": "2026-09-11 10:00–23:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/affirmation-bottle-registration-1993184414238",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/affirmation-bottle-registration-1993184414238"
+      }
+    },
+    {
+      "id": "cand-eb-1996317791253",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Ola Beach Club - Hydroponics Workshop",
+      "description": "Dive into the world of soil-free gardening and learn how to grow fresh greens from scratch in this hydroponics workshop.",
+      "when": "2026-09-12 14:00–15:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/ola-beach-club-hydroponics-workshop-tickets-1996317791253",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/ola-beach-club-hydroponics-workshop-tickets-1996317791253"
+      }
+    },
+    {
+      "id": "cand-eb-1983843987771",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "KOKOMO Beach Club - Craft Rental",
+      "description": "Enjoy a day of fun in the sun or experience the magnificent sunset at the sea!",
+      "when": "2026-09-11 09:00–17:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/kokomo-beach-club-craft-rental-tickets-1983843987771",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/kokomo-beach-club-craft-rental-tickets-1983843987771"
+      }
+    },
+    {
+      "id": "cand-eb-1998625466572",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "FREE: Give Your Eyes A Break - A Digital Eye-Wellness Experience",
+      "description": "For families, young professionals, students and anyone else who lives on their screens — in collaboration with MyoFree Japan.",
+      "when": "2026-09-12 10:00–12:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/free-give-your-eyes-a-break-a-digital-eye-wellness-experience-tickets-1998625466572",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/free-give-your-eyes-a-break-a-digital-eye-wellness-experience-tickets-1998625466572"
+      }
+    },
+    {
+      "id": "cand-eb-1999525004113",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Coding & Robotics:  LEGO WEDO Robotics Trial; Ages 7 - 12 [Stars of Kovan]",
+      "description": "Embark your child's coding journey with fun, hands-on learning in The Young Maker's LEGO WEDO Robotics trial class! Perfect for ages 7-12.",
+      "when": "2026-09-14 16:00–17:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/coding-robotics-lego-wedo-robotics-trial-ages-7-12-stars-of-kovan-tickets-1999525004113",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/coding-robotics-lego-wedo-robotics-trial-ages-7-12-stars-of-kovan-tickets-1999525004113"
+      }
+    },
+    {
+      "id": "cand-eb-1980296769947",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Intermediate Beach Volleyball at ECP for a charity",
+      "description": "Intermediate level only. You need to be comfortable playing (beach) volleyball. We only play matches (4x4, 3x3 or 2x2)",
+      "when": "2026-09-13 09:00–12:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/intermediate-beach-volleyball-at-ecp-for-a-charity-tickets-1980296769947",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/intermediate-beach-volleyball-at-ecp-for-a-charity-tickets-1980296769947"
+      }
+    },
+    {
+      "id": "cand-eb-1999526872702",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Coding & Robotics: OSMO Trial; Ages 4-6 [Stars of Kovan]",
+      "description": "Embark your child's coding journey with fun, hands-on learning in The Young Maker's OSMO trial class! Perfect for ages 4-6.",
+      "when": "2026-09-15 16:30–17:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/coding-robotics-osmo-trial-ages-4-6-stars-of-kovan-tickets-1999526872702",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/coding-robotics-osmo-trial-ages-4-6-stars-of-kovan-tickets-1999526872702"
+      }
+    },
+    {
+      "id": "cand-eb-1999975831550",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Crafting Mid-Autumn Traditions: Mooncakes & Lanterns with Dona Manis",
+      "description": "Join us for a fun hands-on session making mooncakes and lanterns with and celebrate heritage traditions with Dona Manis this Mid-Autumn!",
+      "when": "2026-09-18 18:00–20:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/crafting-mid-autumn-traditions-mooncakes-lanterns-with-dona-manis-tickets-1999975831550",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/crafting-mid-autumn-traditions-mooncakes-lanterns-with-dona-manis-tickets-1999975831550"
+      }
+    },
+    {
+      "id": "cand-eb-1999527173602",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Coding & Robotics:  Scratch Trial; Ages 7-11 [Stars of Kovan]",
+      "description": "Embark your child's coding journey with fun, hands-on learning in The Young Maker's Scratch trial class! Perfect for ages 7-11.",
+      "when": "2026-09-16 16:00–17:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/coding-robotics-scratch-trial-ages-7-11-stars-of-kovan-tickets-1999527173602",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/coding-robotics-scratch-trial-ages-7-11-stars-of-kovan-tickets-1999527173602"
+      }
+    },
+    {
+      "id": "cand-eb-1996374305288",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Marine Intertidal Tour with Biogirl MJ (SPECIAL PRICE!)",
+      "description": "Join Biogirl MJ on an intertidal tour adventure to discover the hidden marine life right on our very own shores!",
+      "when": "2026-09-13 05:30–07:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/marine-intertidal-tour-with-biogirl-mj-special-price-tickets-1996374305288",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/marine-intertidal-tour-with-biogirl-mj-special-price-tickets-1996374305288"
+      }
+    },
+    {
+      "id": "cand-eb-1995858092281",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Bilingual Eco-Festival  2026",
+      "description": "A family festival celebrating bilingualism and sustainability through storytelling, performances, hands-on activities, and eco-learning.",
+      "when": "2026-09-12 11:00–15:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/bilingual-eco-festival-2026-tickets-1995858092281",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/bilingual-eco-festival-2026-tickets-1995858092281"
+      }
+    },
+    {
+      "id": "cand-eb-1996317503392",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Ola Beach Club - Eco Paddle",
+      "description": "Learn about Singapore’s marine biodiversity, the impact of ocean pollution, and practical ways to protect marine ecosystems.",
+      "when": "2026-09-13 10:00–12:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/ola-beach-club-eco-paddle-tickets-1996317503392",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/ola-beach-club-eco-paddle-tickets-1996317503392"
+      }
+    },
+    {
+      "id": "cand-eb-1999349902379",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Powerful 1 Day AI Bootcamp for Kids",
+      "description": "Join our fun AI Bootcamp for Kids to explore cool tech hands-on and spark creativity!",
+      "when": "2026-09-11 15:30–16:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/powerful-1-day-ai-bootcamp-for-kids-tickets-1999349902379",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/powerful-1-day-ai-bootcamp-for-kids-tickets-1999349902379"
+      }
+    },
+    {
+      "id": "cand-eb-1998939367458",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Yamaha Primary Course (Age 4 - 5.5) @ Jurong West (Frontier Community Club)",
+      "description": "Kids this age have a notable development in their sense of hearing. Join in for a session of singing and keyboard playing.",
+      "when": "2026-09-13 16:00–16:45",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/yamaha-primary-course-age-4-55-jurong-west-frontier-community-club-tickets-1998939367458",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/yamaha-primary-course-age-4-55-jurong-west-frontier-community-club-tickets-1998939367458"
+      }
+    },
+    {
+      "id": "cand-eb-1993429981737",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Yamaha Primary Course (Age 4 - 5.5) @ Hougang",
+      "description": "Kids this age have a notable development in their sense of hearing. Join in for a session of singing and keyboard playing.",
+      "when": "2026-09-17 19:15–20:15",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/yamaha-primary-course-age-4-55-hougang-tickets-1993429981737",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/yamaha-primary-course-age-4-55-hougang-tickets-1993429981737"
+      }
+    },
+    {
+      "id": "cand-eb-1993893059816",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Yamaha Primary Course (Age 4 - 5.5) @ Sembawang Shopping Centre",
+      "description": "Kids this age have a notable development in their sense of hearing. Join in for a session of singing and keyboard playing.",
+      "when": "2026-09-13 16:00–17:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/yamaha-primary-course-age-4-55-sembawang-shopping-centre-tickets-1993893059816",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/yamaha-primary-course-age-4-55-sembawang-shopping-centre-tickets-1993893059816"
+      }
+    },
+    {
+      "id": "cand-eb-1999989071150",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Yamaha Primary Course (Age 4 - 5.5) @ Westgate",
+      "description": "Kids this age have a notable development in their sense of hearing. Join in for a session of singing and keyboard playing.",
+      "when": "2026-09-17 18:00–19:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/yamaha-primary-course-age-4-55-westgate-tickets-1999989071150",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/yamaha-primary-course-age-4-55-westgate-tickets-1999989071150"
+      }
+    },
+    {
+      "id": "cand-eb-1998524455445",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Yamaha Primary Course (Age 4 - 5.5) @ Thomson Plaza",
+      "description": "Kids this age have a notable development in their sense of hearing. Join in for a session of singing and keyboard playing.",
+      "when": "2026-09-13 11:00–11:45",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/yamaha-primary-course-age-4-55-thomson-plaza-tickets-1998524455445",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/yamaha-primary-course-age-4-55-thomson-plaza-tickets-1998524455445"
+      }
+    },
+    {
+      "id": "cand-eb-1995074369144",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Yamaha Primary Course (Age 4 - 5.5) @ SAFRA Punggol",
+      "description": "Kids this age have a notable development in their sense of hearing. Join in for a session of singing and keyboard playing.",
+      "when": "2026-09-13 13:30–14:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/yamaha-primary-course-age-4-55-safra-punggol-tickets-1995074369144",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/yamaha-primary-course-age-4-55-safra-punggol-tickets-1995074369144"
+      }
+    },
+    {
+      "id": "cand-eb-1996317785235",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Ola Beach Club - Upcycled Soap Making",
+      "description": "Learn how everyday soap scraps get a second life. A hands-on class that's creative, sustainable and fun for all ages.",
+      "when": "2026-09-12 11:30–13:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/ola-beach-club-upcycled-soap-making-tickets-1996317785235",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/ola-beach-club-upcycled-soap-making-tickets-1996317785235"
+      }
+    },
+    {
+      "id": "cand-eb-1998724870893",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Mooncake Making Event",
+      "description": "Get ready to roll up your sleeves and craft some delicious mooncakes from scratch with us!",
+      "when": "2026-09-12 10:30–12:30",
+      "venue": null,
+      "url": "https://www.eventbrite.com/e/mooncake-making-event-tickets-1998724870893",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.com/e/mooncake-making-event-tickets-1998724870893"
+      }
+    },
+    {
+      "id": "cand-eb-1998702564173",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Nature walk with Singapore Democratic School",
+      "description": "Join us for a fun family-friendly nature walk with Singapore Democratic School and learn how children learn in a self-directed setting!",
+      "when": "2026-09-13 16:00–17:30",
+      "venue": null,
+      "url": "https://www.eventbrite.com/e/nature-walk-with-singapore-democratic-school-tickets-1998702564173",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.com/e/nature-walk-with-singapore-democratic-school-tickets-1998702564173"
+      }
+    },
+    {
+      "id": "cand-eb-1994530307842",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Piano Course for Children (Age 6 - 8) @ Thomson Plaza",
+      "description": "Enroll your child in Yamaha's piano classes and they'll develop music skills that will stay with them for life.",
+      "when": "2026-09-13 14:00–14:45",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/piano-course-for-children-age-6-8-thomson-plaza-tickets-1994530307842",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/piano-course-for-children-age-6-8-thomson-plaza-tickets-1994530307842"
+      }
+    },
+    {
+      "id": "cand-eb-1998939055525",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Piano Course for Children (Age 6 - 8) @ Frontier Community Club",
+      "description": "Enroll your child in Yamaha's piano classes and they'll develop music skills that will stay with them for life.",
+      "when": "2026-09-16 19:00–19:45",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/piano-course-for-children-age-6-8-frontier-community-club-tickets-1998939055525",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/piano-course-for-children-age-6-8-frontier-community-club-tickets-1998939055525"
+      }
+    },
+    {
+      "id": "cand-eb-1998169717414",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Piano Course for Children (Age 6 - 8) @ Hougang",
+      "description": "Enroll your child in Yamaha's piano classes and they'll develop music skills that will stay with them for life.",
+      "when": "2026-09-13 11:00–12:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/piano-course-for-children-age-6-8-hougang-tickets-1998169717414",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/piano-course-for-children-age-6-8-hougang-tickets-1998169717414"
+      }
+    },
+    {
+      "id": "cand-eb-1998939518911",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Yamaha Primary Course Explorer (Age 3) @ Frontier Community Club",
+      "description": "At 3 years old, children are naturally drawn to fantasy and imagination. Join us for a joyful musical experience!",
+      "when": "2026-09-15 20:00–20:45",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/yamaha-primary-course-explorer-age-3-frontier-community-club-tickets-1998939518911",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/yamaha-primary-course-explorer-age-3-frontier-community-club-tickets-1998939518911"
+      }
+    },
+    {
+      "id": "cand-eb-1993318217447",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Yamaha Primary Course Explorer (Age 3) @ Kallang Leisure Park",
+      "description": "At 3 years old, children are naturally drawn to fantasy and imagination. Join us for a joyful musical experience!",
+      "when": "2026-09-15 17:30–18:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/yamaha-primary-course-explorer-age-3-kallang-leisure-park-tickets-1993318217447",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/yamaha-primary-course-explorer-age-3-kallang-leisure-park-tickets-1993318217447"
+      }
+    },
+    {
+      "id": "cand-eb-1343870405559",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "One day Pichwai painting workshop in Singapore!",
+      "description": "Come join us for a fun Pichwai painting workshop.  In just 2.5 hours you will carry a painting done by you.",
+      "when": "2026-09-11 11:00–13:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/one-day-pichwai-painting-workshop-in-singapore-tickets-1343870405559",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/one-day-pichwai-painting-workshop-in-singapore-tickets-1343870405559"
+      }
+    },
+    {
+      "id": "cand-eb-1999845359304",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Yamaha Primary Course (Age 4 - 5.5)Trial lesson @ Plaza Singapura",
+      "description": "At 3 years old, children are naturally drawn to fantasy and imagination. Join us for a joyful musical experience!",
+      "when": "2026-09-13 15:00–16:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/yamaha-primary-course-age-4-55trial-lesson-plaza-singapura-tickets-1999845359304",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/yamaha-primary-course-age-4-55trial-lesson-plaza-singapura-tickets-1999845359304"
+      }
+    },
+    {
+      "id": "cand-eb-1987040799521",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Magical Bubble Art Workshop for Kids | Art Journey Singapore",
+      "description": "Kids create magical art using real bubbles! A fun, mess-friendly workshop for ages 4–12. All materials included. Limited seats — book now!",
+      "when": "2026-09-11 10:00–21:00",
+      "venue": null,
+      "url": "https://www.eventbrite.com/e/magical-bubble-art-workshop-for-kids-art-journey-singapore-tickets-1987040799521",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.com/e/magical-bubble-art-workshop-for-kids-art-journey-singapore-tickets-1987040799521"
+      }
+    },
+    {
+      "id": "cand-eb-1999654085198",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Guitar Courses @ SAFRA Punggol",
+      "description": "Choose your trial lessons for guitar or ukulele courses. Learn with expert teachers using Yamaha Music Foundation materials!",
+      "when": "2026-09-13 14:30–15:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/guitar-courses-safra-punggol-tickets-1999654085198",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/guitar-courses-safra-punggol-tickets-1999654085198"
+      }
+    },
+    {
+      "id": "cand-eb-1999471938392",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Guitar Courses Free Trial Lessons @ Thomson Plaza",
+      "description": "Choose your trial lessons for guitar or ukulele courses. Learn with expert teachers using Yamaha Music Foundation materials!",
+      "when": "2026-09-17 17:00–17:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/guitar-courses-free-trial-lessons-thomson-plaza-tickets-1999471938392",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/guitar-courses-free-trial-lessons-thomson-plaza-tickets-1999471938392"
+      }
+    },
+    {
+      "id": "cand-eb-1996244484992",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Public Group Workshop - Custom Postcard Record",
+      "description": "Transform your voice memo into a custom Post-a-Record—watch the live cutting process right before your eyes!",
+      "when": "2026-09-12 14:00–16:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/public-group-workshop-custom-postcard-record-tickets-1996244484992",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/public-group-workshop-custom-postcard-record-tickets-1996244484992"
+      }
+    },
+    {
+      "id": "cand-eb-1993187044104",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Shrink Art Shaker Keychain",
+      "description": "In this hands-on session, you will get to make 10 unique charms to fill your shaker keychain.",
+      "when": "2026-09-11 10:00–11:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/shrink-art-shaker-keychain-tickets-1993187044104",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/shrink-art-shaker-keychain-tickets-1993187044104"
+      }
+    },
+    {
+      "id": "cand-eb-1998661613689",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "World Cleanup Day 2026: Family & Intergenerational Cleanup",
+      "description": "Bring your family and friends for a meaningful afternoon of community cleanup at East Coast Park. All generations are welcome!",
+      "when": "2026-09-12 16:30–18:00",
+      "venue": null,
+      "url": "https://www.eventbrite.com/e/world-cleanup-day-2026-family-intergenerational-cleanup-tickets-1998661613689",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.com/e/world-cleanup-day-2026-family-intergenerational-cleanup-tickets-1998661613689"
+      }
+    },
+    {
+      "id": "cand-eb-1999967598926",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "FREE: Give Your Eyes A Break: A Digital Eye-Wellness Experience",
+      "description": "A free digital eye-wellness morning for families, young professionals, students and anyone else who lives on their screens",
+      "when": "2026-09-12 10:00–12:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/free-give-your-eyes-a-break-a-digital-eye-wellness-experience-tickets-1999967598926",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/free-give-your-eyes-a-break-a-digital-eye-wellness-experience-tickets-1999967598926"
+      }
+    },
+    {
+      "id": "cand-eb-1997965770403",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "HOMEGROWN Festival 2026",
+      "description": "HOMEGROWN Festival returns 11-13 Sept @ Paya Lebar Quarter Plaza! 3 days, free live music, headlined by brb. & Regina Song. Admission free!",
+      "when": "2026-09-11 14:00–21:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/homegrown-festival-2026-tickets-1997965770403",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/homegrown-festival-2026-tickets-1997965770403"
+      }
+    },
+    {
+      "id": "cand-eb-1993110445997",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Yoga for a Change at East Coast Park (Coastal Playgrove)",
+      "description": "Yoga for a Change is a weekly charity yoga class at East Coast Park (Coastal Playgrove), every Sunday 8-9am",
+      "when": "2026-09-13 08:00–09:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/yoga-for-a-change-at-east-coast-park-coastal-playgrove-tickets-1993110445997",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/yoga-for-a-change-at-east-coast-park-coastal-playgrove-tickets-1993110445997"
+      }
+    },
+    {
+      "id": "cand-eb-1996424694002",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Nature & Sustainability Tour: A Sensory Stroll - What's that Smell?[Sep'26]",
+      "description": "Join us for free guided walks to learn about climate change, biodiversity and sustainable features in the Gardens!",
+      "when": "2026-09-12 10:30–11:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/nature-sustainability-tour-a-sensory-stroll-whats-that-smellsep26-tickets-1996424694002",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/nature-sustainability-tour-a-sensory-stroll-whats-that-smellsep26-tickets-1996424694002"
+      }
+    },
+    {
+      "id": "cand-eb-1996424602729",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Nature and Sustainability Tour: Biodiversity & Ecosystems [Sep' 26]",
+      "description": "Join us for free guided walks to learn about climate change, biodiversity and sustainable features in the Gardens!",
+      "when": "2026-09-12 08:30–09:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/nature-and-sustainability-tour-biodiversity-ecosystems-sep-26-tickets-1996424602729",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/nature-and-sustainability-tour-biodiversity-ecosystems-sep-26-tickets-1996424602729"
+      }
+    },
+    {
+      "id": "cand-eb-1996424637834",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Nature and Sustainability Tour: Carbon and Climate [Sep '26]",
+      "description": "Join us for free guided walks to learn about climate change, biodiversity and sustainable features in the Gardens!",
+      "when": "2026-09-12 08:30–09:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/nature-and-sustainability-tour-carbon-and-climate-sep-26-tickets-1996424637834",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/nature-and-sustainability-tour-carbon-and-climate-sep-26-tickets-1996424637834"
+      }
+    },
+    {
+      "id": "cand-eb-1996424669930",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "Nature & Sustainability Tour: The Secret Life of Pollinators [Sep'26]",
+      "description": "Join us for free guided walks to learn about climate change, biodiversity and sustainable features in the Gardens!",
+      "when": "2026-09-12 10:30–11:30",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/nature-sustainability-tour-the-secret-life-of-pollinators-sep26-tickets-1996424669930",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/nature-sustainability-tour-the-secret-life-of-pollinators-sep26-tickets-1996424669930"
+      }
+    },
+    {
+      "id": "cand-eb-1989983646656",
+      "origin": "eventbrite",
+      "status": "proposed",
+      "title": "House of Tan Yeok Nee - Public Tour [English]",
+      "description": "Step inside a stunning heritage mansion and uncover stories that bring history to life on this public tour.",
+      "when": "2026-09-18 10:00–11:00",
+      "venue": null,
+      "url": "https://www.eventbrite.sg/e/house-of-tan-yeok-nee-public-tour-english-tickets-1989983646656",
+      "tabs": [
+        "events"
+      ],
+      "anchor": "Singapore (island-wide)",
+      "travel": {
+        "zone": null,
+        "region": "Singapore",
+        "lat": null,
+        "lng": null,
+        "distanceKm": null,
+        "geoSource": null
+      },
+      "source": {
+        "label": "Eventbrite",
+        "url": "https://www.eventbrite.sg/e/house-of-tan-yeok-nee-public-tour-english-tickets-1989983646656"
+      }
+    }
+  ]
 }

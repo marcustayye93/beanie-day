@@ -19,7 +19,9 @@ Run order on Fridays:  geocode -> fetch -> verify -> zones -> friday-refresh.py
 Env:
   HOME_POSTAL       Home postal for distance math. Default 730587 (Woodlands).
   EVENTBRITE_TOKEN  Private token from https://www.eventbrite.com/platform/api-keys
-                    (only needed for `fetch`; everything else works without it).
+                    (only needed for `fetch` on machines without the eventbrite
+                    skill; on this machine the stored credential is used via
+                    the skill's eb-call CLI. Everything else works without it).
 """
 
 from __future__ import annotations
@@ -440,88 +442,134 @@ def sistic_event_to_candidate(ev, ev_date):
     }
 
 
-def fetch_eventbrite(home_lat, home_lng, start, end):
-    """Eventbrite v3 events/search around each heartland anchor.
+# ---------------------------------------------------------------- Eventbrite
+#
+# The documented GET /v3/events/search/ was removed in Feb 2020 — do NOT use
+# it. This adapter uses the undocumented POST
+# https://www.eventbriteapi.com/v3/destination/search/, the same endpoint the
+# eventbrite.com discovery frontend calls (request shape verified live
+# 2026-09-10 from its JS bundles + tokened runs).
+#   {"event_search": {"places": ["85632605"], "page_size": 50,
+#                     "dates": ["future"], "q": "kids family children",
+#                     "continuation": "<token>"}}
+# `dates` takes enum strings only ("future", "today", "this_weekend") — no
+# server-side custom range — so the sweep filters client-side to [start, end].
+# Place ID 85632605 = Singapore (country), scraped from the SSR bytes of
+# https://www.eventbrite.com/d/singapore/events/ (single "placeId").
+# q="kids family children" keeps the sweep family-plausible (~176 events vs
+# thousands island-wide); the human review queue filters the rest.
+#
+# Honest limits: this endpoint publishes no venue name, no coordinates and
+# no price. Candidates carry nulls for those; the curator fills venue/geo
+# when promoting by hand. Never invent them here.
+EB_DEST_SEARCH = "https://www.eventbriteapi.com/v3/destination/search/"
+EB_SG_PLACE_ID = "85632605"  # Singapore, verified 2026-09-10
+EB_Q = "kids family children"
 
-    Returns (status, note, candidates). Distances on candidates are measured
-    from the nearest anchor (curator reference) — the app recomputes per user.
+
+def _eb_sg_post(body):
+    """POST a dict body to destination/search; return the parsed payload.
+
+    Prefers EVENTBRITE_TOKEN (env Bearer). Falls back to the eventbrite
+    skill's eb-call CLI, which authenticates via Marcus's stored credential.
     """
     token = (os.environ.get("EVENTBRITE_TOKEN") or "").strip()
-    if not token:
-        return ("missing_token", "set EVENTBRITE_TOKEN to enable", [])
-    headers = {
-        "Authorization": f"Bearer {token}",
-        "Accept": "application/json",
-    }
-    seen_ids = set()
-    out = []
+    if token:
+        req = urllib.request.Request(
+            EB_DEST_SEARCH, data=json.dumps(body).encode(), method="POST",
+            headers={"Authorization": f"Bearer {token}",
+                     "Content-Type": "application/json",
+                     "Accept": "application/json"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            raise RuntimeError(f"Eventbrite HTTP {exc.code}: "
+                               f"{exc.read()[:200]!r}")
+    import subprocess
+    cli = Path.home() / "workspace" / "skills" / "eventbrite" / "bin" / "eb-call"
+    if not cli.exists():
+        raise RuntimeError("no EVENTBRITE_TOKEN in env and no eventbrite skill CLI")
+    r = subprocess.run([str(cli), "POST", EB_DEST_SEARCH, json.dumps(body)],
+                       capture_output=True, text=True, timeout=90)
+    if r.returncode != 0:
+        raise RuntimeError(f"eb-call failed: {r.stderr.strip()[:200]}")
+    return json.loads(r.stdout)
+
+
+def fetch_eventbrite(home_lat, home_lng, start, end):
+    """Eventbrite destination/search island-wide sweep.
+
+    Returns (status, note, candidates). Distances/zones are NOT computed —
+    the endpoint gives no coordinates — so travel stays null and the
+    curator fills venue/geo on promotion.
+    """
     try:
-        for anchor_name, alat, alng in SEARCH_ANCHORS:
-            params = {
-                "location.latitude": alat,
-                "location.longitude": alng,
-                "location.within": f"{ANCHOR_RADIUS_KM}km",
-                "start_date.range_start": start.strftime("%Y-%m-%dT00:00:00"),
-                "start_date.range_end": end.strftime("%Y-%m-%dT23:59:59"),
-                "expand": "venue",
-                "sort_by": "date",
-                "page_size": 50,
-            }
-            data = http_get_json(
-                "https://www.eventbriteapi.com/v3/events/search/",
-                params,
-                headers=headers,
-            )
-            for ev in data.get("events", []) or []:
-                eid = ev.get("id")
-                if not eid or eid in seen_ids:
+        start_s, end_s = start.strftime("%Y-%m-%d"), end.strftime("%Y-%m-%d")
+        out, seen, pages = [], set(), 0
+        continuation = None
+        for _ in range(6):  # ~176 events at page_size 50
+            body = {"event_search": {"places": [EB_SG_PLACE_ID],
+                                     "page_size": 50,
+                                     "dates": ["future"],
+                                     "q": EB_Q}}
+            if continuation:
+                body["event_search"]["continuation"] = continuation
+            payload = _eb_sg_post(body)
+            pages += 1
+            evs = (payload.get("events") or {}).get("results", [])
+            for ev in evs:
+                eid = str(ev.get("eventbrite_event_id") or ev.get("id") or "")
+                if not eid or eid in seen or ev.get("is_cancelled"):
                     continue
-                seen_ids.add(eid)
-                cand = event_to_candidate(ev, anchor_name, alat, alng)
+                seen.add(eid)
+                sd = str(ev.get("start_date") or "")
+                if not (start_s <= sd <= end_s):
+                    continue
+                cand = event_to_candidate(ev, eid)
                 if cand:
                     out.append(cand)
-            time.sleep(0.5)  # be polite between anchor sweeps
-    except Exception as exc:
-        return ("error", str(exc)[:160], out)
-    return ("ok", f"{len(out)} unique events across {len(SEARCH_ANCHORS)} anchors", out)
+            continuation = ((payload.get("events") or {})
+                            .get("pagination", {}).get("continuation"))
+            if not continuation:
+                break
+            time.sleep(0.5)  # be polite between pages
+    except Exception as exc:  # noqa: BLE001 - fragile endpoint, never fatal
+        return ("error", str(exc)[:160], [])
+    return ("ok", f"{len(out)} events in window (island-wide, {pages} pages)", out)
 
 
-def event_to_candidate(ev, anchor_name, alat, alng):
-    name = ((ev.get("name") or {}).get("text") or "").strip()
+def event_to_candidate(ev, eid):
+    name = (ev.get("name") or "").strip()
     if not name:
         return None
-    venue = ev.get("venue") or {}
-    vlat = venue.get("latitude")
-    vlng = venue.get("longitude")
-    try:
-        vlat = float(vlat) if vlat is not None else None
-        vlng = float(vlng) if vlng is not None else None
-    except (TypeError, ValueError):
-        vlat, vlng = None, None
-    zone = zone_from_latlng(vlat, vlng) if vlat and vlng else None
-    dist = round(haversine_km(alat, alng, vlat, vlng), 1) if vlat and vlng else None
-    desc = ((ev.get("description") or {}).get("text") or "").strip()
-    start_local = ((ev.get("start") or {}).get("local") or "").strip()
+    sd = str(ev.get("start_date") or "")
+    st, et = ev.get("start_time"), ev.get("end_time")
+    when = f"{sd} {(st or '').strip()}–{(et or '').strip()}".strip() if (st or et) else sd
+    desc = (ev.get("summary") or "").strip()
+    if ev.get("is_online_event"):
+        desc = (desc + " [Online event]").strip()
+    url = ev.get("url") or ""
     return {
-        "id": f"cand-eb-{ev.get('id')}",
+        "id": f"cand-eb-{eid}",
         "origin": "eventbrite",
         "status": "proposed",
         "title": name,
-        "description": desc[:280],
-        "when": start_local,
-        "venue": (venue.get("name") or "").strip(),
-        "url": ev.get("url") or "",
+        "description": desc[:280] or None,
+        "when": when or None,
+        "venue": None,  # not published by destination/search — curator fills in
+        "url": url,
         "tabs": ["events"],
-        "anchor": anchor_name,
+        "anchor": "Singapore (island-wide)",
         "travel": {
-            "zone": zone,
-            "region": zone or "",
-            "lat": vlat,
-            "lng": vlng,
-            "distanceKm": dist,
-            "geoSource": "eventbrite",
+            "zone": None,
+            "region": "Singapore",
+            "lat": None,
+            "lng": None,
+            "distanceKm": None,
+            "geoSource": None,
         },
-        "source": {"label": "Eventbrite", "url": ev.get("url") or ""},
+        "source": {"label": "Eventbrite", "url": url},
     }
 
 
