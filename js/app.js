@@ -597,6 +597,13 @@
 
     els.panelTitle.textContent = tab.label;
     els.panelBlurb.textContent = tab.blurb;
+    // Cheapest Pints is location-aware: with a pinned postal the list runs
+    // nearest-first, so say so — the #N badges still show the island-wide
+    // cheap rank.
+    if (state.activeTab === "hh-prices" && hasPinnedGeo()) {
+      els.panelBlurb.textContent =
+        "The cheapest verified draught pours, nearest first for you — the #N badges show each bar's island-wide cheap rank.";
+    }
     els.sectionIcon.textContent = theme.emoji;
     if (els.hhBanner) els.hhBanner.hidden = state.activeTab !== "happy-hour";
 
@@ -841,7 +848,11 @@
       };
       return [...list].sort((a, b) => distOf(a) - distOf(b));
     }
-    // Cheapest-pints tab: ranked cheapest-first by scripts/build-hh.py.
+    // Cheapest-pints tab: ranked cheapest-first by scripts/build-hh.py —
+    // but location-aware like the Happy Hour tab. With a pinned postal the
+    // list leads with the cheapest pours NEAR THE VISITOR (nearest-first);
+    // the #N badges keep the island-wide cheap rank so the price context
+    // survives. Without a postal it stays the plain cheapest-first ranking.
     if (state.activeTab === "hh-prices") {
       const q = state.query.trim().toLowerCase();
       let list = (state.hhPrices || []).map((b, i) => hhPriceToCard(b, i, true));
@@ -862,6 +873,9 @@
             .toLowerCase()
             .includes(q)
         );
+      }
+      if (hasPinnedGeo()) {
+        list = [...list].sort((a, b) => liveDistanceKm(a) - liveDistanceKm(b));
       }
       return list;
     }
