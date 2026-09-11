@@ -3,14 +3,14 @@
     "weekLabel": "11 Sep – 17 Sep 2026",
     "weekStart": "2026-09-11",
     "weekEnd": "2026-09-17",
-    "refreshedOn": "2026-09-09",
+    "refreshedOn": "2026-09-11",
     "nextRefresh": "2026-09-18",
     "note": "Only fresh finds this week — new openings, pop-ups, limited-run events, and menus you wouldn’t already have bookmarked. Familiar favourites are intentionally left out.",
     "sourcesNote": "Scouted from City Nomads Just Opened, Eatbook, HungryGoWhere, Honeycombers, Time Out SG, Seth Lui / TheSmartLocal, Singapore Expo events, HappyHourLah, venue pages, and ParkingGoWhere / LTA rates. Always re-check hours before you go — new places change fast.",
-    "autoRefreshNote": "Auto-stamped 2026-09-09 06:22 UTC. Curate openings from City Nomads Just Opened, Eatbook, Expo events, HappyHourLah before relying on cards — auto-roll updates dates; humans keep quality high.",
+    "autoRefreshNote": "Auto-stamped 2026-09-11 02:26 UTC. Curate openings from City Nomads Just Opened, Eatbook, Expo events, HappyHourLah before relying on cards — auto-roll updates dates; humans keep quality high.",
     "zonePass": {
       "version": 1,
-      "refreshedOn": "2026-09-09",
+      "refreshedOn": "2026-09-11",
       "quotas": {
         "Central": 4,
         "East": 2,
@@ -23,45 +23,45 @@
       },
       "zones": {
         "Central": {
-          "status": "empty",
-          "count": 0,
-          "rawCount": 18,
+          "status": "filled",
+          "count": 13,
+          "rawCount": 13,
           "overCap": true,
-          "note": "OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 18 items vs cap 10 — trim before cards go out."
+          "note": "OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 13 items vs cap 10 — trim before cards go out."
         },
         "East": {
-          "status": "empty",
-          "count": 0,
-          "rawCount": 6,
+          "status": "filled",
+          "count": 13,
+          "rawCount": 13,
           "overCap": false,
           "note": ""
         },
         "West": {
-          "status": "empty",
-          "count": 0,
+          "status": "filled",
+          "count": 2,
           "rawCount": 2,
           "overCap": false,
           "note": ""
         },
         "North": {
-          "status": "empty",
-          "count": 0,
-          "rawCount": 5,
+          "status": "filled",
+          "count": 9,
+          "rawCount": 9,
           "overCap": false,
           "note": ""
         },
         "South": {
-          "status": "empty",
-          "count": 0,
-          "rawCount": 1,
+          "status": "filled",
+          "count": 2,
+          "rawCount": 2,
           "overCap": false,
           "note": ""
         }
       },
-      "summary": "Central 18/4 (cap 10!) · East 6/2 · West 2/2 · North 5/2 · South 1/1"
+      "summary": "Central 13/4 (cap 10!) · East 13/2 · West 2/2 · North 9/2 · South 2/1"
     },
     "curatorWarnings": [
-      "Central: 18 items vs cap 10 — trim or move items out of Central"
+      "Central: 13 items vs cap 10 — trim or move items out of Central"
     ]
   },
   "tabs": [
