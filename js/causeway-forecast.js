@@ -1,14 +1,18 @@
 /* Causeway jam forecast — reads data/causeway-history.json produced by
  * scripts/causeway-collect.py (camera-derived jam index, 15-min samples) and
  * renders: live jam index per crossing, a usual-jam heatmap (day x hour),
- * and a leave-later optimizer with rough crossing-time estimates. */
+ * and a leave-later optimizer with rough crossing-time estimates.
+ * v2: samples also carry approach_min (LTA EstTravelTimes minutes on the
+ * BKE/AYE approach to each checkpoint), shown per crossing card. */
 (function () {
   "use strict";
 
   var HIST_URL = "data/causeway-history.json";
   var CROSSINGS = {
-    woodlands: { name: "Woodlands Causeway", cams: ["2701", "2702", "2704"] },
-    tuas: { name: "Tuas Second Link", cams: ["4703", "4712", "4713"] },
+    woodlands: { name: "Woodlands Causeway", cams: ["2701", "2702", "2704"],
+                 approachLabel: "BKE to Woodlands Centre" },
+    tuas: { name: "Tuas Second Link", cams: ["4703", "4712", "4713"],
+            approachLabel: "AYE to Tuas Checkpoint" },
   };
   var DOW = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   var active = "woodlands";
@@ -93,6 +97,12 @@
         cmp = " · usual " + DOW[latest.dow] + " " + latest.hour + ":00 is " +
               Math.round(usual.avg) + " — " + cmp;
       }
+      // v2: live expressway approach time from LTA EstTravelTimes.
+      var appr = latest.approach_min && latest.approach_min[key];
+      var apprLine = (typeof appr === "number")
+        ? '<div class="fc-approach">🛣️ Expressway approach: ~' + appr +
+          " min (" + esc(CROSSINGS[key].approachLabel) + ")</div>"
+        : "";
       return (
         '<article class="fc-card">' +
           '<div class="fc-name">' + esc(CROSSINGS[key].name) + "</div>" +
@@ -101,6 +111,7 @@
             '<span class="fc-chip ' + st.cls + '">' + esc(st.word) + "</span>" +
           "</div>" +
           '<div class="fc-sub">jam index · updated ' + esc(agoText(latest.t)) + esc(cmp) + "</div>" +
+          apprLine +
         "</article>"
       );
     }).join("");

@@ -198,6 +198,7 @@
 .fc-chip.fc-3 { background: rgba(244, 63, 94, 0.16); color: #be123c; }
 .fc-chip.fc-na { background: var(--ink-3); color: var(--ink-2); }
 .fc-sub { font-size: 11.5px; color: var(--ink-3); margin-top: 6px; line-height: 1.5; }
+.fc-approach { font-size: 12px; font-weight: 600; color: var(--ink-2); margin-top: 6px; line-height: 1.5; }
 .cw-fc-best {
   font-size: 13.5px;
   background: var(--surface);

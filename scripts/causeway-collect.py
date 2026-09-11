@@ -18,8 +18,11 @@ Method notes:
   - PIL + numpy only (no cv2 dependency).
   - ROI fractions were picked from night snapshots on 2026-09-12; the
     percentile self-calibration absorbs ROI imprecision over a few days.
-  - v2 ideas: LTA DataMall Traffic Speed Bands on the BKE/AYE approaches
-    (needs a free API key), NEA rainfall correlation.
+  - v2 (2026-09-12): LTA DataMall EstTravelTimes (needs the free API key,
+    stored as custom.lta-datamall) adds real expressway approach times:
+    BKE dir=1 segments to Woodlands Centre, AYE dir=1 segments to Tuas
+    Checkpoint. TrafficSpeedBands v4 was evaluated but rejected: ~40k
+    segments with no working $filter/$top, too heavy for a 15-min cron.
 
 Usage:
   python3 scripts/causeway-collect.py        # collect + append only
@@ -61,6 +64,61 @@ CAMERAS = {
     "4713": ((0.52, 0.12, 1.00, 0.78), 0.021, 0.10, "tuas"),
 }
 EDGE_THRESHOLD = 28.0  # gradient magnitude on 0-255 grayscale
+
+# ---- v2: LTA DataMall EstTravelTimes approach times ----
+LTA_API = "https://datamall2.mytransport.sg/ltaodataservice/"
+LTA_HOSTS = ("datamall2.mytransport.sg",)
+
+# (Name, StartPoint, EndPoint, Direction) of the final expressway approach to
+# each checkpoint. Direction "1" = toward the checkpoint on both:
+#   AYE dir=1 runs ... -> TUAS WEST DRIVE -> TUAS CHECKPOINT (westbound)
+#   BKE dir=1 runs ... -> WOODLANDS AVE 3 -> WOODLANDS CENTRE (northbound)
+# EstTime is in minutes. Free-flow baselines measured 2026-09-12 ~02:45 SGT:
+# woodlands = 2 min, tuas = 5 min.
+APPROACH_SEGS = {
+    "woodlands": [
+        ("BKE", "BKE/SLE INTERCHANGE", "WOODLANDS AVE 3", "1"),
+        ("BKE", "WOODLANDS AVE 3", "WOODLANDS CENTRE", "1"),
+    ],
+    "tuas": [
+        ("AYE", "AYE/PIE INTERCHANGE", "TUAS WEST RD", "1"),
+        ("AYE", "TUAS WEST RD", "TUAS WEST DRIVE", "1"),
+        ("AYE", "TUAS WEST DRIVE", "TUAS CHECKPOINT", "1"),
+    ],
+}
+APPROACH_LABEL = {
+    "woodlands": "BKE to Woodlands Centre",
+    "tuas": "AYE to Tuas Checkpoint",
+}
+
+
+def fetch_approach():
+    """Sum EstTravelTimes minutes over each crossing's approach segments.
+
+    Returns {"woodlands": mins|None, "tuas": mins|None}. Never raises: a
+    failed fetch yields None values so camera collection still proceeds.
+    """
+    try:
+        req = urllib.request.Request(
+            LTA_API + "EstTravelTimes", headers={"Accept": "application/json"})
+        add_surrogate_to_request(req, "custom.lta-datamall", allowed_hosts=LTA_HOSTS)
+        data = read_json_response(urllib.request.urlopen(req, timeout=30))
+    except Exception as e:  # noqa: BLE001 - approach feed is best-effort
+        print(f"EstTravelTimes failed: {e}", file=sys.stderr)
+        return {"woodlands": None, "tuas": None}
+    recs = {(r["Name"], r["StartPoint"], r["EndPoint"], str(r["Direction"])): r["EstTime"]
+            for r in data.get("value", [])}
+    out = {}
+    for xing, segs in APPROACH_SEGS.items():
+        total, ok = 0, True
+        for key in segs:
+            if key in recs:
+                total += recs[key]
+            else:
+                ok = False
+                print(f"approach segment missing for {xing}: {key}", file=sys.stderr)
+        out[xing] = total if ok else None
+    return out
 
 
 def fetch(url, binary=False):
@@ -157,6 +215,7 @@ def collect():
         "dow": ts.weekday(),  # Monday=0
         "hour": ts.hour,
         "cams": cams_out,
+        "approach_min": fetch_approach(),  # v2: LTA EstTravelTimes, best-effort
     }
     samples.append(sample)
 
