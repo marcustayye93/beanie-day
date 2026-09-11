@@ -153,3 +153,125 @@
   line-height: 1.6;
   margin: 4px 2px 0;
 }
+
+/* ---- Jam forecast ---- */
+.cw-fc-status {
+  font-size: 13px;
+  color: var(--ink-2);
+  margin: 0 0 12px;
+}
+.fc-cal {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(245, 158, 11, 0.16);
+  color: var(--amber, #b45309);
+}
+.cw-fc-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.fc-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  padding: 12px;
+}
+.fc-name { font-size: 12.5px; font-weight: 700; color: var(--ink-2); margin-bottom: 6px; }
+.fc-row { display: flex; align-items: baseline; gap: 8px; }
+.fc-num { font-size: 34px; font-weight: 800; letter-spacing: -0.02em; line-height: 1; }
+.fc-chip {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.fc-chip.fc-0 { background: rgba(34, 197, 94, 0.16); color: #16a34a; }
+.fc-chip.fc-1 { background: rgba(245, 158, 11, 0.16); color: #b45309; }
+.fc-chip.fc-2 { background: rgba(249, 115, 22, 0.16); color: #c2410c; }
+.fc-chip.fc-3 { background: rgba(244, 63, 94, 0.16); color: #be123c; }
+.fc-chip.fc-na { background: var(--ink-3); color: var(--ink-2); }
+.fc-sub { font-size: 11.5px; color: var(--ink-3); margin-top: 6px; line-height: 1.5; }
+.cw-fc-best {
+  font-size: 13.5px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+.cw-fc-h {
+  font-size: 14px;
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.cw-fc-tabs { display: inline-flex; gap: 6px; }
+.cw-fc-tabs button {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-2);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.cw-fc-tabs button.is-on { background: var(--teal); border-color: var(--teal); color: #fff; }
+
+/* heatmap */
+.hm-scroll { overflow-x: auto; margin: 0 -4px 16px; padding: 0 4px; }
+.hm-grid {
+  display: grid;
+  grid-template-columns: 32px repeat(24, minmax(14px, 1fr));
+  gap: 2px;
+  min-width: 560px;
+  align-items: center;
+}
+.hm-corner { height: 14px; }
+.hm-h { font-size: 9px; color: var(--ink-3); text-align: center; height: 14px; }
+.hm-d { font-size: 10px; font-weight: 700; color: var(--ink-2); padding-right: 4px; }
+.hm-cell { aspect-ratio: 1; border-radius: 3px; min-height: 14px; }
+.hm-cell.hm-0 { background: color-mix(in srgb, #22c55e 30%, var(--surface)); }
+.hm-cell.hm-1 { background: color-mix(in srgb, #a3e635 45%, var(--surface)); }
+.hm-cell.hm-2 { background: color-mix(in srgb, #f59e0b 55%, var(--surface)); }
+.hm-cell.hm-3 { background: color-mix(in srgb, #f97316 70%, var(--surface)); }
+.hm-cell.hm-4 { background: color-mix(in srgb, #ef4444 80%, var(--surface)); }
+.hm-cell.hm-na { background: transparent; border: 1px dashed var(--line); }
+.hm-legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--ink-3);
+  margin-top: 8px;
+  min-width: 560px;
+}
+.hm-legend .hm-cell { width: 14px; flex: 0 0 auto; }
+
+/* leave-later */
+.lv-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.lv-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 10px 8px;
+  text-align: center;
+}
+.lv-card.is-now { border-color: var(--teal); box-shadow: var(--shadow-sm); }
+.lv-when { font-size: 11px; font-weight: 700; color: var(--ink-2); }
+.lv-mins { font-size: 19px; font-weight: 800; margin: 4px 0 2px; }
+.lv-mins small { font-size: 11px; font-weight: 600; color: var(--ink-3); }
+.lv-sub { font-size: 10px; color: var(--ink-3); margin-bottom: 6px; }
+.lv-bar { height: 5px; border-radius: 999px; background: var(--ink-3); opacity: 0.35; overflow: hidden; }
+.lv-bar i { display: block; height: 100%; background: var(--teal); border-radius: 999px; }

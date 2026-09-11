@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#0f766e" />
   <title>Causeway Traffic · Bean There</title>
   <link rel="stylesheet" href="css/app.css?v=3" />
-  <link rel="stylesheet" href="css/causeway.css?v=1" />
+  <link rel="stylesheet" href="css/causeway.css?v=2" />
 </head>
 <body>
   <div class="cw-shell">
@@ -21,6 +21,16 @@
     </header>
 
     <main id="cw-main">
+      <section class="cw-section" id="cw-fc" aria-label="Jam forecast">
+        <h2><span aria-hidden="true">🔮</span> Jam forecast</h2>
+        <p class="cw-fc-status" id="cw-fc-status">Loading jam index…</p>
+        <div class="cw-fc-cards" id="cw-fc-cards"></div>
+        <p class="cw-fc-best" id="cw-fc-best"></p>
+        <h3 class="cw-fc-h">Usual jam by day &amp; hour <span class="cw-fc-tabs" id="cw-fc-tabs"></span></h3>
+        <div class="hm-scroll"><div id="cw-heatmap"></div></div>
+        <h3 class="cw-fc-h">Leave now or later?</h3>
+        <div id="cw-leave"></div>
+      </section>
       <section class="cw-section" aria-label="Woodlands Causeway">
         <h2><span aria-hidden="true">🌉</span> Woodlands Causeway</h2>
         <div class="cw-grid" id="cw-woodlands"></div>
@@ -36,5 +46,6 @@
     </main>
   </div>
   <script src="js/causeway.js?v=1" defer></script>
+  <script src="js/causeway-forecast.js?v=1" defer></script>
 </body>
 </html>
