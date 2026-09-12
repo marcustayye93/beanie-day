@@ -164,7 +164,10 @@ def percentile(sorted_vals, pct):
 def collect():
     feed = fetch(API)
     cams = {c["camera_id"]: c for c in feed["items"][0]["cameras"]}
-    ts = dt.datetime.fromisoformat(cams["2701"]["timestamp"])
+    # 2701 may drop out of the feed (maintenance); use any available camera's
+    # timestamp for the sample rather than failing the whole run.
+    ref = cams.get("2701") or next(iter(cams.values()))
+    ts = dt.datetime.fromisoformat(ref["timestamp"])
 
     results = {}
     for cid, (roi, _empty, _span, _xing) in CAMERAS.items():

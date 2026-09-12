@@ -3,7 +3,10 @@
  * renders: live jam index per crossing, a usual-jam heatmap (day x hour),
  * and a leave-later optimizer with rough crossing-time estimates.
  * v2: samples also carry approach_min (LTA EstTravelTimes minutes on the
- * BKE/AYE approach to each checkpoint), shown per crossing card. */
+ * BKE/AYE approach to each checkpoint), shown per crossing card.
+ * v3: forecast auto-refreshes (5 min + manual refresh button); approach
+ * cards compare against the usual for that day/hour; the best-crossing
+ * callout compares all-in time (expressway approach + checkpoint queue). */
 (function () {
   "use strict";
 
@@ -64,6 +67,25 @@
     return n >= (minN || 1) ? { avg: sum / n, n: n } : null;
   }
 
+  // v2/v3: live expressway approach minutes for a crossing in one sample.
+  // Samples predating v2 have no approach_min — they are skipped, not zeroed.
+  function approachOf(sample, xing) {
+    var a = sample && sample.approach_min;
+    var v = a ? a[xing] : null;
+    return typeof v === "number" ? v : null;
+  }
+
+  function avgApproach(samples, xing, dow, hour, minN) {
+    var sum = 0, n = 0;
+    samples.forEach(function (s) {
+      if ((dow === null || s.dow === dow) && (hour === null || s.hour === hour)) {
+        var v = approachOf(s, xing);
+        if (v !== null) { sum += v; n++; }
+      }
+    });
+    return n >= (minN || 1) ? { avg: sum / n, n: n } : null;
+  }
+
   function agoText(iso) {
     if (!iso) return "";
     var mins = Math.max(0, Math.round((Date.now() - new Date(iso).getTime()) / 60000));
@@ -98,11 +120,23 @@
               Math.round(usual.avg) + " — " + cmp;
       }
       // v2: live expressway approach time from LTA EstTravelTimes.
-      var appr = latest.approach_min && latest.approach_min[key];
-      var apprLine = (typeof appr === "number")
-        ? '<div class="fc-approach">🛣️ Expressway approach: ~' + appr +
-          " min (" + esc(CROSSINGS[key].approachLabel) + ")</div>"
-        : "";
+      // v3: compared against the usual for this day/hour, like the jam index.
+      var appr = approachOf(latest, key);
+      var apprLine = "";
+      if (appr !== null) {
+        apprLine = '<div class="fc-approach">🛣️ Expressway approach: ~' + appr +
+          " min (" + esc(CROSSINGS[key].approachLabel) + ")";
+        var usualA = avgApproach(samples, key, latest.dow, latest.hour, 3);
+        if (usualA) {
+          var ad = Math.round(appr - usualA.avg);
+          var aword = ad >= 3 ? "heavier than usual"
+            : ad <= -3 ? "lighter than usual"
+            : "about usual";
+          apprLine += " · usually ~" + Math.round(usualA.avg) + " min " +
+            DOW[latest.dow] + " " + latest.hour + ":00 — " + aword;
+        }
+        apprLine += "</div>";
+      }
       return (
         '<article class="fc-card">' +
           '<div class="fc-name">' + esc(CROSSINGS[key].name) + "</div>" +
@@ -117,18 +151,26 @@
     }).join("");
     host.innerHTML = html;
 
-    // Best-crossing callout.
+    // Best-crossing callout. v3: compares all-in time (expressway approach +
+    // checkpoint queue estimate) when the approach feed is present; falls
+    // back to the jam-index comparison otherwise.
     var w = crossingIndex(latest, "woodlands");
     var t = crossingIndex(latest, "tuas");
     var best = $("cw-fc-best");
     if (w === null || t === null) { best.innerHTML = ""; return; }
-    var diff = w - t;
+    var wA = approachOf(latest, "woodlands");
+    var tA = approachOf(latest, "tuas");
+    var useAllIn = wA !== null && tA !== null;
+    var diff = useAllIn ? (wA + estMin(w)) - (tA + estMin(t)) : w - t;
+    var gapMin = useAllIn ? Math.abs((wA + estMin(w)) - (tA + estMin(t)))
+                          : Math.abs(estMin(w) - estMin(t));
+    var allInNote = useAllIn ? " all-in (expressway + checkpoint)" : "";
     if (diff >= 8) {
       best.innerHTML = "🟢 <strong>Tuas Second Link</strong> is clearer right now — " +
-        "rough est. <strong>" + (estMin(w) - estMin(t)) + " min</strong> quicker.";
+        "roughly <strong>" + gapMin + " min</strong> quicker" + allInNote + ".";
     } else if (diff <= -8) {
       best.innerHTML = "🟢 <strong>Woodlands Causeway</strong> is clearer right now — " +
-        "rough est. <strong>" + (estMin(t) - estMin(w)) + " min</strong> quicker.";
+        "roughly <strong>" + gapMin + " min</strong> quicker" + allInNote + ".";
     } else {
       best.innerHTML = "Both crossings look similar right now.";
     }
@@ -223,8 +265,10 @@
     renderLeave(samples, latest);
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    if (!$("cw-fc")) return; // forecast section not on this page
+  // v3: the forecast re-fetches on the same rhythm as the cameras so the
+  // jam index and approach times never sit stale. A failed refresh keeps
+  // the existing content; the empty state only shows before first render.
+  function loadForecast() {
     fetch(HIST_URL, { cache: "no-store" })
       .then(function (res) {
         if (!res.ok) throw new Error("HTTP " + res.status);
@@ -232,8 +276,20 @@
       })
       .then(renderAll)
       .catch(function () {
-        $("cw-fc-status").textContent =
-          "Jam index unavailable right now — observations are still being collected.";
+        if (!window.__fcSamples) {
+          $("cw-fc-status").textContent =
+            "Jam index unavailable right now — observations are still being collected.";
+        }
       });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    if (!$("cw-fc")) return; // forecast section not on this page
+    loadForecast();
+    setInterval(function () {
+      if (!document.hidden) loadForecast();
+    }, 5 * 60 * 1000);
+    var btn = $("cw-refresh");
+    if (btn) btn.addEventListener("click", loadForecast);
   });
 })();
