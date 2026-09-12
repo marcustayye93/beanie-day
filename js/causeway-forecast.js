@@ -202,6 +202,8 @@
 
   function renderLeave(samples, latest) {
     var host = $("cw-leave");
+    var xing = $("cw-leave-xing");
+    if (xing) xing.textContent = "— " + CROSSINGS[active].name.split(" ")[0];
     var html = "";
     [0, 1, 2, 3].forEach(function (plus) {
       var hour = (latest.hour + plus) % 24;
