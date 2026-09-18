@@ -1,16 +1,16 @@
 {
   "meta": {
-    "weekLabel": "11 Sep – 17 Sep 2026",
-    "weekStart": "2026-09-11",
-    "weekEnd": "2026-09-17",
-    "refreshedOn": "2026-09-11",
-    "nextRefresh": "2026-09-18",
+    "weekLabel": "18 Sep – 24 Sep 2026",
+    "weekStart": "2026-09-18",
+    "weekEnd": "2026-09-24",
+    "refreshedOn": "2026-09-18",
+    "nextRefresh": "2026-09-25",
     "note": "Only fresh finds this week — new openings, pop-ups, limited-run events, and menus you wouldn’t already have bookmarked. Familiar favourites are intentionally left out.",
     "sourcesNote": "Scouted from City Nomads Just Opened, Eatbook, HungryGoWhere, Honeycombers, Time Out SG, Seth Lui / TheSmartLocal, Singapore Expo events, HappyHourLah, venue pages, and ParkingGoWhere / LTA rates. Always re-check hours before you go — new places change fast.",
-    "autoRefreshNote": "Auto-stamped 2026-09-11 02:26 UTC. Curate openings from City Nomads Just Opened, Eatbook, Expo events, HappyHourLah before relying on cards — auto-roll updates dates; humans keep quality high.",
+    "autoRefreshNote": "Auto-stamped 2026-09-18 02:38 UTC. Curate openings from City Nomads Just Opened, Eatbook, Expo events, HappyHourLah before relying on cards — auto-roll updates dates; humans keep quality high.",
     "zonePass": {
       "version": 1,
-      "refreshedOn": "2026-09-11",
+      "refreshedOn": "2026-09-18",
       "quotas": {
         "Central": 4,
         "East": 2,
@@ -27,7 +27,7 @@
           "count": 13,
           "rawCount": 13,
           "overCap": true,
-          "note": "OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 13 items vs cap 10 — trim before cards go out."
+          "note": "OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 13 items vs cap 10 — trim before cards go out. OVER CAP: 13 items vs cap 10 — trim before cards go out."
         },
         "East": {
           "status": "filled",
