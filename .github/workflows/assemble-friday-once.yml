@@ -1,0 +1,27 @@
+name: assemble-friday-once
+on:
+  workflow_dispatch:
+  push:
+    branches: [chore/friday-zone-pass-2026-09-18]
+    paths:
+      - 'data/research/friday-2026-09-18/**'
+      - 'scripts/assemble-friday-2026-09-18.py'
+permissions:
+  contents: write
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: chore/friday-zone-pass-2026-09-18
+      - name: Assemble week.json
+        run: python3 scripts/assemble-friday-2026-09-18.py
+      - name: Commit week.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/week.json
+          git diff --cached --quiet && echo "no change" && exit 0
+          git commit -m "chore(week): assemble Friday zone-pass 18–24 Sep 2026"
+          git push
