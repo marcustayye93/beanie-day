@@ -1,16 +1,16 @@
 {
   "meta": {
-    "weekLabel": "18 Sep – 24 Sep 2026",
-    "weekStart": "2026-09-18",
-    "weekEnd": "2026-09-24",
-    "refreshedOn": "2026-09-18",
-    "nextRefresh": "2026-09-25",
+    "weekLabel": "25 Sep – 1 Oct 2026",
+    "weekStart": "2026-09-25",
+    "weekEnd": "2026-10-01",
+    "refreshedOn": "2026-09-25",
+    "nextRefresh": "2026-10-02",
     "note": "Only fresh finds this week — new openings, pop-ups, limited-run events, and menus you wouldn’t already have bookmarked. Familiar favourites are intentionally left out.",
-    "sourcesNote": "Scouted from City Nomads Just Opened, Eatbook, HungryGoWhere, Honeycombers, Time Out SG, Seth Lui / TheSmartLocal, Singapore Expo events, HappyHourLah, venue pages, and ParkingGoWhere / LTA rates. Always re-check hours before you go — new places change fast.",
-    "autoRefreshNote": "Auto-stamped 2026-09-18 02:38 UTC. Curate openings from City Nomads Just Opened, Eatbook, Expo events, HappyHourLah before relying on cards — auto-roll updates dates; humans keep quality high.",
+    "sourcesNote": "Scouted from CNA Lifestyle, Little Big Red Dot, HungryGoWhere, Lobang Guru, Eatbook, Singapore EXPO / ST, EverydayOnSales, Mandai, Luma, Time Out SG, and prior-week carry-overs still running. Always re-check hours before you go — new places change fast.",
+    "autoRefreshNote": "Auto-stamped 2026-09-25 SGT. Friday zone-pass 25 Sep 2026: rolled week, stripped expired one-offs (Home Inspirations, SRF, Fore Sip & Win), added verified openings, recomputed zonePass.",
     "zonePass": {
       "version": 1,
-      "refreshedOn": "2026-09-18",
+      "refreshedOn": "2026-09-25",
       "quotas": {
         "Central": 4,
         "East": 2,
@@ -24,29 +24,29 @@
       "zones": {
         "Central": {
           "status": "filled",
-          "count": 13,
-          "rawCount": 13,
-          "overCap": true,
-          "note": "OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 18 items vs cap 10 — trim before cards go out. OVER CAP: 13 items vs cap 10 — trim before cards go out. OVER CAP: 13 items vs cap 10 — trim before cards go out."
+          "count": 10,
+          "rawCount": 10,
+          "overCap": false,
+          "note": ""
         },
         "East": {
           "status": "filled",
-          "count": 13,
-          "rawCount": 13,
+          "count": 10,
+          "rawCount": 10,
           "overCap": false,
           "note": ""
         },
         "West": {
           "status": "filled",
-          "count": 2,
-          "rawCount": 2,
+          "count": 5,
+          "rawCount": 5,
           "overCap": false,
           "note": ""
         },
         "North": {
           "status": "filled",
-          "count": 9,
-          "rawCount": 9,
+          "count": 10,
+          "rawCount": 10,
           "overCap": false,
           "note": ""
         },
@@ -58,11 +58,8 @@
           "note": ""
         }
       },
-      "summary": "Central 13/4 (cap 10!) · East 13/2 · West 2/2 · North 9/2 · South 2/1"
-    },
-    "curatorWarnings": [
-      "Central: 13 items vs cap 10 — trim or move items out of Central"
-    ]
+      "summary": "Central 10/4 · East 10/2 · West 5/2 · North 10/2 · South 2/1"
+    }
   },
   "tabs": [
     {
@@ -389,210 +386,10 @@
       }
     },
     {
-      "id": "fl-moms-touch",
-      "title": "Mom's Touch — Korea's fried-chicken giant returns",
-      "venue": "Chinatown / CBD",
-      "description": "South Korea's largest fried chicken chain (1,400+ outlets) is back in Singapore after shutting all local stores in 2022, now at 18 Cross in the CBD. The headline order is the SuperThigh Chicken Burger (S$9.95) built on a boneless fried thigh, plus Boneless Fried Chicken Thigh (from S$9.95) in four flavours including soy garlic and cheesy Sichuan. Open daily 7am-10pm, so it doubles as a breakfast-to-supper option.",
-      "why": "The comeback story of the month — Korea's biggest chicken chain returns to Singapore after four years away.",
-      "when": "Daily 7am-10pm",
-      "deal": "~$10-20/pax",
-      "parking": "Limited parking around 18 Cross; Tanjong Pagar or Telok Ayer MRT are minutes away.",
-      "heatNote": "",
-      "days": [
-        "Fri",
-        "Sat",
-        "Sun",
-        "Mon",
-        "Tue",
-        "Wed",
-        "Thu"
-      ],
-      "tags": [
-        "Indoor",
-        "AC",
-        "Budget"
-      ],
-      "tabs": [
-        "flavours",
-        "this-week"
-      ],
-      "highlight": false,
-      "nearHomeBonus": false,
-      "top3Tabs": [],
-      "travel": {
-        "zone": "Central",
-        "fromWoodlands": "25–40 min",
-        "region": "Chinatown / CBD",
-        "lat": 1.28401,
-        "lng": 103.84706,
-        "geoSource": "onemap",
-        "geoQuery": "181 South Bridge Road, Singapore 058743",
-        "distanceKm": 17.1,
-        "nearestMrt": "Telok Ayer"
-      },
-      "google": {
-        "rating": 4.4,
-        "reviews": 208
-      },
-      "source": {
-        "label": "Eatbook",
-        "url": "https://eatbook.sg/new-restaurants-september-2026/"
-      }
-    },
-    {
-      "id": "fl-katsu-by-kyu",
-      "title": "Katsu by Kyu — SG's first Jeju pork tonkatsu",
-      "venue": "Shenton Way / CBD",
-      "description": "At OUE Downtown 2, Katsu by Kyu is Singapore's first restaurant dedicated entirely to Jeju pork tonkatsu. Cutlets go through a 10-day dry-age, are finished over rice-straw charcoal for a smoky aroma, and fried to order in crisp panko. Pick from Central Cut Premium Loin (S$42++), Loin (S$32++) or Tenderloin (S$30++), each with rice milled from Incheon, Korea — or the Tenderloin and Kadaif Prawn combo (S$32++).",
-      "why": "A genuine first for Singapore — Jeju pork tonkatsu with 10-day dry-ageing, new in August 2026.",
-      "when": "Mon-Sat 11am-3pm, 5-10pm (closed Sun)",
-      "deal": "~$35-50/pax",
-      "parking": "OUE Downtown basement parking; Tanjong Pagar MRT is the closest.",
-      "heatNote": "",
-      "days": [
-        "Mon",
-        "Tue",
-        "Wed",
-        "Thu",
-        "Fri",
-        "Sat"
-      ],
-      "tags": [
-        "Indoor",
-        "AC"
-      ],
-      "tabs": [
-        "flavours",
-        "this-week"
-      ],
-      "highlight": false,
-      "nearHomeBonus": false,
-      "top3Tabs": [],
-      "travel": {
-        "zone": "Central",
-        "fromWoodlands": "25–40 min",
-        "region": "Shenton Way / CBD",
-        "lat": 1.27797,
-        "lng": 103.84901,
-        "geoSource": "onemap",
-        "geoQuery": "6A Shenton Way, OUE Downtown 2, Singapore 068815",
-        "distanceKm": 17.8,
-        "nearestMrt": "Shenton Way"
-      },
-      "google": {
-        "rating": 4.3,
-        "reviews": 110
-      },
-      "source": {
-        "label": "Eatbook",
-        "url": "https://eatbook.sg/new-restaurants-august-2026/"
-      }
-    },
-    {
-      "id": "fl-unagi-kikukawa",
-      "title": "Unagi Yondaime Kikukawa — 90-year-old unagi masters at Raffles City",
-      "venue": "City Hall",
-      "description": "The Michelin-approved unagi chain with 90 years of history has opened its second Singapore outlet at Raffles City, helmed by fourth-generation master Kikukawa Yuhei. Whole eels are filleted and grilled over binchotan for crisp skin and tender flesh. The classic Kabayaki Ippon Unagi Set (S$48++) comes with nori, pickles and eel liver soup; the Shirayaki version (S$48++) serves the eel with just salt so the char speaks for itself.",
-      "why": "New September 2026 opening — a 90-year-old Japanese unagi institution, now in the heart of town.",
-      "when": "Hours TBC — check before heading down",
-      "deal": "~$50-70/pax",
-      "parking": "Raffles City carpark; directly above City Hall MRT.",
-      "heatNote": "",
-      "days": [
-        "Fri",
-        "Sat",
-        "Sun",
-        "Mon",
-        "Tue",
-        "Wed",
-        "Thu"
-      ],
-      "tags": [
-        "Indoor",
-        "AC"
-      ],
-      "tabs": [
-        "flavours",
-        "this-week"
-      ],
-      "highlight": false,
-      "nearHomeBonus": false,
-      "top3Tabs": [],
-      "travel": {
-        "zone": "Central",
-        "fromWoodlands": "25–40 min",
-        "region": "City Hall",
-        "lat": 1.29265,
-        "lng": 103.85022,
-        "geoSource": "onemap",
-        "geoQuery": "252 North Bridge Road, Raffles City, Singapore 179103",
-        "distanceKm": 16.3,
-        "nearestMrt": "City Hall"
-      },
-      "google": {
-        "rating": 4.7,
-        "reviews": 409
-      },
-      "source": {
-        "label": "Eatbook",
-        "url": "https://eatbook.sg/new-restaurants-september-2026/"
-      }
-    },
-    {
-      "id": "fl-noor",
-      "title": "NOOR — Mediterranean plates + hidden izakaya",
-      "venue": "River Valley",
-      "description": "New on Mohamed Sultan Road, the 65-seat NOOR channels Mediterranean sharing plates — tahini, labneh, harissa — with quiet Japanese influences, led by chef Titus Thamil. Start with the tahini-slicked Shok Bread (S$16++), then Hamachi Tartlet (S$18++) in a crisp gyoza shell, finishing with Labneh Cheesecake (S$18++). Behind the main room sits a hidden 10-seat izakaya, and Thursday nights run Yalla Tokyo omakase dinners (S$88++) with live drums.",
-      "why": "September 2026 newcomer — Mediterranean-Japanese plates plus a secret izakaya and theatrical Thursday omakase nights.",
-      "when": "Tue-Sun 5pm-12am (closed Mon)",
-      "deal": "~$50-80/pax",
-      "parking": "Limited street parking on Mohamed Sultan Road; nearest MRT is Fort Canning or Clarke Quay, then a short walk.",
-      "heatNote": "",
-      "days": [
-        "Tue",
-        "Wed",
-        "Thu",
-        "Fri",
-        "Sat",
-        "Sun"
-      ],
-      "tags": [
-        "Indoor",
-        "AC",
-        "Date-night"
-      ],
-      "tabs": [
-        "flavours",
-        "this-week"
-      ],
-      "highlight": false,
-      "nearHomeBonus": false,
-      "top3Tabs": [],
-      "travel": {
-        "zone": "Central",
-        "fromWoodlands": "25–40 min",
-        "region": "River Valley",
-        "lat": 1.29611,
-        "lng": 103.83851,
-        "geoSource": "onemap",
-        "geoQuery": "17 Mohamed Sultan Road, Singapore 238966",
-        "distanceKm": 15.5,
-        "nearestMrt": "Somerset"
-      },
-      "google": {
-        "rating": 4.8,
-        "reviews": 549
-      },
-      "source": {
-        "label": "Eatbook",
-        "url": "https://eatbook.sg/new-restaurants-september-2026/"
-      }
-    },
-    {
       "id": "fl-sushidan-parkway",
       "title": "Sushidan — $19.90 omakase at Parkway Parade",
       "venue": "Marine Parade / East Coast",
-      "description": "Michelin-starred-pedigree Sushidan opened its second Singapore outlet at Parkway Parade on 5 Sep 2026, bringing chef Hiroyuki Sato's Toyosu Market-sourced seafood to the East. The Goshoku Set (S$19.90++) is an entry-level omakase with chawanmushi, three mini dons and a sushi platter — remarkable value. From 5 to 30 Sep, add 30g of Hokkaido nama uni to any omakase course for S$18.80++.",
+      "description": "Michelin-starred-pedigree Sushidan opened its second Singapore outlet at Parkway Parade on 5 Sep 2026, bringing chef Hiroyuki Sato's Toyosu Market-sourced seafood to the East. The Goshoku Set (S$19.90++) is an entry-level omakase with chawanmusii, three mini dons and a sushi platter — remarkable value. From 5 to 30 Sep, add 30g of Hokkaido nama uni to any omakase course for S$18.80++.",
       "why": "Opened 5 Sep — east-coast omakase from S$19.90++, plus a limited uni add-on running through 30 Sep.",
       "when": "Daily 11am-10pm",
       "deal": "~$25-45/pax",
@@ -973,60 +770,17 @@
       }
     },
     {
-      "id": "nh-one-punggol-bash",
-      "title": "One Punggol 2nd Birthday Bash — carnival + Mid-Autumn light-up",
-      "venue": "Punggol",
-      "description": "Singapore's largest integrated community hub celebrates its 2nd anniversary with a week of free school-holiday activities — bouncy castles, inflatable play zones, kiddy rides, tabletop games and arts-and-crafts workshops. The celebrations peak on Sun 13 Sep with the Birthday Bash carnival (interactive games, gachapon prizes, old-school photo booth) and a Mid-Autumn light-up with lantern displays, cultural performances and crafts from 6pm to 10pm.",
-      "why": "One-day-only birthday bash + Mid-Autumn celebration, 13 Sep",
-      "when": "Sun 13 Sep; bash daytime, Mid-Autumn light-up 6pm-10pm",
-      "deal": "Free",
-      "parking": "Underground carpark at One Punggol",
-      "heatNote": "",
-      "days": [
-        "Sun"
-      ],
-      "tags": [
-        "Indoor",
-        "Outdoor"
-      ],
-      "tabs": [
-        "near-home",
-        "this-week"
-      ],
-      "highlight": false,
-      "nearHomeBonus": true,
-      "top3Tabs": [
-        "near-home",
-        "this-week"
-      ],
-      "travel": {
-        "zone": "North",
-        "fromWoodlands": "25–40 min",
-        "region": "Punggol",
-        "lat": 1.41477,
-        "lng": 103.91061,
-        "geoSource": "onemap",
-        "geoQuery": "1 Punggol Drive, Singapore 828629",
-        "distanceKm": 12.9,
-        "nearestMrt": "Punggol Coast"
-      },
-      "google": null,
-      "source": {
-        "label": "BYKidO",
-        "url": "https://www.bykido.com/blogs/events-and-activities/september-school-holiday-activities-for-kids-in-singapore"
-      }
-    },
-    {
       "id": "out-midautumn-gbtb",
-      "title": "Mid-Autumn Festival Lanterns @ Gardens by the Bay — opening-night lantern wonderland",
+      "title": "Mid-Autumn Festival Lanterns @ Gardens by the Bay — through 27 Sep",
       "venue": "Marina South",
       "description": "Gardens by the Bay's Mid-Autumn Festival lantern display opens Saturday 12 September 2026, running 6pm–10pm daily through 27 September. Large-scale illuminated lantern sets spread across Supertree Grove, Golden Garden and Bayfront Plaza, with a marketplace, carnival games and a Colonnade of 1,000 hand-painted lanterns. The LED Lion Dance launches the festival on 12 September at 8.30pm. Outdoor grounds are free to enter.",
-      "why": "It opens on Saturday night of this week — opening night has the LED Lion Dance at 8.30pm",
-      "when": "Nightly 6pm–10pm (12–27 Sep)",
+      "why": "Lantern wonderland still runs nightly through Sun 27 Sep — free outdoor grounds, last weekend.",
+      "when": "Nightly 6pm–10pm through Sun 27 Sep",
       "deal": "Free (workshop fees and Flower Dome tickets apply separately)",
       "parking": "Car parks at Bayfront Plaza and The Meadow; nearest MRT is Bayfront (CE1/DT16)",
       "heatNote": "",
       "days": [
+        "Fri",
         "Sat",
         "Sun",
         "Mon",
@@ -1069,8 +823,8 @@
       "title": "Lilytopia — Egyptian-themed floral display in the Flower Dome",
       "venue": "Marina South",
       "description": "Gardens by the Bay's first Egyptian-themed floral display fills the Flower Dome with more than 7,000 lilies across 46 species, including the Egyptian blue waterlily and giant Victoria waterlilies. A 4.5-metre Abu Simbel-style facade, painted temple columns and deity statues frame a central Nile-inspired pond. The display runs through 27 September 2026, daily 9am–9pm; Flower Dome admission applies.",
-      "why": "Timed display in its final two weeks — pair with the Mid-Autumn lanterns next door at night",
-      "when": "Daily 9am–9pm (until 27 Sep)",
+      "why": "Lilytopia still on through Sun 27 Sep — last weekend for the Egyptian-themed Flower Dome display; pair with Mid-Autumn lanterns next door at night.",
+      "when": "Daily 9am–9pm until Sun 27 Sep",
       "deal": "~$20 adult entry (Flower Dome)",
       "parking": "Car parks at Bayfront Plaza and The Meadow; nearest MRT is Bayfront (CE1/DT16)",
       "heatNote": "",
@@ -1251,14 +1005,65 @@
       }
     },
     {
-      "id": "br-novela-changi-city-point",
-      "title": "Novela opens at Changi City Point — $160 beauty bag promo",
-      "venue": "Changi / Expo",
-      "description": "Beauty retailer Novela opened a new outlet at Changi City Point (B1-24/25) on 3 September 2026. Until 16 September, VIP Gold members who spend $188 in a single transaction receive an exclusive Beauty Bag worth up to $160 — including two full-sized Kenzo and Monotheme fragrances plus gifts from Embryolisse, ISDIN, Clarins, ELIXIR and ANESSA, and a $10 off $100 voucher.",
-      "why": "Opening promo runs to 16 Sep only — a $160 beauty bag for VIP Gold members spending $188, while stocks last.",
-      "when": "Daily 11am-10pm, until 16 Sep 2026",
-      "deal": "$188 spend for beauty bag (VIP Gold)",
-      "parking": "Changi City Point carpark; Expo MRT is beside the mall.",
+      "id": "fl-yamamotos-hamburg",
+      "title": "Yamamoto's Hamburg — soft launch at Lau Pa Sat, mains under $20",
+      "venue": "Lau Pa Sat / Raffles Quay",
+      "description": "Japanese hamburg chain Yamamoto's Hamburg (Yamahan) soft-launches its first Singapore outlet at Lau Pa Sat on 22 September 2026, ahead of the official 5 October opening. Signature Yamamoto Hamburg is S$19.90 (beef patty stuffed with Gorgonzola and mushroom cream, miso-dashi demi-glace); other hamburgs from S$15.90. From the same founder as Hikiniku To Come.",
+      "why": "Soft launch still on at Lau Pa Sat — first Yamahan outside Japan; most mains under $20 ahead of the 5 Oct official opening.",
+      "when": "Soft launch ongoing (official opening 5 Oct); hours TBD",
+      "deal": "~$16-25/pax",
+      "parking": "Limited around Lau Pa Sat; Raffles Place / Downtown MRT nearby.",
+      "heatNote": "",
+      "days": [
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun",
+        "Mon"
+      ],
+      "tags": [
+        "Indoor",
+        "AC",
+        "Budget"
+      ],
+      "tabs": [
+        "flavours",
+        "this-week"
+      ],
+      "highlight": true,
+      "nearHomeBonus": false,
+      "top3Tabs": [
+        "flavours",
+        "this-week"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "25–40 min",
+        "region": "Lau Pa Sat / Raffles Quay",
+        "lat": 1.28075,
+        "lng": 103.85045,
+        "geoSource": "manual",
+        "geoQuery": "18 Raffles Quay, Lau Pa Sat, Singapore 048582",
+        "distanceKm": 17.5,
+        "nearestMrt": "Raffles Place"
+      },
+      "google": null,
+      "source": {
+        "label": "Eatbook",
+        "url": "https://eatbook.sg/yamamotos-hamburg-singapore/"
+      }
+    },
+    {
+      "id": "fl-dolpan-hwajoo",
+      "title": "Dolpan Hwajoo — Busan hotstone dining pub in Tanjong Pagar",
+      "venue": "Tanjong Pagar",
+      "description": "Busan dining pub Dolpan Hwajoo has opened at 99 Tanjong Pagar Road with shareable hotstone classics — Dolpan Rose Daechang Dakbal (S$46++), Cheese Deunggalbi (S$48++), and ube / Shine Muscat makgeolli. Open till 1am Wed–Sat. Three minutes from Tanjong Pagar MRT.",
+      "why": "Brand-new Busan concept in the CBD with late hours — proper date-night Korean sharing plates.",
+      "when": "Sun–Tue 11am-3pm & 5pm-12am; Wed–Sat 11am-3pm & 5pm-1am",
+      "deal": "~$40-70/pax sharing",
+      "parking": "Limited street / nearby carparks; Tanjong Pagar MRT ~3 min walk.",
       "heatNote": "",
       "days": [
         "Fri",
@@ -1266,47 +1071,49 @@
         "Sun",
         "Mon",
         "Tue",
-        "Wed"
+        "Wed",
+        "Thu"
       ],
       "tags": [
         "Indoor",
         "AC"
       ],
       "tabs": [
-        "brands",
-        "this-week"
+        "flavours",
+        "this-week",
+        "happy-hour"
       ],
-      "highlight": false,
+      "highlight": true,
       "nearHomeBonus": false,
       "top3Tabs": [
-        "brands"
+        "flavours"
       ],
       "travel": {
-        "zone": "East",
-        "fromWoodlands": "45–65 min",
-        "region": "Changi / Expo",
-        "lat": 1.33404,
-        "lng": 103.96292,
-        "geoSource": "onemap",
-        "geoQuery": "B1-24/25, Changi City Point, 5 Changi Business Park Central 1, Singapore 486038",
-        "distanceKm": 21.4,
-        "nearestMrt": "Expo"
+        "zone": "Central",
+        "fromWoodlands": "25–40 min",
+        "region": "Tanjong Pagar",
+        "lat": 1.2764,
+        "lng": 103.8436,
+        "geoSource": "manual",
+        "geoQuery": "99 Tanjong Pagar Road, Singapore 088520",
+        "distanceKm": 17.8,
+        "nearestMrt": "Tanjong Pagar"
       },
       "google": null,
       "source": {
-        "label": "EverydayOnSales",
-        "url": "https://sg.everydayonsales.com/3-16-september-2026-novela-singapore-opening-promotion-at-changi-city-point-with-exclusive-beauty-bag-worth-up-to-160/"
+        "label": "Eatbook",
+        "url": "https://eatbook.sg/dolpan-hwajoo-singapore/"
       }
     },
     {
-      "id": "br-chagee-suntec-family",
-      "title": "CHAGEE's first family-friendly store lands at Suntec City",
-      "venue": "Marina Centre",
-      "description": "CHAGEE opened its first family-friendly concept store at Suntec City in early September 2026. The refreshed format centres on a tiered play seating area for children with multi-level booths, soft-touch materials, a digital screen with motion-based games, and complimentary milk for young visitors — while parents get their tea fix nearby.",
-      "why": "Brand-new store concept opened days ago — the first CHAGEE designed around kids, with play seating and free milk for children.",
-      "when": "Daily 10am-10pm",
-      "deal": "~$5-8/drink",
-      "parking": "Suntec City carpark; Promenade / Esplanade / City Hall MRT nearby.",
+      "id": "fl-sansok-hougang",
+      "title": "Sansok — Culinary Class Wars chef brings hansang sets to Hougang",
+      "venue": "Hougang Mall",
+      "description": "Chef Min Yohan (Culinary Class Wars; Bibimdeli) opened Sansok at Hougang Mall #03-09A with charcoal-grilled hansang sets from S$12.90, free-flow banchan, and a $1 free-flow drinks + DIY bingsu add-on through 31 October. Hanok-inspired 64-seater in the heartlands.",
+      "why": "Netflix-famous Korean comfort food in Hougang — sets from $12.90 with opening drinks/bingsu deal.",
+      "when": "Daily 11:30am-10pm",
+      "deal": "Sets from $12.90; $1 drinks+bingsu promo till 31 Oct",
+      "parking": "Hougang Mall multi-storey; Hougang MRT nearby.",
       "heatNote": "",
       "days": [
         "Fri",
@@ -1320,130 +1127,44 @@
       "tags": [
         "Indoor",
         "AC",
-        "Family-friendly"
+        "Budget"
       ],
       "tabs": [
-        "brands",
-        "this-week"
-      ],
-      "highlight": false,
-      "nearHomeBonus": false,
-      "top3Tabs": [
-        "brands"
-      ],
-      "travel": {
-        "zone": "Central",
-        "fromWoodlands": "25–40 min",
-        "region": "Marina Centre",
-        "lat": 1.29593,
-        "lng": 103.85901,
-        "geoSource": "onemap",
-        "geoQuery": "Suntec City, 3 Temasek Boulevard, Singapore 038983",
-        "distanceKm": 16.3,
-        "nearestMrt": "Promenade"
-      },
-      "google": null,
-      "source": {
-        "label": "Marketing-Interactive",
-        "url": "https://www.marketing-interactive.com/chagee-opens-first-family-friendly-store-in-singapore-at-suntec-city"
-      }
-    },
-    {
-      "id": "ev-homegrown-2026",
-      "title": "HOMEGROWN Festival 2026 — free gigs with Regina Song & brb.",
-      "venue": "Paya Lebar",
-      "description": "HOMEGROWN Festival returns for its third edition at PLQ Plaza, Paya Lebar, from 11 to 13 September 2026. Organised by the Music & Drama Company, it's headlined by bedroom-pop star Regina Song and pop-groove favourites brb., with Forests, Ice Cream Sundays, 10pm Noise Complaint and MDC talents RINES, Dominic Chin and Gail Belmonte also on the bill. Entry is free, with pop-up retail booths on site.",
-      "why": "Catch international-level Singapore talent live for free — Regina Song and brb. headline a three-day festival this weekend.",
-      "when": "11-13 Sep, various timings",
-      "deal": "Free entry",
-      "parking": "PLQ Mall carpark; Paya Lebar MRT is right there.",
-      "heatNote": "",
-      "days": [
-        "Fri",
-        "Sat",
-        "Sun"
-      ],
-      "tags": [
-        "Outdoor"
-      ],
-      "tabs": [
-        "events",
-        "this-week"
+        "flavours",
+        "this-week",
+        "near-home"
       ],
       "highlight": true,
       "nearHomeBonus": false,
       "top3Tabs": [
-        "events"
+        "flavours"
       ],
       "travel": {
         "zone": "East",
         "fromWoodlands": "25–40 min",
-        "region": "Paya Lebar",
-        "lat": 1.34742,
-        "lng": 103.88014,
-        "geoSource": "onemap",
-        "geoQuery": "PLQ Plaza, 10 Paya Lebar Road, Singapore 409057",
-        "distanceKm": 13.0,
-        "nearestMrt": "Bartley"
+        "region": "Hougang",
+        "lat": 1.3724,
+        "lng": 103.8937,
+        "geoSource": "manual",
+        "geoQuery": "90 Hougang Avenue 10, Hougang Mall #03-09A, Singapore 538766",
+        "distanceKm": 12.8,
+        "nearestMrt": "Hougang"
       },
       "google": null,
       "source": {
-        "label": "Wonderwall.sg",
-        "url": "https://wonderwall.sg/workplay/things-to-do-this-week-in-singapore"
+        "label": "HungryGoWhere",
+        "url": "https://hungrygowhere.com/food-news/sansok-hougang/"
       }
     },
     {
-      "id": "ev-liberation-sg",
-      "title": "Liberation of Singapore — 81 years of freedom, free events",
-      "venue": "Changi",
-      "description": "Marking 81 years since the end of WWII, Liberation of Singapore runs 11-13 September across two venues: Changi Chapel and Museum, and Reflections at Bukit Chandu. The programme includes walking tours, talks, kids' craft sessions and 'Heritage in Harmony', a concert of WWII camp songs performed live for the first time since the war ended. All events are free but registration is required.",
-      "why": "A rare long-weekend of free heritage programming — including WWII camp songs performed live for the first time since 1945.",
-      "when": "11-13 Sep, various timings (registration required)",
-      "deal": "Free (register for a spot)",
-      "parking": "On-site parking at the museum; shuttle/taxi recommended.",
-      "heatNote": "",
-      "days": [
-        "Fri",
-        "Sat",
-        "Sun"
-      ],
-      "tags": [
-        "Indoor",
-        "Outdoor"
-      ],
-      "tabs": [
-        "events",
-        "this-week"
-      ],
-      "highlight": false,
-      "nearHomeBonus": false,
-      "top3Tabs": [],
-      "travel": {
-        "zone": "East",
-        "fromWoodlands": "45–65 min",
-        "region": "Changi",
-        "lat": 1.36214,
-        "lng": 103.97408,
-        "geoSource": "onemap",
-        "geoQuery": "Changi Chapel and Museum, 1000 Upper Changi Road North, Singapore 507707",
-        "distanceKm": 21.2,
-        "nearestMrt": "Changi Airport"
-      },
-      "google": null,
-      "source": {
-        "label": "Wonderwall.sg",
-        "url": "https://wonderwall.sg/workplay/things-to-do-this-week-in-singapore"
-      }
-    },
-    {
-      "id": "ev-srf-2026",
-      "title": "Singapore River Festival 2026 — The Quay Collective",
-      "venue": "Singapore River",
-      "description": "The Singapore River Festival marks its 10th edition from 11 to 20 September 2026 with 'The Quay Collective'. All three quays get experience zones: an Acai Social dance session inside Clarke Quay's oldest heritage building, an outdoor Monopoly: Hidden Singapore clue adventure, the Whispers of the Twin Quays boat-and-walk tour, and the River Echo Chambers projection wall at Boat Quay. Admission is free, with some ticketed experiences.",
-      "why": "The 10th edition of the river festival runs through the whole week — riverside light art, dance floors and bumboat tours, mostly free.",
-      "when": "11-20 Sep, various timings",
-      "deal": "Free entry; some ticketed events",
-      "parking": "Clarke Quay / Riverside Point carparks; Clarke Quay MRT nearby.",
+      "id": "fl-elijah-pies-joo-chiat",
+      "title": "Elijah Pies Joo Chiat flagship — pizza pies + pet-friendly patio",
+      "venue": "Joo Chiat",
+      "description": "Homegrown Elijah Pies opened its larger Joo Chiat flagship at 72 Joo Chiat Place on 12 September 2026 with exclusive pizza pies (from S$22), kaya toffee pie (S$9), and the Joo Chiat-only Elijah soufflé pie (S$18). Pet-friendly outdoor seating with water and treats; craft mocktails on the menu.",
+      "why": "New flagship with exclusive menu — and a patio you can bring a dog to.",
+      "when": "Daily 10am-10pm",
+      "deal": "Pies ~$9-24; opening gift bag with $40+drink spend while stocks last",
+      "parking": "Street parking along Joo Chiat Place; Eunos MRT.",
       "heatNote": "",
       "days": [
         "Fri",
@@ -1455,502 +1176,777 @@
         "Thu"
       ],
       "tags": [
+        "Indoor",
+        "Outdoor",
+        "AC"
+      ],
+      "tabs": [
+        "flavours",
+        "this-week"
+      ],
+      "highlight": false,
+      "nearHomeBonus": false,
+      "top3Tabs": [],
+      "travel": {
+        "zone": "East",
+        "fromWoodlands": "35–50 min",
+        "region": "Joo Chiat / East Coast",
+        "lat": 1.3135,
+        "lng": 103.9035,
+        "geoSource": "manual",
+        "geoQuery": "72 Joo Chiat Place, Singapore 427789",
+        "distanceKm": 16.2,
+        "nearestMrt": "Eunos"
+      },
+      "google": null,
+      "source": {
+        "label": "HungryGoWhere",
+        "url": "https://hungrygowhere.com/food-news/elijah-pies-joo-chiat-flagship/"
+      }
+    },
+    {
+      "id": "fl-fore-coffee-jp",
+      "title": "Fore Coffee — new Jurong Point outlet",
+      "venue": "Jurong Point",
+      "description": "Indonesian coffee chain Fore Coffee has opened at Jurong Point — a fresh west-side specialty-coffee stop for iced classics and signature milky cups without needing a downtown detour.",
+      "why": "Still-new west Fore outlet at Jurong Point — easy near-home coffee stop.",
+      "when": "Mall hours (daily)",
+      "deal": "Specialty coffee ~$4–8",
+      "parking": "Jurong Point JP1/JP2 carparks.",
+      "heatNote": "",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu"
+      ],
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "tabs": [
+        "flavours",
+        "near-home",
+        "this-week",
+        "brands"
+      ],
+      "highlight": false,
+      "nearHomeBonus": true,
+      "top3Tabs": [
+        "near-home"
+      ],
+      "travel": {
+        "zone": "West",
+        "fromWoodlands": "25–40 min",
+        "region": "Jurong",
+        "lat": 1.3397,
+        "lng": 103.7067,
+        "geoSource": "manual",
+        "geoQuery": "1 Jurong West Central 2, Jurong Point, Singapore 648886",
+        "distanceKm": 12.6,
+        "nearestMrt": "Boon Lay"
+      },
+      "google": null,
+      "source": {
+        "label": "Jurong Point",
+        "url": "https://jurongpoint.com/news/fore-coffee-jurong-point-grand-opening"
+      }
+    },
+    {
+      "id": "fl-daily-dim-sum-jp",
+      "title": "Daily Dim Sum opens at Jurong Point — $2 drink opening special",
+      "venue": "Jurong Point",
+      "description": "Daily Dim Sum (天天点心) has opened at Jurong Point with steamed dim sum and an opening special: iced lemon tea or hot/cold HK milk tea for S$2 with selected dish purchases (U.P. up to S$4.90).",
+      "why": "Fresh west opening — classic steamer baskets without a trip downtown.",
+      "when": "Mall hours; $2 drink opening special while it lasts",
+      "deal": "$2 tea with selected dishes (opening special)",
+      "parking": "Jurong Point JP1/JP2 carparks.",
+      "heatNote": "",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu"
+      ],
+      "tags": [
+        "Indoor",
+        "AC",
+        "Budget"
+      ],
+      "tabs": [
+        "flavours",
+        "near-home",
+        "this-week"
+      ],
+      "highlight": false,
+      "nearHomeBonus": true,
+      "top3Tabs": [],
+      "travel": {
+        "zone": "West",
+        "fromWoodlands": "25–40 min",
+        "region": "Jurong",
+        "lat": 1.3397,
+        "lng": 103.7067,
+        "geoSource": "manual",
+        "geoQuery": "1 Jurong West Central 2, Jurong Point, Singapore 648886",
+        "distanceKm": 12.6,
+        "nearestMrt": "Boon Lay"
+      },
+      "google": null,
+      "source": {
+        "label": "Jurong Point",
+        "url": "https://jurongpoint.com/news/daily-dim-sum-jurong-point-opening"
+      }
+    },
+    {
+      "id": "ev-shaping-hearts-2026",
+      "title": "Shaping Hearts 2026 — inclusive arts festival at Punggol Digital District",
+      "venue": "Punggol Digital District",
+      "description": "North East CDC's Shaping Hearts 2026 runs 12–27 September at Nexus, Punggol Digital District (88 Punggol Way) — Singapore's largest inclusive arts festival with works by artists with disabilities, interactive playgrounds, workshops, and weekend performances. Daily 10am–8pm; proceeds from art sales go directly to the artists.",
+      "why": "Last weekend through Sun 27 Sep — interactive north-side inclusive arts festival at Punggol Digital District.",
+      "when": "Daily 10am–8pm through Sun 27 Sep",
+      "deal": "Free entry (art purchase optional)",
+      "parking": "PDD / nearby carparks; Punggol Coast MRT.",
+      "heatNote": "",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu"
+      ],
+      "tags": [
+        "Indoor",
         "Outdoor"
       ],
       "tabs": [
         "events",
-        "this-week"
+        "near-home",
+        "this-week",
+        "outdoor"
       ],
+      "highlight": true,
+      "nearHomeBonus": true,
+      "top3Tabs": [
+        "events",
+        "near-home"
+      ],
+      "travel": {
+        "zone": "North",
+        "fromWoodlands": "25–40 min",
+        "region": "Punggol",
+        "lat": 1.415,
+        "lng": 103.9105,
+        "geoSource": "manual",
+        "geoQuery": "88 Punggol Way, Nexus, Punggol Digital District, Singapore 829913",
+        "distanceKm": 13.0,
+        "nearestMrt": "Punggol Coast"
+      },
+      "google": null,
+      "source": {
+        "label": "MustShareNews",
+        "url": "https://mustsharenews.com/shaping-hearts-2026/"
+      }
+    },
+    {
+      "google": null,
+      "heatNote": "",
       "highlight": true,
       "nearHomeBonus": false,
       "top3Tabs": [
-        "events"
+        "flavours",
+        "this-week"
+      ],
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "id": "fl-aro-mohamed-sultan",
+      "title": "Aro — Johanne Siy's debut restaurant opens 25 Sep on Mohamed Sultan",
+      "venue": "Mohamed Sultan / River Valley",
+      "description": "Chef Johanne Siy (formerly of Cloud Street) debuts Aro at 15 Mohamed Sultan Road on 25 September 2026 — a personal, ingredient-driven dining room. Expect a tight seasonal menu and the kind of soft opening buzz that books out fast.",
+      "why": "Opens today (25 Sep) — Johanne Siy's first solo restaurant; highlight Central dinner plan.",
+      "when": "Opens Fri 25 Sep (hours via venue)",
+      "deal": "Fine-casual; book ahead",
+      "parking": "Limited street / nearby hotels; nearest MRT Fort Canning / Clarke Quay.",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu"
+      ],
+      "tabs": [
+        "flavours",
+        "this-week"
       ],
       "travel": {
         "zone": "Central",
         "fromWoodlands": "25–40 min",
-        "region": "Singapore River",
-        "lat": 1.28968,
-        "lng": 103.83716,
-        "geoSource": "onemap",
-        "geoQuery": "Various venues along the Singapore River — Clarke Quay, Robertson Quay, Boat Quay, Singapore",
-        "distanceKm": 16.1,
-        "nearestMrt": "Havelock"
+        "region": "Mohamed Sultan",
+        "lat": 1.291,
+        "lng": 103.84,
+        "geoSource": "approx",
+        "geoQuery": "15 Mohamed Sultan Road, Singapore",
+        "distanceKm": 16.8,
+        "nearestMrt": "Fort Canning"
       },
-      "google": null,
       "source": {
-        "label": "The Honeycombers",
-        "url": "https://thehoneycombers.com/singapore/things-to-do-this-weekend-singapore/"
+        "label": "CNA Lifestyle",
+        "url": "https://cnalifestyle.channelnewsasia.com/dining/johanne-siy-aro-new-restaurant-589306"
       }
     },
     {
-      "id": "ev-twilight-flea-feast",
-      "title": "Twilight: Flea & Feast — giant indoor pasar malam at Suntec",
-      "venue": "Marina Centre",
-      "description": "Twilight: Flea & Feast takes over Halls 401-403 of Suntec City Convention Centre from 11 to 13 September 2026, turning two huge convention halls into one of the biggest indoor markets in the city. Expect food, beauty, fashion and lifestyle stalls plus a schedule of performances — all under air-con, so the weekend heat is a non-issue. Admission is free.",
-      "why": "One of Singapore's biggest indoor markets runs this weekend only — free entry, AC-cooled, and packed with food and shopping stalls.",
-      "when": "11-13 Sep, 12pm-10pm",
-      "deal": "Free admission",
-      "parking": "Suntec City carpark; Promenade / Esplanade MRT nearby.",
+      "google": null,
       "heatNote": "",
+      "highlight": false,
+      "nearHomeBonus": false,
+      "top3Tabs": [
+        "flavours",
+        "this-week"
+      ],
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "id": "fl-bomul-scotts",
+      "title": "BOMUL Samgyetang opens at Scotts Square — 1-for-1 first 350 bowls/day",
+      "venue": "Scotts Square / Orchard",
+      "description": "Korean ginseng-chicken specialist BOMUL Samgyetang opens 25 September 2026 at Scotts Square #B1-08/09, 6 Scotts Road. Opening promo: 1-for-1 on the first 350 bowls each day from 25 Sep–2 Oct. Daily 11am–10pm.",
+      "why": "Opens today with a capped 1-for-1 ginseng-chicken bowl deal through 2 Oct — Orchard lunch that actually moves.",
+      "when": "Daily 11am–10pm; 1-for-1 first 350 bowls/day 25 Sep–2 Oct",
+      "deal": "1-for-1 first 350 bowls/day (25 Sep–2 Oct)",
+      "parking": "Scotts Square / Wheelock Place / Orchard carparks; Orchard MRT.",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu"
+      ],
+      "tabs": [
+        "flavours",
+        "this-week",
+        "happy-hour"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "25–40 min",
+        "region": "Orchard",
+        "lat": 1.3058,
+        "lng": 103.831,
+        "geoSource": "approx",
+        "geoQuery": "6 Scotts Road, Scotts Square #B1-08/09, Singapore 228209",
+        "distanceKm": 15.5,
+        "nearestMrt": "Orchard"
+      },
+      "source": {
+        "label": "Little Big Red Dot",
+        "url": "https://littlebigreddot.com/bomul-samgyetang-scotts-square-opens-25-september-2026/"
+      }
+    },
+    {
+      "google": null,
+      "heatNote": "",
+      "highlight": false,
+      "nearHomeBonus": false,
+      "top3Tabs": [
+        "flavours",
+        "this-week"
+      ],
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "id": "fl-noci-orchard-gateway",
+      "title": "Noci Bakehouse — new Orchard Gateway outlet",
+      "venue": "Orchard Gateway",
+      "description": "Noci Bakehouse opens a new outlet at Orchard Gateway #01-09, 277 Orchard Road — pastries, soft loaves and café staples in the heart of Orchard. Daily 8:30am–8:30pm.",
+      "why": "Brand-new Orchard bakehouse stop — easy pre-movie or mid-mall pastry run.",
+      "when": "Daily 8:30am–8:30pm",
+      "deal": "Bakehouse café pricing",
+      "parking": "Orchard Gateway / 313@Somerset carparks; Somerset MRT.",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu"
+      ],
+      "tabs": [
+        "flavours",
+        "this-week"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "25–40 min",
+        "region": "Orchard",
+        "lat": 1.301,
+        "lng": 103.839,
+        "geoSource": "approx",
+        "geoQuery": "277 Orchard Road, Orchard Gateway #01-09, Singapore 238858",
+        "distanceKm": 15.8,
+        "nearestMrt": "Somerset"
+      },
+      "source": {
+        "label": "HungryGoWhere",
+        "url": "https://hungrygowhere.com/food-news/noci-bakehouse-orchard-gateway/"
+      }
+    },
+    {
+      "google": null,
+      "heatNote": "",
+      "highlight": false,
+      "nearHomeBonus": false,
+      "top3Tabs": [
+        "flavours",
+        "this-week"
+      ],
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "id": "fl-maison-yoshoku-raffles",
+      "title": "Maison Yoshoku at Raffles City — floating dessert bar + 1-for-1 26–28 Sep",
+      "venue": "Raffles City",
+      "description": "Maison Yoshoku opens around 23 September 2026 at Raffles City with modern yoshoku dining and Singapore's first floating dessert bar. Opening deal: 1-for-1 lunch and dinner 26–28 September.",
+      "why": "Brand-new Raffles City yoshoku room with a floating dessert bar — and 1-for-1 lunch/dinner this Sat–Mon (26–28 Sep).",
+      "when": "Opens ~23 Sep; 1-for-1 lunch/dinner Sat–Mon 26–28 Sep",
+      "deal": "1-for-1 lunch & dinner 26–28 Sep",
+      "parking": "Raffles City carpark; City Hall MRT.",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu"
+      ],
+      "tabs": [
+        "flavours",
+        "this-week",
+        "happy-hour"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "25–40 min",
+        "region": "City Hall",
+        "lat": 1.2936,
+        "lng": 103.853,
+        "geoSource": "approx",
+        "geoQuery": "252 North Bridge Road, Raffles City, Singapore 179103",
+        "distanceKm": 16.5,
+        "nearestMrt": "City Hall"
+      },
+      "source": {
+        "label": "Lobang Guru",
+        "url": "https://lobang.guru.sg/maison-yoshoku-opens-at-raffles-city-with-singapores-first-floating-dessert-bar-and-modern-yoshoku-dining/"
+      }
+    },
+    {
+      "google": null,
+      "heatNote": "",
+      "highlight": false,
+      "nearHomeBonus": false,
+      "top3Tabs": [
+        "flavours",
+        "this-week"
+      ],
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "id": "fl-marymount-bakehouse-thomson",
+      "title": "Marymount Bakehouse — second cafe at Upper Thomson",
+      "venue": "Upper Thomson / Thomson Ridge",
+      "description": "Marymount Bakehouse opens its second cafe at 9 Thomson Ridge (574637) — Wed–Sun 9am–6pm. Same neighbourhood bakery energy, now on the Thomson stretch.",
+      "why": "Second Marymount Bakehouse cafe — Wed–Sun pastry run on Upper Thomson without a full Orchard trip.",
+      "when": "Wed–Sun 9am–6pm",
+      "deal": "Bakehouse café pricing",
+      "parking": "Street / nearby; Marymount / Upper Thomson area.",
+      "days": [
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "tabs": [
+        "flavours",
+        "this-week"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "20–30 min",
+        "region": "Upper Thomson",
+        "lat": 1.353,
+        "lng": 103.833,
+        "geoSource": "approx",
+        "geoQuery": "9 Thomson Ridge, Singapore 574637",
+        "distanceKm": 10.5,
+        "nearestMrt": "Marymount"
+      },
+      "source": {
+        "label": "Eatbook",
+        "url": "https://eatbook.sg/marymount-bakehouse-upper-thomson/"
+      }
+    },
+    {
+      "google": null,
+      "heatNote": "",
+      "highlight": false,
+      "nearHomeBonus": false,
+      "top3Tabs": [
+        "flavours",
+        "this-week"
+      ],
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "id": "fl-cloudmills-claymore",
+      "title": "Cloudmills — MasterChef runner-up bakery at Claymore",
+      "venue": "Claymore / Orchard",
+      "description": "Cloudmills bakery opens at 1 Claymore Drive #01-01 — headed by a MasterChef Asia runner-up, with laminated pastries and café staples steps from Orchard.",
+      "why": "New Claymore bakery from a MasterChef runner-up — Orchard-adjacent pastry without the mall crush.",
+      "when": "Cafe hours (check venue)",
+      "deal": "Bakehouse café pricing",
+      "parking": "Nearby Orchard / Claymore hotels; Orchard MRT.",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu"
+      ],
+      "tabs": [
+        "flavours",
+        "this-week"
+      ],
+      "travel": {
+        "zone": "Central",
+        "fromWoodlands": "25–40 min",
+        "region": "Claymore",
+        "lat": 1.307,
+        "lng": 103.83,
+        "geoSource": "approx",
+        "geoQuery": "1 Claymore Drive #01-01, Singapore",
+        "distanceKm": 15.4,
+        "nearestMrt": "Orchard"
+      },
+      "source": {
+        "label": "HungryGoWhere",
+        "url": "https://hungrygowhere.com/critics-reviews/cloudmills-bakery-claymore/"
+      }
+    },
+    {
+      "google": null,
+      "heatNote": "",
+      "highlight": false,
+      "nearHomeBonus": false,
+      "top3Tabs": [
+        "events",
+        "this-week"
+      ],
+      "tags": [
+        "Indoor",
+        "AC"
+      ],
+      "id": "ev-tlm-food-expo-2026-sep",
+      "title": "TLM Food Expo at Singapore EXPO Hall 6A — 25–27 Sep (and 2–4 Oct)",
+      "venue": "Singapore EXPO",
+      "description": "Popular TLM Food Expo returns for its final 2026 instalments at Singapore EXPO Hall 6A — 25–27 September and 2–4 October, 11am–9pm, free entry. Mid-Autumn mooncake specials from 25 Sep 5pm. Cashless / on-site dining stalls typical of TLM fairs.",
+      "why": "Free-entry Expo food fair this Fri–Sun (25–27 Sep) with Mid-Autumn mooncakes from 5pm today — plus a second run 2–4 Oct.",
+      "when": "25–27 Sep & 2–4 Oct, daily 11am–9pm; mooncakes from Fri 25 Sep 5pm",
+      "deal": "Free entry",
+      "parking": "EXPO carparks; Expo MRT.",
       "days": [
         "Fri",
         "Sat",
         "Sun"
       ],
-      "tags": [
-        "Indoor",
-        "AC"
-      ],
       "tabs": [
         "events",
         "this-week"
       ],
+      "travel": {
+        "zone": "East",
+        "fromWoodlands": "25–40 min",
+        "region": "Changi / EXPO",
+        "lat": 1.334,
+        "lng": 103.959,
+        "geoSource": "approx",
+        "geoQuery": "1 Expo Drive, Singapore EXPO Hall 6A, Singapore 486150",
+        "distanceKm": 20.5,
+        "nearestMrt": "Expo"
+      },
+      "source": {
+        "label": "Singapore EXPO",
+        "url": "https://www.singaporeexpo.com.sg/events-at-expo/"
+      }
+    },
+    {
+      "google": null,
+      "heatNote": "",
       "highlight": false,
       "nearHomeBonus": false,
       "top3Tabs": [
-        "events"
-      ],
-      "travel": {
-        "zone": "Central",
-        "fromWoodlands": "25–40 min",
-        "region": "Marina Centre",
-        "lat": 1.2935,
-        "lng": 103.85719,
-        "geoSource": "onemap",
-        "geoQuery": "Hall 401-403, Suntec City Convention Centre, 1 Raffles Boulevard, Singapore 039593",
-        "distanceKm": 16.5,
-        "nearestMrt": "Esplanade"
-      },
-      "google": null,
-      "source": {
-        "label": "The Honeycombers",
-        "url": "https://thehoneycombers.com/singapore/things-to-do-this-weekend-singapore/"
-      }
-    },
-    {
-      "id": "ev-eb-mooncake-kids",
-      "title": "Kids' mooncake-making workshop at Holland International School",
-      "venue": "Bukit Timah",
-      "description": "A hands-on Mid-Autumn workshop where kids make mooncake dough from scratch, shape their own mooncakes and take them home to share with family. All ingredients are halal and vegetarian; children under 14 attend with a parent. Well timed for the Mid-Autumn Festival on 25 September.",
-      "why": "A seasonal, hands-on cultural tradition — kids leave with mooncakes they made themselves.",
-      "when": "Sat 12 Sep, 1:30–3pm",
-      "deal": "Tickets $69",
-      "parking": "Free parking on site, per the event listing.",
-      "heatNote": "",
-      "days": [
-        "Sat"
-      ],
-      "tags": [
-        "Indoor"
-      ],
-      "tabs": [
-        "events",
+        "flavours",
         "this-week"
       ],
-      "highlight": false,
-      "nearHomeBonus": false,
-      "top3Tabs": [],
-      "travel": {
-        "zone": "Central",
-        "fromWoodlands": "15–25 min",
-        "region": "Bukit Timah",
-        "lat": 1.34547,
-        "lng": 103.78991,
-        "geoSource": "eventbrite",
-        "geoQuery": "65 Bukit Tinggi Road, Singapore 289757",
-        "distanceKm": 9.2,
-        "nearestMrt": "King Albert Park"
-      },
-      "google": null,
-      "source": {
-        "label": "Eventbrite",
-        "url": "https://www.eventbrite.com/e/mooncake-making-workshop-for-children-tickets-1999005864352"
-      }
-    },
-    {
-      "id": "ev-eb-eco-festival",
-      "title": "Bilingual Eco-Festival 2026 — free family festival at One Punggol",
-      "venue": "Punggol",
-      "description": "A free family festival celebrating bilingualism and sustainability through storytelling, performances, hands-on activities and eco-learning, held at the One Punggol community hub.",
-      "why": "Free, bilingual and green — a full family morning in Punggol with real substance.",
-      "when": "Sat 12 Sep, 11am",
-      "deal": "Free entry",
-      "parking": "",
-      "heatNote": "",
-      "days": [
-        "Sat"
-      ],
       "tags": [
-        "Outdoor"
+        "Indoor",
+        "AC",
+        "Budget"
+      ],
+      "id": "fl-tian-tian-jewel",
+      "title": "Tian Tian Hainanese Chicken Rice — new Jewel Changi Airport outlet",
+      "venue": "Jewel Changi Airport",
+      "description": "Tian Tian Hainanese Chicken Rice — the Maxwell Food Centre institution — has opened at Jewel Changi Airport, joining Eatbook's September 2026 new-restaurants roundup. Another reason to stitch Jewel into an East loop with Expo.",
+      "why": "Famous Maxwell chicken rice now at Jewel — easy East add-on with TLM Expo.",
+      "when": "Jewel dining hours",
+      "deal": "Hawker-style chicken rice pricing",
+      "parking": "Jewel / Changi Airport carparks; Changi Airport MRT.",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu"
       ],
       "tabs": [
-        "events",
+        "flavours",
         "this-week"
       ],
-      "highlight": true,
-      "nearHomeBonus": false,
-      "top3Tabs": [],
-      "travel": {
-        "zone": "North",
-        "fromWoodlands": "25–40 min",
-        "region": "Punggol",
-        "lat": 1.40825,
-        "lng": 103.90504,
-        "geoSource": "eventbrite",
-        "geoQuery": "1 Punggol Drive, Singapore 828629",
-        "distanceKm": 12.4,
-        "nearestMrt": "Punggol"
-      },
-      "google": {
-        "rating": 4.3,
-        "reviews": 1770
-      },
-      "source": {
-        "label": "Eventbrite",
-        "url": "https://www.eventbrite.sg/e/bilingual-eco-festival-2026-tickets-1995858092281"
-      }
-    },
-    {
-      "id": "ev-eb-intertidal-biogirl",
-      "title": "Dawn intertidal marine tour at Changi Beach with Biogirl MJ",
-      "venue": "Changi",
-      "description": "A guided dawn walk across Changi's intertidal zone with marine educator Biogirl MJ, discovering the hidden marine life on Singapore's own shores — crabs, seastars and more at low tide. Listed at a special price for this date.",
-      "why": "Singapore's wild side before sunrise — a marine biologist shows you what the tide leaves behind.",
-      "when": "Sun 13 Sep, 5:30am",
-      "deal": "From $39",
-      "parking": "",
-      "heatNote": "",
-      "days": [
-        "Sun"
-      ],
-      "tags": [
-        "Outdoor"
-      ],
-      "tabs": [
-        "events",
-        "this-week"
-      ],
-      "highlight": true,
-      "nearHomeBonus": false,
-      "top3Tabs": [],
       "travel": {
         "zone": "East",
-        "fromWoodlands": "45–65 min",
+        "fromWoodlands": "25–40 min",
         "region": "Changi",
-        "lat": 1.38833,
-        "lng": 104.00139,
-        "geoSource": "eventbrite",
-        "geoQuery": "Changi Beach, Singapore",
-        "distanceKm": 23.3,
+        "lat": 1.3602,
+        "lng": 103.989,
+        "geoSource": "approx",
+        "geoQuery": "Jewel Changi Airport, Singapore",
+        "distanceKm": 22.0,
         "nearestMrt": "Changi Airport"
       },
-      "google": {
-        "rating": 4.6,
-        "reviews": 114
-      },
       "source": {
-        "label": "Eventbrite",
-        "url": "https://www.eventbrite.sg/e/marine-intertidal-tour-with-biogirl-mj-special-price-tickets-1996374305288"
+        "label": "Eatbook",
+        "url": "https://eatbook.sg/new-restaurants-september-2026/"
       }
     },
     {
-      "id": "ev-eb-daddy-hair",
-      "title": "Daddy & daughter hair workshop at Love Hair, Keong Saik",
-      "venue": "Keong Saik",
-      "description": "A hands-on workshop at Keong Saik salon Love Hair where dads learn real hair skills — braids, buns and beyond — to bond with their daughters. Small, practical and genuinely sweet.",
-      "why": "The most wholesome two hours of the weekend: dads leave able to do more than a ponytail.",
-      "when": "Sun 13 Sep, 4pm",
-      "deal": "Tickets $158",
-      "parking": "",
+      "google": null,
       "heatNote": "",
-      "days": [
-        "Sun"
-      ],
-      "tags": [
-        "Indoor"
-      ],
-      "tabs": [
-        "events",
-        "this-week"
-      ],
       "highlight": false,
-      "nearHomeBonus": false,
-      "top3Tabs": [],
-      "travel": {
-        "zone": "Central",
-        "fromWoodlands": "25–40 min",
-        "region": "Keong Saik",
-        "lat": 1.27984,
-        "lng": 103.84148,
-        "geoSource": "eventbrite",
-        "geoQuery": "23 Keong Saik Road, Singapore 089130",
-        "distanceKm": 17.3,
-        "nearestMrt": "Outram Park"
-      },
-      "google": {
-        "rating": 4.9,
-        "reviews": 236
-      },
-      "source": {
-        "label": "Eventbrite",
-        "url": "https://www.eventbrite.hk/e/dads-guide-to-doing-hair-daddy-daughter-workshop-tickets-1989442085833"
-      }
-    },
-    {
-      "id": "ev-eb-cleanup-day",
-      "title": "World Cleanup Day family cleanup at East Coast Park",
-      "venue": "East Coast Park",
-      "description": "Join a family-and-all-generations community cleanup at East Coast Park's Raintree Cove (near carpark C3 & C4) for World Cleanup Day. All welcome — a meaningful late-afternoon outdoors with the kids.",
-      "why": "Do some good together — a free, feel-good family afternoon on the beach.",
-      "when": "Sat 12 Sep, 4:30pm",
-      "deal": "Free",
-      "parking": "",
-      "heatNote": "",
-      "days": [
-        "Sat"
-      ],
-      "tags": [
-        "Outdoor"
-      ],
-      "tabs": [
-        "events",
-        "this-week"
-      ],
-      "highlight": false,
-      "nearHomeBonus": false,
-      "top3Tabs": [],
-      "travel": {
-        "zone": "East",
-        "fromWoodlands": "25–40 min",
-        "region": "East Coast Park",
-        "lat": 1.30194,
-        "lng": 103.91602,
-        "geoSource": "eventbrite",
-        "geoQuery": "East Coast Park, Raintree Cove (near carpark C3 & C4), Singapore",
-        "distanceKm": 19.4,
-        "nearestMrt": "Marine Terrace"
-      },
-      "google": {
-        "rating": 4.6,
-        "reviews": 32161
-      },
-      "source": {
-        "label": "Eventbrite",
-        "url": "https://www.eventbrite.com/e/world-cleanup-day-2026-family-intergenerational-cleanup-tickets-1998661613689"
-      }
-    },
-    {
-      "id": "ev-eb-kayak-tour",
-      "title": "Private kayaking at Pasir Ris Beach — kids & pets welcome",
-      "venue": "Pasir Ris",
-      "description": "A private, guided kayaking experience launching from Pasir Ris Beach with KOKOMO Beach Club. Kids and even pets are welcome, so the whole family — dog included — can paddle together.",
-      "why": "Kayaking with the kids — and the dog. Private, guided and genuinely different.",
-      "when": "Fri 11 Sep, 9am",
-      "deal": "From $53",
-      "parking": "",
-      "heatNote": "",
-      "days": [
-        "Fri"
-      ],
-      "tags": [
-        "Outdoor"
-      ],
-      "tabs": [
-        "events",
-        "this-week"
-      ],
-      "highlight": false,
-      "nearHomeBonus": false,
-      "top3Tabs": [],
-      "travel": {
-        "zone": "East",
-        "fromWoodlands": "25–40 min",
-        "region": "Pasir Ris",
-        "lat": 1.38473,
-        "lng": 103.94367,
-        "geoSource": "eventbrite",
-        "geoQuery": "131 Pasir Ris Road (Carpark E), Pasir Ris Beach, Singapore 519148",
-        "distanceKm": 17.2,
-        "nearestMrt": "Pasir Ris"
-      },
-      "google": {
-        "rating": 4.7,
-        "reviews": 46
-      },
-      "source": {
-        "label": "Eventbrite",
-        "url": "https://www.eventbrite.sg/e/singapore-private-kayaking-tourkids-pets-friendly-tickets-1985694504717"
-      }
-    },
-    {
-      "id": "ev-eb-lamian-challenge",
-      "title": "Kids' lamian-pulling challenge at Western Mahua, HarbourFront",
-      "venue": "HarbourFront",
-      "description": "A family session at hand-pulled noodle restaurant Western Mahua where parents and kids learn to pull lamian by hand, enjoy a meal together and take home a surprise. Also runs 11 Oct.",
-      "why": "Kids learn to pull noodles like pros, then eat them — dinner and a show in one.",
-      "when": "Sun 13 Sep, 3:30–5pm",
-      "deal": "From $19",
-      "parking": "",
-      "heatNote": "",
-      "days": [
-        "Sun"
+      "nearHomeBonus": true,
+      "top3Tabs": [
+        "flavours",
+        "near-home"
       ],
       "tags": [
         "Indoor",
         "AC"
       ],
-      "tabs": [
-        "events",
-        "this-week"
+      "id": "fl-bari-bari-jem",
+      "title": "Bari Bari Steak — new outlet at JEM (grand-opening 1-for-1 through 25 Sep)",
+      "venue": "JEM / Jurong East",
+      "description": "Bari Bari Steak opens a new outlet at JEM #01-16, 50 Jurong Gateway Road. Grand-opening 1-for-1 teppan promotion ran 22–25 September 2026 (today is the last day) plus a $10 return voucher — still worth knowing as a fresh west steakhouse stop even after the promo.",
+      "why": "New JEM steakhouse — today (25 Sep) is the last day of the 1-for-1 teppan grand-opening promo.",
+      "when": "Mall hours; 1-for-1 teppan grand opening ends Fri 25 Sep",
+      "deal": "1-for-1 teppan (ends today 25 Sep) + $10 return voucher",
+      "parking": "JEM / Westgate carparks; Jurong East MRT.",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu"
       ],
-      "highlight": false,
-      "nearHomeBonus": false,
-      "top3Tabs": [],
+      "tabs": [
+        "flavours",
+        "near-home",
+        "this-week",
+        "happy-hour"
+      ],
       "travel": {
-        "zone": "South",
+        "zone": "West",
         "fromWoodlands": "25–40 min",
-        "region": "HarbourFront",
-        "lat": 1.26357,
-        "lng": 103.82124,
-        "geoSource": "eventbrite",
-        "geoQuery": "1 HarbourFront Walk, #03-11 VivoCity, Singapore 098585",
-        "distanceKm": 18.6,
-        "nearestMrt": "HarbourFront"
-      },
-      "google": {
-        "rating": 4.4,
-        "reviews": 442
+        "region": "Jurong East",
+        "lat": 1.333,
+        "lng": 103.743,
+        "geoSource": "approx",
+        "geoQuery": "50 Jurong Gateway Road, JEM #01-16, Singapore 608549",
+        "distanceKm": 12.0,
+        "nearestMrt": "Jurong East"
       },
       "source": {
-        "label": "Eventbrite",
-        "url": "https://www.eventbrite.com/e/13-sept-11-oct-western-mahua-kids-lamian-challenge-tickets-1999070598975"
+        "label": "EverydayOnSales",
+        "url": "https://sg.everydayonsales.com/22-25-september-2026-bari-bari-steak-1-for-1-teppan-grand-opening-promotion-at-jem-plus-10-return-voucher/"
       }
     },
     {
-      "id": "ev-eb-yoga-ecp",
-      "title": "Charity yoga at Coastal Playgrove, East Coast Park",
-      "venue": "East Coast Park",
-      "description": "Yoga for a Change runs weekly charity yoga classes at East Coast Park's Coastal Playgrove every Sunday morning — an hour of open-air flow where your ticket supports a good cause.",
-      "why": "Sunday-morning yoga by the sea, and the fee does good.",
-      "when": "Sun 13 Sep, 8–9am",
-      "deal": "Tickets $20",
-      "parking": "",
-      "heatNote": "",
+      "google": null,
+      "heatNote": "Outdoor evening — bring light jacket / mozzie care.",
+      "highlight": false,
+      "nearHomeBonus": true,
+      "top3Tabs": [
+        "events",
+        "near-home"
+      ],
+      "tags": [
+        "Outdoor"
+      ],
+      "id": "ev-river-wonders-wilderful-2026",
+      "title": "River Wonders WILD-erful Mid-Autumn — 25 & 26 Sep evenings",
+      "venue": "River Wonders / Mandai",
+      "description": "Celebrate a WILD-erful Mid-Autumn at River Wonders on 25 & 26 September 2026, 6:30–9pm — lanterns, keeper talks and festive programmes. Tickets from about S$14 (see Mandai for packages).",
+      "why": "Two Mid-Autumn nights at Mandai (Fri–Sat) — lanterns + keeper talks, near-home north evening plan.",
+      "when": "Fri 25 & Sat 26 Sep, 6:30–9pm",
+      "deal": "Tickets from ~$14",
+      "parking": "Mandai wildlife reserve carparks; Mandai Khatib Shuttle / public buses.",
       "days": [
+        "Fri",
+        "Sat"
+      ],
+      "tabs": [
+        "events",
+        "near-home",
+        "outdoor",
+        "this-week"
+      ],
+      "travel": {
+        "zone": "North",
+        "fromWoodlands": "10–20 min",
+        "region": "Mandai",
+        "lat": 1.403,
+        "lng": 103.793,
+        "geoSource": "approx",
+        "geoQuery": "80 Mandai Lake Road, River Wonders, Singapore 729826",
+        "distanceKm": 6.5,
+        "nearestMrt": "Khatib (shuttle)"
+      },
+      "source": {
+        "label": "Mandai",
+        "url": "https://www.mandai.com/content/dam/mandai/events/mid-autumn-festival/celebrate-a-wild-erful-mid-autumn-at-river-wonders.pdf"
+      }
+    },
+    {
+      "google": null,
+      "heatNote": "Morning outdoor walk — sunscreen / water.",
+      "highlight": true,
+      "nearHomeBonus": true,
+      "top3Tabs": [
+        "near-home",
+        "events"
+      ],
+      "tags": [
+        "Outdoor"
+      ],
+      "id": "ev-it-takes-a-village-walk-2026",
+      "title": "It Takes a Village — Intergenerational Community Walk at Woodlands Botanical Garden",
+      "venue": "Woodlands Botanical Garden",
+      "description": "Free intergenerational / dementia-friendly community walk on Saturday 26 September 2026, 9:00–11:30am at Woodlands Botanical Garden, 134 Marsiling Road (730134). Register ahead via Luma — gentle near-home morning activity.",
+      "why": "Free Woodlands walk Sat 26 Sep 9–11:30am — register now; rare near-home highlight this weekend.",
+      "when": "Sat 26 Sep 9:00–11:30am; free, register",
+      "deal": "Free (registration required)",
+      "parking": "Nearby Marsiling / Woodlands Botanical Garden access.",
+      "days": [
+        "Sat"
+      ],
+      "tabs": [
+        "events",
+        "near-home",
+        "outdoor",
+        "this-week",
+        "parks"
+      ],
+      "travel": {
+        "zone": "North",
+        "fromWoodlands": "Near Home",
+        "region": "Woodlands / Marsiling",
+        "lat": 1.439,
+        "lng": 103.776,
+        "geoSource": "approx",
+        "geoQuery": "134 Marsiling Road, Woodlands Botanical Garden, Singapore 730134",
+        "distanceKm": 1.5,
+        "nearestMrt": "Marsiling"
+      },
+      "source": {
+        "label": "Luma",
+        "url": "https://luma.com/8bl66qmy"
+      }
+    },
+    {
+      "google": null,
+      "heatNote": "Beachside — go earlier for cooler terrace seating.",
+      "highlight": true,
+      "nearHomeBonus": false,
+      "top3Tabs": [
+        "flavours",
+        "this-week"
+      ],
+      "tags": [
+        "Indoor",
+        "Outdoor",
+        "AC"
+      ],
+      "id": "fl-fico-tanjong-beach",
+      "title": "Fico at Tanjong Beach Club — coastal Italian opens 28 Sep",
+      "venue": "Tanjong Beach Club / Sentosa",
+      "description": "Fico opens its second restaurant by the sea at Tanjong Beach Club, 120 Tanjong Beach Walk, on 28 September 2026 — coastal Italian with a charcoal grill. Hours: Mon–Thu 10am–8pm, Fri 10am–9pm, Sat/Sun/PH 9am–9pm.",
+      "why": "Opens Mon 28 Sep — coastal Italian charcoal-grill dining at Tanjong Beach Club; South highlight for the week.",
+      "when": "Opens Mon 28 Sep; Mon–Thu 10–8, Fri 10–9, Sat/Sun/PH 9–9",
+      "deal": "Coastal Italian (check menus)",
+      "parking": "Sentosa beach / Tanjong Beach access; Sentosa Express + walk/bus.",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
         "Sun"
       ],
-      "tags": [
-        "Outdoor"
-      ],
       "tabs": [
-        "events",
-        "this-week"
+        "flavours",
+        "this-week",
+        "outdoor"
       ],
-      "highlight": false,
-      "nearHomeBonus": false,
-      "top3Tabs": [],
       "travel": {
-        "zone": "East",
-        "fromWoodlands": "25–40 min",
-        "region": "East Coast Park",
-        "lat": 1.29691,
-        "lng": 103.89967,
-        "geoSource": "eventbrite",
-        "geoQuery": "Coastal Playgrove, East Coast Park, Singapore 449874",
-        "distanceKm": 18.7,
-        "nearestMrt": "Tanjong Katong"
-      },
-      "google": {
-        "rating": 4.5,
-        "reviews": 637
+        "zone": "South",
+        "fromWoodlands": "35–50 min",
+        "region": "Sentosa / Tanjong Beach",
+        "lat": 1.243,
+        "lng": 103.825,
+        "geoSource": "approx",
+        "geoQuery": "120 Tanjong Beach Walk, Tanjong Beach Club, Singapore 098942",
+        "distanceKm": 21.0,
+        "nearestMrt": "HarbourFront"
       },
       "source": {
-        "label": "Eventbrite",
-        "url": "https://www.eventbrite.sg/e/yoga-for-a-change-at-east-coast-park-coastal-playgrove-tickets-1993110445997"
-      }
-    },
-    {
-      "id": "ev-eb-pichwai",
-      "title": "One-day Pichwai painting workshop in Serangoon",
-      "venue": "Serangoon",
-      "description": "A 2.5-hour workshop in the traditional Rajasthani art of Pichwai — intricate devotional painting — and you leave carrying a finished piece you painted yourself. Exact studio details on booking.",
-      "why": "A rare chance to try a centuries-old Indian art form in a single afternoon.",
-      "when": "Fri 11 Sep, 11am–1:30pm",
-      "deal": "Tickets $90",
-      "parking": "",
-      "heatNote": "",
-      "days": [
-        "Fri"
-      ],
-      "tags": [
-        "Indoor"
-      ],
-      "tabs": [
-        "events",
-        "this-week"
-      ],
-      "highlight": false,
-      "nearHomeBonus": false,
-      "top3Tabs": [],
-      "travel": {
-        "zone": "Central",
-        "fromWoodlands": "15–25 min",
-        "region": "Serangoon",
-        "lat": 1.35126,
-        "lng": 103.86358,
-        "geoSource": "eventbrite",
-        "geoQuery": "143 Serangoon Avenue 3, Singapore 556121",
-        "distanceKm": 11.5,
-        "nearestMrt": "Lorong Chuan"
-      },
-      "google": null,
-      "source": {
-        "label": "Eventbrite",
-        "url": "https://www.eventbrite.sg/e/one-day-pichwai-painting-workshop-in-singapore-tickets-1343870405559"
-      }
-    },
-    {
-      "id": "ev-eb-hiit-charity",
-      "title": "Charity HIIT bootcamp at The Lawn, Marina Bay",
-      "venue": "Marina Bay",
-      "description": "A high-intensity bootcamp on The Lawn at Marina Bay run by Because – Sports to Support, where your sweat raises money for charity. Monday-night training with a conscience.",
-      "why": "Twelve dollars, one hard workout, money to charity — the easiest good deed of the week.",
-      "when": "Mon 14 Sep, 7:30pm",
-      "deal": "Tickets $12",
-      "parking": "",
-      "heatNote": "",
-      "days": [
-        "Mon"
-      ],
-      "tags": [
-        "Outdoor"
-      ],
-      "tabs": [
-        "events",
-        "this-week"
-      ],
-      "highlight": false,
-      "nearHomeBonus": false,
-      "top3Tabs": [],
-      "travel": {
-        "zone": "Central",
-        "fromWoodlands": "25–40 min",
-        "region": "Marina Bay",
-        "lat": 1.28032,
-        "lng": 103.85335,
-        "geoSource": "eventbrite",
-        "geoQuery": "8A Marina Boulevard, The Lawn @ Marina Bay, Singapore 018984",
-        "distanceKm": 17.7,
-        "nearestMrt": "Downtown"
-      },
-      "google": {
-        "rating": 4.5,
-        "reviews": 572
-      },
-      "source": {
-        "label": "Eventbrite",
-        "url": "https://www.eventbrite.sg/e/hiit-bootcamp-for-a-charity-tickets-1888098496429"
+        "label": "Time Out Singapore",
+        "url": "https://www.timeout.com/singapore/news/fico-opens-its-second-restaurant-by-the-sea-at-tanjong-beach-club-090926"
       }
     }
   ]
